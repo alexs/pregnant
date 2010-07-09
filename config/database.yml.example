@@ -1,0 +1,18 @@
+login: &login
+  adapter: postgresql
+  host: localhost
+  username: NombreUsuarioPostgres
+  password: ContraseñaPostgres
+  encoding: UTF-8
+
+development:
+  database: pregnant
+  <<: *login
+
+test:
+  database: pregnant
+  <<: *login
+
+production:
+  database: pregnant
+  <<: *login
