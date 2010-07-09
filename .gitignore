@@ -15,4 +15,4 @@ tmp/*
 .bundle/environment.rb
 Gemfile.lock
 .bundle
-log/*.log
+log/*
