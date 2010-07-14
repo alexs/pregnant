@@ -1,0 +1,11 @@
+-remote_form_for(@patient) do |patient|
+  = patient.error_messages
+  %p
+    = patient.label :firstname
+  %p
+    = patient.text_field :firstname
+  %p
+    = patient.text_field :lastname1
+  %p
+    = patient.text_field :lastname2
+  = patient.submit 'Guardar'
