@@ -1,72 +1,12 @@
-/*
-Syntax error: Invalid CSS after " +column(5": expected "{", was ")"
-        on line 4 of /home/alex/proyectos/pregnant/app/stylesheets/application.scss
-
-1: @import "base";
-2: 
-3: #container
-4:  +column(5)
-
-Backtrace:
-/home/alex/proyectos/pregnant/app/stylesheets/application.scss:4
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/haml-3.0.13/lib/sass/scss/parser.rb:792:in `expected'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/haml-3.0.13/lib/sass/scss/parser.rb:767:in `expected'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/haml-3.0.13/lib/sass/scss/parser.rb:763:in `tok!'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/haml-3.0.13/lib/sass/scss/parser.rb:298:in `block'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/haml-3.0.13/lib/sass/scss/parser.rb:293:in `ruleset'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/haml-3.0.13/lib/sass/scss/parser.rb:316:in `block_child'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/haml-3.0.13/lib/sass/scss/parser.rb:310:in `block_contents'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/haml-3.0.13/lib/sass/scss/parser.rb:57:in `stylesheet'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/haml-3.0.13/lib/sass/scss/parser.rb:26:in `parse'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/haml-3.0.13/lib/sass/engine.rb:205:in `_to_tree'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/haml-3.0.13/lib/sass/engine.rb:178:in `to_tree'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/haml-3.0.13/lib/haml/util.rb:249:in `silence_haml_warnings'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/haml-3.0.13/lib/sass/engine.rb:178:in `to_tree'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/haml-3.0.13/lib/sass/files.rb:44:in `tree_for'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/haml-3.0.13/rails/../lib/sass/plugin.rb:221:in `update_stylesheet'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/haml-3.0.13/rails/../lib/sass/plugin.rb:86:in `update_stylesheets'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/haml-3.0.13/rails/../lib/sass/plugin.rb:79:in `each'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/haml-3.0.13/rails/../lib/sass/plugin.rb:79:in `update_stylesheets'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/haml-3.0.13/rails/../lib/sass/plugin.rb:77:in `each'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/haml-3.0.13/rails/../lib/sass/plugin.rb:77:in `update_stylesheets'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/haml-3.0.13/rails/../lib/sass/plugin.rb:51:in `check_for_updates'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/haml-3.0.13/rails/../lib/sass/plugin/rack.rb:40:in `call'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
-/home/alex/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
-/home/alex/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
-/home/alex/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
-/home/alex/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start'
-/home/alex/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
-/home/alex/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:95:in `start'
-/home/alex/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `each'
-/home/alex/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:92:in `start'
-/home/alex/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:23:in `start'
-/home/alex/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/webrick/server.rb:82:in `start'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
-/home/alex/.rvm/gems/ruby-1.8.7-p299/gems/rails-2.3.8/lib/commands/server.rb:111
-/home/alex/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
-/home/alex/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
-script/server:3
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Invalid CSS after \" +column(5\": expected \"{\", was \")\"\A         on line 4 of /home/alex/proyectos/pregnant/app/stylesheets/application.scss\A \A 1: @import \"base\";\A 2: \A 3: #container\A 4:  +column(5)"; }
+/* line 4, ../../../app/stylesheets/application.sass */
+#patients_list {
+  width: 40.0px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: inline-block;
+  background-color: #cccccc;
+}
+/* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
+#patients_list {
+  display: block;
+}

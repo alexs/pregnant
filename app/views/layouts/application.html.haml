@@ -12,11 +12,13 @@
     = javascript_include_tag :defaults
   #container
     #header
-      #name_header
-        %h1 SERVICIOS DE SALUD PUBLICA
-      #logo_header
-    #body
+      %h1 Servicios de Salud Pública - DF
+    #sidebar
+      Sidebar
+    #content
       %body
         %p{:style => "color: green"}
           = notice
         = yield
+    #footer
+      %h1 footer

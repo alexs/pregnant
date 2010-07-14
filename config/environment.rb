@@ -9,13 +9,6 @@ require File.join(File.dirname(__FILE__), 'boot')
 Rails::Initializer.run do |config|
   config.gem 'compass', :version => '>= 0.10.0'
   config.gem 'haml', :version => '>=3.0.0'
-  config.gem 'compass', :version => '>= 0.10.0'
-  config.gem 'haml', :version => '>=3.0.0'
-  config.gem 'compass', :version => '>= 0.10.0'
-  config.gem 'haml', :version => '>=3.0.0'
-  config.gem 'compass', :version => '>= 0.10.0'
-  config.gem 'haml', :version => '>=3.0.0'
-  config.gem "haml"
   config.time_zone = 'UTC'
 
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
