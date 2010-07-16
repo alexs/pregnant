@@ -1,12 +1,56 @@
 /* line 4, ../../../app/stylesheets/application.sass */
-#patients_list {
-  width: 40.0px;
+.principal {
+  width: 900px;
   margin: 0 auto;
   overflow: hidden;
   display: inline-block;
-  background-color: #cccccc;
+  background-color: white;
+  border: solid;
 }
 /* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
-#patients_list {
+.principal {
   display: block;
+}
+/* line 8, ../../../app/stylesheets/application.sass */
+.principal #header {
+  display: inline;
+  float: left;
+  margin-right: 100px;
+  width: 900px;
+  background: #c3d9ff;
+  background-image: url('/images/header.png?1279302961');
+  background-repeat: no-repeat;
+  background-position: top left;
+  height: 136px;
+}
+/* line 138, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .principal #header {
+  overflow-x: hidden;
+}
+/* line 16, ../../../app/stylesheets/application.sass */
+.principal #content {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 900px;
+  height: 400px;
+}
+/* line 138, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .principal #content {
+  overflow-x: hidden;
+}
+/* line 19, ../../../app/stylesheets/application.sass */
+.principal #footer {
+  display: inline;
+  float: left;
+  margin-right: 100px;
+  width: 900px;
+  background-image: url('/images/footer.png?1279304199');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  height: 80px;
+}
+/* line 138, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .principal #footer {
+  overflow-x: hidden;
 }

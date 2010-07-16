@@ -8,17 +8,13 @@
     /[if IE]
       = stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compiled/application.css', :media => 'screen'
-    = stylesheet_link_tag 'scaffold'
     = javascript_include_tag :defaults
-  #container
-    #header
-      %h1 Servicios de Salud Pública - DF
-    #sidebar
-      Sidebar
-    #content
-      %body
+  %body
+    .principal
+      #header
+        %h1 Servicios de Salud Pública - DF
+      #content
         %p{:style => "color: green"}
           = notice
         = yield
-    #footer
-      %h1 footer
+      #footer

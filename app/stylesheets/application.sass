@@ -1,7 +1,25 @@
 @import partials/base
-@import blueprint
+//@import blueprint
 
-#patients_list
- +container
- background-color: #ccc
-
+.principal
+  +container
+  background-color: #fff
+  border: solid
+  #header
+    +column(8)
+    background: $blueprint_table_header_color
+    background:
+      image: image-url("header.png")
+      repeat: no-repeat
+      position: top left
+    height: 136px
+  #content
+    +column(8, true)
+    height: 400px
+  #footer
+    +column(8)
+    background:
+      image: image-url("footer.png")
+      repeat: no-repeat
+      position: bottom center
+    height: 80px
