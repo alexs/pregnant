@@ -4,7 +4,7 @@
       = link_to "Pacientes","#"
       %ul
         %li 
-          = link_to "- Alta", "#"
+          = link_to_remote "- Alta", :update => "content", :url => {:controller => "patients", :action => "new"}
         %li
           = link_to "- Busqueda","#" 
         %li

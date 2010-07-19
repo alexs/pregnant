@@ -1,11 +1,16 @@
--remote_form_for(@patient) do |patient|
-  = patient.error_messages
-  %p
-    = patient.label :firstname
-  %p
-    = patient.text_field :firstname
-  %p
-    = patient.text_field :lastname1
-  %p
-    = patient.text_field :lastname2
-  = patient.submit 'Guardar'
+-field_set_tag "Alta de Paciente", :id => "patient_new" do
+  -remote_form_for(@patient) do |patient|
+    = patient.error_messages
+    %p
+      = patient.label "Nombre"
+    %p
+      = patient.text_field :firstname
+    %p
+      = patient.label "Apellido Paterno"
+    %p
+      = patient.text_field :lastname1
+    %p
+      = patient.label "Apellido Materno"
+    %p
+      = patient.text_field :lastname2
+    = patient.submit 'Guardar'

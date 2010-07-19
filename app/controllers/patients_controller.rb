@@ -27,7 +27,7 @@ class PatientsController < ApplicationController
     @patient = Patient.new
 
     respond_to do |format|
-      format.html { render :partial => 'form.html.haml', :layout => true}
+      format.html { render :partial => 'form.html.haml', :layout => false}
       format.xml  { render :xml => @patient }
     end
   end
