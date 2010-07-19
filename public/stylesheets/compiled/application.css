@@ -1,6 +1,6 @@
-/* line 4, ../../../app/stylesheets/application.sass */
+/* line 3, ../../../app/stylesheets/application.sass */
 .principal {
-  width: 900px;
+  width: 890px;
   margin: 0 auto;
   overflow: hidden;
   display: inline-block;
@@ -11,12 +11,12 @@
 .principal {
   display: block;
 }
-/* line 8, ../../../app/stylesheets/application.sass */
+/* line 7, ../../../app/stylesheets/application.sass */
 .principal #header {
   display: inline;
   float: left;
-  margin-right: 100px;
-  width: 900px;
+  margin-right: 0px;
+  width: 890px;
   background: #c3d9ff;
   background-image: url('/images/header.png?1279302961');
   background-repeat: no-repeat;
@@ -27,24 +27,24 @@
 * html .principal #header {
   overflow-x: hidden;
 }
-/* line 16, ../../../app/stylesheets/application.sass */
+/* line 15, ../../../app/stylesheets/application.sass */
 .principal #content {
   display: inline;
   float: left;
   margin-right: 0;
-  width: 900px;
+  width: 890px;
   height: 400px;
 }
 /* line 138, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html .principal #content {
   overflow-x: hidden;
 }
-/* line 19, ../../../app/stylesheets/application.sass */
+/* line 18, ../../../app/stylesheets/application.sass */
 .principal #footer {
   display: inline;
   float: left;
-  margin-right: 100px;
-  width: 900px;
+  margin-right: 0px;
+  width: 890px;
   background-image: url('/images/footer.png?1279304199');
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -53,4 +53,62 @@
 /* line 138, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html .principal #footer {
   overflow-x: hidden;
+}
+
+/* line 25, ../../../app/stylesheets/application.sass */
+.menu {
+  width: 890px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  top: 116px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
+.menu {
+  display: block;
+}
+/* line 30, ../../../app/stylesheets/application.sass */
+.menu ul {
+  list-style: url(none) none;
+}
+/* line 32, ../../../app/stylesheets/application.sass */
+.menu ul li {
+  display: inline;
+  float: left;
+  position: relative;
+  background-color: white;
+  width: 150px;
+  margin: 0;
+}
+/* line 39, ../../../app/stylesheets/application.sass */
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  font-size: 16px;
+  display: block;
+  width: 140px;
+  padding: 2px 5px;
+}
+/* line 47, ../../../app/stylesheets/application.sass */
+.menu ul li a:hover, .menu ul li a:active {
+  background-color: #ffcc33;
+  color: black;
+}
+/* line 50, ../../../app/stylesheets/application.sass */
+.menu ul li ul {
+  position: relative;
+  display: none;
+}
+/* line 53, ../../../app/stylesheets/application.sass */
+.menu ul li ul li {
+  display: list-item;
+  float: none;
+  margin: 0;
+}
+/* line 57, ../../../app/stylesheets/application.sass */
+.menu ul li ul li a {
+  font-size: 14px;
 }

@@ -1,0 +1,34 @@
+.menu
+  %ul
+    %li 
+      = link_to "Pacientes","#"
+      %ul
+        %li 
+          = link_to "- Alta", "#"
+        %li
+          = link_to "- Busqueda","#" 
+        %li
+          = link_to "- Modificar", "#"
+    %li
+      = link_to "Reportes", "#"
+      %ul
+        %li
+          = link_to "- Indicadores", "#"
+        %li 
+          = link_to "- Listados", "#"
+    %li
+      = link_to "Usuarios", "#"
+
+:javascript
+  $(document).ready(function() {
+   $('ul li:has(ul)').hover(
+    function(e)
+    {
+    $(this).find('ul').slideDown();
+    },
+    function(e)
+    {
+    $(this).find('ul').slideUp();
+    }
+  );
+  });
