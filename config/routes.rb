@@ -1,4 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :squares
+
+  map.resources :squares
+
+  map.resources :counties
+
+  map.resources :states
+
   map.resources :patients
   map.resource :navigator
 
