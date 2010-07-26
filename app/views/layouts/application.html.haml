@@ -14,7 +14,9 @@
       #header
         = render :partial => "navigators/menu"
       #content
+        = image_tag('spinner.gif', :id => 'indicator', :style => 'display:none')
         %p{:style => "color: green"}
           = notice
-        = yield
+        #workspace
+          = yield
       #footer
