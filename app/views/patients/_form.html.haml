@@ -2,6 +2,14 @@
   -remote_form_for(@patient) do |patient|
     = patient.error_messages
     %p
+      = patient.label "Expediente"
+    %p
+      = patient.text_field :expedient
+    %p 
+      = patient.label "Curp"
+    %p
+      = patient.text_field :curp 
+    %p
       = patient.label "Nombre"
     %p
       = patient.text_field :firstname
@@ -13,4 +21,17 @@
       = patient.label "Apellido Materno"
     %p
       = patient.text_field :lastname2
-    = patient.submit 'Guardar'
+    %p
+      = patient.label "Fecha de nacimiento"
+    %p
+      = patient.date_select(:birthday)
+    %p 
+      = patient.label "Sexo"
+    %p
+      Hombre #{patient.radio_button(:gender,'true')}
+      %br
+      Mujer #{patient.radio_button(:gender,'false')}
+    
+    
+   
+      = patient.submit 'Guardar'

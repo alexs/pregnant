@@ -18,7 +18,7 @@
   margin-right: 0px;
   width: 890px;
   background: #c3d9ff;
-  background-image: url('/images/header.png?1279302961');
+  background-image: url('/images/header.png?1279647361');
   background-repeat: no-repeat;
   background-position: top left;
   height: 136px;
@@ -33,7 +33,7 @@
   float: left;
   margin-right: 0;
   width: 890px;
-  height: 400px;
+  height: 1400px;
 }
 /* line 138, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html .principal #content {
@@ -51,7 +51,7 @@
   float: left;
   margin-right: 0px;
   width: 890px;
-  background-image: url('/images/footer.png?1279304199');
+  background-image: url('/images/footer.png?1279647361');
   background-repeat: no-repeat;
   background-position: bottom center;
   height: 80px;
