@@ -8,7 +8,9 @@
     /[if IE]
       = stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compiled/application.css', :media => 'screen'
+    = stylesheet_link_tag 'compiled/fullcalendar.css', :media => 'screen'
     = javascript_include_tag :defaults
+    = javascript_include_tag "fullcalendar.js", "fullcalendar.min.js", "gcal.js"
   %body
     .principal
       #header

@@ -13,7 +13,7 @@
       = link_to "Citas", "#"
       %ul
         %li
-          = link_to "- Nueva", "#"
+          = link_to_remote "- Nueva",  :loading => "$('#indicator').show();", :update => "workspace", :url => {:controller => "meetings", :action => "new"}, :complete => "$('#indicator').hide(); load_calendar();"
         %li 
           = link_to "- Buscar", "#"
         %li 

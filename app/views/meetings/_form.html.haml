@@ -1,0 +1,18 @@
+-remote_form_for(@meeting) do |meeting|
+  = meeting.error_messages
+  %p
+    #calendar
+
+:javascript
+  $(document).ready(function() {
+   $('ul li:has(ul)').hover(
+    function(e)
+    {
+    $(this).find('ul').slideDown();
+    },
+    function(e)
+    {
+    $(this).find('ul').slideUp();
+    }
+  );
+  });

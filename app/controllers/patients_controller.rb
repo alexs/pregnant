@@ -80,4 +80,14 @@ class PatientsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def select_state
+    @counties = County.find(:all, :conditions => ['state_id = ?', params[:state_select]])
+    return render(:partial => 'get_counties', :layout => false) if request.xhr?
+  end
+
+  def select_county
+    @squares = Square.find(:all, :conditions => ['county_id = ?', params[:county_select]])
+    return render(:partial => 'get_squares', :layout => false) if request.xhr?
+  end
 end

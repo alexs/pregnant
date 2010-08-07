@@ -22,16 +22,54 @@
     %p
       = patient.text_field :lastname2
     %p
+      = patient.label "Lugar de Nacimiento"
+      = patient.select :bornstate_id, State.all.collect {|state| [state.name, state.id]}
+    %p
       = patient.label "Fecha de nacimiento"
     %p
       = patient.date_select(:birthday)
-    %p 
+    %p
       = patient.label "Sexo"
     %p
       Hombre #{patient.radio_button(:gender,'true')}
       %br
       Mujer #{patient.radio_button(:gender,'false')}
-    
-    
+    %p
+      = patient.label "Domicilio"
+    %p
+      = patient.label "Calle"
+      = patient.text_field :street
+    %p
+      = patient.label "Num. Exterior"
+      = patient.text_field :exterior
+    %p
+      = patient.label "Num Interior"
+      = patient.text_field :interior
+    %p
+      = patient.label "Estado: "
+      = select_tag "state", options_from_collection_for_select(State.all, 'id', 'name')
+    %p
+      = patient.label "Delegacion o Municipio: "
+      = select_tag "county", "<option>Selecciona antes un estado</option>", :name => 'county'
+    %p
+      = patient.label "Colonia: "
+      = patient.select :square_id_id, [["Selecciona antes un municipio","Invalid"]]
+    %p
+
+      = observe_field 'state',
+        :url => {:controller => 'patients',
+        :action => 'select_state'},
+        :update => 'county',
+        :with => 'state_select'
+
+      = observe_field 'county',
+        :url => {:controller => 'patients',
+        :action => 'select_county'},
+        :update => 'patient_square_id_id',
+        :with => 'county_select'
+
+    %p
+      = patient.label "Telefono"
+      = patient.text_field :phone
    
       = patient.submit 'Guardar'
