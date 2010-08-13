@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :meetings
+#  map.resources :meetings, :member => {:get_meetings => :get}
   map.resources :squares
   map.resources :squares
   map.resources :counties

@@ -18,7 +18,7 @@
   margin-right: 0px;
   width: 890px;
   background: #c3d9ff;
-  background-image: url('/images/header.png?1279647361');
+  background-image: url('/images/header.png?1279302961');
   background-repeat: no-repeat;
   background-position: top left;
   height: 136px;
@@ -33,7 +33,7 @@
   float: left;
   margin-right: 0;
   width: 890px;
-  height: 1400px;
+  height: 420px;
 }
 /* line 138, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html .principal #content {
@@ -51,7 +51,7 @@
   float: left;
   margin-right: 0px;
   width: 890px;
-  background-image: url('/images/footer.png?1279647361');
+  background-image: url('/images/footer.png?1279304199');
   background-repeat: no-repeat;
   background-position: bottom center;
   height: 80px;
@@ -120,132 +120,73 @@
 }
 
 /* line 63, ../../../app/stylesheets/application.sass */
-#content {
-  line-height: 3;
+#content #workspace {
+  margin: 10px 10px 10px 10px;
 }
-/* line 6, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content p {
-  margin-bottom: 0;
+
+/* line 65, ../../../app/stylesheets/application.sass */
+#content #workspace #new_patient {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 /* line 18, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content label {
+#content #workspace #new_patient label {
   font-weight: bold;
 }
 /* line 19, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content fieldset {
+#content #workspace #new_patient fieldset {
   padding: 1.4em;
   margin: 0 0 1.5em 0;
 }
 /* line 20, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content legend {
+#content #workspace #new_patient legend {
   font-weight: bold;
   font-size: 1.2em;
 }
 /* line 25, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content input.text, #content input.title, #content input[type=text], #content input[type=password] {
+#content #workspace #new_patient input.text, #content #workspace #new_patient input.title, #content #workspace #new_patient input[type=text], #content #workspace #new_patient input[type=password] {
   margin: 0.5em 0;
   background-color: white;
   padding: 5px;
 }
 /* line 26, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content input.title {
+#content #workspace #new_patient input.title {
   font-size: 1.5em;
 }
 /* line 30, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content input[type=checkbox], #content input.checkbox, #content input[type=radio], #content input.radio {
+#content #workspace #new_patient input[type=checkbox], #content #workspace #new_patient input.checkbox, #content #workspace #new_patient input[type=radio], #content #workspace #new_patient input.radio {
   position: relative;
   top: 0.25em;
 }
 /* line 32, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content textarea {
+#content #workspace #new_patient textarea {
   margin: 0.5em 0;
   padding: 5px;
 }
 /* line 33, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content select {
-  margin: 0.5em 0;
-}
-/* line 57, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content fieldset {
-  border: 1px solid #cccccc;
-}
-/* line 60, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content input.text, #content input.title, #content input[type=text], #content input[type=password],
-#content textarea, #content select {
-  border: 1px solid #bbbbbb;
-}
-/* line 62, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content input.text:focus, #content input.title:focus, #content input[type=text]:focus, #content input[type=password]:focus,
-#content textarea:focus, #content select:focus {
-  border: 1px solid #666666;
-}
-/* line 46, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content input.text, #content input.title, #content input[type=text], #content input[type=password] {
-  width: 300px;
-}
-/* line 48, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content textarea {
-  width: 390px;
-  height: 250px;
-}
-/* line 18, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content label {
-  font-weight: bold;
-}
-/* line 19, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content fieldset {
-  padding: 1.4em;
-  margin: 0 0 1.5em 0;
-}
-/* line 20, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content legend {
-  font-weight: bold;
-  font-size: 1.2em;
-}
-/* line 25, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content input.text, #content input.title, #content input[type=text], #content input[type=password] {
-  margin: 0.5em 0;
-  background-color: white;
-  padding: 5px;
-}
-/* line 26, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content input.title {
-  font-size: 1.5em;
-}
-/* line 30, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content input[type=checkbox], #content input.checkbox, #content input[type=radio], #content input.radio {
-  position: relative;
-  top: 0.25em;
-}
-/* line 32, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content textarea {
-  margin: 0.5em 0;
-  padding: 5px;
-}
-/* line 33, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content select {
+#content #workspace #new_patient select {
   margin: 0.5em 0;
 }
 /* line 46, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content input.text, #content input.title, #content input[type=text], #content input[type=password] {
+#content #workspace #new_patient input.text, #content #workspace #new_patient input.title, #content #workspace #new_patient input[type=text], #content #workspace #new_patient input[type=password] {
   width: 300px;
 }
 /* line 48, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content textarea {
+#content #workspace #new_patient textarea {
   width: 390px;
   height: 250px;
 }
 /* line 57, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content fieldset {
+#content #workspace #new_patient fieldset {
   border: 1px solid #35567b;
 }
 /* line 60, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content input.text, #content input.title, #content input[type=text], #content input[type=password],
-#content textarea, #content select {
+#content #workspace #new_patient input.text, #content #workspace #new_patient input.title, #content #workspace #new_patient input[type=text], #content #workspace #new_patient input[type=password],
+#content #workspace #new_patient textarea, #content #workspace #new_patient select {
   border: 1px solid #207dd4;
 }
 /* line 62, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-#content input.text:focus, #content input.title:focus, #content input[type=text]:focus, #content input[type=password]:focus,
-#content textarea:focus, #content select:focus {
+#content #workspace #new_patient input.text:focus, #content #workspace #new_patient input.title:focus, #content #workspace #new_patient input[type=text]:focus, #content #workspace #new_patient input[type=password]:focus,
+#content #workspace #new_patient textarea:focus, #content #workspace #new_patient select:focus {
   border: 1px solid #da9a22;
 }

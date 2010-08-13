@@ -2,13 +2,9 @@ class MeetingsController < ApplicationController
   # GET /meetings
   # GET /meetings.xml
   def index
-
-    @meetings = Meeting.find(:all, :conditions => ["starttime >= '#{Time.at(params['start'].to_i).to_formatted_s(:db)}' and endtime <= '#{Time.at(params['end'].to_i).to_formatted_s(:db)}'"])
-    meetings = [] 
-    @meetings.each do |meeting|
-      meetings << {:id => meeting.id, :title => "xxx", :description => "descripcion de la prueba" || "Some cool description here...", :start => "#{meeting.starttime.iso8601}", :end => "#{meeting.endtime.iso8601}", :allDay => meeting.all_day}
+   respond_to do |format|
+      format.html # show.html.erb
     end
-    render :text => meetings.to_json
   end
 
   # GET /meetings/1
@@ -25,12 +21,7 @@ class MeetingsController < ApplicationController
   # GET /meetings/new
   # GET /meetings/new.xml
   def new
-    @meeting = Meeting.new
-
-    respond_to do |format|
-      format.html { render :partial => 'form.html.haml', :layout => false}
-      format.xml  { render :xml => @meeting }
-    end
+    @meeting = Meeting.new(:endtime => 1.hour.from_now, :period => "Does not repeat")
   end
 
   # GET /meetings/1/edit
@@ -46,10 +37,8 @@ class MeetingsController < ApplicationController
     respond_to do |format|
       if @meeting.save
         format.html { redirect_to(@meeting, :notice => 'Meeting was successfully created.') }
-        format.xml  { render :xml => @meeting, :status => :created, :location => @meeting }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @meeting.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -83,10 +72,10 @@ class MeetingsController < ApplicationController
   end
 
   def get_meetings
-    @meetings = Meeting.find(:all, :conditions => ["starttime >= '#{Time.at(params['start'].to_i).to_formatted_s(:db)}' and endtime <= '#{Time.at(params['end'].to_i).to_formatted_s(:db)}'"])
-    meetings = [] 
+     @meetings = Meeting.find(:all, :conditions => ["starttime >= '#{Time.at(params['start'].to_i).to_formatted_s(:db)}' and endtime <= '#{Time.at(params['end'].to_i).to_formatted_s(:db)}'"])
+    meetings = []
     @meetings.each do |meeting|
-      meetings << {:id => meeting.id, :title => "xxx", :description => meeting.description || "Some cool description here...", :start => "#{meeting.starttime.iso8601}", :end => "#{meeting.endtime.iso8601}", :allDay => meeting.all_day}
+      meetings << {:id => meeting.id, :title => "xxx", :description => "descripcion de la prueba" || "Some cool description here...", :start => "#{meeting.starttime.iso8601}", :end => "#{meeting.endtime.iso8601}", :allDay => meeting.all_day}
     end
     render :text => meetings.to_json
   end
