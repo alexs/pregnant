@@ -1,17 +1,28 @@
 <% remote_form_for @meeting, :url => {:action => :create}, :before => "$('#creating_events').show();", :complete => "$('#creating_events').hide();" do |f| %>
 <p>
-  <%=f.label :starttime, 'Start Time' %>
+  <%=f.label :starttime, 'Elige una fecha y hora' %>
   <br/>
-  <%=f.datetime_select :starttime %>
-</p>
-<p>
-  <%=f.label :endtime, 'End Time' %>
-  <br/>
-  <%=f.datetime_select :endtime %>
+  <div id="datepicker"></div>
+  <%= select_time(Time.now, :time_separator => ' : ') %>
+  <br />
+  <%= f.text_field :starttime, :value => Date.today %>
+
 </p>
 
 <%=f.hidden_field :id, :value => @meeting.id %>
 <p>
-  <%=f.submit 'Create' %> <span id = "creating_events" style = "display:none;">Creating, Please wait...</span>
+  <%=f.submit 'Create' %> <span id = "creating_events" style =  "display:none;">Guardando, porfavor espere...</span>
 </p>
 <%end %>
+
+<script type="text/javascript">
+	$(function() {
+	$("#datepicker").datepicker({
+         changeMonth: true,
+ 	 changeYear: true,
+         onSelect: function(date) {
+          $("#meeting_starttime").val(date)
+        }
+        });
+	});
+</script>

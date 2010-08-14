@@ -1,5 +1,5 @@
 @import partials/base
-
+$short_field: 60px
 .principal
   +container
   background-color: #fff
@@ -63,8 +63,18 @@
 #content #workspace
   margin: 10px 10px 10px 10px
 #content #workspace #new_patient
-  +blueprint-form-layout
   font-size: 12px
   font-family: Arial,Helvetica,sans-serif
-  +blueprint-form-sizes
   +blueprint-form-borders(#207DD4,#DA9A22,#35567B)
+  +blueprint-form-sizes
+  #patient_exterior
+    width: $short_field
+  #patient_interior
+    width: $short_field
+#patients_form
+  table
+    $table-color : #7a98c6
+    +table-scaffolding
+    +inner-table-borders(1px, darken($table-color, 40%))
+    +outer-table-borders(2px)
+    +alternating-rows-and-columns($table-color, adjust-hue($table-color,-120deg), #222)

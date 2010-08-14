@@ -4,7 +4,8 @@ class CreateMeetings < ActiveRecord::Migration
       t.references :patient
       t.references :dependency
       t.references :user
-      t.datetime :starttime, :endtime
+      t.datetime :starttime
+      t.string :test
       t.boolean :all_day, :default => false
 
       t.timestamps

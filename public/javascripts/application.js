@@ -4,6 +4,8 @@
 function load_calendar() {
   $('#calendar').fullCalendar({
     weekends: false,
+    minTime: 8,
+    maxTime: 19,
     monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio','Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
     dayNames: ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes'],
     dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sab'],
@@ -38,7 +40,7 @@ function load_calendar() {
                   $('#loading').hide();
           },
           events: "/meetings/get_meetings",
-          timeFormat: 'h:mm t{ - h:mm t} ',
+    timeFormat: 'h:mm tt',
           dragOpacity: "0.5",
           eventDrop: function(event, dayDelta, minuteDelta, allDay, revertFunc){
 //              if (confirm("Are you sure about this change?")) {
