@@ -2,11 +2,14 @@ class PatientsController < ApplicationController
   # GET /patients
   # GET /patients.xml
   def index
-    @patients = Patient.all
-
+    #if !params[:patient]['search'].nil?
+   #   @patients = Patient.find_by_firstname(params[:patient]['search'])
+   # else
+      @patients = Patient.find(:all, :limit => 0)
+   # end
+   
     respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @patients }
+      format.js { render :action => 'search_patient'}
     end
   end
 
@@ -25,10 +28,8 @@ class PatientsController < ApplicationController
   # GET /patients/new.xml
   def new
     @patient = Patient.new
-
     respond_to do |format|
-      format.html { render :partial => 'form.html.haml', :layout => false}
-      format.xml  { render :xml => @patient }
+      format.js { render :action => 'new_form'}
     end
   end
 
@@ -40,15 +41,28 @@ class PatientsController < ApplicationController
   # POST /patients
   # POST /patients.xml
   def create
+    birthdate = {:year => params[:patient]['birthday(1i)'], :month =>   params[:patient]['birthday(2i)'], :day => params[:patient]['birthday(3i)']}
+    key = Patient.new.keygen(params[:patient],  birthdate)
     @patient = Patient.new(params[:patient])
+    if !@patient.square_id.nil?
+      @patient.cp = Square.find(@patient.square_id).cp.to_s
+    end
 
+    @patient.cuip = key
+    @patient.lastname1 = @patient.lastname1.upcase
+    @patient.firstname = @patient.firstname.upcase
+    @patient.lastname2 = @patient.lastname2.upcase
+    @patient.street = @patient.street.upcase
+
+    ###### QUIIIIIITAAAAAAAAAARRRRRRRRRR SOLO PARA PRUEBAS ########33
+    @patient.user_id = 1
+    @patient.dependency_id = 1
+    
     respond_to do |format|
       if @patient.save
-        format.html { redirect_to(@patient, :notice => 'Patient was successfully created.') }
-        format.xml  { render :xml => @patient, :status => :created, :location => @patient }
+        format.js {render :action => 'create.js.rjs', :notice => 'Patient was successfully created.'}
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @patient.errors, :status => :unprocessable_entity }
+        format.js {render :action => 'new_form.js.rjs'}
       end
     end
   end

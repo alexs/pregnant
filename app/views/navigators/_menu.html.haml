@@ -4,9 +4,9 @@
       = link_to "Pacientes","#"
       %ul
         %li 
-          = link_to_remote "- Alta",  :loading => "$('#indicator').show();", :update => "workspace", :url => {:controller => "patients", :action => "new"}, :complete => "$('#indicator').hide();"
+          = link_to_remote "- Alta",  :loading => "$('#indicator').show();", :url => {:controller => "patients", :action => "new"}, :complete => "$('#indicator').hide();"
         %li
-          = link_to "- Busqueda","#" 
+          = link_to_remote "- Busqueda", :loading => "$('#indicator').show();", :url => {:controller => "patients", :action => "index"}, :method => :get, :complete => "$('#indicator').hide();"
         %li
           = link_to "- Modificar", "#"
     %li

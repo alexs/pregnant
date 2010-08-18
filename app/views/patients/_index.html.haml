@@ -1,0 +1,11 @@
+%h1 Búsqueda de pacientes.
+%p
+ - remote_form_for @patient, :url => {:action => :get_patient}, $('patient_container').update('')
+ do |person|
+
+ - remote_form_for patients_path, :method => 'get' do
+  = text_field_tag 'patient[search]', nil
+  = submit_to_remote "Buscar", "Buscar"
+%p
+#patient_container
+ .cell    

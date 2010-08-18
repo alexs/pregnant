@@ -13,7 +13,7 @@ class Patient < ActiveRecord::Base
   end
 
   def rfc(patient, borndate)
-    rfc = patient['firstname'].slice(0..1) + patient['lastname'].slice(0..0) + patient['name'].slice(0..0) + State.find(patient['bornstate_id']).clave + borndate[:year].slice(2..3) + eval_data(borndate[:month]) + eval_data(borndate[:day])
+    rfc = patient['lastname1'].slice(0..1) + patient['lastname2'].slice(0..0) + patient['firstname'].slice(0..0) + State.find(patient['bornstate_id']).name + borndate[:year].slice(2..3) + eval_data(borndate[:month]) + eval_data(borndate[:day])
   end
 
   def unique_chars(patient, borndate)
@@ -30,7 +30,7 @@ class Patient < ActiveRecord::Base
    end
 
 
-  def full_name
+  def fullname
     "#{firstname} #{lastname1} #{lastname2}"
   end
 

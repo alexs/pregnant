@@ -5,7 +5,7 @@
   <div id="datepicker"></div>
   <%= select_time(Time.now, :time_separator => ' : ') %>
   <br />
-  <%= f.text_field :starttime, :value => Date.today %>
+  <%= f.text_field :starttime, :value => Date.today, :style => 'display:none' %>
 
 </p>
 

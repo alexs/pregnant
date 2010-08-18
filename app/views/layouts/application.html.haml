@@ -18,7 +18,8 @@
       #header
         = render :partial => "navigators/menu"
       #content
-        = image_tag('spinner.gif', :id => 'indicator', :style => 'display:none')
+        .indicator{:style => 'display:none'}
+          Cargando...
         %p{:style => "color: green"}
           = notice
         #workspace

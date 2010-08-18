@@ -1,6 +1,10 @@
--remote_form_for(@patient) do |patient|
-  = patient.error_messages
-  #patients_form
+%h1 Registro de paciente
+%br
+#patients_form
+  -remote_form_for(@patient) do |patient|
+    - if !patient.error_messages.empty?
+      .validation
+        = patient.error_messages
     %table
       %tr
         %th.even Datos Generales
@@ -63,7 +67,7 @@
           %p
             = patient.label "Colonia: "
           %p
-            = patient.select :square_id_id, [["Selecciona antes un municipio","Invalid"]]
+            = patient.select :square_id, [["Selecciona antes un municipio","Invalid"]]
           %p
 
             = observe_field 'state',
@@ -75,7 +79,7 @@
             = observe_field 'county',
               :url => {:controller => 'patients',
               :action => 'select_county'},
-              :update => 'patient_square_id_id',
+              :update => 'patient_square_id',
               :with => 'county_select'
 
           %p

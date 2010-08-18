@@ -23,7 +23,7 @@
   background-position: top left;
   height: 136px;
 }
-/* line 138, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+/* line 139, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html .principal #header {
   overflow-x: hidden;
 }
@@ -33,11 +33,17 @@
   float: left;
   margin-right: 0;
   width: 890px;
-  height: 420px;
+  margin-left: 0;
 }
-/* line 138, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+/* line 139, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html .principal #content {
   overflow-x: hidden;
+}
+/* line 29, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/lists/_bullets.scss */
+.principal #content li {
+  padding-left: 14px;
+  background: url('/images/bullet-round.png?1282082810') no-repeat 4.5px 5.5px;
+  list-style-type: none;
 }
 /* line 18, ../../../app/stylesheets/application.sass */
 .principal #content #indicator {
@@ -56,7 +62,7 @@
   background-position: bottom center;
   height: 80px;
 }
-/* line 138, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+/* line 139, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html .principal #footer {
   overflow-x: hidden;
 }
@@ -240,4 +246,59 @@
 /* line 19, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
 #patients_form table tfoot th.even, #patients_form table tfoot th:nth-child(2n), #patients_form table tfoot td.even, #patients_form table tfoot td:nth-child(2n) {
   background-color: #dddddd;
+}
+
+/* line 81, ../../../app/stylesheets/application.sass */
+.info, .success, .warning, .error, .validation {
+  border: 1px solid;
+  margin: 10px 0px;
+  padding: 15px 10px 15px 50px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+/* line 87, ../../../app/stylesheets/application.sass */
+.info {
+  color: #00529b;
+  background-color: #bde5f8;
+  background-image: url("info.png");
+}
+
+/* line 91, ../../../app/stylesheets/application.sass */
+.success {
+  color: #4f8a10;
+  background-color: #dff2bf;
+}
+
+/* line 95, ../../../app/stylesheets/application.sass */
+.warning {
+  color: #9f6000;
+  background-color: #feefb3;
+  background-image: url("warning.png");
+}
+
+/* line 99, ../../../app/stylesheets/application.sass */
+.error {
+  color: #d8000c;
+  background-color: #ffbaba;
+  background-image: url("error.png");
+}
+
+/* line 103, ../../../app/stylesheets/application.sass */
+.validation {
+  color: #d63301;
+  background-color: #ffccba;
+  background-image: url('/images/validation.png?1282080838');
+}
+
+/* line 107, ../../../app/stylesheets/application.sass */
+.validation h2 {
+  color: #9f6000;
+  background-color: #feefb3;
+  background-image: url("warning.png");
+}
+
+/* line 111, ../../../app/stylesheets/application.sass */
+h1 {
+  text-align: center;
 }
