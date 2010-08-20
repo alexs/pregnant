@@ -1,6 +1,8 @@
 class Patient < ActiveRecord::Base
+  searchable_by :firstname, :lastname1, :lastname2
+
   validates_presence_of :firstname, :lastname1, :lastname2, :birthday, :street,  :bornstate_id, :square_id
-  validates_numericality_of :square_id, :only_integer => true, :message => "Debes Seleccionar una colonia valida"
+  validates_numericality_of :square_id, :only_integer => true, :greater_than => 0, :message => "Debes Seleccionar una colonia valida"
   validates_inclusion_of :gender, :in => [true, false]
   validates_uniqueness_of :cuip, :message => "Este paciente ya existe en el sistema, busque nuevamente porfavor."
 

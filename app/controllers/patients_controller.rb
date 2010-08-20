@@ -2,12 +2,8 @@ class PatientsController < ApplicationController
   # GET /patients
   # GET /patients.xml
   def index
-    #if !params[:patient]['search'].nil?
-   #   @patients = Patient.find_by_firstname(params[:patient]['search'])
-   # else
-      @patients = Patient.find(:all, :limit => 0)
-   # end
-   
+    @patient = Patient.new
+
     respond_to do |format|
       format.js { render :action => 'search_patient'}
     end
@@ -44,7 +40,8 @@ class PatientsController < ApplicationController
     birthdate = {:year => params[:patient]['birthday(1i)'], :month =>   params[:patient]['birthday(2i)'], :day => params[:patient]['birthday(3i)']}
     key = Patient.new.keygen(params[:patient],  birthdate)
     @patient = Patient.new(params[:patient])
-    if !@patient.square_id.nil?
+
+    if !@patient.square_id.nil? and @patient.square_id.to_i > 0
       @patient.cp = Square.find(@patient.square_id).cp.to_s
     end
 
@@ -57,7 +54,7 @@ class PatientsController < ApplicationController
     ###### QUIIIIIITAAAAAAAAAARRRRRRRRRR SOLO PARA PRUEBAS ########33
     @patient.user_id = 1
     @patient.dependency_id = 1
-    
+
     respond_to do |format|
       if @patient.save
         format.js {render :action => 'create.js.rjs', :notice => 'Patient was successfully created.'}
@@ -103,5 +100,12 @@ class PatientsController < ApplicationController
   def select_county
     @squares = Square.find(:all, :conditions => ['county_id = ?', params[:county_select]])
     return render(:partial => 'get_squares', :layout => false) if request.xhr?
+  end
+
+  def get_patient
+    @patients = Patient.finder(params[:patient]['search'])
+    respond_to do |format|
+      format.js   { render 'get_patient' }
+    end
   end
 end
