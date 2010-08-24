@@ -8,7 +8,8 @@ class Patient < ActiveRecord::Base
 
   belongs_to :square
   belongs_to :state
-
+  has_many :patients
+  
   def keygen(patient, borndate)
     key = rfc(patient, borndate) + unique_chars(patient, borndate)
     key = key.upcase
@@ -41,7 +42,7 @@ class Patient < ActiveRecord::Base
   end
 
   def full_address
-    "#{street} #{exterior}, #{interior} CP: #{cp}, Colonia: #{self.colony.name}, Delegacion: #{self.square.county.name}, #{self.square.county.state.name}"
+    "#{street} #{exterior}, #{interior} CP: #{cp}, Colonia: #{self.square.name}, Delegacion: #{self.square.county.name}, #{self.square.county.state.name}"
   end
 
   def age

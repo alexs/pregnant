@@ -5,5 +5,15 @@
   = submit_to_remote('submit_get_patient', 'Buscar', :url => { :controller => 'patients', :action => 'get_patient'})
 %p
  %br
+  .patient_header
+   %table
+    %tr
+     %th.name
+      %h1 Nombre
+     %th.age
+      %h1 Edad
+     %th.address
+      %h1 Domicilio
+     %th.actions
+      %h1 Acciones
   #patient_container
-   .cell    

@@ -1,10 +1,14 @@
-.patient_header
- .generic_cell{style="width: 220px; font-weight: bold;"}
-  Nombre
- .generic_cell{style="width: 100px; font-weight: bold;"}
-  Edad
- .generic_cell{style="width: 300px; font-weight: bold;"}
-  Domicilio
- .generic_cell{style="width: 200px; font-weight: bold;"}
-  Acciones
-= @patients.size
+.patients_result
+  - @patients.each do |patient|
+    %table
+      %tr{:class => "#{cycle ('odd', 'even')}"}
+        %td.name
+          = patient.fullname
+        %td.age
+          = patient.age.to_s + " " + "años"
+        %td.address
+          = patient.full_address
+        %td.actions
+          acciones
+%br
+Total de registros encontrados: #{@patients.size}
