@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :psychologies
+
+  map.resources :psychologies
+
 #  map.resources :meetings, :member => {:get_meetings => :get}
   map.resources :squares
   map.resources :squares
