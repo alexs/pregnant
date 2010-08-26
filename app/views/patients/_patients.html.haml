@@ -9,6 +9,6 @@
         %td.address
           = patient.full_address
         %td.actions
-          acciones
+          = link_to_remote "Seleccionar", :update => "workspace", :url => { :controller => "patients", :action => "show", :id => "#{patient.id}"}, :method => :get, :layout => false
 %br
 Total de registros encontrados: #{@patients.size}

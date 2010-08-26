@@ -15,8 +15,7 @@ class PatientsController < ApplicationController
     @patient = Patient.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @patient }
+      format.html { render :layout => false }
     end
   end
 

@@ -22,15 +22,15 @@
           %p
             = patient.label "Nombre"
           %p
-            = patient.text_field :firstname
+            = patient.text_field :firstname, :onkeyup => 'this.value=stripAccent(this.value)'
           %p
             = patient.label "Apellido Paterno"
           %p
-            = patient.text_field :lastname1
+            = patient.text_field :lastname1, :onkeyup => 'this.value=stripAccent(this.value)'
           %p
             = patient.label "Apellido Materno"
           %p
-            = patient.text_field :lastname2
+            = patient.text_field :lastname2, :onkeyup => 'this.value=stripAccent(this.value)'
           %p
             = patient.label "Lugar de Nacimiento"
             = patient.select :bornstate_id, State.all.collect {|state| [state.name, state.id]}
@@ -47,7 +47,7 @@
           %p
             = patient.label "Calle"
           %p
-            = patient.text_field :street
+            = patient.text_field :street, :onkeyup => 'this.value=stripAccent(this.value)'
           %p
             = patient.label "Num. Exterior"
           %p

@@ -148,9 +148,14 @@ body {
 /* line 76, ../../../app/stylesheets/application.sass */
 #content #workspace {
   margin: 10px 10px 10px 10px;
+  padding-bottom: 25px;
+}
+/* line 79, ../../../app/stylesheets/application.sass */
+#content #workspace #clean {
+  padding-bottom: 250px;
 }
 
-/* line 78, ../../../app/stylesheets/application.sass */
+/* line 81, ../../../app/stylesheets/application.sass */
 #content #workspace {
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
@@ -178,16 +183,16 @@ body {
   width: 390px;
   height: 250px;
 }
-/* line 83, ../../../app/stylesheets/application.sass */
+/* line 86, ../../../app/stylesheets/application.sass */
 #content #workspace #patient_exterior {
   width: 60px;
 }
-/* line 85, ../../../app/stylesheets/application.sass */
+/* line 88, ../../../app/stylesheets/application.sass */
 #content #workspace #patient_interior {
   width: 60px;
 }
 
-/* line 88, ../../../app/stylesheets/application.sass */
+/* line 91, ../../../app/stylesheets/application.sass */
 #patients_form table {
   border: 2px solid black;
 }
@@ -268,7 +273,89 @@ body {
   background-color: #dddddd;
 }
 
-/* line 95, ../../../app/stylesheets/application.sass */
+/* line 98, ../../../app/stylesheets/application.sass */
+#patient_show table {
+  border: 2px solid black;
+  width: 100%;
+}
+/* line 2, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
+#patient_show table th {
+  text-align: center;
+  font-weight: bold;
+}
+/* line 6, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
+#patient_show table td,
+#patient_show table th {
+  padding: 2px;
+}
+/* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
+#patient_show table td.numeric,
+#patient_show table th.numeric {
+  text-align: right;
+}
+/* line 14, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
+#patient_show table th, #patient_show table td {
+  border-right: 1px solid #233551;
+  border-bottom: 1px solid #233551;
+  border-left-width: 0px;
+  border-top-width: 0px;
+}
+/* line 21, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
+#patient_show table th:last-child, #patient_show table th.last, #patient_show table td:last-child, #patient_show table td.last {
+  border-right-width: 0px;
+}
+/* line 26, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
+#patient_show table tbody tr:last-child th, #patient_show table tbody tr:last-child td,
+#patient_show table tbody tr.last th,
+#patient_show table tbody tr.last td, #patient_show table tfoot tr:last-child th, #patient_show table tfoot tr:last-child td, #patient_show table tfoot tr.last th, #patient_show table tfoot tr.last td {
+  border-bottom-width: 0px;
+}
+/* line 4, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
+#patient_show table thead th {
+  border-bottom: 2px solid black;
+}
+/* line 7, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
+#patient_show table tfoot th, #patient_show table tfoot td {
+  border-top: 2px solid black;
+}
+/* line 10, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
+#patient_show table th:first-child {
+  border-right: 2px solid black;
+}
+/* line 2, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#patient_show table th {
+  background-color: white;
+}
+/* line 4, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#patient_show table th.even, #patient_show table th:nth-child(2n) {
+  background-color: #dddddd;
+}
+/* line 7, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#patient_show table tr.odd td {
+  background-color: #98c67a;
+}
+/* line 9, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#patient_show table tr.odd td.even, #patient_show table tr.odd td:nth-child(2n) {
+  background-color: #76a458;
+}
+/* line 12, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#patient_show table tr.even td {
+  background-color: #7a98c6;
+}
+/* line 14, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#patient_show table tr.even td.even, #patient_show table tr.even td:nth-child(2n) {
+  background-color: #5876a4;
+}
+/* line 17, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#patient_show table tfoot th, #patient_show table tfoot td {
+  background-color: white;
+}
+/* line 19, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#patient_show table tfoot th.even, #patient_show table tfoot th:nth-child(2n), #patient_show table tfoot td.even, #patient_show table tfoot td:nth-child(2n) {
+  background-color: #dddddd;
+}
+
+/* line 106, ../../../app/stylesheets/application.sass */
 .patient_header table, .patients_result table {
   border: 1px solid #0080ff;
 }
@@ -333,24 +420,24 @@ body {
 .patient_header table tfoot th.even, .patient_header table tfoot th:nth-child(2n), .patient_header table tfoot td.even, .patient_header table tfoot td:nth-child(2n), .patients_result table tfoot th.even, .patients_result table tfoot th:nth-child(2n), .patients_result table tfoot td.even, .patients_result table tfoot td:nth-child(2n) {
   background-color: #eeeeee;
 }
-/* line 100, ../../../app/stylesheets/application.sass */
+/* line 111, ../../../app/stylesheets/application.sass */
 .patient_header table .name, .patients_result table .name {
   width: 290px;
 }
-/* line 102, ../../../app/stylesheets/application.sass */
+/* line 113, ../../../app/stylesheets/application.sass */
 .patient_header table .age, .patients_result table .age {
   width: 60px;
 }
-/* line 104, ../../../app/stylesheets/application.sass */
+/* line 115, ../../../app/stylesheets/application.sass */
 .patient_header table .address, .patients_result table .address {
   width: 290px;
 }
-/* line 106, ../../../app/stylesheets/application.sass */
+/* line 117, ../../../app/stylesheets/application.sass */
 .patient_header table .actions, .patients_result table .actions {
   width: 230px;
 }
 
-/* line 108, ../../../app/stylesheets/application.sass */
+/* line 119, ../../../app/stylesheets/application.sass */
 .info, .success, .warning, .error, .validation {
   border: 1px solid;
   margin: 10px 0px;
@@ -359,49 +446,70 @@ body {
   background-position: 10px center;
 }
 
-/* line 114, ../../../app/stylesheets/application.sass */
+/* line 125, ../../../app/stylesheets/application.sass */
 .info {
   color: #00529b;
   background-color: #bde5f8;
   background-image: url("info.png");
 }
 
-/* line 118, ../../../app/stylesheets/application.sass */
+/* line 129, ../../../app/stylesheets/application.sass */
 .success {
   color: #4f8a10;
   background-color: #dff2bf;
 }
 
-/* line 122, ../../../app/stylesheets/application.sass */
+/* line 133, ../../../app/stylesheets/application.sass */
 .warning {
   color: #9f6000;
   background-color: #feefb3;
   background-image: url("warning.png");
 }
 
-/* line 126, ../../../app/stylesheets/application.sass */
+/* line 137, ../../../app/stylesheets/application.sass */
 .error {
   color: #d8000c;
   background-color: #ffbaba;
   background-image: url("error.png");
 }
 
-/* line 130, ../../../app/stylesheets/application.sass */
+/* line 141, ../../../app/stylesheets/application.sass */
 .validation {
   color: #d63301;
   background-color: #ffccba;
   background-image: url('/images/validation.png?1282080838');
 }
 
-/* line 134, ../../../app/stylesheets/application.sass */
+/* line 145, ../../../app/stylesheets/application.sass */
 .validation h2 {
   color: #9f6000;
   background-color: #feefb3;
   background-image: url("warning.png");
 }
 
-/* line 138, ../../../app/stylesheets/application.sass */
+/* line 149, ../../../app/stylesheets/application.sass */
 h1 {
   text-align: center;
   font-size: 14px;
+}
+
+/* line 152, ../../../app/stylesheets/application.sass */
+#menu_patient {
+  padding-top: 50px;
+}
+/* line 154, ../../../app/stylesheets/application.sass */
+#menu_patient .button {
+  padding: 2px 2px 2px 2px;
+  background-color: #ffffcc;
+  display: block;
+  color: #003366;
+  font-weight: bold;
+  line-height: 29px;
+  margin-bottom: 14px;
+  text-decoration: none;
+  border-color: #6699cc;
+  border-style: double;
+  border-width: medium;
+  cursor: pointer;
+  width: 20em;
 }

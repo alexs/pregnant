@@ -1,0 +1,25 @@
+#patient_show
+  %table{:border => 1}
+    %tr
+      %th{:colspan => 3, :class => "even"}
+        Datos de paciente
+    %tr
+      %td
+        Nombre: 
+        %b #{@patient.fullname}
+      %td
+        Edad: 
+        %b #{@patient.age} años
+      %td
+        Sexo: 
+        %b #{@patient.sex}
+    %tr
+      %td
+        Domicilio: 
+        %b #{@patient.full_address}
+      %td
+        Telefono:  
+        %b #{@patient.phone}
+#menu_patient
+  .button 
+    = link_to_remote "cuestionario CGS-15", :url => {:action => :new}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"

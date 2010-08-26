@@ -75,6 +75,9 @@ body
     font-size: 14px
 #content #workspace
   margin: 10px 10px 10px 10px
+  padding-bottom: 25px
+  #clean
+    padding-bottom: 250px
 #content #workspace
   font-size: 12px
   font-family: Arial,Helvetica,sans-serif
@@ -86,11 +89,19 @@ body
     width: $short_field
 #patients_form
   table
-    $table-color : #7a98c6
+    $table-color: #7a98c6
     +table-scaffolding
     +inner-table-borders(1px, darken($table-color, 40%))
     +outer-table-borders(2px)
     +alternating-rows-and-columns($table-color, adjust-hue($table-color,-120deg), #222)
+#patient_show
+  table
+    $table-color: #7a98c6
+    +table-scaffolding
+    +inner-table-borders(1px, darken($table-color, 40%))
+    +outer-table-borders(2px)
+    +alternating-rows-and-columns($table-color, adjust-hue($table-color,-120deg), #222)
+    width: 100%
 .patient_header, .patients_result
   table
     $table-color : #7a98c6
@@ -138,4 +149,19 @@ body
 h1
   text-align: center
   font-size: 14px
-  
+#menu_patient
+  padding-top: 50px
+  .button
+    padding: 2px 2px 2px 2px
+    background-color: #FFFFCC
+    display: block
+    color: #003366
+    font-weight: bold
+    line-height: 29px
+    margin-bottom: 14px
+    text-decoration: none
+    border-color: #6699CC
+    border-style: double
+    border-width: medium
+    cursor: pointer
+    width: 20em
