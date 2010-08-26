@@ -1,0 +1,11 @@
+- remote_form_for @psychology, :url => {:action => :create } do |f|
+  = f.error_messages
+  %p
+    = f.label :date 
+    = f.date_select :date
+  %p
+    = f.label :weeks_of_gestation
+    = f.text_field :weeks_of_gestation
+  %p
+    = f.submit 'Create'
+    .creating{:style => "display:none;"}

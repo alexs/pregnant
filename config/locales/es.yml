@@ -129,6 +129,9 @@ es:
         # Overrides default messages
 
     attributes:
+     psychology:
+        date: "Fecha"
+        weeks_of_gestation: "Semanas de Gestación"
      detection:
         patient_id: "Paciente"
         securitytype_id: "Seguridad Social"
