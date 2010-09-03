@@ -21,6 +21,7 @@ class CreatePsychologies < ActiveRecord::Migration
       t.integer :nervous_q15
       t.integer :user_id
       t.integer :dependency_id
+      t.integer :patient_id
 
       t.timestamps
     end

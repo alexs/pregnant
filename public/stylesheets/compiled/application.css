@@ -156,8 +156,14 @@ body {
 }
 
 /* line 81, ../../../app/stylesheets/application.sass */
+#create_questionary_dialog {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* line 84, ../../../app/stylesheets/application.sass */
 #content #workspace {
-  font-size: 12px;
+  font-size: 13px;
   font-family: Arial, Helvetica, sans-serif;
 }
 /* line 57, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
@@ -183,16 +189,21 @@ body {
   width: 390px;
   height: 250px;
 }
-/* line 86, ../../../app/stylesheets/application.sass */
+/* line 89, ../../../app/stylesheets/application.sass */
 #content #workspace #patient_exterior {
   width: 60px;
 }
-/* line 88, ../../../app/stylesheets/application.sass */
+/* line 91, ../../../app/stylesheets/application.sass */
 #content #workspace #patient_interior {
   width: 60px;
 }
 
-/* line 91, ../../../app/stylesheets/application.sass */
+/* line 93, ../../../app/stylesheets/application.sass */
+.short_field {
+  width: 60px;
+}
+
+/* line 96, ../../../app/stylesheets/application.sass */
 #patients_form table {
   border: 2px solid black;
 }
@@ -273,7 +284,7 @@ body {
   background-color: #dddddd;
 }
 
-/* line 98, ../../../app/stylesheets/application.sass */
+/* line 103, ../../../app/stylesheets/application.sass */
 #patient_show table {
   border: 2px solid black;
   width: 100%;
@@ -355,7 +366,7 @@ body {
   background-color: #dddddd;
 }
 
-/* line 106, ../../../app/stylesheets/application.sass */
+/* line 111, ../../../app/stylesheets/application.sass */
 .patient_header table, .patients_result table {
   border: 1px solid #0080ff;
 }
@@ -420,24 +431,24 @@ body {
 .patient_header table tfoot th.even, .patient_header table tfoot th:nth-child(2n), .patient_header table tfoot td.even, .patient_header table tfoot td:nth-child(2n), .patients_result table tfoot th.even, .patients_result table tfoot th:nth-child(2n), .patients_result table tfoot td.even, .patients_result table tfoot td:nth-child(2n) {
   background-color: #eeeeee;
 }
-/* line 111, ../../../app/stylesheets/application.sass */
+/* line 116, ../../../app/stylesheets/application.sass */
 .patient_header table .name, .patients_result table .name {
   width: 290px;
 }
-/* line 113, ../../../app/stylesheets/application.sass */
+/* line 118, ../../../app/stylesheets/application.sass */
 .patient_header table .age, .patients_result table .age {
   width: 60px;
 }
-/* line 115, ../../../app/stylesheets/application.sass */
+/* line 120, ../../../app/stylesheets/application.sass */
 .patient_header table .address, .patients_result table .address {
   width: 290px;
 }
-/* line 117, ../../../app/stylesheets/application.sass */
+/* line 122, ../../../app/stylesheets/application.sass */
 .patient_header table .actions, .patients_result table .actions {
   width: 230px;
 }
 
-/* line 119, ../../../app/stylesheets/application.sass */
+/* line 124, ../../../app/stylesheets/application.sass */
 .info, .success, .warning, .error, .validation {
   border: 1px solid;
   margin: 10px 0px;
@@ -446,58 +457,58 @@ body {
   background-position: 10px center;
 }
 
-/* line 125, ../../../app/stylesheets/application.sass */
+/* line 130, ../../../app/stylesheets/application.sass */
 .info {
   color: #00529b;
   background-color: #bde5f8;
   background-image: url("info.png");
 }
 
-/* line 129, ../../../app/stylesheets/application.sass */
+/* line 134, ../../../app/stylesheets/application.sass */
 .success {
   color: #4f8a10;
   background-color: #dff2bf;
 }
 
-/* line 133, ../../../app/stylesheets/application.sass */
+/* line 138, ../../../app/stylesheets/application.sass */
 .warning {
   color: #9f6000;
   background-color: #feefb3;
   background-image: url("warning.png");
 }
 
-/* line 137, ../../../app/stylesheets/application.sass */
+/* line 142, ../../../app/stylesheets/application.sass */
 .error {
   color: #d8000c;
   background-color: #ffbaba;
   background-image: url("error.png");
 }
 
-/* line 141, ../../../app/stylesheets/application.sass */
+/* line 146, ../../../app/stylesheets/application.sass */
 .validation {
   color: #d63301;
   background-color: #ffccba;
   background-image: url('/images/validation.png?1282080838');
 }
 
-/* line 145, ../../../app/stylesheets/application.sass */
+/* line 150, ../../../app/stylesheets/application.sass */
 .validation h2 {
   color: #9f6000;
   background-color: #feefb3;
   background-image: url("warning.png");
 }
 
-/* line 149, ../../../app/stylesheets/application.sass */
+/* line 154, ../../../app/stylesheets/application.sass */
 h1 {
   text-align: center;
   font-size: 14px;
 }
 
-/* line 152, ../../../app/stylesheets/application.sass */
+/* line 157, ../../../app/stylesheets/application.sass */
 #menu_patient {
   padding-top: 50px;
 }
-/* line 154, ../../../app/stylesheets/application.sass */
+/* line 159, ../../../app/stylesheets/application.sass */
 #menu_patient .button {
   padding: 2px 2px 2px 2px;
   background-color: #ffffcc;
@@ -511,5 +522,12 @@ h1 {
   border-style: double;
   border-width: medium;
   cursor: pointer;
-  width: 20em;
+  width: 12em;
+}
+
+/* line 173, ../../../app/stylesheets/application.sass */
+.fieldWithErrors {
+  padding: 2px;
+  display: inline-block;
+  background-color: #ffbaba;
 }

@@ -24,7 +24,7 @@ class PsychologiesController < ApplicationController
   # GET /psychologies/new
   # GET /psychologies/new.xml
   def new
-    @psychology = Psychology.new
+    @psychology = Psychology.new(:patient_id => params[:id])
   end
 
   # GET /psychologies/1/edit
@@ -32,24 +32,18 @@ class PsychologiesController < ApplicationController
     @psychology = Psychology.find(params[:id])
   end
 
-  # POST /psychologies
-  # POST /psychologies.xml
   def create
     @psychology = Psychology.new(params[:psychology])
 
     respond_to do |format|
       if @psychology.save
-        format.html { redirect_to(@psychology, :notice => 'Psychology was successfully created.') }
-        format.xml  { render :xml => @psychology, :status => :created, :location => @psychology }
+        format.js { render :action => "create" }
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @psychology.errors, :status => :unprocessable_entity }
+        format.js { render :action => "new" }
       end
     end
   end
 
-  # PUT /psychologies/1
-  # PUT /psychologies/1.xml
   def update
     @psychology = Psychology.find(params[:id])
 

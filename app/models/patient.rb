@@ -9,6 +9,7 @@ class Patient < ActiveRecord::Base
   belongs_to :square
   belongs_to :state
   has_many :patients
+  has_many :psychologies
   
   def keygen(patient, borndate)
     key = rfc(patient, borndate) + unique_chars(patient, borndate)

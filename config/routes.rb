@@ -1,14 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :psychologies
-
-  map.resources :psychologies
-
-#  map.resources :meetings, :member => {:get_meetings => :get}
+  map.resources :psychologies, :belongs_to => [ :patient]
+# map.resources :meetings, :member => {:get_meetings => :get}
   map.resources :squares
   map.resources :squares
   map.resources :counties
   map.resources :states
-  map.resources :patients
+  map.resources :patients, :has_many => [:psychologies]
   map.resource :navigator
   map.root :controller => "navigators"
 

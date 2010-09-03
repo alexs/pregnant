@@ -78,8 +78,11 @@ body
   padding-bottom: 25px
   #clean
     padding-bottom: 250px
+#create_questionary_dialog
+  font-size: 14px
+  font-family: Arial,Helvetica,sans-serif
 #content #workspace
-  font-size: 12px
+  font-size: 13px
   font-family: Arial,Helvetica,sans-serif
   +blueprint-form-borders(#207DD4,#DA9A22,#35567B)
   +blueprint-form-sizes
@@ -87,6 +90,8 @@ body
     width: $short_field
   #patient_interior
     width: $short_field
+.short_field
+  width: $short_field
 #patients_form
   table
     $table-color: #7a98c6
@@ -164,4 +169,8 @@ h1
     border-style: double
     border-width: medium
     cursor: pointer
-    width: 20em
+    width: 12em
+.fieldWithErrors
+  padding: 2px
+  display: inline-block
+  background-color: #FFBABA

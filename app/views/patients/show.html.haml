@@ -22,6 +22,13 @@
         %b #{@patient.phone}
 #menu_patient
   .button 
-    = link_to_remote "cuestionario CGS-15", :url => {:controller => 'psychologies', :action => :new}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+    - if @patient.psychologies.size < 1
+      = link_to_remote "Cuestionario CGS-15", :url => {:controller => 'psychologies', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+      .status{ :style => 'display:none'}
+        = image_tag("checked.png")
+    - else
+      Cuestionario CGS-15
+      .status{ :style => 'display:inline'}
+        = image_tag("checked.png")
 #create_questionary_dialog{ :stylefood => 'display:none' }
   #create_questionary

@@ -81,7 +81,7 @@
     <%= f.text_field :dependency_id %>
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Guardar' %>
   </p>
 <% end %>
 
