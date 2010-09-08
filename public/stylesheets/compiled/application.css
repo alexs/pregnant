@@ -505,10 +505,17 @@ h1 {
 }
 
 /* line 157, ../../../app/stylesheets/application.sass */
+.questionary_title {
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* line 161, ../../../app/stylesheets/application.sass */
 #menu_patient {
   padding-top: 50px;
 }
-/* line 159, ../../../app/stylesheets/application.sass */
+/* line 163, ../../../app/stylesheets/application.sass */
 #menu_patient .button {
   padding: 2px 2px 2px 2px;
   background-color: #ffffcc;
@@ -525,9 +532,90 @@ h1 {
   width: 12em;
 }
 
-/* line 173, ../../../app/stylesheets/application.sass */
+/* line 177, ../../../app/stylesheets/application.sass */
 .fieldWithErrors {
   padding: 2px;
   display: inline-block;
   background-color: #ffbaba;
+}
+
+/* line 182, ../../../app/stylesheets/application.sass */
+.clinical_form table {
+  border: 2px solid black;
+}
+/* line 2, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
+.clinical_form table th {
+  text-align: center;
+  font-weight: bold;
+}
+/* line 6, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
+.clinical_form table td,
+.clinical_form table th {
+  padding: 2px;
+}
+/* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
+.clinical_form table td.numeric,
+.clinical_form table th.numeric {
+  text-align: right;
+}
+/* line 14, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
+.clinical_form table th, .clinical_form table td {
+  border-right: 1px solid #233551;
+  border-bottom: 1px solid #233551;
+  border-left-width: 0px;
+  border-top-width: 0px;
+}
+/* line 21, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
+.clinical_form table th:last-child, .clinical_form table th.last, .clinical_form table td:last-child, .clinical_form table td.last {
+  border-right-width: 0px;
+}
+/* line 26, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
+.clinical_form table tbody tr:last-child th, .clinical_form table tbody tr:last-child td,
+.clinical_form table tbody tr.last th,
+.clinical_form table tbody tr.last td, .clinical_form table tfoot tr:last-child th, .clinical_form table tfoot tr:last-child td, .clinical_form table tfoot tr.last th, .clinical_form table tfoot tr.last td {
+  border-bottom-width: 0px;
+}
+/* line 4, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
+.clinical_form table thead th {
+  border-bottom: 2px solid black;
+}
+/* line 7, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
+.clinical_form table tfoot th, .clinical_form table tfoot td {
+  border-top: 2px solid black;
+}
+/* line 10, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
+.clinical_form table th:first-child {
+  border-right: 2px solid black;
+}
+/* line 2, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.clinical_form table th {
+  background-color: white;
+}
+/* line 4, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.clinical_form table th.even, .clinical_form table th:nth-child(2n) {
+  background-color: #dddddd;
+}
+/* line 7, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.clinical_form table tr.odd td {
+  background-color: #98c67a;
+}
+/* line 9, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.clinical_form table tr.odd td.even, .clinical_form table tr.odd td:nth-child(2n) {
+  background-color: #76a458;
+}
+/* line 12, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.clinical_form table tr.even td {
+  background-color: #7a98c6;
+}
+/* line 14, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.clinical_form table tr.even td.even, .clinical_form table tr.even td:nth-child(2n) {
+  background-color: #5876a4;
+}
+/* line 17, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.clinical_form table tfoot th, .clinical_form table tfoot td {
+  background-color: white;
+}
+/* line 19, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.clinical_form table tfoot th.even, .clinical_form table tfoot th:nth-child(2n), .clinical_form table tfoot td.even, .clinical_form table tfoot td:nth-child(2n) {
+  background-color: #dddddd;
 }

@@ -154,6 +154,10 @@ body
 h1
   text-align: center
   font-size: 14px
+.questionary_title
+  text-align: left
+  font-size: 14px
+  font-weight: bold
 #menu_patient
   padding-top: 50px
   .button
@@ -174,3 +178,10 @@ h1
   padding: 2px
   display: inline-block
   background-color: #FFBABA
+.clinical_form
+  table
+    $table-color : #7a98c6
+    +table-scaffolding
+    +inner-table-borders(1px, darken($table-color, 40%))
+    +outer-table-borders(2px)
+    +alternating-rows-and-columns($table-color, adjust-hue($table-color, -120deg), #222)

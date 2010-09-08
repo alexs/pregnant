@@ -15,7 +15,7 @@ class PatientsController < ApplicationController
     @patient = Patient.find(params[:id])
 
     respond_to do |format|
-      format.html { render :layout => false }
+      format.html { render :partial => 'show' }
     end
   end
 

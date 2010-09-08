@@ -1,6 +1,4 @@
 class ClinicalHistoriesController < ApplicationController
-  # GET /clinical_histories
-  # GET /clinical_histories.xml
   def index
     @clinical_histories = ClinicalHistory.all
 
@@ -10,8 +8,6 @@ class ClinicalHistoriesController < ApplicationController
     end
   end
 
-  # GET /clinical_histories/1
-  # GET /clinical_histories/1.xml
   def show
     @clinical_history = ClinicalHistory.find(params[:id])
 
@@ -21,14 +17,11 @@ class ClinicalHistoriesController < ApplicationController
     end
   end
 
-  # GET /clinical_histories/new
-  # GET /clinical_histories/new.xml
   def new
-    @clinical_history = ClinicalHistory.new
+    @clinical_history = ClinicalHistory.new(:patient_id => params[:id])
 
     respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @clinical_history }
+      format.js
     end
   end
 
