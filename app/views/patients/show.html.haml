@@ -30,5 +30,14 @@
       Cuestionario CGS-15
       .status{ :style => 'display:inline'}
         = image_tag("checked.png")
+  .button 
+    - if @patient.clinical_histories.size < 1
+      = link_to_remote "Historia Clinica Perinatal", :url => {:controller => 'clinical_histories', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+      .status_clinical{ :style => 'display:none'}
+        = image_tag("checked.png")
+    - else
+      Historia Clinica Perinatal
+      .status_clinical{ :style => 'display:inline'}
+        = image_tag("checked.png")
 #create_questionary_dialog{ :stylefood => 'display:none' }
   #create_questionary

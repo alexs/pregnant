@@ -65,7 +65,7 @@
           %p
             = select_tag "county", "<option>Selecciona antes un estado</option>", :name => 'county'
           %p
-            = patient.label "Colonia: "
+            = patient.label "Colonia y Código postal: "
           %p
             = patient.select :square_id, [["Selecciona antes un municipio","Invalid"]]
           %p
@@ -86,5 +86,16 @@
             = patient.label "Telefono"
           %p
             = patient.text_field :phone
+      %tr
+        %td{:colspan => "2"}
           %p
+            = patient.label "Estado Civil"
+          %p
+            = patient.select(:maritalstatus_id, Maritalstatus.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true })
+          %p
+            = patient.label "Ocupación"
+          %p
+            = patient.select(:ocupation_id, Ocupation.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true })
+          %p
+      
     = patient.submit 'Guardar'

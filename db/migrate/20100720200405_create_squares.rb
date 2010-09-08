@@ -2,7 +2,8 @@ class CreateSquares < ActiveRecord::Migration
   def self.up
     create_table :squares do |t|
       t.string :name
-      t.integer :cp
+      t.string :cp
+      t.string :square_type
       t.references :county
 
       t.timestamps

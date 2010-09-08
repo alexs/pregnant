@@ -1,33 +1,33 @@
-"id","name"
-1,"Aguascalientes"
-2,"Baja California"
-3,"Baja California Sur"
-4,"Campeche"
-5,"Coahuila de Zaragoza"
-6,"Colima"
-7,"Chiapas"
-8,"Chihuahua"
-9,"Distrito Federal"
-10,"Durango"
-11,"Guanajuato"
-12,"Guerrero"
-13,"Hidalgo"
-14,"Jalisco"
-15,"Mexico"
-16,"Michoacan de Ocampo"
-17,"Morelos"
-18,"Nayarit"
-19,"Nuevo Leon"
-20,"Oaxaca"
-21,"Puebla"
-22,"Queretaro"
-23,"Quintana Roo"
-24,"San Luis Potosi"
-25,"Sinaloa"
-26,"Sonora"
-27,"Tabasco"
-28,"Tamaulipas"
-29,"Tlaxcala"
-30,"Veracruz "
-31,"Yucatan"
-32,"Zacatecas"
+id, name, key
+1,Aguascalientes,AS
+2,Baja California,BC
+3,Baja California Sur,BS
+4,Campeche,CC
+5,Coahuila,CL
+6,Colima,CM
+7,Chiapas,CS
+8,Chihuahua,CH
+9,Distrito Federal,DF
+10,Durango,DG
+11,Guanajuato,GT
+12,Guerrero,GR
+13,Hidalgo,HG
+14,Jalisco,JC
+15,Estado de Mexico,MC
+16,Michoacán,MN
+17,Morelos,MS
+18,Nayarit,NT
+19,Nuevo León,NL
+20,Oaxaca,OC
+21,Puebla,PL
+22,Querétaro,QR
+23,Quintana Roo,QR
+24,San Luis Potosí,SP
+25,Sinaloa,SL
+26,Sonora,SR
+27,Tabasco,TC
+28,Tamaulipas,TS
+29,Tlaxcala,TL
+30,Veracruz,VZ
+31,Yucatán,YN
+32,Zacatecas,ZS
