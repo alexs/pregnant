@@ -37,17 +37,13 @@ class ClinicalHistoriesController < ApplicationController
 
     respond_to do |format|
       if @clinical_history.save
-        format.html { redirect_to(@clinical_history, :notice => 'ClinicalHistory was successfully created.') }
-        format.xml  { render :xml => @clinical_history, :status => :created, :location => @clinical_history }
+        format.js { render :action => "create" }
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @clinical_history.errors, :status => :unprocessable_entity }
+        format.js { render :action => "new" }
       end
     end
   end
 
-  # PUT /clinical_histories/1
-  # PUT /clinical_histories/1.xml
   def update
     @clinical_history = ClinicalHistory.find(params[:id])
 
