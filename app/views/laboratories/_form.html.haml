@@ -1,0 +1,103 @@
+- remote_form_for @laboratory, :url => {:action => :create }, :before => "$('.creating').show();", :complete => "$('.creating').hide();" do |f|
+  - if !f.error_messages.empty?
+    .validation
+      = f.error_messages
+  %table
+    %tr
+      %td
+        = f.label :date
+        = f.date_select :date
+        = f.hidden_field :patient_id, :value => @laboratory.patient_id
+    %tr
+      %td
+        = f.label "Diagnostico Presuntivo:"
+        = f.text_field :presumptive_diagnosis
+    %tr
+      %td
+        = f.label "Fecha próxima de consulta:"
+        = f.date_select :date_next_consult
+    %tr
+      %td
+        = f.label "Médico Solicitante:"
+        = f.text_field :applicant_doctor
+  %hr
+  %h2 Hematología:
+  %br
+  %table
+    %tr
+      %td
+        = f.label "Hemoglobina:"
+        = f.text_field :hemoglobina
+      %td
+        = f.label "Hematócrito:"
+        = f.text_field :hematocrito 
+      %td 
+        = f.label "CMHC:"
+        = f.text_field :cmhc 
+    %tr
+      %td
+        = f.label "Leucocitos:"
+        = f.text_field :leucocitos 
+      %td
+        = f.label "Cuenta Diferencial:"
+        = f.text_field :cuenta_diferencial
+      %td
+        = f.label "Linfocitos:"
+        = f.text_field :linfocitos
+    %tr 
+      %td
+        = f.label "Monocitos:"
+        = f.text_field :monocitos
+      %td
+        = f.label "Eosinófilos:"
+        = f.text_field :eosinofilos
+      %td   
+        = f.label "Basófilos:"
+        = f.text_field :basofilos
+    %tr
+      %td
+        = f.label "Neut. Segmen."
+        = f.text_field :neut_segmen
+      %td
+        = f.label "Neut. en Banda."
+        = f.text_field :neut_banda
+  %br
+  = f.label "alteraciones"
+  %br
+  = f.text_area :alteraciones, :size => "15x5"
+  %br
+  %br
+  %table
+    %tr
+      %td
+        = f.label "Reticulocitos"
+        = f.text_field :reticulocitos
+      %td
+        = f.label "Plaquetas"
+        = f.text_field :plaquetas
+      %td
+        = f.label "Sed. Globular"
+        = f.text_field :sed_globular
+    %tr
+      %td
+        = f.label "Grupo Sanguineo"
+        = f.text_field :grupo_sanguineo
+      %td
+        = f.label "Factor Rh"
+        = f.text_field :factor_rh
+      %td
+        = f.label "T. Protrombina"
+        = f.text_field :t_protrombina
+    %tr
+      %td
+        = f.label "T. Parcial Tromb."
+        = f.text_field :t_parcial_tromb 
+	      
+			
+  .guardar
+    = f.submit 'Guardar'
+  .creating{:style => "display:none;"}Guardando, porfavor espere
+	   
+		
+		
+			
