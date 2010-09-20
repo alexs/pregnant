@@ -37,7 +37,7 @@
           %p
             = patient.label "Fecha de nacimiento"
           %p
-            = patient.date_select(:birthday)
+            = patient.date_select(:birthday, :order => [:day, :month, :year], :start_year => 1900, :end_year => Time.now.year - 9)
           %p
             = patient.label "Sexo"
           %p

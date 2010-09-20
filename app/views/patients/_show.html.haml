@@ -17,9 +17,13 @@
       %td
         Domicilio: 
         %b #{@patient.full_address}
-      %td
+      %td{:colspan=> 2}
         Telefono:  
         %b #{@patient.phone}
+    %tr
+      %td
+        CUIP(Clave Unica Identificadora de Paciente): 
+        %b #{@patient.cuip}
 #menu_patient
   .button 
     - if @patient.psychologies.size < 1
