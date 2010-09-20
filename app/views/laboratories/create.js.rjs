@@ -1,2 +1,2 @@
 page<<"$('#create_questionary_dialog').dialog('destroy');"
-page<<"$('.status').css('display','inline');"
+page<<"$('.status_laboratory').css('display','inline');"
