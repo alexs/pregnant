@@ -284,6 +284,17 @@
   %p
     = f.label "MOLAS: "
     = f.text_field :molas, :size => 5
+  %p
+    %table
+      %tr.odd
+        %th{:width => "100px"} AÑO
+        %th{:width => "300px"} TIPO EMBARAZO
+        %th{:width => "300px"} RESOLUCION
+  %p
+    %table
+      - f.fields_for :past_pregnants do |builder|
+        = render 'past_pregnantfields', :f => builder
+      = link_to_add_fields "Ingresar datos de otro embarazo pasado", f, :past_pregnants
   %br
     %h1.questionary_title DATOS DEL EMBARAZO
     %hr
@@ -326,6 +337,86 @@
     %hr
   %br
   %p
+    .clinical_form
+      %table
+        %tr.odd
+          %th SISTEMA
+          %th SDP
+          %th COMENTARIO
+        %tr.even
+          %td OJOS
+          %td.numeric
+            = f.check_box :inte_ojos
+          %td
+            = f.text_field :inte_ojos_desc
+          %td.numeric
+        %tr.odd
+          %td OIDOS
+          %td.numeric
+            = f.check_box :inte_oidos
+          %td
+            = f.text_field :inte_oidos_desc            
+        %tr.even
+          %td NARIZ
+          %td.numeric
+            = f.check_box :inte_nariz
+          %td
+            = f.text_field :inte_nariz_desc
+        %tr.odd
+          %td GARGANTA
+          %td.numeric
+            = f.check_box :inte_garganta
+          %td
+            = f.text_field :inte_garganta_desc
+        %tr.even
+          %td DIGESTIVO
+          %td.numeric
+            = f.check_box :inte_digestivo
+          %td
+            = f.text_field :inte_digestivo_desc
+        %tr.odd
+          %td CARDIOCIRCULATORIO
+          %td.numeric
+            = f.check_box :inte_cardiocirculatorio
+          %td
+            = f.text_field :inte_cardiocirculatorio_desc
+        %tr.even
+          %td MUSCULOESQUELETICO
+          %td.numeric
+            = f.check_box :inte_musculoesqueletico
+          %td
+            = f.text_field :inte_musculoesqueletico_desc
+        %tr.odd
+          %td PIEL Y TEGUMENTOS
+          %td.numeric
+            = f.check_box :inte_piel_y_tegumentos
+          %td
+            = f.text_field :inte_piel_y_tegumentos_desc
+        %tr.even
+          %td PULMONAR
+          %td.numeric
+            = f.check_box :inte_pulmonar
+          %td
+            = f.text_field :inte_pulmonar_desc
+        %tr.odd
+          %td NEUROGOLICO
+          %td.numeric
+            = f.check_box :inte_neurologico
+          %td
+            = f.text_field :inte_neurologico_desc
+        %tr.even
+          %td PSICOLOGICO
+          %td.numeric
+            = f.check_box :inte_psicologico
+          %td
+            = f.text_field :inte_psicologico_desc
+        %tr.odd
+          %td MAMAS
+          %td.numeric
+            = f.check_box :inte_mamas
+          %td
+            = f.text_field :inte_mamas_desc
+
   %br
     %h1.questionary_title EXPLORACION FISICA
     %hr
@@ -373,33 +464,76 @@
   
   %p
     = f.label :reblandecimientos 
-    = f.check_box :reblandecimientos 
-
+    = f.check_box :reblandecimientos
+  %p
+    .clinical_form
+      %table
+        %tr.odd
+          %th AREA
+          %th SDP
+          %th COMENTARIO
+        %tr.even
+          %td CABEZA-CUELLO-TIROIDES
+          %td.numeric
+            = f.check_box :cabeza_cuello_tiroides
+          %td
+            = f.text_field :cabeza_cuello_tiroides_desc
+          %td.numeric
+        %tr.odd
+          %td CARDIORESPIRATORIO
+          %td.numeric
+            = f.check_box :cardiorespiratorio_desc
+          %td
+            = f.text_field :cardiorespiratorio_desc
+        %tr.even
+          %td MAMAS
+          %td.numeric
+            = f.check_box :explora_mamas
+          %td
+            = f.text_field :explora_mamas_desc
+        %tr.odd
+          %td ABDOMEN
+          %td.numeric
+            = f.check_box :abdomen
+          %td
+            = f.text_field :abdomen_desc
+        %tr.even
+          %td EXTREMIDADES
+          %td.numeric
+            = f.check_box :extremidades
+          %td
+            = f.text_field :extremidades_desc
+        %tr.odd
+          %td GENITALES
+          %td.numeric
+            = f.check_box :genitales
+          %td
+            = f.text_field :genitales_desc
   %br
     %h1.questionary_title IMPRESION DIAGNOSTICA
     %hr
   %br
   %p
-
+    = f.text_area :impresion_diagnostica
   %br
     %h1.questionary_title TRATAMIENTO
     %hr
   %br
   %p
     = f.label "INICIO DE ACIDO FOLICO"
-    = f.check_box :inicio_acido_folico 
+    = f.text_field :inicio_acido_folico 
     SDG,
     = f.label "INICIO DE MULTIVITAMINAS"
-    = f.check_box :inicio_multivitaminas
+    = f.text_field :inicio_multivitaminas
     SDG,
     = f.label "INICIO DE SUPLEMENTOS"
-    = f.check_box :inicio_suplementos
+    = f.text_field :inicio_suplementos
     SDG,
     = f.label "INICIO DE HIERRO"
-    = f.check_box :inicio_hierro 
+    = f.text_field :inicio_hierro 
     SDG,
     = f.label "INICIO DE ASPIRINAS"
-    = f.check_box :inicio_aspirina
+    = f.text_field :inicio_aspirina
     SDG,
   %p
     = f.hidden_field :patient_id, :value => @clinical_history.patient_id

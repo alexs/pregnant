@@ -19,6 +19,7 @@ class ClinicalHistoriesController < ApplicationController
 
   def new
     @clinical_history = ClinicalHistory.new(:patient_id => params[:id])
+    @clinical_history.past_pregnants.build
 
     respond_to do |format|
       format.js

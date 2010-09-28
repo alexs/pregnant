@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  year: 1
+  pregnant_type: MyString
+  resolve: MyString
+  clinical_history: 
+
+two:
+  year: 1
+  pregnant_type: MyString
+  resolve: MyString
+  clinical_history: 
