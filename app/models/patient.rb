@@ -12,7 +12,7 @@ class Patient < ActiveRecord::Base
   belongs_to :ocupation
   has_many :psychologies
   has_many :clinical_histories
-  has_many :laboratories
+  has_many :appoiments
   
   def keygen(patient, borndate)
     key = rfc(patient, borndate) + unique_chars(patient, borndate)

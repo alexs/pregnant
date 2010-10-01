@@ -433,22 +433,38 @@ body {
 }
 /* line 116, ../../../app/stylesheets/application.sass */
 .patient_header table .name, .patients_result table .name {
-  width: 290px;
+  width: 150px;
 }
 /* line 118, ../../../app/stylesheets/application.sass */
+.patient_header table .lastname, .patients_result table .lastname {
+  width: 150px;
+}
+/* line 120, ../../../app/stylesheets/application.sass */
+.patient_header table .date_next_consult, .patients_result table .date_next_consult {
+  width: 100px;
+}
+/* line 122, ../../../app/stylesheets/application.sass */
+.patient_header table .presumptive_diagnosis, .patients_result table .presumptive_diagnosis {
+  width: 290px;
+}
+/* line 124, ../../../app/stylesheets/application.sass */
+.patient_header table .applicant_doctor, .patients_result table .applicant_doctor {
+  width: 150px;
+}
+/* line 126, ../../../app/stylesheets/application.sass */
 .patient_header table .age, .patients_result table .age {
   width: 60px;
 }
-/* line 120, ../../../app/stylesheets/application.sass */
+/* line 128, ../../../app/stylesheets/application.sass */
 .patient_header table .address, .patients_result table .address {
   width: 290px;
 }
-/* line 122, ../../../app/stylesheets/application.sass */
+/* line 130, ../../../app/stylesheets/application.sass */
 .patient_header table .actions, .patients_result table .actions {
   width: 230px;
 }
 
-/* line 124, ../../../app/stylesheets/application.sass */
+/* line 132, ../../../app/stylesheets/application.sass */
 .info, .success, .warning, .error, .validation {
   border: 1px solid;
   margin: 10px 0px;
@@ -457,65 +473,65 @@ body {
   background-position: 10px center;
 }
 
-/* line 130, ../../../app/stylesheets/application.sass */
+/* line 138, ../../../app/stylesheets/application.sass */
 .info {
   color: #00529b;
   background-color: #bde5f8;
   background-image: url("info.png");
 }
 
-/* line 134, ../../../app/stylesheets/application.sass */
+/* line 142, ../../../app/stylesheets/application.sass */
 .success {
   color: #4f8a10;
   background-color: #dff2bf;
 }
 
-/* line 138, ../../../app/stylesheets/application.sass */
+/* line 146, ../../../app/stylesheets/application.sass */
 .warning {
   color: #9f6000;
   background-color: #feefb3;
   background-image: url("warning.png");
 }
 
-/* line 142, ../../../app/stylesheets/application.sass */
+/* line 150, ../../../app/stylesheets/application.sass */
 .error {
   color: #d8000c;
   background-color: #ffbaba;
   background-image: url("error.png");
 }
 
-/* line 146, ../../../app/stylesheets/application.sass */
+/* line 154, ../../../app/stylesheets/application.sass */
 .validation {
   color: #d63301;
   background-color: #ffccba;
   background-image: url('/images/validation.png?1284402700');
 }
 
-/* line 150, ../../../app/stylesheets/application.sass */
+/* line 158, ../../../app/stylesheets/application.sass */
 .validation h2 {
   color: #9f6000;
   background-color: #feefb3;
   background-image: url("warning.png");
 }
 
-/* line 154, ../../../app/stylesheets/application.sass */
+/* line 162, ../../../app/stylesheets/application.sass */
 h1 {
   text-align: center;
   font-size: 14px;
 }
 
-/* line 157, ../../../app/stylesheets/application.sass */
+/* line 165, ../../../app/stylesheets/application.sass */
 .questionary_title {
   text-align: left;
   font-size: 14px;
   font-weight: bold;
 }
 
-/* line 161, ../../../app/stylesheets/application.sass */
+/* line 169, ../../../app/stylesheets/application.sass */
 #menu_patient {
   padding-top: 50px;
 }
-/* line 163, ../../../app/stylesheets/application.sass */
+/* line 171, ../../../app/stylesheets/application.sass */
 #menu_patient .button {
   padding: 2px 2px 2px 2px;
   background-color: #ffffcc;
@@ -532,14 +548,14 @@ h1 {
   width: 12em;
 }
 
-/* line 177, ../../../app/stylesheets/application.sass */
+/* line 185, ../../../app/stylesheets/application.sass */
 .fieldWithErrors {
   padding: 2px;
   display: inline-block;
   background-color: #ffbaba;
 }
 
-/* line 182, ../../../app/stylesheets/application.sass */
+/* line 190, ../../../app/stylesheets/application.sass */
 .clinical_form table {
   border: 2px solid black;
 }

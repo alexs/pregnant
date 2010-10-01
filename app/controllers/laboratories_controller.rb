@@ -24,7 +24,7 @@ class LaboratoriesController < ApplicationController
   # GET /laboratories/new
   # GET /laboratories/new.xml
   def new
-    @laboratory = Laboratory.new(:patient_id => params[:id])
+    @laboratory = Laboratory.new(:appoiment_id => params[:id])
   end
 
 

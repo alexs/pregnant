@@ -1,5 +1,4 @@
 class Laboratory < ActiveRecord::Base
   
-  belongs_to :patient
-  
+  belongs_to :appoiment
 end

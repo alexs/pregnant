@@ -6,20 +6,7 @@
     %tr
       %td
         = f.label :date
-        = f.date_select :date
-        = f.hidden_field :patient_id, :value => @laboratory.patient_id
-    %tr
-      %td
-        = f.label "Diagnostico Presuntivo:"
-        = f.text_field :presumptive_diagnosis
-    %tr
-      %td
-        = f.label "Fecha próxima de consulta:"
-        = f.date_select :date_next_consult
-    %tr
-      %td
-        = f.label "Médico Solicitante:"
-        = f.text_field :applicant_doctor
+        = f.date_select :date    
   %hr
   %h2 Hematología:
   %br
@@ -91,9 +78,218 @@
     %tr
       %td
         = f.label "T. Parcial Tromb."
-        = f.text_field :t_parcial_tromb 
-	      
-			
+        = f.text_field :t_parcial_tromb
+  %hr
+  %h2 Química Sanguínea
+  %br    
+
+  %table
+    %tr
+      %td
+        = f.label "Glucosa"
+        = f.text_field :quimica_sanguinea_glucosa
+      %td
+        = f.label "Hb Glicosilada"
+        = f.text_field :hb_glicosilada
+      %td
+        = f.label "Urea"
+        = f.text_field :urea
+    %tr
+      %td
+        = f.label "Acido Urico"
+        = f.text_field :acido_urico
+      %td
+        = f.label "Creatinina"
+        = f.text_field :creatinina
+      %td
+        = f.label "Colesterol Total"
+        = f.text_field :colesterol_total
+    %tr
+      %td
+        = f.label "Triglicéridos"
+        = f.text_field :trigliceridos
+      %td
+        = f.label "-HDL-"
+        = f.text_field :hdl
+      %td
+        = f.label "--LDL--"
+        = f.text_field :ldl
+    %tr
+      %td
+        = f.label "Bilirrubina Total"
+        = f.text_field :bilirrubina_total
+      %td
+        = f.label "Bilirrubina Directa"
+        = f.text_field :bilirubina_directa
+      %td
+        = f.label "Bilirrubina Indirecta"
+        = f.text_field :bilirrubina_indirecta
+    %tr
+      %td
+        = f.label "ALAT (TGP)"
+        = f.text_field :alat_tgp
+      %td
+        = f.label "ASAT (TGO)"
+        = f.text_field :asat_tgo
+      %td 
+        = f.label "F. Alcalina"
+        = f.text_field :f_alcalina
+  			
+  %hr
+  %h2 Otros (Curva de Tolerancia a la Glucosa) 
+  %br
+  
+  %table
+    %tr
+      %td
+        = f.label "Ayuno"
+        = f.text_field :tolerancia_glucosa_ayuno
+      %td
+        = f.label "1 Hora"
+        = f.text_field :tolerancia_glucosa_1hora
+      %td
+        = f.label "2 Horas"
+        = f.text_field :tolerancia_glucosa_2horas    
+  %br
+  = f.label "Observaciones"
+  %br
+  = f.text_area :alteraciones, :size => "15x5"
+  %br
+  %br
+  
+  %hr
+  %h2 Inmunología
+  %br
+
+  %table
+    %tr
+      %td
+        = f.label "-VDRl-"
+        = f.text_field :vdrl
+      %td
+        = f.label "Antiestreptolisinas"
+        = f.text_field :antiestreptolisinas
+      %td
+        = f.label "Factor Reumatoide"
+        = f.text_field :factor_reumatoide
+    %tr
+      %td
+        = f.label "Proteina C. Reactiva"
+        = f.text_field :proteina_c_reactiva
+      %td
+        = f.label "Prueba de Embarazo"
+        = f.text_field :prueba_embarazo
+  %hr
+  %h2 Parasitología 
+  %br
+  %h2 Coproparasitoscópico
+  %table
+    %tr
+      %td
+        = f.label "1"
+        = f.text_field :coproparasitoscopico1
+    %tr
+      %td
+        = f.label "2"
+        = f.text_field :coproparasitoscopico2
+    %tr
+      %td
+        = f.label "3"
+        = f.text_field :coproparasitoscopico3
+
+  %hr
+  %h2 Urianalisis
+  %br
+  %table
+    %tr
+      %td
+        = f.label "Fisico_quimico"
+        = f.text_field :fisico_quimico
+      %td
+        = f.label "color"
+        = f.text_field :color
+      %td
+        = f.label "PH"
+        = f.text_field :ph
+    %tr
+      %td
+        = f.label "Densidad"
+        = f.text_field :densidad
+      %td
+        = f.label "Glucosa"
+        = f.text_field :urianalisis_glucosa
+      %td
+        = f.label "Cetona"
+        = f.text_field :cetona
+    %tr
+      %td
+        = f.label "Proteina"
+        = f.text_field :proteina
+      %td
+        = f.label "Nitrito"
+        = f.text_field :nitrito
+      %td
+        = f.label "Bilirrubina"
+        = f.text_field :bilirrubina
+    %tr
+      %td
+        = f.label "Hemoglobina"
+        = f.text_field :urianalisis_hemoglobina
+      %td
+        = f.label "Urobilinogeno"
+        = f.text_field :urobilinogeno
+      %td
+        = f.label "Sedimento"
+        = f.text_field :sedimento
+    %tr
+      %td
+        = f.label "Leucocitos"
+        = f.text_field :urianalisisis_leucocitos
+      %td
+        = f.label "Eritrocitos"
+        = f.text_field :eritrocitos
+      %td
+        = f.label "Cel. Epiteliales"
+        = f.text_field :cel_epiteliales
+    %tr
+      %td
+        = f.label "Bacterias"
+        = f.text_field :bacterias
+      %td
+        = f.label "Cristales"
+        = f.text_field :cristales
+      %td
+        = f.label "Cilindros"
+        = f.text_field :cilindros
+
+  %hr
+  %h2 Microbiología
+  %br
+  %table
+    %tr
+      %td
+        = f.label "Exudado (GRAM)"
+        = f.text_field :exudado_gram
+  %h2 Baciloscopia
+  %table
+    %tr
+      %td 
+        = f.label "1"
+        = f.text_field :basiloscopia_baar1
+      %td
+        = f.label "2"
+        = f.text_field :basiloscopia_baar2
+      %td
+        = f.label "3"
+        = f.text_field :basiloscopia_baar3
+    %tr
+      %td
+        = f.label "Cultivo"
+        = f.text_field :cultivo
+      %td
+        = f.label "Otros"
+        = f.text_field :microbiologia_otros
+      
   .guardar
     = f.submit 'Guardar'
   .creating{:style => "display:none;"}Guardando, porfavor espere
