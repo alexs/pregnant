@@ -2,10 +2,7 @@
 
 <table>
   <tr>
-    <th>Date</th>
-    <th>Date next consult</th>
-    <th>Presumptive diagnosis</th>
-    <th>Applicant doctor</th>
+	  <th>Usuario</th>
     <th>Hemoglobina</th>
     <th>Hematocrito</th>
     <th>Cmhc</th>
@@ -79,17 +76,11 @@
     <th>Num registro</th>
     <th>Nombre</th>
     <th>Fecha reporte</th>
-    <th>User</th>
-    <th>Dependency</th>
-    <th>Patient</th>
   </tr>
 
 <% @laboratories.each do |laboratory| %>
   <tr>
-    <td><%=h laboratory.date %></td>
-    <td><%=h laboratory.date_next_consult %></td>
-    <td><%=h laboratory.presumptive_diagnosis %></td>
-    <td><%=h laboratory.applicant_doctor %></td>
+	  <td><%=h laboratory.appoiment.patient.firstname %></td>
     <td><%=h laboratory.hemoglobina %></td>
     <td><%=h laboratory.hematocrito %></td>
     <td><%=h laboratory.cmhc %></td>
@@ -163,9 +154,6 @@
     <td><%=h laboratory.num_registro %></td>
     <td><%=h laboratory.nombre %></td>
     <td><%=h laboratory.fecha_reporte %></td>
-    <td><%=h laboratory.user_id %></td>
-    <td><%=h laboratory.dependency_id %></td>
-    <td><%=h laboratory.patient_id %></td>
     <td><%= link_to 'Show', laboratory %></td>
     <td><%= link_to 'Edit', edit_laboratory_path(laboratory) %></td>
     <td><%= link_to 'Destroy', laboratory, :confirm => 'Are you sure?', :method => :delete %></td>

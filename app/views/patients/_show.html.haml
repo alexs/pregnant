@@ -39,15 +39,9 @@
       Historia Clinica Perinatal
       .status_clinical{ :style => 'display:inline'}
         = image_tag("checked.png")
+
   .button
-    - if @patient.laboratories.size < 1
-      = link_to_remote "Solicitud y Reporte de Resultados de Laboratorio", :url => {:controller => 'laboratories', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
-      .status_laboratory{ :style => 'display:none'}
-        = image_tag("checked.png")
-    - else
-      Solicitud y Reporte de Resultados de Laboratorio 
-      .status_laboratory{ :style => 'display:inline'}
-        = image_tag("checked.png")
+    = link_to_remote "Programas Cita Laboratorio", :url => {:controller => 'appoiments', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
 
 #create_questionary_dialog{ :stylefood => 'display:none' }
   #create_questionary

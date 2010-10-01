@@ -2,9 +2,6 @@ class CreateLaboratories < ActiveRecord::Migration
   def self.up
     create_table :laboratories do |t|
       t.date :date
-      t.date :date_next_consult
-      t.string :presumptive_diagnosis
-      t.string :applicant_doctor
       t.string :hemoglobina
       t.string :hematocrito
       t.string :cmhc
@@ -24,7 +21,7 @@ class CreateLaboratories < ActiveRecord::Migration
       t.string :factor_rh
       t.string :t_protrombina
       t.string :t_parcial_tromb
-      t.string :glucosa
+      t.string :quimica_sanguinea_glucosa
       t.string :hb_glicosilada
       t.string :urea
       t.string :acido_urico
@@ -52,14 +49,15 @@ class CreateLaboratories < ActiveRecord::Migration
       t.string :color
       t.string :ph
       t.string :densidad
-      t.string :glucosa
+      t.string :urianalisis_glucosa
       t.string :cetona
       t.string :proteina
       t.string :nitrito
       t.string :bilirrubina
-      t.string :hemoglobina
+      t.string :urianalisis_hemoglobina
       t.string :sedimento
-      t.string :leucocitos
+      t.string :urobilinogeno
+      t.string :urianalisisis_leucocitos
       t.string :eritrocitos
       t.string :cel_epiteliales
       t.string :bacterias

@@ -19,6 +19,15 @@ class PatientsController < ApplicationController
     end
   end
 
+
+def appointments
+@appointments = Appoiment.find(:all, :conditions => {:patient_id => params[:id]})
+@patient = Patient.find(params[:id] )
+  respond_to do |format|
+    format.js { render :action => 'get_appointments'}
+  end    
+end  
+
   # GET /patients/new
   # GET /patients/new.xml
   def new
