@@ -40,7 +40,7 @@ class AppoimentsController < ApplicationController
 
     respond_to do |format|
       if @appoiment.save
-        format.html { redirect_to(@appoiment, :notice => 'Appoiment was successfully created.') }
+       
         format.xml  { render :xml => @appoiment, :status => :created, :location => @appoiment }
       else
         format.html { render :action => "new" }

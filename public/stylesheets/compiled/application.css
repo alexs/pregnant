@@ -433,7 +433,7 @@ body {
 }
 /* line 116, ../../../app/stylesheets/application.sass */
 .patient_header table .name, .patients_result table .name {
-  width: 150px;
+  width: 200px;
 }
 /* line 118, ../../../app/stylesheets/application.sass */
 .patient_header table .lastname, .patients_result table .lastname {
@@ -445,7 +445,7 @@ body {
 }
 /* line 122, ../../../app/stylesheets/application.sass */
 .patient_header table .presumptive_diagnosis, .patients_result table .presumptive_diagnosis {
-  width: 290px;
+  width: 150px;
 }
 /* line 124, ../../../app/stylesheets/application.sass */
 .patient_header table .applicant_doctor, .patients_result table .applicant_doctor {
@@ -457,11 +457,11 @@ body {
 }
 /* line 128, ../../../app/stylesheets/application.sass */
 .patient_header table .address, .patients_result table .address {
-  width: 290px;
+  width: 300px;
 }
 /* line 130, ../../../app/stylesheets/application.sass */
 .patient_header table .actions, .patients_result table .actions {
-  width: 230px;
+  width: 100px;
 }
 
 /* line 132, ../../../app/stylesheets/application.sass */

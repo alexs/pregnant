@@ -45,7 +45,7 @@
         = image_tag("checked.png")
 
   .button
-    = link_to_remote "Programas Cita Laboratorio", :url => {:controller => 'appoiments', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+    = link_to_remote "Programar Cita para Laboratorio", :url => {:controller => 'appoiments', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
 
 #create_questionary_dialog{ :stylefood => 'display:none' }
   #create_questionary
