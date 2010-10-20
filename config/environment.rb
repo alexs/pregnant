@@ -11,7 +11,7 @@ Rails::Initializer.run do |config|
   config.gem 'haml', :version => '>=3.0.0'
   config.gem 'searchlogic', :version => '>=2.4.23'
   config.time_zone = 'UTC'
-  #conig.gem "authlogic"
+  config.gem "authlogic"
 
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
