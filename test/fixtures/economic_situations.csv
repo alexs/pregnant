@@ -1,0 +1,6 @@
+"id","name","desc","point"
+1,"INDIGENCIA","Inexistencia de ingresos para resolver necesidades primarias.",0
+2,"DEFICIT","Cuando se utiliza del 61% o más del Ingreso familiar.",1
+3,"EQUILIBRIO","Cuando se utiliza del 51% al 60% del Ingreso familiar.",2
+4,"SOLVENTE","Cuando se utiliza del 41% al 50% del Ingreso familiar.",3
+5,"EXCEDENTE","Cuando se utiliza del 40% a menos del Ingreso familiar.",4

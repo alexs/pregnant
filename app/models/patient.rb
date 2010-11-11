@@ -10,6 +10,8 @@ class Patient < ActiveRecord::Base
   belongs_to :state
   belongs_to :maritalstatus
   belongs_to :ocupation
+  belongs_to :economic_situation
+  belongs_to :tipo_vivienda
   has_many :psychologies
   has_many :clinical_histories
   has_many :appoiments

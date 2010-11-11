@@ -1,4 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :socioeconomic_ocupations
+
+  map.resources :economic_situations
+
+  map.resources :ocupations
+
+  map.resources :socioeconomics
+
   map.resources :first_times
 
   map.resources :appoiments
