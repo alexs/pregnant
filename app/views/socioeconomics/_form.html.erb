@@ -4,7 +4,9 @@
 
   <p>
     <%= f.label :ocupation %><br />
-    <%= f.select(:ocupation, Ocupation.all.collect{|p| [p.name, p.id]}, { :include_blank => true }) %>
+    <%= f.select(:ocupation, SocioeconomicOcupation.all.collect{|p|
+    [p.name, p.id]}, { :include_blank => true }) %>
+
   </p>
   <p>
     <table border="1">
@@ -55,16 +57,39 @@
 
   <p>
     <%= f.label "Situación Económica" %><br />
-    <%= f.select(:economic_situation_id, EconomicSituation.all.collect{|p| [p.name, p.id]}, { :include_blank => true }) %>
+    <%= f.select(:economic_situation_id,
+    EconomicSituation.all.collect{|p| [p.name + ": " + p.desc, p.id]}, { :include_blank => true }) %>
   </p>
   <p>
     <%= f.label "Tipo de vivienda" %><br />
     <%= f.select(:tipo_vivienda_id, TipoVivienda.all.collect{|p| [p.name, p.id]}, { :include_blank => true }) %>
   </p>
   <p>
+    <table>
+      <tr>
+        <th>Numero de dormitorios</th>
+      </tr>
+      <tr>
+        <td>
+          Vivienda en un cuarto <br />
+          1 a 2 <br />
+          3 <br />
+          4 a más
+        </td>
+        <td>
+          <%= f.radio_button(:dormitorios,0) %><br />
+          <%= f.radio_button(:dormitorios,1) %><br />
+          <%= f.radio_button(:dormitorios,2) %><br />
+          <%= f.radio_button(:dormitorios,3) %>
+        </td>
+      </tr>
+    </table>
+  </p>
+  <p>
     <%= f.label :calificacion %><br />
     <%= f.text_field :calificacion %>
   </p>
+  <%= f.hidden_field :patient_id, :value => @socioeconomic.patient_id %>
  <div class="guardar">
     <%= f.submit 'Guardar' %>
   </div>
