@@ -73,6 +73,77 @@ class CreateLaboratories < ActiveRecord::Migration
       t.string :tolerancia_glucosa_1hora
       t.string :tolerancia_glucosa_2horas
       t.string :tolerancia_glucosa_observaciones
+
+
+      t.boolean :hemoglobina_reactivo
+      t.boolean :hematocrito_reactivo
+      t.boolean :cmhc_reactivo
+      t.boolean :leucocitos_reactivo
+      t.boolean :cuenta_diferencial_reactivo
+      t.boolean :linfocitos_reactivo
+      t.boolean :monocitos_reactivo
+      t.boolean :eosinofilos_reactivo
+      t.boolean :basofilos_reactivo
+      t.boolean :neut_segmen_reactivo
+      t.boolean :neut_banda_reactivo
+      t.boolean :reticulocitos_reactivo
+      t.boolean :plaquetas_reactivo
+      t.boolean :sed_globular_reactivo
+      t.boolean :grupo_sanguineo_reactivo
+      t.boolean :factor_rh_reactivo
+      t.boolean :t_protrombina_reactivo
+      t.boolean :t_parcial_tromb_reactivo
+      t.boolean :quimica_sanguinea_glucosa_reactivo
+      t.boolean :hb_glicosilada_reactivo
+      t.boolean :urea_reactivo
+      t.boolean :acido_urico_reactivo
+      t.boolean :creatinina_reactivo
+      t.boolean :colesterol_total_reactivo
+      t.boolean :trigliceridos_reactivo
+      t.boolean :hdl_reactivo
+      t.boolean :ldl_reactivo
+      t.boolean :bilirrubina_total_reactivo
+      t.boolean :bilirubina_directa_reactivo
+      t.boolean :bilirrubina_indirecta_reactivo
+      t.boolean :alat_tgp_reactivo
+      t.boolean :asat_tgo_reactivo
+      t.boolean :f_alcalina_reactivo
+      t.boolean :vdrl_reactivo
+      t.boolean :antiestreptolisinas_reactivo
+      t.boolean :factor_reumatoide_reactivo
+      t.boolean :proteina_c_reactiva_reactivo
+      t.boolean :prueba_embarazo_reactivo
+      t.boolean :coproparasitoscopico1_reactivo
+      t.boolean :coproparasitoscopico2_reactivo
+      t.boolean :coproparasitoscopico3_reactivo
+      t.boolean :fisico_quimico_reactivo
+      t.boolean :color_reactivo_reactivo
+      t.boolean :ph_reactivo
+      t.boolean :densidad_reactivo
+      t.boolean :urianalisis_glucosa_reactivo
+      t.boolean :cetona_reactivo
+      t.boolean :proteina_reactivo
+      t.boolean :nitrito_reactivo
+      t.boolean :bilirrubina_reactivo
+      t.boolean :urianalisis_hemoglobina_reactivo
+      t.boolean :sedimento_reactivo
+      t.boolean :urobilinogeno_reactivo
+      t.boolean :urianalisisis_leucocitos_reactivo
+      t.boolean :eritrocitos_reactivo
+      t.boolean :cel_epiteliales_reactivo
+      t.boolean :bacterias_reactivo
+      t.boolean :cristales_reactivo
+      t.boolean :cilindros_reactivo
+      t.boolean :exudado_gram_reactivo
+      t.boolean :basiloscopia_baar1_reactivo
+      t.boolean :basiloscopia_baar2_reactivo
+      t.boolean :basiloscopia_baar3_reactivo
+      t.boolean :cultivo_reactivo
+      t.boolean :tolerancia_glucosa_ayuno_reactivo
+      t.boolean :tolerancia_glucosa_1hora_reactivo
+      t.boolean :tolerancia_glucosa_2horas_reactivo
+
+
       t.string :num_registro
       t.string :nombre
       t.date :fecha_reporte
