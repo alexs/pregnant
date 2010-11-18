@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :risk_factors
+
   map.resources :socioeconomic_ocupations
 
   map.resources :economic_situations
