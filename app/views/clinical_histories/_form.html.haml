@@ -300,8 +300,6 @@
     %hr
   %br
   %p
-    = f.label "FECHA PROBABLE DE PARTO: "
-    = f.date_select :fecha_probable_parto  
     = f.label "ALTURA DEL FONDO UTERINO: "
     = f.text_field :altura_fondo_uterino, :size => 5
     CMS
@@ -540,12 +538,14 @@
   %p
     = f.label :user_id 
     = f.text_field :user_id 
-  
   %p
     = f.label :dependency_id 
     = f.text_field :dependency_id 
   %hr
   %p
+  .guardado{:style => "display:none;"}
+    = image_tag("checked.png") 
+    Se ha guardado correctamente
   .guardar
     = f.submit 'Guardar'
   .creating{:style => "display:none;"}Guardando, porfavor espere

@@ -100,7 +100,12 @@
     <%= f.label :dependency_id %><br />
     <%= f.text_field :dependency_id %>
   </p>
+  <div class="created" style = "display:none">
+    Se ha guardado con éxito.
+  </div>
+  <div class="save" style = "display:inline">
   <%= f.submit "guardar" %>
+  </div>
   <div class="creating" style = "display:none">
     Guardando, porfavor espere...
   </div>

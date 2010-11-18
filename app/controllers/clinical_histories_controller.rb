@@ -35,6 +35,8 @@ class ClinicalHistoriesController < ApplicationController
   # POST /clinical_histories.xml
   def create
     @clinical_history = ClinicalHistory.new(params[:clinical_history])
+    @probable_embarazo = @clinical_history.fum + 280
+    @clinical_history.fecha_probable_parto = @probable_embarazo
 
     respond_to do |format|
       if @clinical_history.save
