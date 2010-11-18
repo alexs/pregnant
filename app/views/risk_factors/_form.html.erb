@@ -93,12 +93,10 @@
     <%= f.hidden_field :patient_id, :value => @risk_factor.patient_id %>
   </p>
   <p>
-    <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
+    <%= f.hidden_field :user_id, :value => 1 %>
   </p>
   <p>
-    <%= f.label :dependency_id %><br />
-    <%= f.text_field :dependency_id %>
+    <%= f.hidden_field :dependency_id, :value => 1 %>
   </p>
   <div class="created" style = "display:none">
     Se ha guardado con éxito.
