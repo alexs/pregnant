@@ -12,6 +12,7 @@ class Patient < ActiveRecord::Base
   belongs_to :ocupation
   belongs_to :economic_situation
   belongs_to :tipo_vivienda
+  belongs_to :schooling
   has_many :psychologies
   has_many :clinical_histories
   has_many :appoiments

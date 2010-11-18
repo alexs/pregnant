@@ -97,5 +97,9 @@
           %p
             = patient.select(:ocupation_id, Ocupation.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true })
           %p
-      
+            = patient.label "Escolaridad"
+          %p
+            = patient.select(:schooling_id, Schooling.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true })
+          %p
+     
     = patient.submit 'Guardar'
