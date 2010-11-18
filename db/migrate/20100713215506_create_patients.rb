@@ -5,7 +5,7 @@ class CreatePatients < ActiveRecord::Migration
       t.string :cuip, :firstname, :lastname1, :lastname2, :street, :exterior, :cp, :null => false
       t.date :birthday, :null => false
       t.boolean :gender, :null => false
-      t.references :user, :dependency, :bornstate, :square, :null => false
+      t.references :user, :dependency, :bornstate, :square, :schooling, :null => false
 
       t.timestamps
     end
