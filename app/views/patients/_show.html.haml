@@ -51,5 +51,22 @@
     = link_to_remote "Ficha Socio Económica Inicial", :url => {:controller => 'socioeconomics', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
   .button
     = link_to_remote "Factores de Riesgo Modificables", :url => {:controller => 'risk_factors', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+    - if @patient.ries_pars.size < 1
+      = link_to_remote "Cuestionario de Riesgo de Parentaje", :url => {:controller => 'ries_pars', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+      .status{ :style => 'display:none'}
+        = image_tag("checked.png")
+    - else
+      Cuestionario de Riesgo de Parentaje
+      .status{ :style => 'display:inline'}
+      = image_tag("checked.png")
+  .button
+    - if @patient.ries_pars.size < 1
+      = link_to_remote "Ultra Sonido", :url => {:controller => 'ultra_sounds', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+      .status{ :style => 'display:none'}
+        = image_tag("checked.png")
+    - else
+      Ultra Sonido
+      .status{ :style => 'display:inline'}
+      = image_tag("checked.png")
 #create_questionary_dialog{ :stylefood => 'display:none' }
   #create_questionary

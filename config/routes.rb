@@ -4,17 +4,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :risk_factors
   map.resources :violencies
 
-  map.resources :violencies
+  map.resources :ultra_sounds
 
-  map.resources :violencies
-
-  map.resources :violencies
-
-  map.resources :violencies
-
-  map.resources :violencies
-
-  map.resources :violencies
+  map.resources :ries_pars
 
   map.resources :socioeconomic_ocupations
 

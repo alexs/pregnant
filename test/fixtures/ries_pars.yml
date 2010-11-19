@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  no_preparada_emb: 1
+  no_razon: MyString
+  considero_problema_grande: 1
+  cosas_infancia: 1
+  no_apoyo_pareja: 1
+  no_personas_necesito: 1
+  desconfianza_madre: 1
+
+two:
+  no_preparada_emb: 1
+  no_razon: MyString
+  considero_problema_grande: 1
+  cosas_infancia: 1
+  no_apoyo_pareja: 1
+  no_personas_necesito: 1
+  desconfianza_madre: 1
