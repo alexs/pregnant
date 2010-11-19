@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :ultra_sounds
+
+  map.resources :ries_pars
+
   map.resources :socioeconomic_ocupations
 
   map.resources :economic_situations

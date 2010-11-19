@@ -15,6 +15,8 @@ class Patient < ActiveRecord::Base
   has_many :psychologies
   has_many :clinical_histories
   has_many :appoiments
+  has_many :ries_pars
+  has_many :ultra_sounds
   
   def keygen(patient, borndate)
     key = rfc(patient, borndate) + unique_chars(patient, borndate)

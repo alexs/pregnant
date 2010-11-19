@@ -1,0 +1,109 @@
+- remote_form_for @ultra_sound, :url => {:action => :create }, :before => "$('.creating').show();", :complete => "$('.creating').hide();" do |f|
+  - if !f.error_messages.empty?
+    .validation
+      = f.error_messages
+  %table
+    %tr
+      %td
+        = f.hidden_field :patient_id
+        = f.label "Diametro biparietal"
+        = f.text_field :DiametroBiparietal
+    %tr
+      %td
+        = f.label "circunferencia cefálica"
+        = f.text_field :CircunferenciaCefalica
+    %tr
+      %td
+        = f.label "circunferencia abdominal"
+        = f.text_field :CircunferenciaAbdominal
+    %tr
+      %td
+        = f.label "longitud del femur"
+        = f.text_field :LongitudFemur
+    %tr
+      %td
+        = f.label "humero "
+        = f.text_field :humero
+    %tr
+      %td
+        = f.label "radio"
+        = f.text_field :radio
+    %tr
+      %td
+        = f.label "cúbito"
+        = f.text_field :cubito
+    %tr
+      %td
+        = f.label "tibia"
+        = f.text_field :tibia
+    %tr
+      %td
+        = f.label "perone"
+        = f.text_field :perone
+    %tr
+      %td
+        = f.label "fetometria promedio"
+        = f.text_field :FetometriaPromedio
+    %tr
+      %td
+        = f.label "peso fetal estimado"
+        = f.text_field :PesoFetalEstimado
+    %tr
+      %td
+        = f.label "percentila"
+        = f.text_field :percentila
+    %tr
+      %td
+        = f.label "arteria uterina derecha"
+        = f.text_field :ArteriaUterinaDerecha
+    %tr
+      %td
+        = f.label "arteria uterina izquierda"
+        = f.text_field :ArteriaUterinaIzquierda
+    %tr
+      %td
+        = f.label "arteria umbilical"
+        = f.text_field :ArteriaUmbilical
+    %tr
+      %td
+        = f.label "vena umbilical"
+        = f.text_field :VenaUmbilical
+    %tr
+      %td
+        = f.label "diametro vena umbilical"
+        = f.text_field :DiametroVenaUmbilical
+    %tr
+      %td
+        = f.label "Ducto venoso"
+        = f.text_field :DuctoVenoso
+    %tr
+      %td
+        = f.label "Tei izquierdo"
+        = f.text_field :TeiIzquierdo
+    %tr
+      %td
+        = f.label "Tei derecho"
+        = f.text_field :TeiDerecho
+    %tr
+      %td
+        = f.label "IFI"
+        = f.text_field :IFI
+    %tr
+      %td
+        = f.label "ACM"
+        = f.text_field :ACM
+    %tr
+      %td
+        = f.label "Longitud cervical"
+        = f.text_field :LongitudCervical
+    %tr
+      %td
+        = f.label "Posición de la Placenta"
+        = f.text_field :PosicionPlacenta
+    %tr
+      %td
+        = f.label "ILA"
+        = f.text_field :ILA
+  .guardar
+    = f.submit 'Guardar'
+  .creating{:style => "display:none;"}Guardando, por favor espere
