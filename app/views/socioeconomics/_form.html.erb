@@ -3,7 +3,7 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :ocupation %><br />
+    <%= f.label "ocupación" %><br />
     <%= f.select(:ocupation, SocioeconomicOcupation.all.collect{|p|
     [p.name, p.id]}, { :include_blank => true }) %>
 
@@ -84,10 +84,6 @@
         </td>
       </tr>
     </table>
-  </p>
-  <p>
-    <%= f.label :calificacion %><br />
-    <%= f.text_field :calificacion %>
   </p>
   <%= f.hidden_field :patient_id, :value => @socioeconomic.patient_id %>
  <div class="guardar">

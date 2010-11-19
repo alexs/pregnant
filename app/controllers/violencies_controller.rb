@@ -24,12 +24,7 @@ class ViolenciesController < ApplicationController
   # GET /violencies/new
   # GET /violencies/new.xml
   def new
-    @violency = Violency.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @violency }
-    end
+    @violency = Violency.new(:patient_id => params[:id])
   end
 
   # GET /violencies/1/edit
@@ -44,11 +39,9 @@ class ViolenciesController < ApplicationController
 
     respond_to do |format|
       if @violency.save
-        format.html { redirect_to(@violency, :notice => 'Violency was successfully created.') }
-        format.xml  { render :xml => @violency, :status => :created, :location => @violency }
+        format.js { render :action => "create" }
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @violency.errors, :status => :unprocessable_entity }
+        format.js { render :action => "new" }
       end
     end
   end

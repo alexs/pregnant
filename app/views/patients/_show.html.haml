@@ -25,6 +25,8 @@
         CUIP(Clave Unica Identificadora de Paciente): 
         %b #{@patient.cuip}
 #menu_patient
+  .semaforo{:style => "text-align: right; float: right; padding: 0px;"}
+    = image_tag "semaforo.gif", :width => "25", :height => "67"
   .button 
     - if @patient.psychologies.size < 1
       = link_to_remote "Cuestionario CGS-15", :url => {:controller => 'psychologies', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
@@ -51,6 +53,9 @@
     = link_to_remote "Ficha Socio Económica Inicial", :url => {:controller => 'socioeconomics', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
   .button
     = link_to_remote "Factores de Riesgo Modificables", :url => {:controller => 'risk_factors', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+  .button
+    = link_to_remote "Violencia Familiar", :url => {:controller => 'violencies', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+  .button
     - if @patient.ries_pars.size < 1
       = link_to_remote "Cuestionario de Riesgo de Parentaje", :url => {:controller => 'ries_pars', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
       .status{ :style => 'display:none'}

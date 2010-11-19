@@ -1,0 +1,2355 @@
+/home/jcarlos/alex/pregnant/app/views/patients/_get_counties.html.haml:1: warning: string literal in condition
+/home/jcarlos/alex/pregnant/app/views/patients/_get_squares.html.haml:1: warning: string literal in condition
+=> Booting Mongrel
+=> Rails 2.3.8 application starting on http://0.0.0.0:3002
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing NavigatorsController#index (for 10.6.17.156 at 2010-09-14 17:59:07) [GET]
+Rendering template within layouts/application
+Rendering navigators/index
+Rendered navigators/_menu (7.9ms)
+Completed in 35ms (View: 32, DB: 0) | 200 OK [http://10.6.250.50/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 10.6.17.156 at 2010-09-14 17:59:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/none" with {:method=>:get}):
+  haml (3.0.17) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#index (for 10.6.17.156 at 2010-09-14 17:59:10) [GET]
+  Parameters: {"authenticity_token"=>"BbQ5UsCOZs+/ptWa6FPSiMuEmanAMBG4FlOSnktIEC8="}
+Rendering patients/search_patient
+Rendered patients/_index (6.8ms)
+Completed in 37ms (View: 17, DB: 0) | 200 OK [http://10.6.250.50/patients?authenticity_token=BbQ5UsCOZs%2B%2FptWa6FPSiMuEmanAMBG4FlOSnktIEC8%3D]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#get_patient (for 10.6.17.156 at 2010-09-14 17:59:13) [POST]
+  Parameters: {"authenticity_token"=>"BbQ5UsCOZs+/ptWa6FPSiMuEmanAMBG4FlOSnktIEC8=", "patient"=>{"search"=>""}}
+  [4;36;1mPatient Load (1.2ms)[0m   [0;1mSELECT * FROM "patients" [0m
+Rendering patients/get_patient
+Rendered patients/_not_found (2.0ms)
+Completed in 20ms (View: 10, DB: 1) | 200 OK [http://10.6.250.50/patients/get_patient]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#new (for 10.6.17.156 at 2010-09-14 17:59:14) [POST]
+  Parameters: {"authenticity_token"=>"BbQ5UsCOZs+/ptWa6FPSiMuEmanAMBG4FlOSnktIEC8="}
+Rendering patients/new_form
+  [4;36;1mState Load (0.7ms)[0m   [0;1mSELECT * FROM "states" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "states" [0m
+  [4;36;1mMaritalstatus Load (0.5ms)[0m   [0;1mSELECT * FROM "maritalstatuses" [0m
+  [4;35;1mOcupation Load (0.4ms)[0m   [0mSELECT * FROM "ocupations" [0m
+Rendered patients/_form (75.1ms)
+Completed in 103ms (View: 87, DB: 2) | 200 OK [http://10.6.250.50/patients/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#select_state (for 10.6.17.156 at 2010-09-14 17:59:18) [POST]
+  Parameters: {"state_select"=>"9", "authenticity_token"=>"BbQ5UsCOZs+/ptWa6FPSiMuEmanAMBG4FlOSnktIEC8="}
+  [4;35;1mCounty Load (1.9ms)[0m   [0mSELECT * FROM "counties" WHERE (state_id = '9') [0m
+Rendered patients/_get_counties (6.0ms)
+Completed in 21ms (View: 11, DB: 2) | 200 OK [http://10.6.250.50/patients/select_state]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#select_county (for 10.6.17.156 at 2010-09-14 17:59:19) [POST]
+  Parameters: {"authenticity_token"=>"BbQ5UsCOZs+/ptWa6FPSiMuEmanAMBG4FlOSnktIEC8=", "county_select"=>"487"}
+  [4;35;1mSquare Load (25.0ms)[0m   [0mSELECT * FROM "squares" WHERE (county_id = '487') [0m
+Rendered patients/_get_squares (9.2ms)
+Completed in 52ms (View: 13, DB: 25) | 200 OK [http://10.6.250.50/patients/select_county]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing NavigatorsController#index (for 10.6.17.156 at 2010-09-20 12:35:28) [GET]
+Rendering template within layouts/application
+Rendering navigators/index
+Rendered navigators/_menu (7.8ms)
+Completed in 18ms (View: 15, DB: 0) | 200 OK [http://10.6.250.50/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 10.6.17.156 at 2010-09-20 12:35:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/none" with {:method=>:get}):
+  haml (3.0.17) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#new (for 10.6.17.156 at 2010-09-20 12:35:32) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E="}
+Rendering patients/new_form
+  [4;35;1mState Load (4.1ms)[0m   [0mSELECT * FROM "states" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "states" [0m
+  [4;35;1mMaritalstatus Load (0.5ms)[0m   [0mSELECT * FROM "maritalstatuses" [0m
+  [4;36;1mOcupation Load (1.2ms)[0m   [0;1mSELECT * FROM "ocupations" [0m
+Rendered patients/_form (130.9ms)
+Completed in 159ms (View: 131, DB: 6) | 200 OK [http://10.6.250.50/patients/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#index (for 10.6.17.156 at 2010-09-20 12:35:34) [GET]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E="}
+Rendering patients/search_patient
+Rendered patients/_index (2.4ms)
+Completed in 17ms (View: 4, DB: 0) | 200 OK [http://10.6.250.50/patients?authenticity_token=S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E%3D]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#get_patient (for 10.6.17.156 at 2010-09-20 12:35:36) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "patient"=>{"search"=>""}}
+  [4;35;1mPatient Load (1.3ms)[0m   [0mSELECT * FROM "patients" [0m
+Rendering patients/get_patient
+Rendered patients/_not_found (1.1ms)
+Completed in 15ms (View: 3, DB: 2) | 200 OK [http://10.6.250.50/patients/get_patient]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#new (for 10.6.17.156 at 2010-09-20 12:40:51) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E="}
+Rendering patients/new_form
+  [4;35;1mState Load (0.7ms)[0m   [0mSELECT * FROM "states" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "states" [0m
+  [4;35;1mMaritalstatus Load (0.4ms)[0m   [0mSELECT * FROM "maritalstatuses" [0m
+  [4;36;1mOcupation Load (0.4ms)[0m   [0;1mSELECT * FROM "ocupations" [0m
+Rendered patients/_form (54.5ms)
+Completed in 141ms (View: 126, DB: 2) | 200 OK [http://10.6.250.50/patients/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#create (for 10.6.17.156 at 2010-09-20 12:41:46) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "patient"=>{"ocupation_id"=>"", "maritalstatus_id"=>"", "square_id"=>"Invalid", "birthday(1i)"=>"2015", "expedient"=>"231564", "birthday(2i)"=>"3", "birthday(3i)"=>"15", "street"=>"ZEMPOALTECAS", "gender"=>"true", "lastname1"=>"SILVA", "curp"=>"siea154", "exterior"=>"", "lastname2"=>"ESQUIVEL", "phone"=>"", "interior"=>"", "bornstate_id"=>"9", "firstname"=>"ALEJANDRO"}, "county"=>"Selecciona antes un estado", "state"=>"1"}
+  [4;36;1mState Load (4.9ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPatient Load (0.9ms)[0m   [0mSELECT "patients".id FROM "patients" WHERE ("patients"."cuip" = 'SIEADISTRITO FEDERAL150315105') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering patients/new_form
+  [4;35;1mState Load (0.4ms)[0m   [0mSELECT * FROM "states" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "states" [0m
+  [4;35;1mMaritalstatus Load (0.4ms)[0m   [0mSELECT * FROM "maritalstatuses" [0m
+  [4;36;1mOcupation Load (0.4ms)[0m   [0;1mSELECT * FROM "ocupations" [0m
+Rendered patients/_form (62.8ms)
+Completed in 106ms (View: 68, DB: 7) | 200 OK [http://10.6.250.50/patients]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 10.6.17.156 at 2010-09-20 12:41:47) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/warning.png" with {:method=>:get}):
+  haml (3.0.17) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#select_state (for 10.6.17.156 at 2010-09-20 12:41:53) [POST]
+  Parameters: {"state_select"=>"9", "authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E="}
+  [4;35;1mCounty Load (13.7ms)[0m   [0mSELECT * FROM "counties" WHERE (state_id = '9') [0m
+Rendered patients/_get_counties (5.1ms)
+Completed in 28ms (View: 6, DB: 14) | 200 OK [http://10.6.250.50/patients/select_state]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#select_county (for 10.6.17.156 at 2010-09-20 12:42:01) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "county_select"=>"201"}
+  [4;35;1mSquare Load (110.4ms)[0m   [0mSELECT * FROM "squares" WHERE (county_id = '201') [0m
+Rendered patients/_get_squares (9.8ms)
+Completed in 135ms (View: 11, DB: 111) | 200 OK [http://10.6.250.50/patients/select_county]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#create (for 10.6.17.156 at 2010-09-20 12:42:14) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "patient"=>{"ocupation_id"=>"13", "maritalstatus_id"=>"4", "square_id"=>"329", "birthday(1i)"=>"2015", "expedient"=>"231564", "birthday(2i)"=>"3", "birthday(3i)"=>"15", "street"=>"ZEMPOALTECAS", "gender"=>"true", "lastname1"=>"SILVA", "curp"=>"siea154", "exterior"=>"3", "lastname2"=>"ESQUIVEL", "phone"=>"555555", "interior"=>"1", "bornstate_id"=>"9", "firstname"=>"ALEJANDRO"}, "county"=>"201", "state"=>"9"}
+  [4;35;1mState Load (0.4ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mSquare Load (6.9ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 329) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPatient Load (0.9ms)[0m   [0mSELECT "patients".id FROM "patients" WHERE ("patients"."cuip" = 'SIEADISTRITO FEDERAL150315105') LIMIT 1[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mINSERT INTO "patients" ("square_id", "ocupation_id", "maritalstatus_id", "expedient", "created_at", "cp", "cuip", "updated_at", "curp", "lastname1", "street", "gender", "lastname2", "exterior", "user_id", "interior", "phone", "firstname", "birthday", "bornstate_id", "dependency_id") VALUES(329, 13, 4, '231564', '2010-09-20 17:42:14.352647', '02460', 'SIEADISTRITO FEDERAL150315105', '2010-09-20 17:42:14.352647', 'siea154', 'SILVA', 'ZEMPOALTECAS', 't', 'ESQUIVEL', '3', 1, '1', '555555', 'ALEJANDRO', '2015-03-15', 9, 1) RETURNING "id"[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mCOMMIT[0m
+Rendering patients/create
+  [4;36;1mSquare Load (0.3ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 329) [0m
+  [4;35;1mCounty Load (0.4ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 201) [0m
+  [4;36;1mState Load (0.2ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "psychologies" WHERE ("psychologies".patient_id = 1) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "clinical_histories" WHERE ("clinical_histories".patient_id = 1) [0m
+Rendered patients/_show (45.7ms)
+Completed in 120ms (View: 56, DB: 18) | 200 OK [http://10.6.250.50/patients]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PsychologiesController#new (for 10.6.17.156 at 2010-09-20 12:42:16) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"1"}
+Rendering psychologies/new
+Rendered psychologies/_form (60.3ms)
+Completed in 92ms (View: 77, DB: 0) | 200 OK [http://10.6.250.50/psychologies/new?id=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClinicalHistoriesController#new (for 10.6.17.156 at 2010-09-20 12:42:21) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"1"}
+Rendering clinical_histories/new
+Rendered clinical_histories/_form (225.6ms)
+Completed in 278ms (View: 245, DB: 0) | 200 OK [http://10.6.250.50/clinical_histories/new?id=1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing NavigatorsController#index (for 10.6.17.143 at 2010-09-20 12:56:12) [GET]
+Rendering template within layouts/application
+Rendering navigators/index
+Rendered navigators/_menu (1.7ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://10.6.250.50/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 10.6.17.143 at 2010-09-20 12:56:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/none" with {:method=>:get}):
+  haml (3.0.17) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#new (for 10.6.17.143 at 2010-09-20 12:56:31) [POST]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E="}
+Rendering patients/new_form
+  [4;36;1mState Load (0.6ms)[0m   [0;1mSELECT * FROM "states" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "states" [0m
+  [4;36;1mMaritalstatus Load (0.6ms)[0m   [0;1mSELECT * FROM "maritalstatuses" [0m
+  [4;35;1mOcupation Load (0.5ms)[0m   [0mSELECT * FROM "ocupations" [0m
+Rendered patients/_form (125.9ms)
+Completed in 145ms (View: 130, DB: 2) | 200 OK [http://10.6.250.50/patients/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing MeetingsController#index (for 10.6.17.143 at 2010-09-20 12:57:33) [GET]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E="}
+Rendering template within layouts/meetings
+Rendering meetings/index
+Completed in 15ms (View: 12, DB: 0) | 200 OK [http://10.6.250.50/meetings?authenticity_token=8lc2ZP%2FwWsznqOwWfchJ%2BEDKrEbGCWhQycPpJQmfN3E%3D]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing MeetingsController#get_meetings (for 10.6.17.143 at 2010-09-20 12:57:33) [GET]
+  Parameters: {"end"=>"1286773200", "start"=>"1283144400", "_"=>"1285005456751"}
+  [4;36;1mMeeting Load (1.3ms)[0m   [0;1mSELECT * FROM "meetings" WHERE (starttime >= '2010-08-30 00:00:00') [0m
+Completed in 9ms (View: 1, DB: 2) | 200 OK [http://10.6.250.50/meetings/get_meetings?_=1285005456751&start=1283144400&end=1286773200]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing MeetingsController#new (for 10.6.17.143 at 2010-09-20 12:57:43) [POST]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E="}
+Rendering meetings/new
+Rendered meetings/_form (11.2ms)
+Completed in 35ms (View: 24, DB: 0) | 200 OK [http://10.6.250.50/meetings/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#new (for 10.6.17.156 at 2010-09-20 13:07:51) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E="}
+Rendering patients/new_form
+  [4;35;1mState Load (0.9ms)[0m   [0mSELECT * FROM "states" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "states" [0m
+  [4;35;1mMaritalstatus Load (0.5ms)[0m   [0mSELECT * FROM "maritalstatuses" [0m
+  [4;36;1mOcupation Load (0.4ms)[0m   [0;1mSELECT * FROM "ocupations" [0m
+Rendered patients/_form (126.1ms)
+Completed in 145ms (View: 130, DB: 2) | 200 OK [http://10.6.250.50/patients/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#index (for 10.6.17.156 at 2010-09-20 13:08:13) [GET]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E="}/home/jcarlos/alex/pregnant/app/views/patients/_patients.html.haml:4: warning: don't put space before argument parentheses
+
+Rendering patients/search_patient
+Rendered patients/_index (2.6ms)
+Completed in 17ms (View: 4, DB: 0) | 200 OK [http://10.6.250.50/patients?authenticity_token=S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E%3D]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#get_patient (for 10.6.17.156 at 2010-09-20 13:08:14) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "patient"=>{"search"=>""}}
+  [4;35;1mPatient Load (1.4ms)[0m   [0mSELECT * FROM "patients" [0m
+Rendering patients/get_patient
+  [4;36;1mSquare Load (0.3ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 329) [0m
+  [4;35;1mCounty Load (0.3ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 201) [0m
+  [4;36;1mState Load (0.2ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+Rendered patients/_patients (31.8ms)
+Completed in 121ms (View: 37, DB: 3) | 200 OK [http://10.6.250.50/patients/get_patient]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#show (for 10.6.17.156 at 2010-09-20 13:08:15) [GET]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"1"}
+  [4;36;1mPatient Load (0.6ms)[0m   [0;1mSELECT * FROM "patients" WHERE ("patients"."id" = 1) [0m
+  [4;35;1mSquare Load (0.3ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 329) [0m
+  [4;36;1mCounty Load (0.3ms)[0m   [0;1mSELECT * FROM "counties" WHERE ("counties"."id" = 201) [0m
+  [4;35;1mState Load (0.3ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "psychologies" WHERE ("psychologies".patient_id = 1) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "clinical_histories" WHERE ("clinical_histories".patient_id = 1) [0m
+Rendered patients/_show (117.5ms)
+Completed in 133ms (View: 116, DB: 3) | 200 OK [http://10.6.250.50/patients/1?authenticity_token=S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E%3D]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PsychologiesController#new (for 10.6.17.156 at 2010-09-20 13:08:20) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"1"}
+Rendering psychologies/new
+Rendered psychologies/_form (33.5ms)
+Completed in 55ms (View: 41, DB: 0) | 200 OK [http://10.6.250.50/psychologies/new?id=1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClinicalHistoriesController#new (for 10.6.17.156 at 2010-09-20 13:08:23) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"1"}
+Rendering clinical_histories/new
+Rendered clinical_histories/_form (108.8ms)
+Completed in 226ms (View: 192, DB: 0) | 200 OK [http://10.6.250.50/clinical_histories/new?id=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing NavigatorsController#index (for 10.6.17.143 at 2010-09-20 15:31:43) [GET]
+Rendering template within layouts/application
+Rendering navigators/index
+Rendered navigators/_menu (1.9ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://10.6.250.50/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 10.6.17.143 at 2010-09-20 15:31:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/none" with {:method=>:get}):
+  haml (3.0.17) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#index (for 10.6.17.143 at 2010-09-20 15:31:47) [GET]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E="}
+Rendering patients/search_patient
+Rendered patients/_index (2.6ms)
+Completed in 25ms (View: 4, DB: 0) | 200 OK [http://10.6.250.50/patients?authenticity_token=8lc2ZP%2FwWsznqOwWfchJ%2BEDKrEbGCWhQycPpJQmfN3E%3D]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#get_patient (for 10.6.17.143 at 2010-09-20 15:31:49) [POST]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E=", "patient"=>{"search"=>""}}
+  [4;36;1mPatient Load (5.2ms)[0m   [0;1mSELECT * FROM "patients" [0m
+Rendering patients/get_patient
+  [4;35;1mSquare Load (0.4ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 329) [0m
+  [4;36;1mCounty Load (0.4ms)[0m   [0;1mSELECT * FROM "counties" WHERE ("counties"."id" = 201) [0m
+  [4;35;1mState Load (0.3ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+Rendered patients/_patients (34.3ms)
+Completed in 121ms (View: 35, DB: 7) | 200 OK [http://10.6.250.50/patients/get_patient]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#show (for 10.6.17.143 at 2010-09-20 15:31:52) [GET]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E=", "id"=>"1"}
+  [4;35;1mPatient Load (0.6ms)[0m   [0mSELECT * FROM "patients" WHERE ("patients"."id" = 1) [0m
+  [4;36;1mSquare Load (0.3ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 329) [0m
+  [4;35;1mCounty Load (0.3ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 201) [0m
+  [4;36;1mState Load (0.3ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "psychologies" WHERE ("psychologies".patient_id = 1) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "clinical_histories" WHERE ("clinical_histories".patient_id = 1) [0m
+Rendered patients/_show (114.5ms)
+Completed in 130ms (View: 113, DB: 3) | 200 OK [http://10.6.250.50/patients/1?authenticity_token=8lc2ZP%2FwWsznqOwWfchJ%2BEDKrEbGCWhQycPpJQmfN3E%3D]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClinicalHistoriesController#new (for 10.6.17.143 at 2010-09-20 15:31:55) [POST]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E=", "id"=>"1"}
+Rendering clinical_histories/new
+Rendered clinical_histories/_form (99.7ms)
+Completed in 146ms (View: 112, DB: 0) | 200 OK [http://10.6.250.50/clinical_histories/new?id=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PsychologiesController#new (for 10.6.17.143 at 2010-09-20 15:33:20) [POST]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E=", "id"=>"1"}
+Rendering psychologies/new
+Rendered psychologies/_form (34.4ms)
+Completed in 57ms (View: 42, DB: 0) | 200 OK [http://10.6.250.50/psychologies/new?id=1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing NavigatorsController#index (for 10.6.17.156 at 2010-09-20 16:55:24) [GET]
+Rendering template within layouts/application
+Rendering navigators/index
+Rendered navigators/_menu (1.5ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://10.6.250.50/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing NavigatorsController#index (for 10.6.17.156 at 2010-09-20 16:59:38) [GET]
+Rendering template within layouts/application
+Rendering navigators/index
+Rendered navigators/_menu (5.5ms)
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://10.6.250.50/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 10.6.17.156 at 2010-09-20 16:59:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/none" with {:method=>:get}):
+  haml (3.0.17) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#index (for 10.6.17.156 at 2010-09-20 16:59:41) [GET]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E="}
+Rendering patients/search_patient
+Rendered patients/_index (3.8ms)
+Completed in 19ms (View: 6, DB: 0) | 200 OK [http://10.6.250.50/patients?authenticity_token=S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E%3D]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#get_patient (for 10.6.17.156 at 2010-09-20 16:59:42) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "patient"=>{"search"=>""}}
+  [4;36;1mPatient Load (1.4ms)[0m   [0;1mSELECT * FROM "patients" [0m
+Rendering patients/get_patient
+  [4;35;1mSquare Load (0.4ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 329) [0m
+  [4;36;1mCounty Load (0.3ms)[0m   [0;1mSELECT * FROM "counties" WHERE ("counties"."id" = 201) [0m
+  [4;35;1mState Load (0.3ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+Rendered patients/_patients (33.2ms)
+Completed in 117ms (View: 34, DB: 3) | 200 OK [http://10.6.250.50/patients/get_patient]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#show (for 10.6.17.156 at 2010-09-20 16:59:44) [GET]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"1"}
+  [4;35;1mPatient Load (0.6ms)[0m   [0mSELECT * FROM "patients" WHERE ("patients"."id" = 1) [0m
+  [4;36;1mSquare Load (0.3ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 329) [0m
+  [4;35;1mCounty Load (0.3ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 201) [0m
+  [4;36;1mState Load (0.3ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "psychologies" WHERE ("psychologies".patient_id = 1) [0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT count(*) AS count_all FROM "clinical_histories" WHERE ("clinical_histories".patient_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: relation "laboratories" does not exist
+: SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"laboratories"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+
+ActionView::TemplateError (PGError: ERROR:  relation "laboratories" does not exist
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"laboratories"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+) on line #43 of app/views/patients/_show.html.haml:
+40:       .status_clinical{ :style => 'display:inline'}
+41:         = image_tag("checked.png")
+42:   .button
+43:     - if @patient.laboratories.size < 1
+44:       = link_to_remote "Solicitud y Reporte de Resultados de Laboratorio", :url => {:controller => 'laboratories', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+45:       .status_laboratory{ :style => 'display:none'}
+46:         = image_tag("checked.png")
+
+    app/views/patients/_show.html.haml:43:in `_run_haml_app47views47patients47_show46html46haml_locals_object_show'
+    haml (3.0.17) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/patients_controller.rb:18:in `show'
+    app/controllers/patients_controller.rb:17:in `show'
+    compass (0.10.2) [v] lib/compass/app_integration/rails/actionpack2/action_controller.rb:7:in `process'
+    haml (3.0.17) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (51.6ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#show (for 10.6.17.156 at 2010-09-20 16:59:50) [GET]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"1"}
+  [4;35;1mPatient Load (0.5ms)[0m   [0mSELECT * FROM "patients" WHERE ("patients"."id" = 1) [0m
+  [4;36;1mSquare Load (0.4ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 329) [0m
+  [4;35;1mCounty Load (0.3ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 201) [0m
+  [4;36;1mState Load (0.3ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "psychologies" WHERE ("psychologies".patient_id = 1) [0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT count(*) AS count_all FROM "clinical_histories" WHERE ("clinical_histories".patient_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: relation "laboratories" does not exist
+: SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+ FROM pg_attribute a LEFT JOIN pg_attrdef d
+ ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+ WHERE a.attrelid = '"laboratories"'::regclass
+ AND a.attnum > 0 AND NOT a.attisdropped
+ ORDER BY a.attnum
+[0m
+
+ActionView::TemplateError (PGError: ERROR:  relation "laboratories" does not exist
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"laboratories"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+) on line #43 of app/views/patients/_show.html.haml:
+40:       .status_clinical{ :style => 'display:inline'}
+41:         = image_tag("checked.png")
+42:   .button
+43:     - if @patient.laboratories.size < 1
+44:       = link_to_remote "Solicitud y Reporte de Resultados de Laboratorio", :url => {:controller => 'laboratories', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+45:       .status_laboratory{ :style => 'display:none'}
+46:         = image_tag("checked.png")
+
+    app/views/patients/_show.html.haml:43:in `_run_haml_app47views47patients47_show46html46haml_locals_object_show'
+    haml (3.0.17) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/patients_controller.rb:18:in `show'
+    app/controllers/patients_controller.rb:17:in `show'
+    compass (0.10.2) [v] lib/compass/app_integration/rails/actionpack2/action_controller.rb:7:in `process'
+    haml (3.0.17) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (128.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePatients (20100713215506)
+Migrating to CreateStates (20100720190208)
+Migrating to CreateCounties (20100720194930)
+Migrating to CreateSquares (20100720200405)
+Migrating to CreateMeetings (20100805182005)
+Migrating to CreatePsychologies (20100826174748)
+Migrating to AddDataToPatient (20100906171820)
+Migrating to CreateMaritalstatuses (20100906172943)
+Migrating to CreateOcupations (20100906172951)
+Migrating to CreateClinicalHistories (20100908203156)
+Migrating to CreateLaboratories (20100913230819)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (6297.2ms)[0m   [0mCREATE TABLE "laboratories" ("id" serial primary key, "date" date, "date_next_consult" date, "presumptive_diagnosis" character varying(255), "applicant_doctor" character varying(255), "hemoglobina" character varying(255), "hematocrito" character varying(255), "cmhc" character varying(255), "leucocitos" character varying(255), "cuenta_diferencial" character varying(255), "linfocitos" character varying(255), "monocitos" character varying(255), "eosinofilos" character varying(255), "basofilos" character varying(255), "neut_segmen" character varying(255), "neut_banda" character varying(255), "alteraciones" character varying(255), "reticulocitos" character varying(255), "plaquetas" character varying(255), "sed_globular" character varying(255), "grupo_sanguineo" character varying(255), "factor_rh" character varying(255), "t_protrombina" character varying(255), "t_parcial_tromb" character varying(255), "glucosa" character varying(255), "hb_glicosilada" character varying(255), "urea" character varying(255), "acido_urico" character varying(255), "creatinina" character varying(255), "colesterol_total" character varying(255), "trigliceridos" character varying(255), "hdl" character varying(255), "ldl" character varying(255), "bilirrubina_total" character varying(255), "bilirubina_directa" character varying(255), "bilirrubina_indirecta" character varying(255), "alat_tgp" character varying(255), "asat_tgo" character varying(255), "f_alcalina" character varying(255), "vdrl" character varying(255), "antiestreptolisinas" character varying(255), "factor_reumatoide" character varying(255), "proteina_c_reactiva" character varying(255), "prueba_embarazo" character varying(255), "inmunologia_otros" character varying(255), "coproparasitoscopico1" character varying(255), "coproparasitoscopico2" character varying(255), "coproparasitoscopico3" character varying(255), "fisico_quimico" character varying(255), "color" character varying(255), "ph" character varying(255), "densidad" character varying(255), "cetona" character varying(255), "proteina" character varying(255), "nitrito" character varying(255), "bilirrubina" character varying(255), "sedimento" character varying(255), "eritrocitos" character varying(255), "cel_epiteliales" character varying(255), "bacterias" character varying(255), "cristales" character varying(255), "cilindros" character varying(255), "exudado_gram" character varying(255), "basiloscopia_baar1" character varying(255), "basiloscopia_baar2" character varying(255), "basiloscopia_baar3" character varying(255), "cultivo" character varying(255), "microbiologia_otros" character varying(255), "tolerancia_glucosa_ayuno" character varying(255), "tolerancia_glucosa_1hora" character varying(255), "tolerancia_glucosa_2horas" character varying(255), "tolerancia_glucosa_observaciones" character varying(255), "num_registro" character varying(255), "nombre" character varying(255), "fecha_reporte" date, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100913230819')[0m
+  [4;35;1mSQL (7.3ms)[0m   [0mCOMMIT[0m
+Migrating to Lab (20100914224857)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "laboratories" ADD COLUMN "user_id" integer[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "laboratories" ADD COLUMN "dependency_id" integer[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "laboratories" ADD COLUMN "patient_id" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100914224857')[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#show (for 10.6.17.156 at 2010-09-20 17:00:16) [GET]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"1"}
+  [4;35;1mPatient Load (0.4ms)[0m   [0mSELECT * FROM "patients" WHERE ("patients"."id" = 1) [0m
+  [4;36;1mSquare Load (0.3ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 329) [0m
+  [4;35;1mCounty Load (0.3ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 201) [0m
+  [4;36;1mState Load (0.2ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "psychologies" WHERE ("psychologies".patient_id = 1) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "clinical_histories" WHERE ("clinical_histories".patient_id = 1) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "laboratories" WHERE ("laboratories".patient_id = 1) [0m
+Rendered patients/_show (41.8ms)
+Completed in 55ms (View: 40, DB: 3) | 200 OK [http://10.6.250.50/patients/1?authenticity_token=S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E%3D]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LaboratoriesController#new (for 10.6.17.156 at 2010-09-20 17:00:21) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"1"}
+Rendering laboratories/new
+Rendered laboratories/_form (47.2ms)
+Completed in 86ms (View: 61, DB: 0) | 200 OK [http://10.6.250.50/laboratories/new?id=1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 10.6.17.156 at 2010-09-20 17:01:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/none" with {:method=>:get}):
+  haml (3.0.17) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#new (for 10.6.17.156 at 2010-09-20 17:01:47) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E="}
+Rendering patients/new_form
+  [4;35;1mState Load (0.7ms)[0m   [0mSELECT * FROM "states" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "states" [0m
+  [4;35;1mMaritalstatus Load (0.4ms)[0m   [0mSELECT * FROM "maritalstatuses" [0m
+  [4;36;1mOcupation Load (0.4ms)[0m   [0;1mSELECT * FROM "ocupations" [0m
+Rendered patients/_form (57.8ms)
+Completed in 79ms (View: 62, DB: 2) | 200 OK [http://10.6.250.50/patients/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#select_state (for 10.6.17.156 at 2010-09-20 17:01:57) [POST]
+  Parameters: {"state_select"=>"9", "authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E="}
+  [4;36;1mCounty Load (8.9ms)[0m   [0;1mSELECT * FROM "counties" WHERE (state_id = '9') [0m
+Rendered patients/_get_counties (5.2ms)
+Completed in 23ms (View: 6, DB: 9) | 200 OK [http://10.6.250.50/patients/select_state]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#select_county (for 10.6.17.156 at 2010-09-20 17:01:58) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "county_select"=>"481"}
+  [4;36;1mSquare Load (67.4ms)[0m   [0;1mSELECT * FROM "squares" WHERE (county_id = '481') [0m
+Rendered patients/_get_squares (7.1ms)
+Completed in 86ms (View: 8, DB: 68) | 200 OK [http://10.6.250.50/patients/select_county]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#index (for 10.6.17.156 at 2010-09-20 17:02:24) [GET]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E="}
+Rendering patients/search_patient
+Rendered patients/_index (73.8ms)
+Completed in 89ms (View: 76, DB: 0) | 200 OK [http://10.6.250.50/patients?authenticity_token=S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E%3D]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#get_patient (for 10.6.17.156 at 2010-09-20 17:02:25) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "patient"=>{"search"=>""}}
+  [4;35;1mPatient Load (1.3ms)[0m   [0mSELECT * FROM "patients" [0m
+Rendering patients/get_patient
+  [4;36;1mSquare Load (0.4ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 329) [0m
+  [4;35;1mCounty Load (0.3ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 201) [0m
+  [4;36;1mState Load (0.3ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+Rendered patients/_patients (30.3ms)
+Completed in 45ms (View: 31, DB: 3) | 200 OK [http://10.6.250.50/patients/get_patient]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#show (for 10.6.17.156 at 2010-09-20 17:02:26) [GET]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"1"}
+  [4;36;1mPatient Load (0.5ms)[0m   [0;1mSELECT * FROM "patients" WHERE ("patients"."id" = 1) [0m
+  [4;35;1mSquare Load (0.4ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 329) [0m
+  [4;36;1mCounty Load (0.3ms)[0m   [0;1mSELECT * FROM "counties" WHERE ("counties"."id" = 201) [0m
+  [4;35;1mState Load (0.3ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "psychologies" WHERE ("psychologies".patient_id = 1) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "clinical_histories" WHERE ("clinical_histories".patient_id = 1) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "laboratories" WHERE ("laboratories".patient_id = 1) [0m
+Rendered patients/_show (59.8ms)
+Completed in 149ms (View: 58, DB: 4) | 200 OK [http://10.6.250.50/patients/1?authenticity_token=S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E%3D]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing LaboratoriesController#new (for 10.6.17.156 at 2010-09-20 17:02:38) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"1"}
+Rendering laboratories/new
+Rendered laboratories/_form (31.2ms)
+Completed in 61ms (View: 37, DB: 0) | 200 OK [http://10.6.250.50/laboratories/new?id=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClinicalHistoriesController#new (for 10.6.17.156 at 2010-09-20 17:02:48) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"1"}
+Rendering clinical_histories/new
+Rendered clinical_histories/_form (102.8ms)
+Completed in 150ms (View: 115, DB: 0) | 200 OK [http://10.6.250.50/clinical_histories/new?id=1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClinicalHistoriesController#new (for 10.6.17.156 at 2010-09-20 17:03:55) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"1"}
+Rendering clinical_histories/new
+Rendered clinical_histories/_form (104.9ms)
+Completed in 155ms (View: 120, DB: 0) | 200 OK [http://10.6.250.50/clinical_histories/new?id=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LaboratoriesController#new (for 10.6.17.156 at 2010-09-20 17:04:02) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"1"}
+Rendering laboratories/new
+Rendered laboratories/_form (32.7ms)
+Completed in 64ms (View: 39, DB: 0) | 200 OK [http://10.6.250.50/laboratories/new?id=1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PsychologiesController#new (for 10.6.17.156 at 2010-09-20 17:04:06) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"1"}
+Rendering psychologies/new
+Rendered psychologies/_form (33.5ms)
+Completed in 59ms (View: 45, DB: 0) | 200 OK [http://10.6.250.50/psychologies/new?id=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LaboratoriesController#new (for 10.6.17.156 at 2010-09-20 17:04:11) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"1"}
+Rendering laboratories/new
+Rendered laboratories/_form (32.8ms)
+Completed in 64ms (View: 39, DB: 0) | 200 OK [http://10.6.250.50/laboratories/new?id=1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing NavigatorsController#index (for 10.6.17.143 at 2010-09-20 17:44:45) [GET]
+Rendering template within layouts/application
+Rendering navigators/index
+Rendered navigators/_menu (1.9ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://10.6.250.50/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 10.6.17.143 at 2010-09-20 17:44:47) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/none" with {:method=>:get}):
+  haml (3.0.17) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#new (for 10.6.17.143 at 2010-09-20 17:44:49) [POST]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E="}
+Rendering patients/new_form
+  [4;36;1mState Load (0.7ms)[0m   [0;1mSELECT * FROM "states" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "states" [0m
+  [4;36;1mMaritalstatus Load (0.4ms)[0m   [0;1mSELECT * FROM "maritalstatuses" [0m
+  [4;35;1mOcupation Load (0.6ms)[0m   [0mSELECT * FROM "ocupations" [0m
+Rendered patients/_form (126.2ms)
+Completed in 147ms (View: 131, DB: 2) | 200 OK [http://10.6.250.50/patients/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#select_state (for 10.6.17.143 at 2010-09-20 17:47:26) [POST]
+  Parameters: {"state_select"=>"9", "authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E="}
+  [4;35;1mCounty Load (1.9ms)[0m   [0mSELECT * FROM "counties" WHERE (state_id = '9') [0m
+Rendered patients/_get_counties (4.8ms)
+Completed in 15ms (View: 5, DB: 2) | 200 OK [http://10.6.250.50/patients/select_state]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#select_county (for 10.6.17.143 at 2010-09-20 17:47:30) [POST]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E=", "county_select"=>"1026"}
+  [4;35;1mSquare Load (24.1ms)[0m   [0mSELECT * FROM "squares" WHERE (county_id = '1026') [0m
+Rendered patients/_get_squares (6.3ms)
+Completed in 41ms (View: 7, DB: 24) | 200 OK [http://10.6.250.50/patients/select_county]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#create (for 10.6.17.143 at 2010-09-20 17:47:45) [POST]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E=", "patient"=>{"ocupation_id"=>"8", "maritalstatus_id"=>"2", "square_id"=>"1547", "birthday(1i)"=>"2005", "expedient"=>"", "birthday(2i)"=>"9", "birthday(3i)"=>"20", "street"=>"XOCONGO 225", "gender"=>"false", "lastname1"=>"HERNANDEZ", "curp"=>"", "exterior"=>"34", "lastname2"=>"PEREZ", "phone"=>"12354345", "interior"=>"1A", "bornstate_id"=>"9", "firstname"=>"ALICIA"}, "county"=>"1026", "state"=>"9"}
+  [4;35;1mState Load (0.4ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mSquare Load (9.4ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 1547) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPatient Load (0.7ms)[0m   [0mSELECT "patients".id FROM "patients" WHERE ("patients"."cuip" = 'HEPADISTRITO FEDERAL05092097E') LIMIT 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "patients" ("square_id", "ocupation_id", "maritalstatus_id", "expedient", "created_at", "cp", "cuip", "updated_at", "curp", "lastname1", "street", "gender", "lastname2", "exterior", "user_id", "interior", "phone", "firstname", "birthday", "bornstate_id", "dependency_id") VALUES(1547, 8, 2, '', '2010-09-20 22:47:45.645703', '12110', 'HEPADISTRITO FEDERAL05092097E', '2010-09-20 22:47:45.645703', '', 'HERNANDEZ', 'XOCONGO 225', 'f', 'PEREZ', '34', 1, '1A', '12354345', 'ALICIA', '2005-09-20', 9, 1) RETURNING "id"[0m
+  [4;35;1mSQL (5.2ms)[0m   [0mCOMMIT[0m
+Rendering patients/create
+  [4;36;1mSquare Load (0.2ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 1547) [0m
+  [4;35;1mCounty Load (0.3ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 1026) [0m
+  [4;36;1mState Load (0.2ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "psychologies" WHERE ("psychologies".patient_id = 2) [0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT count(*) AS count_all FROM "clinical_histories" WHERE ("clinical_histories".patient_id = 2) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "laboratories" WHERE ("laboratories".patient_id = 2) [0m
+Rendered patients/_show (40.5ms)
+Completed in 103ms (View: 40, DB: 19) | 200 OK [http://10.6.250.50/patients]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PsychologiesController#new (for 10.6.17.143 at 2010-09-20 17:49:21) [POST]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E=", "id"=>"2"}
+Rendering psychologies/new
+Rendered psychologies/_form (106.1ms)
+Completed in 128ms (View: 114, DB: 0) | 200 OK [http://10.6.250.50/psychologies/new?id=2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClinicalHistoriesController#new (for 10.6.17.143 at 2010-09-20 17:49:31) [POST]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E=", "id"=>"2"}
+Rendering clinical_histories/new
+Rendered clinical_histories/_form (104.7ms)
+Completed in 221ms (View: 187, DB: 0) | 200 OK [http://10.6.250.50/clinical_histories/new?id=2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClinicalHistoriesController#create (for 10.6.17.143 at 2010-09-20 17:50:33) [POST]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E=", "clinical_history"=>{"cardiovascular_husband"=>"0", "temperatura"=>"", "infectious_husband"=>"0", "medicaments"=>"0", "neoplastic_husband"=>"0", "talla"=>"", "no_audible"=>"0", "geneticos"=>"0", "diabetes"=>"0", "infectious_children"=>"0", "infectious_mother"=>"0", "medicaments_details"=>"", "neoplastic_others"=>"", "inmunizaciones"=>"0", "ectopicos"=>"", "dependency_id"=>"", "dilatacion"=>"0", "cardiovascular_mother"=>"0", "inicio_aspirina"=>"0", "grupo_rh"=>"", "malformed_father"=>"0", "diabetes_mother"=>"0", "iron"=>"0", "partos"=>"", "inicio_acido_folico"=>"0", "cardiovascular_brothers"=>"0", "malformed_brothers"=>"0", "cardiovascular_father"=>"0", "diastolica"=>"", "vitamins"=>"0", "peso"=>"", "diabetes_father"=>"0", "relationship"=>"", "fum(1i)"=>"2010", "enfermedad_hepatica"=>"0", "infectious_others"=>"", "diabetes_children"=>"0", "influenza_estacional"=>"0", "hiperlipidemia"=>"0", "fum(3i)"=>"20", "user_id"=>"", "reblandecimientos"=>"0", "ritmico"=>"0", "cardiovascular_others"=>"", "neoplastic_brothers"=>"0", "gammaglobulina"=>"0", "ivsa"=>"0", "diabetes_others"=>"", "malformed_others"=>"", "sangrado"=>"0", "anticuerpos_irregulares"=>"0", "papanicolau_method"=>"", "sistolica"=>"", "toxicomanias_children"=>"0", "masa_corporal"=>"", "infecciosos"=>"0", "fecha_probable_parto(2i)"=>"9", "altura_fondo_uterino"=>"", "drugs"=>"0", "enfermedad_renal"=>"0", "comentarios"=>"", "transplantes"=>"0", "inicio_multivitaminas"=>"0", "folic_acid"=>"0", "hipertension"=>"0", "toxicomanias_father"=>"0", "funcion_tiroidea"=>"0", "borramientos"=>"0", "malformed_mother"=>"0", "diabetes_husband"=>"0", "psiquiatricas_depresion"=>"0", "malformed_husband"=>"0", "cancer"=>"0", "infectious_brothers"=>"0", "toxicomanias_husband"=>"0", "responsible_family"=>"", "alergias"=>"0", "cirugias_generales"=>"0", "peso_anterior"=>"", "fluidos"=>"0", "toxicomanias_mother"=>"0", "patron_menstrual"=>"", "abortos"=>"", "molas"=>"", "toxicomanias_others"=>"", "cardiovascular_children"=>"0", "malformed_children"=>"0", "anomalias_uterinas"=>"0", "gesta"=>"", "varices_flebitis"=>"0", "infectious_father"=>"0", "cardiopatia"=>"0", "fcf"=>"", "influenza_h1n1"=>"0", "menarquia"=>"", "mamas"=>"0", "cesareas"=>"", "fum(2i)"=>"9", "num_fetos"=>"", "hidrops_feta"=>"0", "cervix"=>"", "neoplastic_children"=>"0", "diabetes_brothers"=>"0", "traumatismo"=>"0", "neumopatias_asma"=>"0", "inicio_suplementos"=>"0", "neoplastic_mother"=>"0", "fecha_probable_parto(1i)"=>"2010", "complicaciones_anestesicas"=>"0", "toxina_tetanica_1"=>"0", "inicio_hierro"=>"0", "neoplastic_father"=>"0", "toxicomanias_brothers"=>"0", "papanicolau"=>"0", "infertilidad"=>"0", "toxina_tetanica_2"=>"0", "patient_id"=>"2", "cirugia_genecologica"=>"0", "fecha_probable_parto(3i)"=>"20", "caffeine"=>"0", "neurologicas_epilepsia"=>"0"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO "clinical_histories" ("cardiovascular_husband", "temperatura", "infectious_husband", "medicaments", "neoplastic_husband", "talla", "no_audible", "geneticos", "alcoholism", "diabetes", "infectious_children", "infectious_mother", "medicaments_details", "neoplastic_others", "inmunizaciones", "ectopicos", "dependency_id", "dilatacion", "cardiovascular_mother", "inicio_aspirina", "grupo_rh", "malformed_father", "diabetes_mother", "feed", "iron", "partos", "inicio_acido_folico", "cardiovascular_brothers", "malformed_brothers", "cardiovascular_father", "diastolica", "vitamins", "fum", "peso", "diabetes_father", "relationship", "created_at", "enfermedad_hepatica", "infectious_others", "diabetes_children", "influenza_estacional", "hiperlipidemia", "user_id", "reblandecimientos", "ritmico", "fecha_probable_parto", "cardiovascular_others", "neoplastic_brothers", "gammaglobulina", "ivsa", "diabetes_others", "malformed_others", "sangrado", "anticuerpos_irregulares", "papanicolau_method", "sistolica", "toxicomanias_children", "masa_corporal", "infecciosos", "altura_fondo_uterino", "drugs", "enfermedad_renal", "comentarios", "transplantes", "inicio_multivitaminas", "folic_acid", "hipertension", "toxicomanias_father", "funcion_tiroidea", "borramientos", "malformed_mother", "diabetes_husband", "updated_at", "psiquiatricas_depresion", "malformed_husband", "cancer", "infectious_brothers", "toxicomanias_husband", "smoking", "responsible_family", "alergias", "cirugias_generales", "peso_anterior", "fluidos", "toxicomanias_mother", "patron_menstrual", "abortos", "molas", "toxicomanias_others", "cardiovascular_children", "malformed_children", "anomalias_uterinas", "gesta", "varices_flebitis", "infectious_father", "cardiopatia", "fcf", "influenza_h1n1", "menarquia", "mamas", "cesareas", "num_fetos", "hidrops_feta", "cervix", "neoplastic_children", "diabetes_brothers", "traumatismo", "neumopatias_asma", "inicio_suplementos", "neoplastic_mother", "complicaciones_anestesicas", "toxina_tetanica_1", "inicio_hierro", "toxina_tetanica_2", "infertilidad", "neoplastic_father", "toxicomanias_brothers", "papanicolau", "neurologicas_epilepsia", "caffeine", "cirugia_genecologica", "patient_id") VALUES('f', NULL, 'f', 'f', 'f', NULL, 'f', 'f', NULL, 'f', 'f', 'f', '', '', 'f', NULL, NULL, 'f', 'f', 'f', '', 'f', 'f', NULL, 'f', NULL, 'f', 'f', 'f', 'f', NULL, 'f', '2010-09-20', NULL, 'f', '', '2010-09-20 22:50:33.230913', 'f', '', 'f', 'f', 'f', NULL, 'f', 'f', '2010-09-20', '', 'f', 'f', 'f', '', '', 'f', 'f', '', NULL, 'f', NULL, 'f', NULL, 'f', 'f', '', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', '2010-09-20 22:50:33.230913', 'f', 'f', 'f', 'f', 'f', NULL, '', 'f', 'f', NULL, 'f', 'f', NULL, NULL, NULL, '', 'f', 'f', 'f', NULL, 'f', 'f', 'f', NULL, 'f', NULL, 'f', NULL, NULL, 'f', NULL, 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 2) RETURNING "id"[0m
+  [4;35;1mSQL (386.6ms)[0m   [0mCOMMIT[0m
+Rendering clinical_histories/create
+Completed in 447ms (View: 5, DB: 388) | 200 OK [http://10.6.250.50/clinical_histories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LaboratoriesController#new (for 10.6.17.143 at 2010-09-20 17:50:43) [POST]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E=", "id"=>"2"}
+Rendering laboratories/new
+Rendered laboratories/_form (109.8ms)
+Completed in 140ms (View: 116, DB: 0) | 200 OK [http://10.6.250.50/laboratories/new?id=2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PsychologiesController#new (for 10.6.17.143 at 2010-09-20 17:51:28) [POST]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E=", "id"=>"2"}
+Rendering psychologies/new
+Rendered psychologies/_form (33.5ms)
+Completed in 56ms (View: 41, DB: 0) | 200 OK [http://10.6.250.50/psychologies/new?id=2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#index (for 10.6.17.143 at 2010-09-20 17:52:18) [GET]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E="}
+Rendering patients/search_patient
+Rendered patients/_index (2.7ms)
+Completed in 90ms (View: 5, DB: 0) | 200 OK [http://10.6.250.50/patients?authenticity_token=8lc2ZP%2FwWsznqOwWfchJ%2BEDKrEbGCWhQycPpJQmfN3E%3D]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#get_patient (for 10.6.17.143 at 2010-09-20 17:52:20) [POST]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E=", "patient"=>{"search"=>""}}
+  [4;36;1mPatient Load (1.4ms)[0m   [0;1mSELECT * FROM "patients" [0m
+Rendering patients/get_patient
+  [4;35;1mSquare Load (0.4ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 329) [0m
+  [4;36;1mCounty Load (0.3ms)[0m   [0;1mSELECT * FROM "counties" WHERE ("counties"."id" = 201) [0m
+  [4;35;1mState Load (0.3ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;36;1mSquare Load (0.2ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 1547) [0m
+  [4;35;1mCounty Load (0.2ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 1026) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+Rendered patients/_patients (33.4ms)
+Completed in 48ms (View: 34, DB: 3) | 200 OK [http://10.6.250.50/patients/get_patient]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#show (for 10.6.17.143 at 2010-09-20 17:52:24) [GET]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E=", "id"=>"2"}
+  [4;36;1mPatient Load (0.5ms)[0m   [0;1mSELECT * FROM "patients" WHERE ("patients"."id" = 2) [0m
+  [4;35;1mSquare Load (0.4ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 1547) [0m
+  [4;36;1mCounty Load (0.3ms)[0m   [0;1mSELECT * FROM "counties" WHERE ("counties"."id" = 1026) [0m
+  [4;35;1mState Load (0.3ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "psychologies" WHERE ("psychologies".patient_id = 2) [0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM "clinical_histories" WHERE ("clinical_histories".patient_id = 2) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "laboratories" WHERE ("laboratories".patient_id = 2) [0m
+Rendered patients/_show (58.2ms)
+Completed in 146ms (View: 56, DB: 4) | 200 OK [http://10.6.250.50/patients/2?authenticity_token=8lc2ZP%2FwWsznqOwWfchJ%2BEDKrEbGCWhQycPpJQmfN3E%3D]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing LaboratoriesController#new (for 10.6.17.143 at 2010-09-20 17:52:41) [POST]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E=", "id"=>"2"}
+Rendering laboratories/new
+Rendered laboratories/_form (30.7ms)
+Completed in 133ms (View: 110, DB: 0) | 200 OK [http://10.6.250.50/laboratories/new?id=2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LaboratoriesController#create (for 10.6.17.143 at 2010-09-20 17:56:16) [POST]
+  Parameters: {"laboratory"=>{"grupo_sanguineo"=>"", "basofilos"=>"", "plaquetas"=>"", "neut_segmen"=>"", "eosinofilos"=>"", "leucocitos"=>"", "date(1i)"=>"2010", "sed_globular"=>"", "date(2i)"=>"9", "neut_banda"=>"", "date(3i)"=>"20", "t_protrombina"=>"", "t_parcial_tromb"=>"", "cmhc"=>"", "hemoglobina"=>"", "patient_id"=>"2", "factor_rh"=>"", "linfocitos"=>"", "applicant_doctor"=>"Solobino Perez Taylor", "date_next_consult(1i)"=>"2010", "date_next_consult(2i)"=>"10", "monocitos"=>"", "cuenta_diferencial"=>"", "date_next_consult(3i)"=>"24", "hematocrito"=>"", "reticulocitos"=>"", "alteraciones"=>"", "presumptive_diagnosis"=>"infeccion en vias urinarias"}, "authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E="}
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO "laboratories" ("tolerancia_glucosa_ayuno", "alat_tgp", "user_id", "acido_urico", "bilirubina_directa", "bilirrubina", "created_at", "bacterias", "tolerancia_glucosa_2horas", "alteraciones", "monocitos", "color", "exudado_gram", "t_protrombina", "basofilos", "microbiologia_otros", "densidad", "proteina", "dependency_id", "glucosa", "urea", "applicant_doctor", "tolerancia_glucosa_1hora", "nombre", "colesterol_total", "cristales", "reticulocitos", "eritrocitos", "bilirrubina_total", "hemoglobina", "grupo_sanguineo", "date", "prueba_embarazo", "nitrito", "basiloscopia_baar1", "cultivo", "presumptive_diagnosis", "date_next_consult", "tolerancia_glucosa_observaciones", "basiloscopia_baar2", "basiloscopia_baar3", "updated_at", "num_registro", "ph", "bilirrubina_indirecta", "vdrl", "linfocitos", "sedimento", "t_parcial_tromb", "cel_epiteliales", "hb_glicosilada", "sed_globular", "hdl", "inmunologia_otros", "creatinina", "leucocitos", "coproparasitoscopico1", "hematocrito", "antiestreptolisinas", "cmhc", "neut_banda", "factor_reumatoide", "cilindros", "factor_rh", "trigliceridos", "coproparasitoscopico2", "neut_segmen", "eosinofilos", "coproparasitoscopico3", "cetona", "proteina_c_reactiva", "f_alcalina", "cuenta_diferencial", "ldl", "fecha_reporte", "plaquetas", "asat_tgo", "fisico_quimico", "patient_id") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, '2010-09-20 22:56:16.211234', NULL, NULL, '', '', NULL, NULL, '', '', NULL, NULL, NULL, NULL, NULL, NULL, 'Solobino Perez Taylor', NULL, NULL, NULL, NULL, '', NULL, NULL, '', '', '2010-09-20', NULL, NULL, NULL, NULL, 'infeccion en vias urinarias', '2010-10-24', NULL, NULL, NULL, '2010-09-20 22:56:16.211234', NULL, NULL, NULL, NULL, '', NULL, '', NULL, NULL, '', NULL, NULL, NULL, '', NULL, '', NULL, '', '', NULL, NULL, '', NULL, NULL, '', '', NULL, NULL, NULL, NULL, '', NULL, NULL, '', NULL, NULL, 2) RETURNING "id"[0m
+  [4;35;1mSQL (13.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://10.6.250.50:3002/laboratories/1
+Completed in 51ms (DB: 14) | 302 Found [http://10.6.250.50/laboratories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LaboratoriesController#show (for 10.6.17.143 at 2010-09-20 17:56:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mLaboratory Load (1.0ms)[0m   [0mSELECT * FROM "laboratories" WHERE ("laboratories"."id" = 1) [0m
+Rendering template within layouts/laboratories
+Rendering laboratories/show
+Completed in 43ms (View: 28, DB: 1) | 200 OK [http://10.6.250.50/laboratories/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PsychologiesController#new (for 10.6.17.143 at 2010-09-20 17:56:25) [POST]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E=", "id"=>"2"}
+Rendering psychologies/new
+Rendered psychologies/_form (34.5ms)
+Completed in 57ms (View: 42, DB: 0) | 200 OK [http://10.6.250.50/psychologies/new?id=2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PsychologiesController#create (for 10.6.17.143 at 2010-09-20 17:56:51) [POST]
+  Parameters: {"psychology"=>{"insomnia_q7"=>"9", "chill_q5"=>"5", "satisfied_to_do_things_q10"=>"2", "exhausted_q2"=>"5", "date(1i)"=>"2010", "sad_q14"=>"8", "date(2i)"=>"9", "afraid_q13"=>"9", "headache_q4"=>"5", "sick_q3"=>"5", "date(3i)"=>"20", "full_of_energy_q6"=>"2", "enjoy_daily_activities_q11"=>"13", "good_health_q1"=>"1", "weeks_of_gestation"=>"", "patient_id"=>"2", "user_id"=>"1", "bad_mood_q12"=>"7", "restless_nights_q9"=>"9", "insomnia_all_night_q8"=>"9", "dependency_id"=>"1", "nervous_q15"=>"7"}, "authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E="}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPsychology Load (0.5ms)[0m   [0mSELECT "psychologies".id FROM "psychologies" WHERE ("psychologies"."patient_id" = 2) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering psychologies/new
+Rendered psychologies/_form (46.2ms)
+Completed in 148ms (View: 129, DB: 1) | 200 OK [http://10.6.250.50/psychologies]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 10.6.17.143 at 2010-09-20 17:56:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/warning.png" with {:method=>:get}):
+  haml (3.0.17) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PsychologiesController#create (for 10.6.17.143 at 2010-09-20 17:57:02) [POST]
+  Parameters: {"psychology"=>{"insomnia_q7"=>"9", "chill_q5"=>"5", "pregnant"=>"true", "satisfied_to_do_things_q10"=>"2", "exhausted_q2"=>"5", "date(1i)"=>"2010", "sad_q14"=>"8", "date(2i)"=>"9", "afraid_q13"=>"9", "headache_q4"=>"5", "sick_q3"=>"5", "date(3i)"=>"20", "full_of_energy_q6"=>"2", "enjoy_daily_activities_q11"=>"13", "good_health_q1"=>"1", "weeks_of_gestation"=>"12", "patient_id"=>"2", "user_id"=>"1", "bad_mood_q12"=>"7", "restless_nights_q9"=>"9", "insomnia_all_night_q8"=>"9", "dependency_id"=>"1", "nervous_q15"=>"7"}, "authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E="}
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPsychology Load (0.5ms)[0m   [0;1mSELECT "psychologies".id FROM "psychologies" WHERE ("psychologies"."patient_id" = 2) LIMIT 1[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mINSERT INTO "psychologies" ("pregnant", "chill_q5", "insomnia_q7", "exhausted_q2", "satisfied_to_do_things_q10", "created_at", "sad_q14", "sick_q3", "headache_q4", "afraid_q13", "updated_at", "full_of_energy_q6", "date", "weeks_of_gestation", "good_health_q1", "enjoy_daily_activities_q11", "patient_id", "insomnia_all_night_q8", "restless_nights_q9", "bad_mood_q12", "user_id", "nervous_q15", "dependency_id") VALUES('t', 5, 9, 5, 2, '2010-09-20 22:57:02.698773', 8, 5, 5, 9, '2010-09-20 22:57:02.698773', 2, '2010-09-20', 12, 1, 13, 2, 9, 9, 7, 1, 7, 1) RETURNING "id"[0m
+  [4;36;1mSQL (5.2ms)[0m   [0;1mCOMMIT[0m
+Rendering psychologies/create
+Completed in 42ms (View: 4, DB: 14) | 200 OK [http://10.6.250.50/psychologies]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PsychologiesController#create (for 10.6.17.143 at 2010-09-20 17:57:04) [POST]
+  Parameters: {"psychology"=>{"insomnia_q7"=>"9", "chill_q5"=>"5", "pregnant"=>"true", "satisfied_to_do_things_q10"=>"2", "exhausted_q2"=>"5", "date(1i)"=>"2010", "sad_q14"=>"8", "date(2i)"=>"9", "afraid_q13"=>"9", "headache_q4"=>"5", "sick_q3"=>"5", "date(3i)"=>"20", "full_of_energy_q6"=>"2", "enjoy_daily_activities_q11"=>"13", "good_health_q1"=>"1", "weeks_of_gestation"=>"12", "patient_id"=>"2", "user_id"=>"1", "bad_mood_q12"=>"7", "restless_nights_q9"=>"9", "insomnia_all_night_q8"=>"9", "dependency_id"=>"1", "nervous_q15"=>"7"}, "authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E="}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPsychology Load (0.6ms)[0m   [0mSELECT "psychologies".id FROM "psychologies" WHERE ("psychologies"."patient_id" = 2) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering psychologies/new
+Rendered psychologies/_form (37.0ms)
+Completed in 64ms (View: 44, DB: 1) | 200 OK [http://10.6.250.50/psychologies]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PsychologiesController#create (for 10.6.17.143 at 2010-09-20 17:57:21) [POST]
+  Parameters: {"psychology"=>{"insomnia_q7"=>"9", "chill_q5"=>"5", "pregnant"=>"true", "satisfied_to_do_things_q10"=>"2", "exhausted_q2"=>"5", "date(1i)"=>"2010", "sad_q14"=>"8", "date(2i)"=>"9", "afraid_q13"=>"9", "headache_q4"=>"5", "sick_q3"=>"5", "date(3i)"=>"20", "full_of_energy_q6"=>"2", "enjoy_daily_activities_q11"=>"13", "good_health_q1"=>"1", "weeks_of_gestation"=>"12", "patient_id"=>"2", "user_id"=>"1", "bad_mood_q12"=>"7", "restless_nights_q9"=>"9", "insomnia_all_night_q8"=>"9", "dependency_id"=>"1", "nervous_q15"=>"7"}, "authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E="}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPsychology Load (0.5ms)[0m   [0mSELECT "psychologies".id FROM "psychologies" WHERE ("psychologies"."patient_id" = 2) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering psychologies/new
+Rendered psychologies/_form (38.2ms)
+Completed in 65ms (View: 46, DB: 1) | 200 OK [http://10.6.250.50/psychologies]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#new (for 10.6.17.143 at 2010-09-20 17:57:39) [POST]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E="}
+Rendering patients/new_form
+  [4;36;1mState Load (0.7ms)[0m   [0;1mSELECT * FROM "states" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "states" [0m
+  [4;36;1mMaritalstatus Load (0.4ms)[0m   [0;1mSELECT * FROM "maritalstatuses" [0m
+  [4;35;1mOcupation Load (0.4ms)[0m   [0mSELECT * FROM "ocupations" [0m
+Rendered patients/_form (56.6ms)
+Completed in 78ms (View: 61, DB: 2) | 200 OK [http://10.6.250.50/patients/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#select_state (for 10.6.17.143 at 2010-09-20 17:59:00) [POST]
+  Parameters: {"state_select"=>"9", "authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E="}
+  [4;35;1mCounty Load (1.9ms)[0m   [0mSELECT * FROM "counties" WHERE (state_id = '9') [0m
+Rendered patients/_get_counties (5.0ms)
+Completed in 16ms (View: 6, DB: 2) | 200 OK [http://10.6.250.50/patients/select_state]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#select_county (for 10.6.17.143 at 2010-09-20 17:59:04) [POST]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E=", "county_select"=>"2375"}
+  [4;35;1mSquare Load (24.6ms)[0m   [0mSELECT * FROM "squares" WHERE (county_id = '2375') [0m
+Rendered patients/_get_squares (11.2ms)
+Completed in 53ms (View: 12, DB: 25) | 200 OK [http://10.6.250.50/patients/select_county]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#index (for 10.6.17.156 at 2010-09-20 17:59:05) [GET]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E="}
+Rendering patients/search_patient
+Rendered patients/_index (2.5ms)
+Completed in 88ms (View: 74, DB: 0) | 200 OK [http://10.6.250.50/patients?authenticity_token=S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E%3D]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#get_patient (for 10.6.17.156 at 2010-09-20 17:59:06) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "patient"=>{"search"=>""}}
+  [4;36;1mPatient Load (1.4ms)[0m   [0;1mSELECT * FROM "patients" [0m
+Rendering patients/get_patient
+  [4;35;1mSquare Load (0.4ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 329) [0m
+  [4;36;1mCounty Load (0.3ms)[0m   [0;1mSELECT * FROM "counties" WHERE ("counties"."id" = 201) [0m
+  [4;35;1mState Load (0.3ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;36;1mSquare Load (0.2ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 1547) [0m
+  [4;35;1mCounty Load (0.2ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 1026) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+Rendered patients/_patients (33.9ms)
+Completed in 49ms (View: 34, DB: 3) | 200 OK [http://10.6.250.50/patients/get_patient]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#show (for 10.6.17.156 at 2010-09-20 17:59:08) [GET]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"2"}
+  [4;36;1mPatient Load (0.5ms)[0m   [0;1mSELECT * FROM "patients" WHERE ("patients"."id" = 2) [0m
+  [4;35;1mSquare Load (0.4ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 1547) [0m
+  [4;36;1mCounty Load (0.3ms)[0m   [0;1mSELECT * FROM "counties" WHERE ("counties"."id" = 1026) [0m
+  [4;35;1mState Load (0.3ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "psychologies" WHERE ("psychologies".patient_id = 2) [0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM "clinical_histories" WHERE ("clinical_histories".patient_id = 2) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "laboratories" WHERE ("laboratories".patient_id = 2) [0m
+Rendered patients/_show (64.2ms)
+Completed in 161ms (View: 66, DB: 4) | 200 OK [http://10.6.250.50/patients/2?authenticity_token=S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E%3D]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#new (for 10.6.17.156 at 2010-09-20 17:59:13) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E="}
+Rendering patients/new_form
+  [4;36;1mState Load (0.8ms)[0m   [0;1mSELECT * FROM "states" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "states" [0m
+  [4;36;1mMaritalstatus Load (0.4ms)[0m   [0;1mSELECT * FROM "maritalstatuses" [0m
+  [4;35;1mOcupation Load (0.3ms)[0m   [0mSELECT * FROM "ocupations" [0m
+Rendered patients/_form (147.6ms)
+Completed in 170ms (View: 155, DB: 2) | 200 OK [http://10.6.250.50/patients/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing MeetingsController#index (for 10.6.17.156 at 2010-09-20 17:59:22) [GET]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E="}
+Rendering template within layouts/meetings
+Rendering meetings/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://10.6.250.50/meetings?authenticity_token=S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E%3D]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing MeetingsController#get_meetings (for 10.6.17.156 at 2010-09-20 17:59:22) [GET]
+  Parameters: {"end"=>"1286773200", "start"=>"1283144400", "_"=>"1285023431605"}
+  [4;36;1mMeeting Load (1.4ms)[0m   [0;1mSELECT * FROM "meetings" WHERE (starttime >= '2010-08-30 00:00:00') [0m
+Completed in 10ms (View: 1, DB: 2) | 200 OK [http://10.6.250.50/meetings/get_meetings?_=1285023431605&start=1283144400&end=1286773200]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing MeetingsController#new (for 10.6.17.156 at 2010-09-20 17:59:24) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E="}
+Rendering meetings/new
+Rendered meetings/_form (9.8ms)
+Completed in 24ms (View: 13, DB: 0) | 200 OK [http://10.6.250.50/meetings/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#create (for 10.6.17.143 at 2010-09-20 17:59:37) [POST]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E=", "patient"=>{"ocupation_id"=>"4", "maritalstatus_id"=>"1", "square_id"=>"2001", "birthday(1i)"=>"2006", "expedient"=>"", "birthday(2i)"=>"9", "birthday(3i)"=>"20", "street"=>"HIDALGO", "gender"=>"false", "lastname1"=>"GALAVIZ", "curp"=>"", "exterior"=>"123", "lastname2"=>"GARCIA", "phone"=>"2345239000", "interior"=>"B", "bornstate_id"=>"10", "firstname"=>"ARACELI"}, "county"=>"2375", "state"=>"9"}
+  [4;35;1mState Load (0.4ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 10) [0m
+  [4;35;1mSquare Load (4.7ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 2001) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPatient Load (0.9ms)[0m   [0mSELECT "patients".id FROM "patients" WHERE ("patients"."cuip" = 'GAGADG060920ED7') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "patients" ("square_id", "ocupation_id", "maritalstatus_id", "expedient", "created_at", "cp", "cuip", "updated_at", "curp", "lastname1", "street", "gender", "lastname2", "exterior", "user_id", "interior", "phone", "firstname", "birthday", "bornstate_id", "dependency_id") VALUES(2001, 4, 1, '', '2010-09-20 22:59:37.526680', '16090', 'GAGADG060920ED7', '2010-09-20 22:59:37.526680', '', 'GALAVIZ', 'HIDALGO', 'f', 'GARCIA', '123', 1, 'B', '2345239000', 'ARACELI', '2006-09-20', 10, 1) RETURNING "id"[0m
+  [4;35;1mSQL (5.6ms)[0m   [0mCOMMIT[0m
+Rendering patients/create
+  [4;36;1mSquare Load (0.2ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 2001) [0m
+  [4;35;1mCounty Load (0.3ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 2375) [0m
+  [4;36;1mState Load (0.2ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "psychologies" WHERE ("psychologies".patient_id = 3) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "clinical_histories" WHERE ("clinical_histories".patient_id = 3) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "laboratories" WHERE ("laboratories".patient_id = 3) [0m
+Rendered patients/_show (43.1ms)
+Completed in 170ms (View: 42, DB: 15) | 200 OK [http://10.6.250.50/patients]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PsychologiesController#new (for 10.6.17.143 at 2010-09-20 17:59:43) [POST]
+  Parameters: {"authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E=", "id"=>"3"}
+Rendering psychologies/new
+Rendered psychologies/_form (32.6ms)
+Completed in 54ms (View: 40, DB: 0) | 200 OK [http://10.6.250.50/psychologies/new?id=3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PsychologiesController#create (for 10.6.17.143 at 2010-09-20 18:00:22) [POST]
+  Parameters: {"psychology"=>{"insomnia_q7"=>"7", "chill_q5"=>"7", "pregnant"=>"true", "satisfied_to_do_things_q10"=>"13", "exhausted_q2"=>"6", "date(1i)"=>"2010", "sad_q14"=>"7", "date(2i)"=>"9", "afraid_q13"=>"9", "headache_q4"=>"11", "sick_q3"=>"7", "date(3i)"=>"20", "full_of_energy_q6"=>"13", "enjoy_daily_activities_q11"=>"13", "good_health_q1"=>"1", "weeks_of_gestation"=>"8", "patient_id"=>"3", "user_id"=>"1", "bad_mood_q12"=>"8", "restless_nights_q9"=>"7", "insomnia_all_night_q8"=>"8", "dependency_id"=>"1", "nervous_q15"=>"7"}, "authenticity_token"=>"8lc2ZP/wWsznqOwWfchJ+EDKrEbGCWhQycPpJQmfN3E="}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPsychology Load (0.5ms)[0m   [0mSELECT "psychologies".id FROM "psychologies" WHERE ("psychologies"."patient_id" = 3) LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "psychologies" ("pregnant", "chill_q5", "insomnia_q7", "exhausted_q2", "satisfied_to_do_things_q10", "created_at", "sad_q14", "sick_q3", "headache_q4", "afraid_q13", "updated_at", "full_of_energy_q6", "date", "weeks_of_gestation", "good_health_q1", "enjoy_daily_activities_q11", "patient_id", "insomnia_all_night_q8", "restless_nights_q9", "bad_mood_q12", "user_id", "nervous_q15", "dependency_id") VALUES('t', 7, 7, 6, 13, '2010-09-20 23:00:22.042351', 7, 7, 11, 9, '2010-09-20 23:00:22.042351', 13, '2010-09-20', 8, 1, 13, 3, 8, 7, 8, 1, 7, 1) RETURNING "id"[0m
+  [4;35;1mSQL (6.4ms)[0m   [0mCOMMIT[0m
+Rendering psychologies/create
+Completed in 33ms (View: 1, DB: 8) | 200 OK [http://10.6.250.50/psychologies]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#index (for 10.6.17.156 at 2010-09-20 18:07:15) [GET]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E="}
+Rendering patients/search_patient
+Rendered patients/_index (2.5ms)
+Completed in 18ms (View: 4, DB: 0) | 200 OK [http://10.6.250.50/patients?authenticity_token=S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E%3D]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#get_patient (for 10.6.17.156 at 2010-09-20 18:07:16) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "patient"=>{"search"=>""}}
+  [4;36;1mPatient Load (1.4ms)[0m   [0;1mSELECT * FROM "patients" [0m
+Rendering patients/get_patient
+  [4;35;1mSquare Load (0.4ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 329) [0m
+  [4;36;1mCounty Load (0.3ms)[0m   [0;1mSELECT * FROM "counties" WHERE ("counties"."id" = 201) [0m
+  [4;35;1mState Load (0.3ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;36;1mSquare Load (0.2ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 1547) [0m
+  [4;35;1mCounty Load (0.2ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 1026) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mSquare Load (0.2ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 2001) [0m
+  [4;36;1mCounty Load (0.2ms)[0m   [0;1mSELECT * FROM "counties" WHERE ("counties"."id" = 2375) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+Rendered patients/_patients (39.4ms)
+Completed in 55ms (View: 40, DB: 3) | 200 OK [http://10.6.250.50/patients/get_patient]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#show (for 10.6.17.156 at 2010-09-20 18:07:23) [GET]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"3"}
+  [4;35;1mPatient Load (0.5ms)[0m   [0mSELECT * FROM "patients" WHERE ("patients"."id" = 3) [0m
+  [4;36;1mSquare Load (0.3ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 2001) [0m
+  [4;35;1mCounty Load (0.4ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 2375) [0m
+  [4;36;1mState Load (0.3ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "psychologies" WHERE ("psychologies".patient_id = 3) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "clinical_histories" WHERE ("clinical_histories".patient_id = 3) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "laboratories" WHERE ("laboratories".patient_id = 3) [0m
+Rendered patients/_show (132.6ms)
+Completed in 149ms (View: 130, DB: 4) | 200 OK [http://10.6.250.50/patients/3?authenticity_token=S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E%3D]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#new (for 10.6.17.156 at 2010-09-20 18:07:27) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E="}
+Rendering patients/new_form
+  [4;35;1mState Load (0.7ms)[0m   [0mSELECT * FROM "states" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "states" [0m
+  [4;35;1mMaritalstatus Load (0.4ms)[0m   [0mSELECT * FROM "maritalstatuses" [0m
+  [4;36;1mOcupation Load (0.6ms)[0m   [0;1mSELECT * FROM "ocupations" [0m
+Rendered patients/_form (136.7ms)
+Completed in 159ms (View: 143, DB: 2) | 200 OK [http://10.6.250.50/patients/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#new (for 10.6.17.156 at 2010-09-20 18:07:39) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E="}
+Rendering patients/new_form
+  [4;36;1mState Load (0.6ms)[0m   [0;1mSELECT * FROM "states" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "states" [0m
+  [4;36;1mMaritalstatus Load (0.4ms)[0m   [0;1mSELECT * FROM "maritalstatuses" [0m
+  [4;35;1mOcupation Load (0.6ms)[0m   [0mSELECT * FROM "ocupations" [0m
+Rendered patients/_form (134.9ms)
+Completed in 157ms (View: 141, DB: 2) | 200 OK [http://10.6.250.50/patients/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#index (for 10.6.17.156 at 2010-09-20 18:07:41) [GET]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E="}
+Rendering patients/search_patient
+Rendered patients/_index (2.6ms)
+Completed in 19ms (View: 5, DB: 0) | 200 OK [http://10.6.250.50/patients?authenticity_token=S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E%3D]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#get_patient (for 10.6.17.156 at 2010-09-20 18:07:42) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "patient"=>{"search"=>""}}
+  [4;36;1mPatient Load (1.3ms)[0m   [0;1mSELECT * FROM "patients" [0m
+Rendering patients/get_patient
+  [4;35;1mSquare Load (0.4ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 329) [0m
+  [4;36;1mCounty Load (0.3ms)[0m   [0;1mSELECT * FROM "counties" WHERE ("counties"."id" = 201) [0m
+  [4;35;1mState Load (0.3ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;36;1mSquare Load (0.2ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 1547) [0m
+  [4;35;1mCounty Load (0.2ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 1026) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mSquare Load (0.2ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 2001) [0m
+  [4;36;1mCounty Load (0.2ms)[0m   [0;1mSELECT * FROM "counties" WHERE ("counties"."id" = 2375) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+Rendered patients/_patients (42.0ms)
+Completed in 128ms (View: 115, DB: 3) | 200 OK [http://10.6.250.50/patients/get_patient]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#show (for 10.6.17.156 at 2010-09-20 18:07:43) [GET]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"2"}
+  [4;35;1mPatient Load (0.5ms)[0m   [0mSELECT * FROM "patients" WHERE ("patients"."id" = 2) [0m
+  [4;36;1mSquare Load (0.3ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 1547) [0m
+  [4;35;1mCounty Load (0.3ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 1026) [0m
+  [4;36;1mState Load (0.3ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "psychologies" WHERE ("psychologies".patient_id = 2) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "clinical_histories" WHERE ("clinical_histories".patient_id = 2) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "laboratories" WHERE ("laboratories".patient_id = 2) [0m
+Rendered patients/_show (127.6ms)
+Completed in 144ms (View: 126, DB: 4) | 200 OK [http://10.6.250.50/patients/2?authenticity_token=S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E%3D]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#index (for 10.6.17.156 at 2010-09-20 18:07:46) [GET]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E="}
+Rendering patients/search_patient
+Rendered patients/_index (2.7ms)
+Completed in 19ms (View: 5, DB: 0) | 200 OK [http://10.6.250.50/patients?authenticity_token=S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E%3D]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#get_patient (for 10.6.17.156 at 2010-09-20 18:07:47) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "patient"=>{"search"=>""}}
+  [4;36;1mPatient Load (1.3ms)[0m   [0;1mSELECT * FROM "patients" [0m
+Rendering patients/get_patient
+  [4;35;1mSquare Load (0.4ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 329) [0m
+  [4;36;1mCounty Load (0.3ms)[0m   [0;1mSELECT * FROM "counties" WHERE ("counties"."id" = 201) [0m
+  [4;35;1mState Load (0.2ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;36;1mSquare Load (0.2ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 1547) [0m
+  [4;35;1mCounty Load (0.1ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 1026) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mSquare Load (0.1ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 2001) [0m
+  [4;36;1mCounty Load (0.1ms)[0m   [0;1mSELECT * FROM "counties" WHERE ("counties"."id" = 2375) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+Rendered patients/_patients (109.1ms)
+Completed in 122ms (View: 109, DB: 3) | 200 OK [http://10.6.250.50/patients/get_patient]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#show (for 10.6.17.156 at 2010-09-20 18:07:48) [GET]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"3"}
+  [4;35;1mPatient Load (0.5ms)[0m   [0mSELECT * FROM "patients" WHERE ("patients"."id" = 3) [0m
+  [4;36;1mSquare Load (0.3ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 2001) [0m
+  [4;35;1mCounty Load (0.3ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 2375) [0m
+  [4;36;1mState Load (0.3ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "psychologies" WHERE ("psychologies".patient_id = 3) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "clinical_histories" WHERE ("clinical_histories".patient_id = 3) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "laboratories" WHERE ("laboratories".patient_id = 3) [0m
+Rendered patients/_show (53.7ms)
+Completed in 70ms (View: 52, DB: 4) | 200 OK [http://10.6.250.50/patients/3?authenticity_token=S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E%3D]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LaboratoriesController#new (for 10.6.17.156 at 2010-09-20 18:07:51) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"3"}
+Rendering laboratories/new
+Rendered laboratories/_form (32.4ms)
+Completed in 64ms (View: 38, DB: 0) | 200 OK [http://10.6.250.50/laboratories/new?id=3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClinicalHistoriesController#new (for 10.6.17.156 at 2010-09-20 18:12:48) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"3"}
+Rendering clinical_histories/new
+Rendered clinical_histories/_form (183.8ms)
+Completed in 234ms (View: 200, DB: 0) | 200 OK [http://10.6.250.50/clinical_histories/new?id=3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClinicalHistoriesController#new (for 10.6.17.156 at 2010-09-20 18:13:13) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"3"}
+Rendering clinical_histories/new
+Rendered clinical_histories/_form (180.7ms)
+Completed in 228ms (View: 194, DB: 0) | 200 OK [http://10.6.250.50/clinical_histories/new?id=3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClinicalHistoriesController#new (for 10.6.17.156 at 2010-09-20 18:13:21) [POST]
+  Parameters: {"authenticity_token"=>"S0hNw9sht93tu3aipq6aFziBqqEHY2lFfiCpioNZ93E=", "id"=>"3"}
+Rendering clinical_histories/new
+Rendered clinical_histories/_form (166.6ms)
+Completed in 213ms (View: 180, DB: 0) | 200 OK [http://10.6.250.50/clinical_histories/new?id=3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing NavigatorsController#index (for 68.171.233.254 at 2010-09-21 10:16:37) [GET]
+Rendering template within layouts/application
+Rendering navigators/index
+Rendered navigators/_menu (1.8ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://201.144.254.182/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 68.171.233.254 at 2010-09-21 10:16:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/none" with {:method=>:get}):
+  haml (3.0.17) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing NavigatorsController#index (for 10.6.17.141 at 2010-09-21 10:44:35) [GET]
+Rendering template within layouts/application
+Rendering navigators/index
+Rendered navigators/_menu (13.6ms)
+Completed in 40ms (View: 37, DB: 0) | 200 OK [http://10.6.250.50/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 10.6.17.141 at 2010-09-21 10:44:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/none" with {:method=>:get}):
+  haml (3.0.17) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing NavigatorsController#index (for 207.249.8.26 at 2010-09-21 10:45:22) [GET]
+Rendering template within layouts/application
+Rendering navigators/index
+Rendered navigators/_menu (1.8ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://201.144.254.182/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 207.249.8.26 at 2010-09-21 10:45:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/none" with {:method=>:get}):
+  haml (3.0.17) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#new (for 207.249.8.26 at 2010-09-21 10:51:20) [POST]
+  Parameters: {"authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q="}
+Rendering patients/new_form
+  [4;35;1mState Load (0.8ms)[0m   [0mSELECT * FROM "states" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "states" [0m
+  [4;35;1mMaritalstatus Load (0.5ms)[0m   [0mSELECT * FROM "maritalstatuses" [0m
+  [4;36;1mOcupation Load (0.4ms)[0m   [0;1mSELECT * FROM "ocupations" [0m
+Rendered patients/_form (77.4ms)
+Completed in 187ms (View: 157, DB: 2) | 200 OK [http://201.144.254.182/patients/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#select_state (for 207.249.8.26 at 2010-09-21 10:53:08) [POST]
+  Parameters: {"state_select"=>"9", "authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q="}
+  [4;36;1mCounty Load (2.1ms)[0m   [0;1mSELECT * FROM "counties" WHERE (state_id = '9') [0m
+Rendered patients/_get_counties (5.8ms)
+Completed in 20ms (View: 10, DB: 2) | 200 OK [http://201.144.254.182/patients/select_state]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#select_county (for 207.249.8.26 at 2010-09-21 10:53:12) [POST]
+  Parameters: {"authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q=", "county_select"=>"472"}
+  [4;36;1mSquare Load (38.5ms)[0m   [0;1mSELECT * FROM "squares" WHERE (county_id = '472') [0m
+Rendered patients/_get_squares (12.0ms)
+Completed in 71ms (View: 16, DB: 39) | 200 OK [http://201.144.254.182/patients/select_county]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#create (for 207.249.8.26 at 2010-09-21 10:53:20) [POST]
+  Parameters: {"authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q=", "patient"=>{"ocupation_id"=>"15", "maritalstatus_id"=>"2", "square_id"=>"503", "birthday(1i)"=>"1979", "expedient"=>"", "birthday(2i)"=>"9", "birthday(3i)"=>"21", "street"=>"PERIFERICO SUR", "gender"=>"false", "lastname1"=>"DIAZ", "curp"=>"", "exterior"=>"4118", "lastname2"=>"JIMENEZ", "phone"=>"12312381897", "interior"=>"", "bornstate_id"=>"17", "firstname"=>"MARIA JUANA "}, "county"=>"472", "state"=>"9"}
+  [4;36;1mState Load (0.4ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 17) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 17) [0m
+  [4;36;1mSquare Load (0.9ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 503) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPatient Load (0.9ms)[0m   [0;1mSELECT "patients".id FROM "patients" WHERE ("patients"."cuip" = 'DIJMMS79092140A') LIMIT 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO "patients" ("square_id", "ocupation_id", "maritalstatus_id", "expedient", "created_at", "cp", "cuip", "updated_at", "curp", "lastname1", "street", "gender", "lastname2", "exterior", "user_id", "interior", "phone", "firstname", "birthday", "bornstate_id", "dependency_id") VALUES(503, 15, 2, '', '2010-09-21 15:53:20.976155', '04330', 'DIJMMS79092140A', '2010-09-21 15:53:20.976155', '', 'DIAZ', 'PERIFERICO SUR', 'f', 'JIMENEZ', '4118', 1, '', '12312381897', 'MARIA JUANA ', '1979-09-21', 17, 1) RETURNING "id"[0m
+  [4;36;1mSQL (5.4ms)[0m   [0;1mCOMMIT[0m
+Rendering patients/create
+  [4;35;1mSquare Load (0.4ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 503) [0m
+  [4;36;1mCounty Load (0.4ms)[0m   [0;1mSELECT * FROM "counties" WHERE ("counties"."id" = 472) [0m
+  [4;35;1mState Load (0.2ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "psychologies" WHERE ("psychologies".patient_id = 4) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "clinical_histories" WHERE ("clinical_histories".patient_id = 4) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "laboratories" WHERE ("laboratories".patient_id = 4) [0m
+Rendered patients/_show (51.3ms)
+Completed in 118ms (View: 61, DB: 12) | 200 OK [http://201.144.254.182/patients]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PsychologiesController#new (for 207.249.8.26 at 2010-09-21 10:54:18) [POST]
+  Parameters: {"authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q=", "id"=>"4"}
+Rendering psychologies/new
+Rendered psychologies/_form (60.2ms)
+Completed in 92ms (View: 77, DB: 0) | 200 OK [http://201.144.254.182/psychologies/new?id=4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PsychologiesController#create (for 207.249.8.26 at 2010-09-21 10:55:03) [POST]
+  Parameters: {"psychology"=>{"insomnia_q7"=>"9", "chill_q5"=>"8", "pregnant"=>"true", "satisfied_to_do_things_q10"=>"13", "exhausted_q2"=>"6", "date(1i)"=>"2010", "sad_q14"=>"9", "date(2i)"=>"9", "afraid_q13"=>"7", "headache_q4"=>"11", "sick_q3"=>"7", "date(3i)"=>"21", "full_of_energy_q6"=>"13", "enjoy_daily_activities_q11"=>"13", "good_health_q1"=>"3", "weeks_of_gestation"=>"8", "patient_id"=>"4", "user_id"=>"1", "bad_mood_q12"=>"7", "restless_nights_q9"=>"7", "insomnia_all_night_q8"=>"7", "dependency_id"=>"1", "nervous_q15"=>"7"}, "authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q="}
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPsychology Load (0.5ms)[0m   [0;1mSELECT "psychologies".id FROM "psychologies" WHERE ("psychologies"."patient_id" = 4) LIMIT 1[0m
+  [4;35;1mSQL (7.4ms)[0m   [0mINSERT INTO "psychologies" ("pregnant", "chill_q5", "insomnia_q7", "exhausted_q2", "satisfied_to_do_things_q10", "created_at", "sad_q14", "sick_q3", "headache_q4", "afraid_q13", "updated_at", "full_of_energy_q6", "date", "weeks_of_gestation", "good_health_q1", "enjoy_daily_activities_q11", "patient_id", "insomnia_all_night_q8", "restless_nights_q9", "bad_mood_q12", "user_id", "nervous_q15", "dependency_id") VALUES('t', 8, 9, 6, 13, '2010-09-21 15:55:03.517171', 9, 7, 11, 7, '2010-09-21 15:55:03.517171', 13, '2010-09-21', 8, 3, 13, 4, 7, 7, 7, 1, 7, 1) RETURNING "id"[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mCOMMIT[0m
+Rendering psychologies/create
+Completed in 40ms (View: 4, DB: 13) | 200 OK [http://201.144.254.182/psychologies]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClinicalHistoriesController#new (for 207.249.8.26 at 2010-09-21 10:55:12) [POST]
+  Parameters: {"authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q=", "id"=>"4"}
+Rendering clinical_histories/new
+Rendered clinical_histories/_form (149.0ms)
+Completed in 272ms (View: 237, DB: 0) | 200 OK [http://201.144.254.182/clinical_histories/new?id=4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClinicalHistoriesController#create (for 207.249.8.26 at 2010-09-21 10:56:11) [POST]
+  Parameters: {"authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q=", "clinical_history"=>{"cardiovascular_husband"=>"0", "temperatura"=>"", "infectious_husband"=>"0", "medicaments"=>"0", "neoplastic_husband"=>"0", "talla"=>"", "no_audible"=>"0", "geneticos"=>"0", "diabetes"=>"0", "infectious_children"=>"0", "infectious_mother"=>"0", "medicaments_details"=>"", "neoplastic_others"=>"", "inmunizaciones"=>"0", "ectopicos"=>"", "dependency_id"=>"", "dilatacion"=>"0", "cardiovascular_mother"=>"0", "inicio_aspirina"=>"0", "grupo_rh"=>"", "malformed_father"=>"0", "diabetes_mother"=>"0", "iron"=>"0", "partos"=>"", "inicio_acido_folico"=>"0", "cardiovascular_brothers"=>"0", "malformed_brothers"=>"0", "cardiovascular_father"=>"0", "diastolica"=>"", "vitamins"=>"0", "peso"=>"", "diabetes_father"=>"0", "relationship"=>"", "fum(1i)"=>"2010", "enfermedad_hepatica"=>"0", "infectious_others"=>"", "diabetes_children"=>"0", "influenza_estacional"=>"0", "hiperlipidemia"=>"0", "fum(3i)"=>"21", "user_id"=>"", "reblandecimientos"=>"0", "ritmico"=>"0", "cardiovascular_others"=>"", "neoplastic_brothers"=>"0", "gammaglobulina"=>"0", "ivsa"=>"0", "diabetes_others"=>"", "malformed_others"=>"", "sangrado"=>"0", "anticuerpos_irregulares"=>"0", "papanicolau_method"=>"", "sistolica"=>"", "toxicomanias_children"=>"0", "masa_corporal"=>"", "infecciosos"=>"0", "fecha_probable_parto(2i)"=>"9", "altura_fondo_uterino"=>"", "drugs"=>"0", "enfermedad_renal"=>"0", "comentarios"=>"", "transplantes"=>"0", "inicio_multivitaminas"=>"0", "folic_acid"=>"0", "hipertension"=>"0", "toxicomanias_father"=>"0", "funcion_tiroidea"=>"0", "borramientos"=>"0", "malformed_mother"=>"0", "diabetes_husband"=>"0", "psiquiatricas_depresion"=>"0", "malformed_husband"=>"0", "cancer"=>"0", "infectious_brothers"=>"0", "toxicomanias_husband"=>"0", "responsible_family"=>"", "alergias"=>"0", "cirugias_generales"=>"0", "peso_anterior"=>"", "fluidos"=>"0", "toxicomanias_mother"=>"0", "patron_menstrual"=>"", "abortos"=>"", "molas"=>"", "toxicomanias_others"=>"", "cardiovascular_children"=>"0", "malformed_children"=>"0", "anomalias_uterinas"=>"0", "gesta"=>"", "varices_flebitis"=>"0", "infectious_father"=>"0", "cardiopatia"=>"0", "fcf"=>"", "influenza_h1n1"=>"0", "menarquia"=>"", "mamas"=>"0", "cesareas"=>"", "fum(2i)"=>"9", "num_fetos"=>"", "hidrops_feta"=>"0", "cervix"=>"", "neoplastic_children"=>"0", "diabetes_brothers"=>"0", "traumatismo"=>"0", "neumopatias_asma"=>"0", "inicio_suplementos"=>"0", "neoplastic_mother"=>"0", "fecha_probable_parto(1i)"=>"2010", "complicaciones_anestesicas"=>"0", "toxina_tetanica_1"=>"0", "inicio_hierro"=>"0", "neoplastic_father"=>"0", "toxicomanias_brothers"=>"0", "papanicolau"=>"0", "infertilidad"=>"0", "toxina_tetanica_2"=>"0", "patient_id"=>"4", "cirugia_genecologica"=>"0", "fecha_probable_parto(3i)"=>"21", "caffeine"=>"0", "neurologicas_epilepsia"=>"0"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "clinical_histories" ("cardiovascular_husband", "temperatura", "infectious_husband", "medicaments", "neoplastic_husband", "talla", "no_audible", "geneticos", "alcoholism", "diabetes", "infectious_children", "infectious_mother", "medicaments_details", "neoplastic_others", "inmunizaciones", "ectopicos", "dependency_id", "dilatacion", "cardiovascular_mother", "inicio_aspirina", "grupo_rh", "malformed_father", "diabetes_mother", "feed", "iron", "partos", "inicio_acido_folico", "cardiovascular_brothers", "malformed_brothers", "cardiovascular_father", "diastolica", "vitamins", "fum", "peso", "diabetes_father", "relationship", "created_at", "enfermedad_hepatica", "infectious_others", "diabetes_children", "influenza_estacional", "hiperlipidemia", "user_id", "reblandecimientos", "ritmico", "fecha_probable_parto", "cardiovascular_others", "neoplastic_brothers", "gammaglobulina", "ivsa", "diabetes_others", "malformed_others", "sangrado", "anticuerpos_irregulares", "papanicolau_method", "sistolica", "toxicomanias_children", "masa_corporal", "infecciosos", "altura_fondo_uterino", "drugs", "enfermedad_renal", "comentarios", "transplantes", "inicio_multivitaminas", "folic_acid", "hipertension", "toxicomanias_father", "funcion_tiroidea", "borramientos", "malformed_mother", "diabetes_husband", "updated_at", "psiquiatricas_depresion", "malformed_husband", "cancer", "infectious_brothers", "toxicomanias_husband", "smoking", "responsible_family", "alergias", "cirugias_generales", "peso_anterior", "fluidos", "toxicomanias_mother", "patron_menstrual", "abortos", "molas", "toxicomanias_others", "cardiovascular_children", "malformed_children", "anomalias_uterinas", "gesta", "varices_flebitis", "infectious_father", "cardiopatia", "fcf", "influenza_h1n1", "menarquia", "mamas", "cesareas", "num_fetos", "hidrops_feta", "cervix", "neoplastic_children", "diabetes_brothers", "traumatismo", "neumopatias_asma", "inicio_suplementos", "neoplastic_mother", "complicaciones_anestesicas", "toxina_tetanica_1", "inicio_hierro", "toxina_tetanica_2", "infertilidad", "neoplastic_father", "toxicomanias_brothers", "papanicolau", "neurologicas_epilepsia", "caffeine", "cirugia_genecologica", "patient_id") VALUES('f', NULL, 'f', 'f', 'f', NULL, 'f', 'f', NULL, 'f', 'f', 'f', '', '', 'f', NULL, NULL, 'f', 'f', 'f', '', 'f', 'f', NULL, 'f', NULL, 'f', 'f', 'f', 'f', NULL, 'f', '2010-09-21', NULL, 'f', '', '2010-09-21 15:56:11.943406', 'f', '', 'f', 'f', 'f', NULL, 'f', 'f', '2010-09-21', '', 'f', 'f', 'f', '', '', 'f', 'f', '', NULL, 'f', NULL, 'f', NULL, 'f', 'f', '', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', '2010-09-21 15:56:11.943406', 'f', 'f', 'f', 'f', 'f', NULL, '', 'f', 'f', NULL, 'f', 'f', NULL, NULL, NULL, '', 'f', 'f', 'f', NULL, 'f', 'f', 'f', NULL, 'f', NULL, 'f', NULL, NULL, 'f', NULL, 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 'f', 4) RETURNING "id"[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mCOMMIT[0m
+Rendering clinical_histories/create
+Completed in 61ms (View: 4, DB: 4) | 200 OK [http://201.144.254.182/clinical_histories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LaboratoriesController#new (for 207.249.8.26 at 2010-09-21 10:56:16) [POST]
+  Parameters: {"authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q=", "id"=>"4"}
+Rendering laboratories/new
+Rendered laboratories/_form (47.4ms)
+Completed in 158ms (View: 134, DB: 0) | 200 OK [http://201.144.254.182/laboratories/new?id=4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PsychologiesController#new (for 207.249.8.26 at 2010-09-21 10:59:03) [POST]
+  Parameters: {"authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q=", "id"=>"4"}
+Rendering psychologies/new
+Rendered psychologies/_form (32.8ms)
+Completed in 55ms (View: 40, DB: 0) | 200 OK [http://201.144.254.182/psychologies/new?id=4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PsychologiesController#new (for 207.249.8.26 at 2010-09-21 11:07:01) [POST]
+  Parameters: {"authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q=", "id"=>"4"}
+Rendering psychologies/new
+Rendered psychologies/_form (35.0ms)
+Completed in 58ms (View: 43, DB: 0) | 200 OK [http://201.144.254.182/psychologies/new?id=4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PsychologiesController#create (for 207.249.8.26 at 2010-09-21 11:07:32) [POST]
+  Parameters: {"psychology"=>{"insomnia_q7"=>"7", "chill_q5"=>"7", "satisfied_to_do_things_q10"=>"14", "exhausted_q2"=>"6", "date(1i)"=>"2010", "sad_q14"=>"7", "date(2i)"=>"9", "afraid_q13"=>"7", "headache_q4"=>"10", "sick_q3"=>"9", "date(3i)"=>"22", "full_of_energy_q6"=>"13", "enjoy_daily_activities_q11"=>"14", "good_health_q1"=>"1", "weeks_of_gestation"=>"", "patient_id"=>"4", "user_id"=>"1", "bad_mood_q12"=>"8", "restless_nights_q9"=>"7", "insomnia_all_night_q8"=>"7", "dependency_id"=>"1", "nervous_q15"=>"7"}, "authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q="}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPsychology Load (0.6ms)[0m   [0mSELECT "psychologies".id FROM "psychologies" WHERE ("psychologies"."patient_id" = 4) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering psychologies/new
+Rendered psychologies/_form (49.3ms)
+Completed in 75ms (View: 57, DB: 1) | 200 OK [http://201.144.254.182/psychologies]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 207.249.8.26 at 2010-09-21 11:07:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/warning.png" with {:method=>:get}):
+  haml (3.0.17) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClinicalHistoriesController#new (for 207.249.8.26 at 2010-09-21 11:08:01) [POST]
+  Parameters: {"authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q=", "id"=>"4"}
+Rendering clinical_histories/new
+Rendered clinical_histories/_form (103.7ms)
+Completed in 224ms (View: 190, DB: 0) | 200 OK [http://201.144.254.182/clinical_histories/new?id=4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClinicalHistoriesController#new (for 207.249.8.26 at 2010-09-21 11:08:05) [POST]
+  Parameters: {"authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q=", "id"=>"4"}
+Rendering clinical_histories/new
+Rendered clinical_histories/_form (106.2ms)
+Completed in 227ms (View: 193, DB: 0) | 200 OK [http://201.144.254.182/clinical_histories/new?id=4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LaboratoriesController#new (for 207.249.8.26 at 2010-09-21 11:14:26) [POST]
+  Parameters: {"authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q=", "id"=>"4"}
+Rendering laboratories/new
+Rendered laboratories/_form (32.3ms)
+Completed in 63ms (View: 38, DB: 0) | 200 OK [http://201.144.254.182/laboratories/new?id=4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing LaboratoriesController#new (for 207.249.8.26 at 2010-09-21 11:18:00) [POST]
+  Parameters: {"authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q=", "id"=>"4"}
+Rendering laboratories/new
+Rendered laboratories/_form (105.6ms)
+Completed in 135ms (View: 111, DB: 0) | 200 OK [http://201.144.254.182/laboratories/new?id=4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing NavigatorsController#index (for 207.249.9.28 at 2010-09-21 11:30:21) [GET]
+Rendering template within layouts/application
+Rendering navigators/index
+Rendered navigators/_menu (1.8ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://201.144.254.182/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 207.249.9.28 at 2010-09-21 11:30:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/none" with {:method=>:get}):
+  haml (3.0.17) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing NavigatorsController#index (for 207.249.8.26 at 2010-09-21 11:33:02) [GET]
+Rendering template within layouts/application
+Rendering navigators/index
+Rendered navigators/_menu (1.7ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://201.144.254.182/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing NavigatorsController#index (for 207.249.8.26 at 2010-09-21 11:34:28) [GET]
+Rendering template within layouts/application
+Rendering navigators/index
+Rendered navigators/_menu (2.0ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://201.144.254.182/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 207.249.8.26 at 2010-09-21 11:34:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/none" with {:method=>:get}):
+  haml (3.0.17) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 207.249.8.26 at 2010-09-21 11:37:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/none" with {:method=>:get}):
+  haml (3.0.17) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#new (for 207.249.8.26 at 2010-09-21 11:39:15) [POST]
+  Parameters: {"authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q="}
+Rendering patients/new_form
+  [4;35;1mState Load (0.7ms)[0m   [0mSELECT * FROM "states" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "states" [0m
+  [4;35;1mMaritalstatus Load (0.4ms)[0m   [0mSELECT * FROM "maritalstatuses" [0m
+  [4;36;1mOcupation Load (0.7ms)[0m   [0;1mSELECT * FROM "ocupations" [0m
+Rendered patients/_form (60.1ms)
+Completed in 164ms (View: 139, DB: 2) | 200 OK [http://201.144.254.182/patients/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#index (for 207.249.8.26 at 2010-09-21 11:39:20) [GET]
+  Parameters: {"authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q="}
+Rendering patients/search_patient
+Rendered patients/_index (7.2ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://201.144.254.182/patients?authenticity_token=xXWXHRbIN7Vbd2TGvz%2BRHsHRMekc7hdeRzm%2FhNX4%2B2Q%3D]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#get_patient (for 207.249.8.26 at 2010-09-21 11:39:22) [POST]
+  Parameters: {"authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q=", "patient"=>{"search"=>""}}
+  [4;35;1mPatient Load (1.4ms)[0m   [0mSELECT * FROM "patients" [0m
+Rendering patients/get_patient
+  [4;36;1mSquare Load (0.4ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 329) [0m
+  [4;35;1mCounty Load (0.3ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 201) [0m
+  [4;36;1mState Load (0.2ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mSquare Load (7.6ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 1547) [0m
+  [4;36;1mCounty Load (0.3ms)[0m   [0;1mSELECT * FROM "counties" WHERE ("counties"."id" = 1026) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;36;1mSquare Load (0.4ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 2001) [0m
+  [4;35;1mCounty Load (0.2ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 2375) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mSquare Load (0.2ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 503) [0m
+  [4;36;1mCounty Load (0.1ms)[0m   [0;1mSELECT * FROM "counties" WHERE ("counties"."id" = 472) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+Rendered patients/_patients (53.7ms)
+Completed in 151ms (View: 129, DB: 11) | 200 OK [http://201.144.254.182/patients/get_patient]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#show (for 207.249.8.26 at 2010-09-21 11:39:42) [GET]
+  Parameters: {"authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q=", "id"=>"4"}
+  [4;35;1mPatient Load (0.6ms)[0m   [0mSELECT * FROM "patients" WHERE ("patients"."id" = 4) [0m
+  [4;36;1mSquare Load (0.3ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 503) [0m
+  [4;35;1mCounty Load (0.3ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 472) [0m
+  [4;36;1mState Load (0.3ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "psychologies" WHERE ("psychologies".patient_id = 4) [0m
+  [4;36;1mSQL (13.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM "clinical_histories" WHERE ("clinical_histories".patient_id = 4) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT count(*) AS count_all FROM "laboratories" WHERE ("laboratories".patient_id = 4) [0m
+Rendered patients/_show (144.4ms)
+Completed in 161ms (View: 129, DB: 17) | 200 OK [http://201.144.254.182/patients/4?authenticity_token=xXWXHRbIN7Vbd2TGvz%2BRHsHRMekc7hdeRzm%2FhNX4%2B2Q%3D]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LaboratoriesController#new (for 207.249.8.26 at 2010-09-21 11:39:45) [POST]
+  Parameters: {"authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q=", "id"=>"4"}
+Rendering laboratories/new
+Rendered laboratories/_form (31.9ms)
+Completed in 62ms (View: 38, DB: 0) | 200 OK [http://201.144.254.182/laboratories/new?id=4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing NavigatorsController#index (for 207.249.8.26 at 2010-09-21 11:40:31) [GET]
+Rendering template within layouts/application
+Rendering navigators/index
+Rendered navigators/_menu (1.9ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://201.144.254.182/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 207.249.8.26 at 2010-09-21 11:40:38) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/none" with {:method=>:get}):
+  haml (3.0.17) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#index (for 207.249.8.26 at 2010-09-21 11:40:42) [GET]
+  Parameters: {"authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q="}
+Rendering patients/search_patient
+Rendered patients/_index (2.7ms)
+Completed in 20ms (View: 5, DB: 0) | 200 OK [http://201.144.254.182/patients?authenticity_token=xXWXHRbIN7Vbd2TGvz%2BRHsHRMekc7hdeRzm%2FhNX4%2B2Q%3D]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#get_patient (for 207.249.8.26 at 2010-09-21 11:40:44) [POST]
+  Parameters: {"authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q=", "patient"=>{"search"=>""}}
+  [4;36;1mPatient Load (1.4ms)[0m   [0;1mSELECT * FROM "patients" [0m
+Rendering patients/get_patient
+  [4;35;1mSquare Load (0.4ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 329) [0m
+  [4;36;1mCounty Load (0.3ms)[0m   [0;1mSELECT * FROM "counties" WHERE ("counties"."id" = 201) [0m
+  [4;35;1mState Load (0.3ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;36;1mSquare Load (0.2ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 1547) [0m
+  [4;35;1mCounty Load (0.2ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 1026) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mSquare Load (0.2ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 2001) [0m
+  [4;36;1mCounty Load (0.2ms)[0m   [0;1mSELECT * FROM "counties" WHERE ("counties"."id" = 2375) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;36;1mSquare Load (0.2ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 503) [0m
+  [4;35;1mCounty Load (0.2ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 472) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+Rendered patients/_patients (39.3ms)
+Completed in 53ms (View: 39, DB: 4) | 200 OK [http://201.144.254.182/patients/get_patient]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#show (for 207.249.8.26 at 2010-09-21 11:40:48) [GET]
+  Parameters: {"authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q=", "id"=>"4"}
+  [4;36;1mPatient Load (0.5ms)[0m   [0;1mSELECT * FROM "patients" WHERE ("patients"."id" = 4) [0m
+  [4;35;1mSquare Load (0.3ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 503) [0m
+  [4;36;1mCounty Load (0.3ms)[0m   [0;1mSELECT * FROM "counties" WHERE ("counties"."id" = 472) [0m
+  [4;35;1mState Load (0.3ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "psychologies" WHERE ("psychologies".patient_id = 4) [0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM "clinical_histories" WHERE ("clinical_histories".patient_id = 4) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "laboratories" WHERE ("laboratories".patient_id = 4) [0m
+Rendered patients/_show (55.2ms)
+Completed in 73ms (View: 53, DB: 4) | 200 OK [http://201.144.254.182/patients/4?authenticity_token=xXWXHRbIN7Vbd2TGvz%2BRHsHRMekc7hdeRzm%2FhNX4%2B2Q%3D]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing LaboratoriesController#new (for 207.249.8.26 at 2010-09-21 11:40:52) [POST]
+  Parameters: {"authenticity_token"=>"xXWXHRbIN7Vbd2TGvz+RHsHRMekc7hdeRzm/hNX4+2Q=", "id"=>"4"}
+Rendering laboratories/new
+Rendered laboratories/_form (33.2ms)
+Completed in 136ms (View: 39, DB: 0) | 200 OK [http://201.144.254.182/laboratories/new?id=4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing NavigatorsController#index (for 200.38.176.253 at 2010-09-21 12:50:11) [GET]
+Rendering template within layouts/application
+Rendering navigators/index
+Rendered navigators/_menu (1.7ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://201.144.254.182/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 200.38.176.253 at 2010-09-21 12:50:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/none" with {:method=>:get}):
+  haml (3.0.17) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#new (for 200.38.176.253 at 2010-09-21 12:50:22) [POST]
+  Parameters: {"authenticity_token"=>"rkbmMtLqyMXix8LIx9fH0JlKiie5zIaLmV8j1pYfuEo="}
+Rendering patients/new_form
+  [4;35;1mState Load (0.7ms)[0m   [0mSELECT * FROM "states" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "states" [0m
+  [4;35;1mMaritalstatus Load (0.4ms)[0m   [0mSELECT * FROM "maritalstatuses" [0m
+  [4;36;1mOcupation Load (0.4ms)[0m   [0;1mSELECT * FROM "ocupations" [0m
+Rendered patients/_form (59.9ms)
+Completed in 85ms (View: 67, DB: 2) | 200 OK [http://201.144.254.182/patients/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#index (for 200.38.176.253 at 2010-09-21 12:50:38) [GET]
+  Parameters: {"authenticity_token"=>"rkbmMtLqyMXix8LIx9fH0JlKiie5zIaLmV8j1pYfuEo="}
+Rendering patients/search_patient
+Rendered patients/_index (2.6ms)
+Completed in 19ms (View: 4, DB: 0) | 200 OK [http://201.144.254.182/patients?authenticity_token=rkbmMtLqyMXix8LIx9fH0JlKiie5zIaLmV8j1pYfuEo%3D]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#get_patient (for 200.38.176.253 at 2010-09-21 12:50:47) [POST]
+  Parameters: {"authenticity_token"=>"rkbmMtLqyMXix8LIx9fH0JlKiie5zIaLmV8j1pYfuEo=", "patient"=>{"search"=>"cano"}}
+  [4;35;1mPatient Load (13.2ms)[0m   [0mSELECT * FROM "patients" WHERE ((LOWER(firstname) LIKE '%cano%' OR LOWER(lastname1) LIKE '%cano%' OR LOWER(lastname2) LIKE '%cano%')) [0m
+Rendering patients/get_patient
+Rendered patients/_not_found (1.0ms)
+Completed in 26ms (View: 2, DB: 13) | 200 OK [http://201.144.254.182/patients/get_patient]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#get_patient (for 200.38.176.253 at 2010-09-21 12:50:57) [POST]
+  Parameters: {"authenticity_token"=>"rkbmMtLqyMXix8LIx9fH0JlKiie5zIaLmV8j1pYfuEo=", "patient"=>{"search"=>"dominguez"}}
+  [4;35;1mPatient Load (1.8ms)[0m   [0mSELECT * FROM "patients" WHERE ((LOWER(firstname) LIKE '%dominguez%' OR LOWER(lastname1) LIKE '%dominguez%' OR LOWER(lastname2) LIKE '%dominguez%')) [0m
+Rendering patients/get_patient
+Rendered patients/_not_found (1.1ms)
+Completed in 16ms (View: 3, DB: 2) | 200 OK [http://201.144.254.182/patients/get_patient]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#get_patient (for 200.38.176.253 at 2010-09-21 12:51:02) [POST]
+  Parameters: {"authenticity_token"=>"rkbmMtLqyMXix8LIx9fH0JlKiie5zIaLmV8j1pYfuEo=", "patient"=>{"search"=>"dominguez"}}
+  [4;35;1mPatient Load (1.7ms)[0m   [0mSELECT * FROM "patients" WHERE ((LOWER(firstname) LIKE '%dominguez%' OR LOWER(lastname1) LIKE '%dominguez%' OR LOWER(lastname2) LIKE '%dominguez%')) [0m
+Rendering patients/get_patient
+Rendered patients/_not_found (1.0ms)
+Completed in 15ms (View: 2, DB: 2) | 200 OK [http://201.144.254.182/patients/get_patient]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#get_patient (for 200.38.176.253 at 2010-09-21 12:51:07) [POST]
+  Parameters: {"authenticity_token"=>"rkbmMtLqyMXix8LIx9fH0JlKiie5zIaLmV8j1pYfuEo=", "patient"=>{"search"=>"lagunes"}}
+  [4;35;1mPatient Load (1.9ms)[0m   [0mSELECT * FROM "patients" WHERE ((LOWER(firstname) LIKE '%lagunes%' OR LOWER(lastname1) LIKE '%lagunes%' OR LOWER(lastname2) LIKE '%lagunes%')) [0m
+Rendering patients/get_patient
+Rendered patients/_not_found (1.1ms)
+Completed in 85ms (View: 3, DB: 2) | 200 OK [http://201.144.254.182/patients/get_patient]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing NavigatorsController#index (for 207.249.8.26 at 2010-09-22 09:32:21) [GET]
+Rendering template within layouts/application
+Rendering navigators/index
+Rendered navigators/_menu (1.8ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://201.144.254.182/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 207.249.8.26 at 2010-09-22 13:19:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/none" with {:method=>:get}):
+  haml (3.0.17) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing NavigatorsController#index (for 207.249.8.26 at 2010-09-23 10:46:12) [GET]
+Rendering template within layouts/application
+Rendering navigators/index
+Rendered navigators/_menu (1.8ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://201.144.254.182/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePatients (20100713215506)
+Migrating to CreateStates (20100720190208)
+Migrating to CreateCounties (20100720194930)
+Migrating to CreateSquares (20100720200405)
+Migrating to CreateMeetings (20100805182005)
+Migrating to CreatePsychologies (20100826174748)
+Migrating to AddDataToPatient (20100906171820)
+Migrating to CreateMaritalstatuses (20100906172943)
+Migrating to CreateOcupations (20100906172951)
+Migrating to CreateClinicalHistories (20100908203156)
+Migrating to CreateLaboratories (20100913230819)
+Migrating to Lab (20100914224857)
+Migrating to CreatePastPregnants (20100924171020)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (310.2ms)[0m   [0mCREATE TABLE "past_pregnants" ("id" serial primary key, "year" integer, "pregnant_type" character varying(255), "resolve" character varying(255), "clinical_history_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (3.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100924171020')[0m
+  [4;35;1mSQL (12.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing NavigatorsController#index (for 10.6.17.156 at 2010-09-28 14:06:33) [GET]
+Rendering template within layouts/application
+Rendering navigators/index
+Rendered navigators/_menu (1.8ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://10.6.250.50/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 10.6.17.156 at 2010-09-28 14:06:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/none" with {:method=>:get}):
+  haml (3.0.17) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#index (for 10.6.17.156 at 2010-09-28 14:06:38) [GET]
+  Parameters: {"authenticity_token"=>"num8/5DfVlUn2rAFNMdzJ11frvhgOtU2NzQP8t10IDk="}
+Rendering patients/search_patient
+Rendered patients/_index (2.7ms)
+Completed in 20ms (View: 5, DB: 0) | 200 OK [http://10.6.250.50/patients?authenticity_token=num8%2F5DfVlUn2rAFNMdzJ11frvhgOtU2NzQP8t10IDk%3D]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#get_patient (for 10.6.17.156 at 2010-09-28 14:06:39) [POST]
+  Parameters: {"authenticity_token"=>"num8/5DfVlUn2rAFNMdzJ11frvhgOtU2NzQP8t10IDk=", "patient"=>{"search"=>""}}
+  [4;35;1mPatient Load (9.6ms)[0m   [0mSELECT * FROM "patients" [0m
+Rendering patients/get_patient
+  [4;36;1mSquare Load (12.6ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 329) [0m
+  [4;35;1mCounty Load (9.9ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 201) [0m
+  [4;36;1mState Load (2.1ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mSquare Load (8.6ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 1547) [0m
+  [4;36;1mCounty Load (0.8ms)[0m   [0;1mSELECT * FROM "counties" WHERE ("counties"."id" = 1026) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;36;1mSquare Load (1.9ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 2001) [0m
+  [4;35;1mCounty Load (0.9ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 2375) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mSquare Load (3.8ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 503) [0m
+  [4;36;1mCounty Load (3.0ms)[0m   [0;1mSELECT * FROM "counties" WHERE ("counties"."id" = 472) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+Rendered patients/_patients (164.7ms)
+Completed in 187ms (View: 123, DB: 54) | 200 OK [http://10.6.250.50/patients/get_patient]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#show (for 10.6.17.156 at 2010-09-28 14:06:40) [GET]
+  Parameters: {"authenticity_token"=>"num8/5DfVlUn2rAFNMdzJ11frvhgOtU2NzQP8t10IDk=", "id"=>"1"}
+  [4;35;1mPatient Load (2.7ms)[0m   [0mSELECT * FROM "patients" WHERE ("patients"."id" = 1) [0m
+  [4;36;1mSquare Load (0.3ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 329) [0m
+  [4;35;1mCounty Load (0.3ms)[0m   [0mSELECT * FROM "counties" WHERE ("counties"."id" = 201) [0m
+  [4;36;1mState Load (0.3ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mSQL (12.4ms)[0m   [0mSELECT count(*) AS count_all FROM "psychologies" WHERE ("psychologies".patient_id = 1) [0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "clinical_histories" WHERE ("clinical_histories".patient_id = 1) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "laboratories" WHERE ("laboratories".patient_id = 1) [0m
+Rendered patients/_show (76.5ms)
+Completed in 95ms (View: 60, DB: 21) | 200 OK [http://10.6.250.50/patients/1?authenticity_token=num8%2F5DfVlUn2rAFNMdzJ11frvhgOtU2NzQP8t10IDk%3D]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClinicalHistoriesController#new (for 10.6.17.156 at 2010-09-28 14:06:43) [POST]
+  Parameters: {"authenticity_token"=>"num8/5DfVlUn2rAFNMdzJ11frvhgOtU2NzQP8t10IDk=", "id"=>"1"}
+Rendering clinical_histories/new
+Rendered clinical_histories/_past_pregnantfields (2.5ms)
+Rendered clinical_histories/_past_pregnantfields (1.5ms)
+
+ActionView::TemplateError (undefined method `inte_ojos' for #<ClinicalHistory:0x7fe243b830f8>) on line #349 of app/views/clinical_histories/_form.html.haml:
+346:         %tr.even
+347:           %td OJOS
+348:           %td.numeric
+349:             = f.check_box :inte_ojos
+350:           %td
+351:             = f.text_field :inte_ojos_desc
+352:           %td.numeric
+
+    app/views/clinical_histories/_form.html.haml:349:in `_run_haml_app47views47clinical_histories47_form46html46haml_locals_form_object'
+    searchlogic (2.4.24) lib/searchlogic/rails_helpers.rb:75:in `fields_for'
+    app/views/clinical_histories/_form.html.haml:1:in `_run_haml_app47views47clinical_histories47_form46html46haml_locals_form_object'
+    haml (3.0.17) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/views/clinical_histories/new.js.rjs:1:in `_run_rjs_app47views47clinical_histories47new46js46rjs'
+    app/views/clinical_histories/new.js.rjs:1:in `_run_rjs_app47views47clinical_histories47new46js46rjs'
+    haml (3.0.17) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/clinical_histories_controller.rb:24:in `new'
+    compass (0.10.2) [v] lib/compass/app_integration/rails/actionpack2/action_controller.rb:7:in `process'
+    haml (3.0.17) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (56.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (105.3ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePatients (20100713215506)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (91.1ms)[0m   [0mCREATE TABLE "patients" ("id" serial primary key, "expedient" character varying(255), "curp" character varying(255), "interior" character varying(255), "phone" character varying(255), "cuip" character varying(255) NOT NULL, "firstname" character varying(255) NOT NULL, "lastname1" character varying(255) NOT NULL, "lastname2" character varying(255) NOT NULL, "street" character varying(255) NOT NULL, "exterior" character varying(255) NOT NULL, "cp" character varying(255) NOT NULL, "birthday" date NOT NULL, "gender" boolean NOT NULL, "user_id" integer NOT NULL, "dependency_id" integer NOT NULL, "bornstate_id" integer NOT NULL, "square_id" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100713215506')[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCOMMIT[0m
+Migrating to CreateStates (20100720190208)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (79.0ms)[0m   [0mCREATE TABLE "states" ("id" serial primary key, "name" character varying(255), "key" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100720190208')[0m
+  [4;35;1mSQL (8.2ms)[0m   [0mCOMMIT[0m
+Migrating to CreateCounties (20100720194930)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (38.1ms)[0m   [0mCREATE TABLE "counties" ("id" serial primary key, "name" character varying(255), "state_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100720194930')[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mCOMMIT[0m
+Migrating to CreateSquares (20100720200405)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (58.4ms)[0m   [0mCREATE TABLE "squares" ("id" serial primary key, "name" character varying(255), "cp" character varying(255), "square_type" character varying(255), "county_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100720200405')[0m
+  [4;35;1mSQL (7.2ms)[0m   [0mCOMMIT[0m
+Migrating to CreateMeetings (20100805182005)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (39.0ms)[0m   [0mCREATE TABLE "meetings" ("id" serial primary key, "patient_id" integer, "dependency_id" integer, "user_id" integer, "starttime" timestamp, "test" character varying(255), "all_day" boolean DEFAULT 'f', "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100805182005')[0m
+  [4;35;1mSQL (6.4ms)[0m   [0mCOMMIT[0m
+Migrating to CreatePsychologies (20100826174748)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (45.1ms)[0m   [0mCREATE TABLE "psychologies" ("id" serial primary key, "date" date, "pregnant" boolean, "weeks_of_gestation" integer, "good_health_q1" integer, "exhausted_q2" integer, "sick_q3" integer, "headache_q4" integer, "chill_q5" integer, "full_of_energy_q6" integer, "insomnia_q7" integer, "insomnia_all_night_q8" integer, "restless_nights_q9" integer, "satisfied_to_do_things_q10" integer, "enjoy_daily_activities_q11" integer, "bad_mood_q12" integer, "afraid_q13" integer, "sad_q14" integer, "nervous_q15" integer, "user_id" integer, "dependency_id" integer, "patient_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100826174748')[0m
+  [4;35;1mSQL (6.3ms)[0m   [0mCOMMIT[0m
+Migrating to AddDataToPatient (20100906171820)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "patients" ADD COLUMN "ocupation_id" integer[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "patients" ALTER "ocupation_id" SET NOT NULL[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "patients" ADD COLUMN "maritalstatus_id" integer[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "patients" ALTER "maritalstatus_id" SET NOT NULL[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100906171820')[0m
+  [4;36;1mSQL (7.8ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateMaritalstatuses (20100906172943)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (40.7ms)[0m   [0;1mCREATE TABLE "maritalstatuses" ("id" serial primary key, "name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100906172943')[0m
+  [4;36;1mSQL (6.2ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateOcupations (20100906172951)
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (32.1ms)[0m   [0;1mCREATE TABLE "ocupations" ("id" serial primary key, "name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100906172951')[0m
+  [4;36;1mSQL (5.9ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateClinicalHistories (20100908203156)
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (101.7ms)[0m   [0;1mCREATE TABLE "clinical_histories" ("id" serial primary key, "responsible_family" character varying(255), "relationship" character varying(255), "cardiovascular_mother" boolean, "cardiovascular_father" boolean, "cardiovascular_children" boolean, "cardiovascular_brothers" boolean, "cardiovascular_husband" boolean, "cardiovascular_others" character varying(255), "diabetes_mother" boolean, "diabetes_father" boolean, "diabetes_children" boolean, "diabetes_brothers" boolean, "diabetes_husband" boolean, "diabetes_others" character varying(255), "neoplastic_mother" boolean, "neoplastic_father" boolean, "neoplastic_children" boolean, "neoplastic_brothers" boolean, "neoplastic_husband" boolean, "neoplastic_others" character varying(255), "infectious_mother" boolean, "infectious_father" boolean, "infectious_children" boolean, "infectious_brothers" boolean, "infectious_husband" boolean, "infectious_others" character varying(255), "toxicomanias_mother" boolean, "toxicomanias_father" boolean, "toxicomanias_children" boolean, "toxicomanias_brothers" boolean, "toxicomanias_husband" boolean, "toxicomanias_others" character varying(255), "malformed_mother" boolean, "malformed_father" boolean, "malformed_children" boolean, "malformed_brothers" boolean, "malformed_husband" boolean, "malformed_others" character varying(255), "feed" integer, "vitamins" boolean, "iron" boolean, "folic_acid" boolean, "caffeine" boolean, "drugs" boolean, "medicaments" boolean, "medicaments_details" character varying(255), "alcoholism" integer, "smoking" integer, "toxina_tetanica_1" boolean, "toxina_tetanica_2" boolean, "influenza_h1n1" boolean, "influenza_estacional" boolean, "hipertension" boolean, "cardiopatia" boolean, "hiperlipidemia" boolean, "enfermedad_renal" boolean, "neurologicas_epilepsia" boolean, "psiquiatricas_depresion" boolean, "enfermedad_hepatica" boolean, "varices_flebitis" boolean, "funcion_tiroidea" boolean, "traumatismo" boolean, "diabetes" boolean, "cancer" boolean, "infecciosos" boolean, "neumopatias_asma" boolean, "alergias" boolean, "mamas" boolean, "cirugia_genecologica" boolean, "cirugias_generales" boolean, "complicaciones_anestesicas" boolean, "inmunizaciones" boolean, "anomalias_uterinas" boolean, "infertilidad" boolean, "transplantes" boolean, "geneticos" boolean, "menarquia" integer, "patron_menstrual" integer, "fum" date, "ivsa" boolean, "papanicolau" boolean, "papanicolau_method" character varying(255), "gesta" integer, "partos" integer, "cesareas" integer, "abortos" integer, "ectopicos" integer, "molas" integer, "fecha_probable_parto" date, "altura_fondo_uterino" integer, "num_fetos" integer, "fcf" integer, "ritmico" boolean, "no_audible" boolean, "grupo_rh" character varying(255), "gammaglobulina" boolean, "hidrops_feta" boolean, "anticuerpos_irregulares" boolean, "peso_anterior" float, "comentarios" text, "inte_ojos" boolean, "inte_oidos" boolean, "inte_nariz" boolean, "inte_garganta" boolean, "inte_digestivo" boolean, "inte_cardiocirculatorio" boolean, "inte_musculoesqueletico" boolean, "inte_piel_y_tegumentos" boolean, "inte_pulmonar" boolean, "inte_neurologico" boolean, "inte_psicologico" boolean, "inte_mamas" boolean, "inte_ojos_desc" character varying(255), "inte_oidos_desc" character varying(255), "inte_nariz_desc" character varying(255), "inte_garganta_desc" character varying(255), "inte_digestivo_desc" character varying(255), "inte_cardiocirculatorio_desc" character varying(255), "inte_musculoesqueletico_desc" character varying(255), "inte_piel_y_tegumentos_desc" character varying(255), "inte_pulmonar_desc" character varying(255), "inte_neurologico_desc" character varying(255), "inte_psicologico_desc" character varying(255), "inte_mamas_desc" character varying(255), "diastolica" integer, "sistolica" integer, "temperatura" float, "peso" float, "talla" float, "masa_corporal" float, "cervix" integer, "fluidos" boolean, "sangrado" boolean, "dilatacion" boolean, "borramientos" boolean, "reblandecimientos" boolean, "cabeza_cuello_tiroides" boolean, "cardiorespiratorio" boolean, "explora_mamas" boolean, "abdomen" boolean, "extremidades" boolean, "genitales" boolean, "area_desc" character varying(255), "cabeza_cuello_tiroides_desc" character varying(255), "cardiorespiratorio_desc" character varying(255), "explora_mamas_desc" character varying(255), "abdomen_desc" character varying(255), "extremidades_desc" character varying(255), "genitales_desc" character varying(255), "impresion_diagnostica" text, "inicio_acido_folico" character varying(255), "inicio_multivitaminas" character varying(255), "inicio_suplementos" character varying(255), "inicio_hierro" character varying(255), "inicio_aspirina" character varying(255), "patient_id" integer, "user_id" integer, "dependency_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100908203156')[0m
+  [4;36;1mSQL (12.3ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateLaboratories (20100913230819)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (73.6ms)[0m   [0;1mCREATE TABLE "laboratories" ("id" serial primary key, "date" date, "date_next_consult" date, "presumptive_diagnosis" character varying(255), "applicant_doctor" character varying(255), "hemoglobina" character varying(255), "hematocrito" character varying(255), "cmhc" character varying(255), "leucocitos" character varying(255), "cuenta_diferencial" character varying(255), "linfocitos" character varying(255), "monocitos" character varying(255), "eosinofilos" character varying(255), "basofilos" character varying(255), "neut_segmen" character varying(255), "neut_banda" character varying(255), "alteraciones" character varying(255), "reticulocitos" character varying(255), "plaquetas" character varying(255), "sed_globular" character varying(255), "grupo_sanguineo" character varying(255), "factor_rh" character varying(255), "t_protrombina" character varying(255), "t_parcial_tromb" character varying(255), "glucosa" character varying(255), "hb_glicosilada" character varying(255), "urea" character varying(255), "acido_urico" character varying(255), "creatinina" character varying(255), "colesterol_total" character varying(255), "trigliceridos" character varying(255), "hdl" character varying(255), "ldl" character varying(255), "bilirrubina_total" character varying(255), "bilirubina_directa" character varying(255), "bilirrubina_indirecta" character varying(255), "alat_tgp" character varying(255), "asat_tgo" character varying(255), "f_alcalina" character varying(255), "vdrl" character varying(255), "antiestreptolisinas" character varying(255), "factor_reumatoide" character varying(255), "proteina_c_reactiva" character varying(255), "prueba_embarazo" character varying(255), "inmunologia_otros" character varying(255), "coproparasitoscopico1" character varying(255), "coproparasitoscopico2" character varying(255), "coproparasitoscopico3" character varying(255), "fisico_quimico" character varying(255), "color" character varying(255), "ph" character varying(255), "densidad" character varying(255), "cetona" character varying(255), "proteina" character varying(255), "nitrito" character varying(255), "bilirrubina" character varying(255), "sedimento" character varying(255), "eritrocitos" character varying(255), "cel_epiteliales" character varying(255), "bacterias" character varying(255), "cristales" character varying(255), "cilindros" character varying(255), "exudado_gram" character varying(255), "basiloscopia_baar1" character varying(255), "basiloscopia_baar2" character varying(255), "basiloscopia_baar3" character varying(255), "cultivo" character varying(255), "microbiologia_otros" character varying(255), "tolerancia_glucosa_ayuno" character varying(255), "tolerancia_glucosa_1hora" character varying(255), "tolerancia_glucosa_2horas" character varying(255), "tolerancia_glucosa_observaciones" character varying(255), "num_registro" character varying(255), "nombre" character varying(255), "fecha_reporte" date, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100913230819')[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mCOMMIT[0m
+Migrating to Lab (20100914224857)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "laboratories" ADD COLUMN "user_id" integer[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "laboratories" ADD COLUMN "dependency_id" integer[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "laboratories" ADD COLUMN "patient_id" integer[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100914224857')[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreatePastPregnants (20100924171020)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (72.5ms)[0m   [0;1mCREATE TABLE "past_pregnants" ("id" serial primary key, "year" integer, "pregnant_type" character varying(255), "resolve" character varying(255), "clinical_history_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100924171020')[0m
+  [4;36;1mSQL (4.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#index (for 10.6.17.156 at 2010-09-28 15:36:10) [GET]
+  Parameters: {"authenticity_token"=>"num8/5DfVlUn2rAFNMdzJ11frvhgOtU2NzQP8t10IDk="}
+Rendering patients/search_patient
+Rendered patients/_index (2.8ms)
+Completed in 98ms (View: 5, DB: 0) | 200 OK [http://10.6.250.50/patients?authenticity_token=num8%2F5DfVlUn2rAFNMdzJ11frvhgOtU2NzQP8t10IDk%3D]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#get_patient (for 10.6.17.156 at 2010-09-28 15:36:11) [POST]
+  Parameters: {"authenticity_token"=>"num8/5DfVlUn2rAFNMdzJ11frvhgOtU2NzQP8t10IDk=", "patient"=>{"search"=>""}}
+  [4;35;1mPatient Load (1.3ms)[0m   [0mSELECT * FROM "patients" [0m
+Rendering patients/get_patient
+Rendered patients/_not_found (1.1ms)
+Completed in 14ms (View: 2, DB: 2) | 200 OK [http://10.6.250.50/patients/get_patient]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#new (for 10.6.17.156 at 2010-09-28 15:36:12) [POST]
+  Parameters: {"authenticity_token"=>"num8/5DfVlUn2rAFNMdzJ11frvhgOtU2NzQP8t10IDk="}
+Rendering patients/new_form
+  [4;35;1mState Load (0.8ms)[0m   [0mSELECT * FROM "states" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "states" [0m
+  [4;35;1mMaritalstatus Load (0.4ms)[0m   [0mSELECT * FROM "maritalstatuses" [0m
+  [4;36;1mOcupation Load (0.3ms)[0m   [0;1mSELECT * FROM "ocupations" [0m
+Rendered patients/_form (130.4ms)
+Completed in 150ms (View: 135, DB: 2) | 200 OK [http://10.6.250.50/patients/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#select_state (for 10.6.17.156 at 2010-09-28 15:36:46) [POST]
+  Parameters: {"state_select"=>"9", "authenticity_token"=>"num8/5DfVlUn2rAFNMdzJ11frvhgOtU2NzQP8t10IDk="}
+  [4;36;1mCounty Load (1.8ms)[0m   [0;1mSELECT * FROM "counties" WHERE (state_id = '9') [0m
+Rendered patients/_get_counties (4.8ms)
+Completed in 15ms (View: 6, DB: 2) | 200 OK [http://10.6.250.50/patients/select_state]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#select_county (for 10.6.17.156 at 2010-09-28 15:36:52) [POST]
+  Parameters: {"authenticity_token"=>"num8/5DfVlUn2rAFNMdzJ11frvhgOtU2NzQP8t10IDk=", "county_select"=>"481"}
+  [4;36;1mSquare Load (22.8ms)[0m   [0;1mSELECT * FROM "squares" WHERE (county_id = '481') [0m
+Rendered patients/_get_squares (7.4ms)
+Completed in 43ms (View: 8, DB: 23) | 200 OK [http://10.6.250.50/patients/select_county]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PatientsController#create (for 10.6.17.156 at 2010-09-28 15:37:33) [POST]
+  Parameters: {"authenticity_token"=>"num8/5DfVlUn2rAFNMdzJ11frvhgOtU2NzQP8t10IDk=", "patient"=>{"ocupation_id"=>"16", "maritalstatus_id"=>"1", "square_id"=>"629", "birthday(1i)"=>"1980", "expedient"=>"alsjsdf3", "birthday(2i)"=>"12", "birthday(3i)"=>"4", "street"=>"VEINTE DE NOVIEMBRE", "gender"=>"true", "lastname1"=>"SILVA", "curp"=>"siea23488234", "exterior"=>"2", "lastname2"=>"ESQUIVEL", "phone"=>"55 55 55 55", "interior"=>"4", "bornstate_id"=>"9", "firstname"=>"ALEJANDRO"}, "county"=>"481", "state"=>"9"}
+  [4;36;1mState Load (0.4ms)[0m   [0;1mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;36;1mSquare Load (0.4ms)[0m   [0;1mSELECT * FROM "squares" WHERE ("squares"."id" = 629) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPatient Load (0.7ms)[0m   [0;1mSELECT "patients".id FROM "patients" WHERE ("patients"."cuip" = 'SIEADF801204560') LIMIT 1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO "patients" ("square_id", "ocupation_id", "maritalstatus_id", "expedient", "created_at", "cp", "cuip", "updated_at", "curp", "lastname1", "street", "gender", "lastname2", "exterior", "user_id", "interior", "phone", "firstname", "birthday", "bornstate_id", "dependency_id") VALUES(629, 16, 1, 'alsjsdf3', '2010-09-28 20:37:33.051069', '05120', 'SIEADF801204560', '2010-09-28 20:37:33.051069', 'siea23488234', 'SILVA', 'VEINTE DE NOVIEMBRE', 't', 'ESQUIVEL', '2', 1, '4', '55 55 55 55', 'ALEJANDRO', '1980-12-04', 9, 1) RETURNING "id"[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mCOMMIT[0m
+Rendering patients/create
+  [4;35;1mSquare Load (0.4ms)[0m   [0mSELECT * FROM "squares" WHERE ("squares"."id" = 629) [0m
+  [4;36;1mCounty Load (0.3ms)[0m   [0;1mSELECT * FROM "counties" WHERE ("counties"."id" = 481) [0m
+  [4;35;1mState Load (0.2ms)[0m   [0mSELECT * FROM "states" WHERE ("states"."id" = 9) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "psychologies" WHERE ("psychologies".patient_id = 1) [0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSELECT count(*) AS count_all FROM "clinical_histories" WHERE ("clinical_histories".patient_id = 1) [0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "laboratories" WHERE ("laboratories".patient_id = 1) [0m
+Rendered patients/_show (113.6ms)
+Completed in 166ms (View: 112, DB: 12) | 200 OK [http://10.6.250.50/patients]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClinicalHistoriesController#new (for 10.6.17.156 at 2010-09-28 15:37:36) [POST]
+  Parameters: {"authenticity_token"=>"num8/5DfVlUn2rAFNMdzJ11frvhgOtU2NzQP8t10IDk=", "id"=>"1"}
+Rendering clinical_histories/new
+Rendered clinical_histories/_past_pregnantfields (1.8ms)
+Rendered clinical_histories/_past_pregnantfields (2.0ms)
+Rendered clinical_histories/_form (127.7ms)
+Completed in 264ms (View: 215, DB: 0) | 200 OK [http://10.6.250.50/clinical_histories/new?id=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mS
