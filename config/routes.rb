@@ -2,6 +2,19 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :schoolings
 
   map.resources :risk_factors
+  map.resources :violencies
+
+  map.resources :violencies
+
+  map.resources :violencies
+
+  map.resources :violencies
+
+  map.resources :violencies
+
+  map.resources :violencies
+
+  map.resources :violencies
 
   map.resources :socioeconomic_ocupations
 
