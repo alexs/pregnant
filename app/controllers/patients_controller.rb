@@ -1,6 +1,4 @@
 class PatientsController < ApplicationController
-  # GET /patients
-  # GET /patients.xml
   def index
     @patient = Patient.new
 
@@ -9,8 +7,6 @@ class PatientsController < ApplicationController
     end
   end
 
-  # GET /patients/1
-  # GET /patients/1.xml
   def show
     @patient = Patient.find(params[:id])
 
@@ -25,11 +21,9 @@ def appointments
 @patient = Patient.find(params[:id] )
   respond_to do |format|
     format.js { render :action => 'get_appointments'}
-  end    
-end  
+  end
+end
 
-  # GET /patients/new
-  # GET /patients/new.xml
   def new
     @patient = Patient.new
     respond_to do |format|
@@ -37,13 +31,10 @@ end
     end
   end
 
-  # GET /patients/1/edit
   def edit
     @patient = Patient.find(params[:id])
   end
 
-  # POST /patients
-  # POST /patients.xml
   def create
     birthdate = {:year => params[:patient]['birthday(1i)'], :month =>   params[:patient]['birthday(2i)'], :day => params[:patient]['birthday(3i)']}
     key = Patient.new.keygen(params[:patient],  birthdate)
@@ -72,8 +63,6 @@ end
     end
   end
 
-  # PUT /patients/1
-  # PUT /patients/1.xml
   def update
     @patient = Patient.find(params[:id])
 
@@ -88,8 +77,6 @@ end
     end
   end
 
-  # DELETE /patients/1
-  # DELETE /patients/1.xml
   def destroy
     @patient = Patient.find(params[:id])
     @patient.destroy

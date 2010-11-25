@@ -12,6 +12,11 @@
       %tr
         %td
           %p
+            = patient.label "Fecha Alta"
+          %p
+            = patient.date_select :date
+          %br
+          %p
             = patient.label "Expediente"
           %p
             = patient.text_field :expedient
@@ -86,6 +91,10 @@
             = patient.label "Telefono"
           %p
             = patient.text_field :phone
+          %p
+            = patient.label "Correo electrónico"
+          %p
+            = patient.text_field :mail
       %tr
         %td{:colspan => "2"}
           %p

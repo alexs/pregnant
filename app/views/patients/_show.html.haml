@@ -24,6 +24,9 @@
       %td
         CUIP(Clave Unica Identificadora de Paciente): 
         %b #{@patient.cuip}
+      %td
+        Correo electrónico:
+        %b #{@patient.mail}
 #menu_patient
   .semaforo{:style => "text-align: right; float: right; padding: 0px;"}
     = image_tag "semaforo.gif", :width => "25", :height => "67"

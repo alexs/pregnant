@@ -3,8 +3,7 @@ class ClinicalHistoriesController < ApplicationController
     @clinical_histories = ClinicalHistory.all
 
     respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @clinical_histories }
+      format.html
     end
   end
 
@@ -12,8 +11,7 @@ class ClinicalHistoriesController < ApplicationController
     @clinical_history = ClinicalHistory.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @clinical_history }
+      format.html
     end
   end
 
@@ -26,13 +24,10 @@ class ClinicalHistoriesController < ApplicationController
     end
   end
 
-  # GET /clinical_histories/1/edit
   def edit
     @clinical_history = ClinicalHistory.find(params[:id])
   end
 
-  # POST /clinical_histories
-  # POST /clinical_histories.xml
   def create
     @clinical_history = ClinicalHistory.new(params[:clinical_history])
     @probable_embarazo = @clinical_history.fum + 280
@@ -53,23 +48,18 @@ class ClinicalHistoriesController < ApplicationController
     respond_to do |format|
       if @clinical_history.update_attributes(params[:clinical_history])
         format.html { redirect_to(@clinical_history, :notice => 'ClinicalHistory was successfully updated.') }
-        format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @clinical_history.errors, :status => :unprocessable_entity }
       end
     end
   end
 
-  # DELETE /clinical_histories/1
-  # DELETE /clinical_histories/1.xml
   def destroy
     @clinical_history = ClinicalHistory.find(params[:id])
     @clinical_history.destroy
 
     respond_to do |format|
       format.html { redirect_to(clinical_histories_url) }
-      format.xml  { head :ok }
     end
   end
 end
