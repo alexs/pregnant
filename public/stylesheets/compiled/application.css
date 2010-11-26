@@ -1,6 +1,6 @@
 /* line 3, ../../../app/stylesheets/application.sass */
 body {
-  background-image: url('/images/body_bg.jpg?1284402700');
+  background-image: url('/images/body_bg.jpg?1282168885');
   background-repeat: repeat-x;
   background-position: top left;
 }
@@ -25,7 +25,7 @@ body {
   margin-right: 0px;
   width: 890px;
   background: #c3d9ff;
-  background-image: url('/images/header.png?1284402700');
+  background-image: url('/images/header.png?1279302961');
   background-repeat: no-repeat;
   background-position: top left;
   height: 136px;
@@ -49,7 +49,7 @@ body {
 /* line 29, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/lists/_bullets.scss */
 .principal #content li {
   padding-left: 14px;
-  background: url('/images/bullet-round.png?1284402700') no-repeat 4.5px 5.5px;
+  background: url('/images/bullet-round.png?1282082810') no-repeat 4.5px 5.5px;
   list-style-type: none;
 }
 /* line 23, ../../../app/stylesheets/application.sass */
@@ -77,7 +77,7 @@ body {
   float: left;
   margin-right: 0px;
   width: 890px;
-  background-image: url('/images/footer.png?1284402700');
+  background-image: url('/images/footer.png?1279304199');
   background-repeat: no-repeat;
   background-position: bottom center;
   height: 80px;
@@ -504,7 +504,7 @@ body {
 .validation {
   color: #d63301;
   background-color: #ffccba;
-  background-image: url('/images/validation.png?1284402700');
+  background-image: url('/images/validation.png?1282080838');
 }
 
 /* line 158, ../../../app/stylesheets/application.sass */
@@ -633,5 +633,95 @@ h1 {
 }
 /* line 19, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
 .clinical_form table tfoot th.even, .clinical_form table tfoot th:nth-child(2n), .clinical_form table tfoot td.even, .clinical_form table tfoot td:nth-child(2n) {
+  background-color: #dddddd;
+}
+
+/* line 197, ../../../app/stylesheets/application.sass */
+#create_questionary table {
+  background-color: #f5f5f5;
+  border-color: #222222 #dedede #dedede #222222;
+  color: #565656;
+  border: 2px solid black;
+}
+/* line 65, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_buttons.scss */
+#create_questionary table:hover {
+  background-color: #dff4ff;
+  border-color: #666666 #c2e1ef #c2e1ef #666666;
+  color: #565656;
+}
+/* line 2, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
+#create_questionary table th {
+  text-align: center;
+  font-weight: bold;
+}
+/* line 6, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
+#create_questionary table td,
+#create_questionary table th {
+  padding: 2px;
+}
+/* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
+#create_questionary table td.numeric,
+#create_questionary table th.numeric {
+  text-align: right;
+}
+/* line 14, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
+#create_questionary table th, #create_questionary table td {
+  border-right: 1px solid #233551;
+  border-bottom: 1px solid #233551;
+  border-left-width: 0px;
+  border-top-width: 0px;
+}
+/* line 21, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
+#create_questionary table th:last-child, #create_questionary table th.last, #create_questionary table td:last-child, #create_questionary table td.last {
+  border-right-width: 0px;
+}
+/* line 26, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
+#create_questionary table tbody tr:last-child th, #create_questionary table tbody tr:last-child td,
+#create_questionary table tbody tr.last th,
+#create_questionary table tbody tr.last td, #create_questionary table tfoot tr:last-child th, #create_questionary table tfoot tr:last-child td, #create_questionary table tfoot tr.last th, #create_questionary table tfoot tr.last td {
+  border-bottom-width: 0px;
+}
+/* line 4, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
+#create_questionary table thead th {
+  border-bottom: 2px solid black;
+}
+/* line 7, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
+#create_questionary table tfoot th, #create_questionary table tfoot td {
+  border-top: 2px solid black;
+}
+/* line 10, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
+#create_questionary table th:first-child {
+  border-right: 2px solid black;
+}
+/* line 2, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#create_questionary table th {
+  background-color: white;
+}
+/* line 4, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#create_questionary table th.even, #create_questionary table th:nth-child(2n) {
+  background-color: #dddddd;
+}
+/* line 7, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#create_questionary table tr.odd td {
+  background-color: #98c67a;
+}
+/* line 9, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#create_questionary table tr.odd td.even, #create_questionary table tr.odd td:nth-child(2n) {
+  background-color: #76a458;
+}
+/* line 12, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#create_questionary table tr.even td {
+  background-color: #7a98c6;
+}
+/* line 14, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#create_questionary table tr.even td.even, #create_questionary table tr.even td:nth-child(2n) {
+  background-color: #5876a4;
+}
+/* line 17, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#create_questionary table tfoot th, #create_questionary table tfoot td {
+  background-color: white;
+}
+/* line 19, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+#create_questionary table tfoot th.even, #create_questionary table tfoot th:nth-child(2n), #create_questionary table tfoot td.even, #create_questionary table tfoot td:nth-child(2n) {
   background-color: #dddddd;
 }

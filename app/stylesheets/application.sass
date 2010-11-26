@@ -188,8 +188,18 @@ h1
   background-color: #FFBABA
 .clinical_form
   table
-    $table-color : #7a98c6
+    $table-color: #7a98c6
     +table-scaffolding
     +inner-table-borders(1px, darken($table-color, 40%))
     +outer-table-borders(2px)
     +alternating-rows-and-columns($table-color, adjust-hue($table-color, -120deg), #222)
+#create_questionary
+  table
+    +button-colors($blueprint-button-font-color,$blueprint-button-background-color,$blueprint-button-border-color, #222)
+    +button-hover-colors($blueprint-button-font-color,$blueprint-button-hover-background-color,$blueprint-button-hover-border-color,#666)
+    $table-color: #7a98c6
+    +table-scaffolding
+    +inner-table-borders(1px, darken($table-color, 40%))
+    +outer-table-borders(2px)
+    +alternating-rows-and-columns($table-color, adjust-hue($table-color, -120deg), #222)  
+
