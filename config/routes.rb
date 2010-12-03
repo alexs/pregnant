@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :variable_fetals
+
   map.resources :schoolings
 
   map.resources :risk_factors

@@ -1,0 +1,33 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nombre_madre: MyString
+  nombre_nacido: MyString
+  rciu: MyString
+  muerte_fetal: MyString
+  mortalidad_fetal: MyString
+  peso: 1.5
+  edad_gestacional: 1.5
+  trofismo: MyString
+  calificacion_apgar: 1.5
+  silverman: 1.5
+  morbilidad_neonatal: MyString
+  muerte_neonatal: MyString
+  tasa_mortalidad: MyString
+  muerte_perinatal: MyString
+
+two:
+  nombre_madre: MyString
+  nombre_nacido: MyString
+  rciu: MyString
+  muerte_fetal: MyString
+  mortalidad_fetal: MyString
+  peso: 1.5
+  edad_gestacional: 1.5
+  trofismo: MyString
+  calificacion_apgar: 1.5
+  silverman: 1.5
+  morbilidad_neonatal: MyString
+  muerte_neonatal: MyString
+  tasa_mortalidad: MyString
+  muerte_perinatal: MyString
