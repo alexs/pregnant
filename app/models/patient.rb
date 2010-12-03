@@ -18,6 +18,8 @@ class Patient < ActiveRecord::Base
   has_many :appoiments
   has_many :ries_pars
   has_many :ultra_sounds
+  has_many :ultra2_sounds
+  has_many :ultra3_sounds
   
   def keygen(patient, borndate)
     key = rfc(patient, borndate) + unique_chars(patient, borndate)

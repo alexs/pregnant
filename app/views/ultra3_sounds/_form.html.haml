@@ -1,4 +1,4 @@
-- remote_form_for @ultra_sound, :url => {:action => :create }, :before => "$('.creating').show();", :complete => "$('.creating').hide();" do |f|
+- remote_form_for @ultra3_sound, :url => {:action => :create }, :before => "$('.creating').show();", :complete => "$('.creating').hide();" do |f|
   - if !f.error_messages.empty?
     .validation
       = f.error_messages
@@ -79,26 +79,6 @@
         mm
       %td
         = f.text_field :LongitudFemur_Semanas_Gestacion, :size => 20
-    %tr
-      %td
-        Longitud cervical
-      %td
-        = f.text_field :LongitudCervical, :size => 20
-      %td
-        = f.text_field :LongitudCervical_Semanas_Gestacion, :size => 20
-    %tr
-      %td
-        TN
-      %td
-        = f.text_field :TN, :size => 20
-      %td
-        = f.text_field :TN_Semanas_Gestacion, :size => 20
-    %tr
-      %td
-        Hueso Nasal
-      %td
-        = f.text_field :HN, :size => 20
-        mm
     %tr
       %td
         Cervix

@@ -26,7 +26,7 @@ class UltraSoundsController < ApplicationController
   def new
     @ultra_sound = UltraSound.new(:patient_id => params[:id])
   end
-
+  
   # GET /ultra_sounds/1/edit
   def edit
     @ultra_sound = UltraSound.find(params[:id])
@@ -42,6 +42,30 @@ class UltraSoundsController < ApplicationController
         format.js { render :action => "create" }
       else
         format.js { render :action => "new" }
+      end
+    end
+  end
+
+ def create2
+    @ultra_sound = UltraSound.new(params[:ultra_sound])
+
+    respond_to do |format|
+      if @ultra_sound.save
+        format.js { render :action => "create" }
+      else
+        format.js { render :action => "new2" }
+      end
+    end
+  end
+
+ def create3
+    @ultra_sound = UltraSound.new(params[:ultra_sound])
+
+    respond_to do |format|
+      if @ultra_sound.save
+        format.js { render :action => "create" }
+      else
+        format.js { render :action => "new3" }
       end
     end
   end

@@ -1,6 +1,6 @@
-<h1>Editing ultra_sound</h1>
+<h1>New ultra2_sound</h1>
 
-<% form_for(@ultra_sound) do |f| %>
+<% form_for(@ultra2_sound) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -104,9 +104,8 @@
     <%= f.text_field :ILA %>
   </p>
   <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit 'Create' %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @ultra_sound %> |
-<%= link_to 'Back', ultra_sounds_path %>
+<%= link_to 'Back', ultra2_sounds_path %>

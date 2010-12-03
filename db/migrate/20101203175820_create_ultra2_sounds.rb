@@ -1,8 +1,8 @@
 # -*- coding: undecided -*-
-class CreateUltraSounds < ActiveRecord::Migration
+class CreateUltra2Sounds < ActiveRecord::Migration
   def self.up
-    create_table :ultra_sounds do |t|
-      t.integer :tipo_ultrasonido
+    create_table :ultra2_sounds do |t|
+       t.integer :tipo_ultrasonido
       t.float :DiametroBiparietal
       t.integer :DiametroBiparietal_Semanas_Gestacion
       t.float :CircunferenciaCefalica
@@ -67,6 +67,6 @@ class CreateUltraSounds < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :ultra_sounds
+    drop_table :ultra2_sounds
   end
 end

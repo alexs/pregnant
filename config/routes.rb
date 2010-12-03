@@ -7,6 +7,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :violencies
 
   map.resources :ultra_sounds
+  map.resources :ultra3_sounds
+  map.resources :ultra2_sounds
+
 
   map.resources :ries_pars
 
