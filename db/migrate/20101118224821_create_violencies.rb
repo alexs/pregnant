@@ -1,12 +1,10 @@
 class CreateViolencies < ActiveRecord::Migration
   def self.up
     create_table :violencies do |t|
-      t.datetime :fecha
-      t.integer :edad
+      
+      
       t.integer :estudios
-      t.string :registro
-      t.integer :civil
-      t.integer :ocupacion
+      t.string  :registro
       t.boolean :esta
       t.boolean :deseaba
       t.boolean :planeo
@@ -60,7 +58,11 @@ class CreateViolencies < ActiveRecord::Migration
       t.integer :user_id
       t.integer :dependency_id
       t.integer :patient_id
-
+      t.integer :embarazos
+      t.integer :abortos
+      t.integer :obitos
+      t.integer :partos
+      t.integer :cesareas
       t.timestamps
     end
   end

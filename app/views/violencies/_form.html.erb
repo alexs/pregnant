@@ -11,13 +11,10 @@
   </p>
 <br />
   <p>
-    <%= f.label "¿Cuántos años de estudios?" %><br />
+    <%= f.label "¿Cuántos años de estudios?" %>
     <%= f.text_field :estudios, :size => 4 %>
-  </p>
-<br />
-  <p>
-    <%= f.label :registro %><br />
-    <%= f.text_field :registro, :size => 4 %>
+    <%= f.label :registro %>
+    <%= f.text_field :registro, :size => 8 %>
   </p>
 
 <br />
@@ -26,11 +23,11 @@
 <br />
 <br />
   <p>
-    <%= f.label :"¿Esta embarazada?" %> <%= f.check_box :esta %>
+    <%= f.label "¿Esta embarazada?" %>; &nbsp; &nbsp; <%= f.check_box :esta %>
   </p>
 <br />
   <p>
-    <%= f.label :"¿Deseaba usted este embarazo?" %><%= f.check_box :deseaba %>
+    <%= f.label :"¿Deseaba usted este embarazo?" %>&nbsp;&nbsp;<%= f.check_box :deseaba %>
   </p>
 <br />
   <p>
@@ -63,6 +60,35 @@
     <%= f.label :"¿Su pareja acepto este embarazo?"%>
     <%= question_violence(f,:paracepto,1) %><%= question_violence(f,:paracepto,2) %><%= question_violence(f,:paracepto,3) %>
   </p>
+    <br />
+  <p>
+    <%= f.label :"¿Cuántos embarazos ha tenido incluyendo el actual?"%>
+    <%= f.text_field :embarazos, :size => 3 %>
+   </p>
+    <br />
+    <p>
+      <%= f.label :"¿Cúantos abortos?"%>
+      <%= f.text_field :abortos, :size => 3 %>
+    </p>
+     <br />
+    <p>
+      <%= f.label :"¿Cuántos óbitos?"%>
+      <%= f.text_field :obitos, :size => 3 %>
+      </p>
+     <br />
+    <p>
+     <%= f.label :"¿Cuántos partos?"%>
+     <%= f.text_field :partos, :size => 3 %>
+      </p>
+     <br />
+    <p>
+     <%= f.label :"¿Cuántos cesáreas?"%>
+     <%= f.text_field :cesareas,  :size => 3 %>
+
+       </p>
+     <br />
+    <p>
+
 
 <br /><br />
 <u>Seleccione la casilla si su respuesta es Sí</u>
@@ -73,7 +99,7 @@
   </p>
 <br />
   <p>
-    <%= f.label :"¿Ha sufrido violencia antes del embarazo durante los últimos 12 meses? " %> <%= f.check_box :meses %>
+    <%= f.label :"¿Ha sufrido violencia antes del embarazo de su paereja actual? " %> <%= f.check_box :meses %>
   </p>
 <br />
   <p>
@@ -177,78 +203,151 @@
      </td>
      <td>
        <%= f.check_box :proposito %>
+        </td>
+     </tr>
+     <tr>
+     <td>
+    11.Que la agreda con alguna navaja, cuchillo o machete
+       </td>
+     <td>
+    <%= f.check_box :machete %>
+        </td>
+     </tr>
+     <tr>
+     <td>
+  
+    12.Que le haga sentir miedo de él
+       </td>
+     <td>
+    <%= f.check_box :miedo %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+
+    13.Que la golpee con un palo o un cinturón o alǵun objeto doméstico.
+        </td>
+     <td>
+    <%= f.check_box :domestico %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+   14.Que la trate de ahorcar o asfixiar.
+       </td>
+     <td>
+    <%= f.check_box :asfixiar %>
+       </td>
+     </tr>
+     <tr>
+     <td>
+    15.Que la amenace con irse con otras mujeres si no accede a tener relaciones sexuales con él.
+       </td>
+     <td>
+    <%= f.check_box :relaciones %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+    16.Que la amenace con matarla a usted o matarse él o matar alos niños.
+       </td>
+     <td>
+    <%= f.check_box :matarla %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+    17.Que la golpee con la mano o con el puño.
+      </td>
+     <td>
+    <%= f.check_box :puño %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+    18.Que le exija tener relaciones sexuales aun que usted no esté dispuesta.
+      </td>
+     <td>
+    <%= f.check_box :dispuesta %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+    19.Que su pareja la patee.
+      </td>
+     <td>
+    <%= f.check_box :patee %>
      </td>
      </tr>
-   </table>
-
-  <p>
-    <%= f.label :"11.Que la agreda con alguna navaja, cuchillo o machete" %>
-    <%= f.check_box :machete %>
-  </p>
-  <p>
-    <%= f.label :"12.Que le haga sentir miedo de él"%>
-    <%= f.check_box :miedo %>
-  </p>
-  <p>
-    <%= f.label :"13.Que la golpee con un palo o un cinturón o alǵun objeto doméstico." %>
-    <%= f.check_box :domestico %>
-  </p>
-  <p>
-    <%= f.label :"14.Que la trate de ahorcar o asfixiar." %>
-    <%= f.check_box :asfixiar %>
-  </p>
-  <p>
-    <%= f.label :"15.Que la amenace con irse con otras mujeres si no accede a tener relaciones sexuales con él." %>
-    <%= f.check_box :relaciones %>
-  </p>
-  <p>
-    <%= f.label :"16.Que la amenace con matarla a usted o matarse él o matar alos niños"%>
-    <%= f.check_box :matarla %>
-  </p>
-  <p>
-    <%= f.label :"17.Que la golpee con la mano o con el puño." %>
-    <%= f.check_box :puño %>
-  </p>
-  <p>
-    <%= f.label :"18.Que le exija tener relaciones sexuales aun que usted no esté dispuesta." %>
-    <%= f.check_box :dispuesta %>
-  </p>
-  <p>
-    <%= f.label :"19.Que su pareja la patee." %>
-    <%= f.check_box :patee %>
-  </p>
-  <p>
-    <%= f.label :"20.Que la amenace con alguna navaja o cuchillo o machete." %>
+     <tr>
+     <td>
+ 20.Que la amenace con alguna navaja o cuchillo o machete.
+        </td>
+     <td>
     <%= f.check_box :cuchillo %>
-  </p>
-  <p>
-    <%= f.label :"21.Que la golpee en el éstomago." %>
+       </td>
+     </tr>
+     <tr>
+     <td>
+  21.Que la golpee en el éstomago.
+        </td>
+     <td>
     <%= f.check_box :estomago %>
-  </p>
-  <p>
-    <%= f.label :"22.Que la sacuda,zarandee o jalonee." %>
+     </td>
+     </tr>
+     <tr>
+     <td>
+    22.Que la sacuda,zarandee o jalonee.
+       </td>
+     <td>
     <%= f.check_box :jalonee %>
-  </p>
-  <p>
-    <%= f.label :"23.Que le dispare con alguna pistola o rifle." %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+    23.Que le dispare con alguna pistola o rifle.
+      </td>
+     <td>
     <%= f.check_box :pistola %>
-  </p>
-  <p>
-    <%= f.label :"24.Que le diga cosas como que usted es poco atractiva o fea" %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+    24.Que le diga cosas como que usted es poco atractiva o fea
+      </td>
+     <td>
     <%= f.check_box :fea %>
-  </p>
-  <p>
-    <%= f.label :"25.Que la ataque con algun otra cosa." %>
+      </td>
+     </tr>
+     <tr>
+     <td>
+    25.Que la ataque con algun otra cosa.
+      </td>
+     <td>
     <%= f.check_box :cosa %>
-  </p>
-  <p>
-    <%= f.label :"26.Que se ponga a golpear o patear la pared o algún mueble." %>
+       </td>
+     </tr>
+     <tr>
+     <td>
+    26.Que se ponga a golpear o patear la pared o algún mueble.
+      </td>
+     <td>
+
     <%= f.check_box :mueble %>
-  </p>
-  <p>
-    <%= f.label :"27.Que la amenace con alguna pistola o rifle." %>
+       </td>
+     </tr>
+     <tr>
+     <td>
+    27.Que la amenace con alguna pistola o rifle.
+       </td>
+     <td>
     <%= f.check_box :rifle %>
-  </p>
+       </td>
+     </tr>
+    </table>
+    
+
+
      
   <br />
   <br />
