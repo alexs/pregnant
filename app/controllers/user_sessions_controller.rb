@@ -10,9 +10,8 @@ class UserSessionsController < ApplicationController
   def create
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
-      flash[:notice] = "Bienvenido a Sveent!"
+      # flash[:notice] = "Bienvenido al sistema de Embarazo!"
       redirect_back_or_default('/navigators')
-
     else
       render :action => :new
     end
@@ -20,7 +19,7 @@ class UserSessionsController < ApplicationController
 
   def destroy
     current_user_session.destroy
-    flash[:notice] = "Has Cerrado Session en Sveent"
+    flash[:notice] = "Has Cerrado Session"
     redirect_back_or_default new_user_session_url
   end
 end

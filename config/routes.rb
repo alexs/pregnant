@@ -40,6 +40,10 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :patients, :has_many => [:psychologies]
   map.resource :navigator
   map.root :controller => "navigators"
+  #users routes
+  map.login '/login', :controller => 'user_sessions', :action => 'new'
+  map.logout '/logout', :controller => 'user_sessions', :action => 'destroy'
+  map.resource :account, :controller => "users"
   map.resource :user_session
 
   # The priority is based upon order of creation: first created -> highest priority.

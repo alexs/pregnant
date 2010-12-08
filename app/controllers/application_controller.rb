@@ -1,4 +1,4 @@
-# -*- coding: undecided -*-
+# -*- coding: utf-8 -*-
 # Filters added to this controller apply to all controllers in the application.
 # Likewise, all the methods added will be available for all controllers.
 
@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   before_filter :require_user
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
-  layout "application"
+  layout "application", :except => :user_sessions
 
  private
   def current_user_session
@@ -57,6 +57,9 @@ class ApplicationController < ActionController::Base
      end
    end
 
+ def store_location
+    session[:return_to] = request.request_uri
+  end
 
   def redirect_back_or_default(default)
     redirect_to(session[:return_to] || default)
