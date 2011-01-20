@@ -98,7 +98,7 @@ end
   end
 
   def get_patient
-    @patients = Patient.finder(params[:patient]['search'])
+    @patients = Patient.searcher(params[:patient]['search'])
     respond_to do |format|
       format.js   { render 'get_patient' }
     end

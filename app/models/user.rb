@@ -2,13 +2,7 @@
 class User < ActiveRecord::Base
   # Virtual attribute for the unencrypted password
  acts_as_authentic
-  searchable_by :paterno, :materno, :name, :login, :email, :rfc
-
-  has_many :detections
-  has_many :laboratories
-  has_many :meetings
-  has_many :controlcards
-  has_many :consultcards
+  searchable_by :name, :surname1, :surname2, :email
 
   belongs_to :group
   belongs_to :dependency
@@ -28,11 +22,11 @@ class User < ActiveRecord::Base
 
 
  def full_name
-   "#{self.name} #{self.paterno} #{self.materno}"
+   "#{self.name} #{self.surname1} #{self.surname2}"
   end
 
   def short_name
-   "#{self.name} #{self.paterno}"
+   "#{self.name} #{self.surname1}"
   end
 
 

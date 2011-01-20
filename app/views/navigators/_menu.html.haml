@@ -21,6 +21,12 @@
           = link_to "- Listados", "#"
     %li
       = link_to "Usuarios", "#"
+      %ul
+        %li
+          = link_to_remote "- Nuevo",  :loading => "$('.indicator').show();", :url => {:controller => "users", :action => "new"}, :method => :get, :complete => "$('.indicator').hide();"
+        %li 
+          = link_to_remote "- Busqueda", :loading => "$('.indicator').show();", :url => {:controller => "users", :action => "index"}, :method => :get, :complete => "$('.indicator').hide();"
+
 
 :javascript
   $(document).ready(function() {

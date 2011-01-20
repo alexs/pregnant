@@ -360,100 +360,100 @@ body {
 }
 
 /* line 110, ../../../app/stylesheets/application.sass */
-.patient_header table, .patients_result table {
+.table_header table, .table_result table {
   border: 1px solid #0080ff;
 }
 /* line 4, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-.patient_header table thead th, .patients_result table thead th {
+.table_header table thead th, .table_result table thead th {
   border-bottom: 1px solid #0080ff;
 }
 /* line 7, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-.patient_header table tfoot th, .patient_header table tfoot td, .patients_result table tfoot th, .patients_result table tfoot td {
+.table_header table tfoot th, .table_header table tfoot td, .table_result table tfoot th, .table_result table tfoot td {
   border-top: 1px solid #0080ff;
 }
 /* line 10, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-.patient_header table th:first-child, .patients_result table th:first-child {
+.table_header table th:first-child, .table_result table th:first-child {
   border-right: 1px solid #0080ff;
 }
 /* line 14, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-.patient_header table th, .patient_header table td, .patients_result table th, .patients_result table td {
+.table_header table th, .table_header table td, .table_result table th, .table_result table td {
   border-right: ipx solid #0080ff;
   border-bottom: ipx solid #0080ff;
   border-left-width: 0px;
   border-top-width: 0px;
 }
 /* line 21, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-.patient_header table th:last-child, .patient_header table th.last, .patient_header table td:last-child, .patient_header table td.last, .patients_result table th:last-child, .patients_result table th.last, .patients_result table td:last-child, .patients_result table td.last {
+.table_header table th:last-child, .table_header table th.last, .table_header table td:last-child, .table_header table td.last, .table_result table th:last-child, .table_result table th.last, .table_result table td:last-child, .table_result table td.last {
   border-right-width: 0px;
 }
 /* line 26, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-.patient_header table tbody tr:last-child th, .patient_header table tbody tr:last-child td,
-.patient_header table tbody tr.last th,
-.patient_header table tbody tr.last td, .patient_header table tfoot tr:last-child th, .patient_header table tfoot tr:last-child td, .patient_header table tfoot tr.last th, .patient_header table tfoot tr.last td, .patients_result table tbody tr:last-child th, .patients_result table tbody tr:last-child td, .patients_result table tbody tr.last th, .patients_result table tbody tr.last td, .patients_result table tfoot tr:last-child th, .patients_result table tfoot tr:last-child td, .patients_result table tfoot tr.last th, .patients_result table tfoot tr.last td {
+.table_header table tbody tr:last-child th, .table_header table tbody tr:last-child td,
+.table_header table tbody tr.last th,
+.table_header table tbody tr.last td, .table_header table tfoot tr:last-child th, .table_header table tfoot tr:last-child td, .table_header table tfoot tr.last th, .table_header table tfoot tr.last td, .table_result table tbody tr:last-child th, .table_result table tbody tr:last-child td, .table_result table tbody tr.last th, .table_result table tbody tr.last td, .table_result table tfoot tr:last-child th, .table_result table tfoot tr:last-child td, .table_result table tfoot tr.last th, .table_result table tfoot tr.last td {
   border-bottom-width: 0px;
 }
 /* line 2, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-.patient_header table th, .patients_result table th {
+.table_header table th, .table_result table th {
   background-color: white;
 }
 /* line 4, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-.patient_header table th.even, .patient_header table th:nth-child(2n), .patients_result table th.even, .patients_result table th:nth-child(2n) {
+.table_header table th.even, .table_header table th:nth-child(2n), .table_result table th.even, .table_result table th:nth-child(2n) {
   background-color: #eeeeee;
 }
 /* line 7, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-.patient_header table tr.odd td, .patients_result table tr.odd td {
+.table_header table tr.odd td, .table_result table tr.odd td {
   background-color: #f2f2f2;
 }
 /* line 9, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-.patient_header table tr.odd td.even, .patient_header table tr.odd td:nth-child(2n), .patients_result table tr.odd td.even, .patients_result table tr.odd td:nth-child(2n) {
+.table_header table tr.odd td.even, .table_header table tr.odd td:nth-child(2n), .table_result table tr.odd td.even, .table_result table tr.odd td:nth-child(2n) {
   background-color: #e1e1e1;
 }
 /* line 12, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-.patient_header table tr.even td, .patients_result table tr.even td {
+.table_header table tr.even td, .table_result table tr.even td {
   background-color: #e0ecf8;
 }
 /* line 14, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-.patient_header table tr.even td.even, .patient_header table tr.even td:nth-child(2n), .patients_result table tr.even td.even, .patients_result table tr.even td:nth-child(2n) {
+.table_header table tr.even td.even, .table_header table tr.even td:nth-child(2n), .table_result table tr.even td.even, .table_result table tr.even td:nth-child(2n) {
   background-color: #cfdbe7;
 }
 /* line 17, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-.patient_header table tfoot th, .patient_header table tfoot td, .patients_result table tfoot th, .patients_result table tfoot td {
+.table_header table tfoot th, .table_header table tfoot td, .table_result table tfoot th, .table_result table tfoot td {
   background-color: white;
 }
 /* line 19, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-.patient_header table tfoot th.even, .patient_header table tfoot th:nth-child(2n), .patient_header table tfoot td.even, .patient_header table tfoot td:nth-child(2n), .patients_result table tfoot th.even, .patients_result table tfoot th:nth-child(2n), .patients_result table tfoot td.even, .patients_result table tfoot td:nth-child(2n) {
+.table_header table tfoot th.even, .table_header table tfoot th:nth-child(2n), .table_header table tfoot td.even, .table_header table tfoot td:nth-child(2n), .table_result table tfoot th.even, .table_result table tfoot th:nth-child(2n), .table_result table tfoot td.even, .table_result table tfoot td:nth-child(2n) {
   background-color: #eeeeee;
 }
 /* line 115, ../../../app/stylesheets/application.sass */
-.patient_header table .name, .patients_result table .name {
+.table_header table .name, .table_result table .name {
   width: 200px;
 }
 /* line 117, ../../../app/stylesheets/application.sass */
-.patient_header table .lastname, .patients_result table .lastname {
+.table_header table .lastname, .table_result table .lastname {
   width: 150px;
 }
 /* line 119, ../../../app/stylesheets/application.sass */
-.patient_header table .date_next_consult, .patients_result table .date_next_consult {
+.table_header table .date_next_consult, .table_result table .date_next_consult {
   width: 100px;
 }
 /* line 121, ../../../app/stylesheets/application.sass */
-.patient_header table .presumptive_diagnosis, .patients_result table .presumptive_diagnosis {
+.table_header table .presumptive_diagnosis, .table_result table .presumptive_diagnosis {
   width: 150px;
 }
 /* line 123, ../../../app/stylesheets/application.sass */
-.patient_header table .applicant_doctor, .patients_result table .applicant_doctor {
+.table_header table .applicant_doctor, .table_result table .applicant_doctor {
   width: 150px;
 }
 /* line 125, ../../../app/stylesheets/application.sass */
-.patient_header table .age, .patients_result table .age {
+.table_header table .age, .table_result table .age {
   width: 60px;
 }
 /* line 127, ../../../app/stylesheets/application.sass */
-.patient_header table .address, .patients_result table .address {
+.table_header table .address, .table_result table .address {
   width: 300px;
 }
 /* line 129, ../../../app/stylesheets/application.sass */
-.patient_header table .actions, .patients_result table .actions {
+.table_header table .actions, .table_result table .actions {
   width: 100px;
 }
 

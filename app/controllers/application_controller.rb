@@ -5,6 +5,8 @@
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   before_filter :require_user
+  filter_parameter_logging :password, :password_confirmation
+  helper_method :current_user_session, :current_user
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   layout "application", :except => :user_sessions
 

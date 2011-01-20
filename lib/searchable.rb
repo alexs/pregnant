@@ -1,5 +1,4 @@
 module Searchable
-
   def searchable_by(*column_names)
     @search_columns = []
     [column_names].flatten.each do |name|
@@ -7,7 +6,7 @@ module Searchable
     end
   end
 
-  def finder(query, fields=nil, options={})
+  def searcher(query, fields=nil, options={})
     with_scope :find => {
       :conditions => search_conditions(query, fields) } do
       find :all, options
