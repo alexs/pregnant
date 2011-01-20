@@ -120,15 +120,17 @@ es:
      # Append your own errors here or at the model/attributes scope.
 
     models:
-     detection: "Hoja de Deteccion"
      patient: "Paciente"
      laboratory: "Resultados de Laboratorio"
-     controlcard: "Tarjeta de Control"
      meeting: "Cita"
-     consultcard: "Tarjeta de Consulta"
+     psychology: "Cuestionario CGS-15"
+     user_session: "Tu sesión"
         # Overrides default messages
 
     attributes:
+     user_session:
+        login: "Nombre de Usuario"
+        password: "Contraseña"
      psychology:
         date: "Fecha"
         weeks_of_gestation: "Semanas de Gestación"

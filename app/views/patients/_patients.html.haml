@@ -11,6 +11,6 @@
         %td.actions
           = link_to_remote "Seleccionar", :update => "workspace", :url => { :controller => "patients", :action => "show", :id => "#{patient.id}"}, :method => :get, :layout => false
         %td.actions
-          = link_to_remote "historial Citas", :url => { :controller => "patients", :action => "appointments", :id => patient.id }, :method => :get
+          = link_to_remote "Citas Laboratorio", :url => { :controller => "patients", :action => "appointments", :id => patient.id }, :method => :get
 %br
 Total de pacientes encontrados: #{@patients.size}
