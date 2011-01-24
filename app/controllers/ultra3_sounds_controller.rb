@@ -1,6 +1,4 @@
 class Ultra3SoundsController < ApplicationController
-  # GET /ultra3_sounds
-  # GET /ultra3_sounds.xml
   def index
     @ultra3_sounds = Ultra3Sound.all
 
@@ -10,8 +8,6 @@ class Ultra3SoundsController < ApplicationController
     end
   end
 
-  # GET /ultra3_sounds/1
-  # GET /ultra3_sounds/1.xml
   def show
     @ultra3_sound = Ultra3Sound.find(params[:id])
 
@@ -21,21 +17,16 @@ class Ultra3SoundsController < ApplicationController
     end
   end
 
-  # GET /ultra3_sounds/new
-  # GET /ultra3_sounds/new.xml
   def new
     @ultra3_sound = Ultra3Sound.new(:patient_id => params[:id])
 
 
   end
 
-  # GET /ultra3_sounds/1/edit
   def edit
     @ultra3_sound = Ultra3Sound.find(params[:id])
   end
 
-  # POST /ultra3_sounds
-  # POST /ultra3_sounds.xml
   def create
     @ultra3_sound = Ultra3Sound.new(params[:ultra3_sound])
 
@@ -48,8 +39,6 @@ class Ultra3SoundsController < ApplicationController
     end
   end
 
-  # PUT /ultra3_sounds/1
-  # PUT /ultra3_sounds/1.xml
   def update
     @ultra3_sound = Ultra3Sound.find(params[:id])
 
