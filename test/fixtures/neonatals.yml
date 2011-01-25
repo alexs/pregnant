@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  patient: 
+  user: 
+  peso: 1.5
+  edad_gestacional: 1.5
+  trofismo: 1
+  calificacion_apgar: 1.5
+  sirveman: 1.5
+  morbilidad_materna: MyString
+  morbilidad_neonatal: MyString
+  muerte_neonatal: 1
+  tasa_mortalidad: 1.5
+  muerte_perinatal: 1.5
+
+two:
+  patient: 
+  user: 
+  peso: 1.5
+  edad_gestacional: 1.5
+  trofismo: 1
+  calificacion_apgar: 1.5
+  sirveman: 1.5
+  morbilidad_materna: MyString
+  morbilidad_neonatal: MyString
+  muerte_neonatal: 1
+  tasa_mortalidad: 1.5
+  muerte_perinatal: 1.5

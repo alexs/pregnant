@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :neonatals
+
   map.resources :dependencies
 
   map.resources :categories

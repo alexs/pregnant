@@ -93,6 +93,8 @@
     - else
       UltraSonido Tercer Trimestre
       .status{ :style => 'display:inline'}
-      = image_tag("checked.png")       
+      = image_tag("checked.png")
+  .button    
+    = link_to_remote "Variables Neonatal", :url => {:controller => 'neonatals', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
 #create_questionary_dialog{ :stylefood => 'display:none' }
   #create_questionary
