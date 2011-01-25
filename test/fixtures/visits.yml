@@ -1,0 +1,63 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  come_3_horas: false
+  come_seno_materno: false
+  succion_deglucion: false
+  bano_sol: false
+  evacuando: false
+  orinando: false
+  boca_arriba: false
+  baño_diario: false
+  lava_cordon: false
+  tamiz_neonatal: false
+  vacuna_bcg_hepatitis_b: false
+  amarillo: 1
+  materno_hidratado: false
+  materno_fiebre: false
+  materno_despierta_llora: false
+  materno_secresion_amarilla_ojos: false
+  materno_peri_umbilical_roja: false
+  materno_peri_umbilical_secresion: false
+  materno_succiona_seno: false
+  cantidad_loquios: MyText
+  mamas_inflamadas: MyText
+  salida_calostro: MyText
+  sutura_estado: MyText
+  madre_emocionalmente: MyText
+  madre_apoyo_familiar: MyText
+  temsion_arterial_diastolica: 1
+  tension_arterial_sistolica: 1
+  frecuencia_cardiaca: 1
+  temperatura: 1.5
+
+two:
+  come_3_horas: false
+  come_seno_materno: false
+  succion_deglucion: false
+  bano_sol: false
+  evacuando: false
+  orinando: false
+  boca_arriba: false
+  baño_diario: false
+  lava_cordon: false
+  tamiz_neonatal: false
+  vacuna_bcg_hepatitis_b: false
+  amarillo: 1
+  materno_hidratado: false
+  materno_fiebre: false
+  materno_despierta_llora: false
+  materno_secresion_amarilla_ojos: false
+  materno_peri_umbilical_roja: false
+  materno_peri_umbilical_secresion: false
+  materno_succiona_seno: false
+  cantidad_loquios: MyText
+  mamas_inflamadas: MyText
+  salida_calostro: MyText
+  sutura_estado: MyText
+  madre_emocionalmente: MyText
+  madre_apoyo_familiar: MyText
+  temsion_arterial_diastolica: 1
+  tension_arterial_sistolica: 1
+  frecuencia_cardiaca: 1
+  temperatura: 1.5

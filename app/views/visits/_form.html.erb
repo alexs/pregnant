@@ -1,0 +1,144 @@
+<% remote_form_for @visit, :url => {:action => :create }, :before =>
+  "$('.creating').show();", :complete => "$('.creating').hide();" do |f| %>
+  <%= f.error_messages %>
+  <%= f.hidden_field :patient_id %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+
+  <p>
+    <%= f.label :come_3_horas %><br />
+    <%= f.radio_button(:come_3_horas, "true") %>Si
+    <%= f.radio_button(:come_3_horas, "false") %>No
+  </p>
+  <p>
+    <%= f.label :come_seno_materno %><br />
+    <%= f.radio_button(:come_seno_materno, "true") %>Si
+    <%= f.radio_button(:come_seno_materno, "false") %>No
+  </p>
+  <p>
+    <%= f.label :succion_deglucion %><br />
+    <%= f.radio_button(:succion_deglucion, "true") %>Si
+    <%= f.radio_button(:succion_deglucion, "false") %>No
+  </p>
+  <p>
+    <%= f.label :bano_sol %><br />
+    <%= f.radio_button(:bano_sol, "true") %>Si
+    <%= f.radio_button(:bano_sol, "false") %>No
+  </p>
+  <p>
+    <%= f.label :evacuando %><br />
+    <%= f.radio_button(:evacuando, "true") %>Si
+    <%= f.radio_button(:evacuando, "false") %>No
+  </p>
+  <p>
+    <%= f.label :orinando %><br />
+    <%= f.radio_button(:orinando, "true") %>Si
+    <%= f.radio_button(:orinando, "false") %>No
+  </p>
+  <p>
+    <%= f.label :boca_arriba %><br />
+    <%= f.radio_button(:boca_arriba, "true") %>Si
+    <%= f.radio_button(:boca_arriba, "false") %>No
+  </p>
+  <p>
+    <%= f.label :baño_diario %><br />
+    <%= f.radio_button(:baño_diario, "true") %>Si
+    <%= f.radio_button(:baño_diario, "false") %>No
+  </p>
+  <p>
+    <%= f.label :lava_cordon %><br />
+    <%= f.radio_button(:lava_cordon, "true") %>Si
+    <%= f.radio_button(:lava_cordon, "false") %>No
+  </p>
+  <p>
+    <%= f.label :tamiz_neonatal %><br />
+    <%= f.radio_button(:tamiz_neonatal, "true") %>Si
+    <%= f.radio_button(:tamiz_neonatal, "false") %>No
+  </p>
+  <p>
+    <%= f.label :vacuna_bcg_hepatitis_b %><br />
+    <%= f.radio_button(:vacuna_bcg_hepatitis_b, "true") %>Si
+    <%= f.radio_button(:vacuna_bcg_hepatitis_b, "false") %>No
+  </p>
+  <p>
+    <%= f.label :amarillo %><br />
+    <%= f.text_field :amarillo %>
+  </p>
+  <p>
+    <%= f.label :materno_hidratado %><br />
+    <%= f.radio_button(:materno_hidratado, "true") %>Si
+    <%= f.radio_button(:materno_hidratado, "false") %>No
+  </p>
+  <p>
+    <%= f.label :materno_fiebre %><br />
+    <%= f.radio_button(:materno_fiebre, "true") %>Si
+    <%= f.radio_button(:materno_fiebre, "false") %>No
+  </p>
+  <p>
+    <%= f.label :materno_despierta_llora %><br />
+    <%= f.radio_button(:materno_despierta_llora, "true") %>Si
+    <%= f.radio_button(:materno_despierta_llora, "false") %>No
+  </p>
+  <p>
+    <%= f.label :materno_secresion_amarilla_ojos %><br />
+    <%= f.radio_button(:materno_secresion_amarilla_ojos, "true") %>Si
+    <%= f.radio_button(:materno_secresion_amarilla_ojos, "false") %>No
+  </p>
+  <p>
+    <%= f.label :materno_peri_umbilical_roja %><br />
+    <%= f.radio_button(:materno_peri_umbilical_roja, "true") %>Si
+    <%= f.radio_button(:materno_peri_umbilical_roja, "false") %>No
+  </p>
+  <p>
+    <%= f.label :materno_peri_umbilical_secresion %><br />
+    <%= f.radio_button(:materno_peri_umbilical_secresion, "true") %>Si
+    <%= f.radio_button(:materno_peri_umbilical_secresion, "false") %>No
+  </p>
+  <p>
+    <%= f.label :materno_succiona_seno %><br />
+    <%= f.radio_button(:materno_succiona_seno, "true") %>Si
+    <%= f.radio_button(:materno_succiona_seno, "false") %>No
+  </p>
+  <p>
+    <%= f.label :cantidad_loquios %><br />
+    <%= f.text_area :cantidad_loquios, :size => "40X20" %>
+  </p>
+  <p>
+    <%= f.label :mamas_inflamadas %><br />
+    <%= f.text_area :mamas_inflamadas, :size => "40X20" %>
+  </p>
+  <p>
+    <%= f.label :salida_calostro %><br />
+    <%= f.text_area :salida_calostro, :size => "40X20" %>
+  </p>
+  <p>
+    <%= f.label :sutura_estado %><br />
+    <%= f.text_area :sutura_estado, :size => "40X20" %>
+  </p>
+  <p>
+    <%= f.label :madre_emocionalmente %><br />
+    <%= f.text_area :madre_emocionalmente, :size => "40X20" %>
+  </p>
+  <p>
+    <%= f.label :madre_apoyo_familiar %><br />
+    <%= f.text_area :madre_apoyo_familiar, :size => "40X20" %>
+  </p>
+  <p>
+    <%= f.label :temsion_arterial_diastolica %><br />
+    <%= f.text_field :temsion_arterial_diastolica, :size => "4" %>
+  </p>
+  <p>
+    <%= f.label :tension_arterial_sistolica %><br />
+    <%= f.text_field :tension_arterial_sistolica, :size => "4" %>
+  </p>
+  <p>
+    <%= f.label :frecuencia_cardiaca %><br />
+    <%= f.text_field :frecuencia_cardiaca, :size => "4" %>
+  </p>
+  <p>
+    <%= f.label :temperatura %><br />
+    <%= f.text_field :temperatura, :size => "4" %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
