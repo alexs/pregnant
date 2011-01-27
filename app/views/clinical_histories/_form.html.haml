@@ -139,16 +139,16 @@
     = f.radio_button(:alcoholism,5) + "No"
     = f.radio_button(:alcoholism,22) + "Antes del embarazo"
     = f.radio_button(:alcoholism,23) + "Durante el embarazo"
-    = f.radio_button(:alcoholism,24) + "Mucho"
-    = f.radio_button(:alcoholism,24) + "Poco"
+    = f.label "¿Cuantas veces a la semana?:"
+    = f.text_field :alcoholism_times, :size => 4
   %p
     = f.label "Tabaquísmo: "
     = f.radio_button(:smoking,21) + "Si"
     = f.radio_button(:smoking,5) + "No"
     = f.radio_button(:smoking,22) + "Antes del embarazo"
     = f.radio_button(:smoking,23) + "Durante el embarazo"
-    = f.radio_button(:smoking,24) + "Mucho"
-    = f.radio_button(:smoking,24) + "Poco"
+    = f.label "¿Cuantos cigarrillos al dia?:"
+    = f.text_field :cigarretes_day, :size => 4
   %p
     Vacunas:
     = f.label "Toxina tetanica 1a. "
@@ -159,6 +159,16 @@
     = f.check_box :influenza_h1n1
     = f.label "influenza estacional"
     = f.check_box :influenza_estacional
+    = f.label "Grupo sanguineo"
+    = f.select(:grupo_sanguineo, { "A" => "A", "B" => "B", "O" => "O", "AB" => "AB"}, {:include_blank => true})
+    = f.label "RH"
+    = f.select(:rh, { "+" => "+", "-" => "-"}, {:include_blank => true})
+    = f.label "TIENE ANTICUERPOS IRREGULARES: "
+    = f.radio_button(:anticuerpos_irregulares, "true")
+    Si
+    = f.radio_button(:anticuerpos_irregulares, "false")
+    No
+
   %br
     %h1.questionary_title ANTECEDENTES PERSONALES PATOLOGICOS
     %hr
@@ -265,9 +275,11 @@
     = f.label "FUM: "
     = f.date_select :fum, :size => 5
     = f.label "IVSA: "
-    = f.check_box :ivsa
+    = f.text_field :ivsa, :size => 6
     = f.label "PAPANICOLAU: "
     = f.check_box :papanicolau
+    = f.label "Numero de Parejas"
+    = f.text_field :num_parejas, :size => 6
   %p
     = f.label "METODO: "
     = f.text_field :papanicolau_method, :size => 5
@@ -308,13 +320,7 @@
     = f.text_field :num_fetos, :size => 5  
     = f.label "FCF"
     = f.text_field :fcf, :size => 5
-    = f.label "RITMICO"
-    = f.check_box :ritmico  
-    = f.label "NO AUDIBLE"
-    = f.check_box :no_audible   
   %p
-    = f.label "GRUPO Y RH"
-    = f.text_field :grupo_rh
     = f.label "EN CASO DE SER NEGATIVO SE APLICO GAMMAGLOBULINA EN EMBARAZO PREVIO, SI(seleccionado) No(no seleccionar)"
     = f.check_box :gammaglobulina
   %p
@@ -322,8 +328,6 @@
     = f.check_box :hidrops_feta
   
   %p
-    = f.label "TIENE ANTICUERPOS IRREGULARES: "
-    = f.check_box :anticuerpos_irregulares
     = f.label "PESO ANTES DEL EMBARAZO: "
     = f.text_field :peso_anterior, :size => 5
     Kg.
@@ -341,31 +345,6 @@
           %th SISTEMA
           %th SDP
           %th COMENTARIO
-        %tr.even
-          %td OJOS
-          %td.numeric
-            = f.check_box :inte_ojos
-          %td
-            = f.text_field :inte_ojos_desc
-          %td.numeric
-        %tr.odd
-          %td OIDOS
-          %td.numeric
-            = f.check_box :inte_oidos
-          %td
-            = f.text_field :inte_oidos_desc            
-        %tr.even
-          %td NARIZ
-          %td.numeric
-            = f.check_box :inte_nariz
-          %td
-            = f.text_field :inte_nariz_desc
-        %tr.odd
-          %td GARGANTA
-          %td.numeric
-            = f.check_box :inte_garganta
-          %td
-            = f.text_field :inte_garganta_desc
         %tr.even
           %td DIGESTIVO
           %td.numeric
@@ -385,39 +364,82 @@
           %td
             = f.text_field :inte_musculoesqueletico_desc
         %tr.odd
-          %td PIEL Y TEGUMENTOS
-          %td.numeric
-            = f.check_box :inte_piel_y_tegumentos
-          %td
-            = f.text_field :inte_piel_y_tegumentos_desc
-        %tr.even
-          %td PULMONAR
-          %td.numeric
-            = f.check_box :inte_pulmonar
-          %td
-            = f.text_field :inte_pulmonar_desc
-        %tr.odd
           %td NEUROGOLICO
           %td.numeric
             = f.check_box :inte_neurologico
           %td
             = f.text_field :inte_neurologico_desc
         %tr.even
-          %td PSICOLOGICO
+          %td GENITALES
           %td.numeric
-            = f.check_box :inte_psicologico
+            = f.check_box :genitales
           %td
-            = f.text_field :inte_psicologico_desc
-        %tr.odd
-          %td MAMAS
-          %td.numeric
-            = f.check_box :inte_mamas
-          %td
-            = f.text_field :inte_mamas_desc
+            = f.text_field :genitales_desc
+
 
   %br
     %h1.questionary_title EXPLORACION FISICA
     %hr
+  %br
+  %p
+    Genitales
+    %br
+    Prurito    
+    = f.radio_button(:gen_prurito, "true")
+    Si
+    = f.radio_button(:gen_prurito, "false")
+    No
+    %br
+    Ardor
+    = f.radio_button(:gen_ardor, "true")
+    Si
+    = f.radio_button(:gen_ardor, "false")
+    No
+    %br
+    Leucorrea
+    = f.radio_button(:gen_leucorrea, "true")
+    Si
+    = f.radio_button(:gen_leucorrea, "false")
+    No
+    %br
+    Fetido    
+    = f.radio_button(:gen_fetido, "true")
+    Si
+    = f.radio_button(:gen_fetido, "false")
+    No
+    %br
+    Sangrado Vaginal
+    = f.radio_button(:gen_sangrado_vaginal, "true")
+    Si
+    = f.radio_button(:gen_sangrado_vaginal, "false")
+    No
+    %br
+    Salida de liquido vaginal    
+    = f.radio_button(:salida_liquido_vaginal, "true")
+    Si
+    = f.radio_button(:salida_liquido_vaginal, "false")
+    No
+    %br
+    Urinario:
+    = f.text_field :urinario
+    %br
+    Ardor
+    = f.radio_button(:ardor, "true")
+    Si
+    = f.radio_button(:ardor, "false")
+    No
+    %br
+    Polaquiuria
+    = f.radio_button(:polaquiuria, "true")
+    Si
+    = f.radio_button(:polaquiuria, "false")
+    No
+    %br
+    Tenesmo Vesical
+    = f.radio_button(:tenesmo_vesical, "true")
+    Si
+    = f.radio_button(:tenesmo_vesical, "false")
+    No
   %br
   %p
     = f.label "Presion Arterial Diastolica: "
@@ -501,12 +523,6 @@
             = f.check_box :extremidades
           %td
             = f.text_field :extremidades_desc
-        %tr.odd
-          %td GENITALES
-          %td.numeric
-            = f.check_box :genitales
-          %td
-            = f.text_field :genitales_desc
   %br
     %h1.questionary_title IMPRESION DIAGNOSTICA
     %hr
