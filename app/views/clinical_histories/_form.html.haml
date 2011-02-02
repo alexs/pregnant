@@ -7,6 +7,7 @@
     = f.text_field :responsible_family 
     = f.label "Parentesco:"
     = f.text_field :relationship
+    = f.hidden_field :patient_id 
   %br
     %h1.questionary_title ANTECEDENTES HEREDOFAMILIARES
     %hr
@@ -276,12 +277,21 @@
     = f.date_select :fum, :size => 5
     = f.label "IVSA: "
     = f.text_field :ivsa, :size => 6
-    = f.label "PAPANICOLAU: "
-    = f.check_box :papanicolau
+    %br
+    = f.label "PAPANICOLAU Normal: "
+    = f.check_box :papanicolau_normal
+    = f.label "PAPANICOLAU Normal Fecha: "
+    = f.date_select :papanicolau_normal_fecha
+    %br
+    = f.label "PAPANICOLAU Anormal: "
+    = f.check_box :papanicolau_anormal
+    = f.label "PAPANICOLAU Anormal Fecha: "
+    = f.date_select :papanicolau_anormal_fecha
+    %br
     = f.label "Numero de Parejas"
     = f.text_field :num_parejas, :size => 6
   %p
-    = f.label "METODO: "
+    = f.label "Papanicolau METODO: "
     = f.text_field :papanicolau_method, :size => 5
     = f.label "GESTA: "
     = f.text_field :gesta, :size => 5
@@ -396,30 +406,6 @@
     = f.radio_button(:gen_ardor, "false")
     No
     %br
-    Leucorrea
-    = f.radio_button(:gen_leucorrea, "true")
-    Si
-    = f.radio_button(:gen_leucorrea, "false")
-    No
-    %br
-    Fetido    
-    = f.radio_button(:gen_fetido, "true")
-    Si
-    = f.radio_button(:gen_fetido, "false")
-    No
-    %br
-    Sangrado Vaginal
-    = f.radio_button(:gen_sangrado_vaginal, "true")
-    Si
-    = f.radio_button(:gen_sangrado_vaginal, "false")
-    No
-    %br
-    Salida de liquido vaginal    
-    = f.radio_button(:salida_liquido_vaginal, "true")
-    Si
-    = f.radio_button(:salida_liquido_vaginal, "false")
-    No
-    %br
     Urinario:
     = f.text_field :urinario
     %br
@@ -476,7 +462,19 @@
   
   %p
     = f.label :dilatacion 
-    = f.check_box :dilatacion 
+    = f.select(:dilatacion, { "0-2" => "1", "3-4" => "2", "5-6" => "3", "+7" => "4"}, {:include_blank => true})
+
+  %p
+    = f.label :longitud
+    = f.select(:longitud, { "largo" => "1", "semiborrado" => "2", "corto" => "3"}, {:include_blank => true})
+
+  %p
+    = f.label :consistencia
+    = f.select(:consistencia, { "resistente" => "1", "intermedio" => "2", "blando" => "3"}, {:include_blank => true})
+
+  %p
+    = f.label :posicion
+    = f.text_field :posicion, :size => 4
   
   %p
     = f.label :borramientos 
@@ -485,6 +483,49 @@
   %p
     = f.label :reblandecimientos 
     = f.check_box :reblandecimientos
+    %br
+    Salida de liquido vaginal:
+    = f.radio_button(:salida_liquido_vaginal, "true")
+    Si
+    = f.radio_button(:salida_liquido_vaginal, "false")
+    No
+    |
+    Fetido:
+    = f.radio_button(:vaginal_fetido, "true")
+    Si
+    = f.radio_button(:vaginal_fetido, "false")
+    No
+    %br
+    Leucorrea:
+    = f.radio_button(:gen_leucorrea, "true")
+    Si
+    = f.radio_button(:gen_leucorrea, "false")
+    No
+    |
+    Fetido:
+    = f.radio_button(:leucorrea_fetido, "true")
+    Si
+    = f.radio_button(:leucorrea_fetido, "false")
+    No
+    |
+    = f.select(:leucorrea_tipo, { "escaso" => "1", "moderado" => "2", "abundante" => "3"}, {:include_blank => true})
+    %br
+    Sangrado Vaginal
+    = f.radio_button(:gen_sangrado_vaginal, "true")
+    Si
+    = f.radio_button(:gen_sangrado_vaginal, "false")
+    No
+    |
+    = f.select(:sangrado_tipo, { "fresco" => "1", "antiguio" => "2"}, {:include_blank => true})
+    %br
+    Fondo de saco
+    = f.select(:fondo_saco, { "libro" => "1", "abombados" => "2"}, {:include_blank => true})
+    |
+    Dolor al movilizar el útero:
+    = f.radio_button(:gen_sangrado_vaginal, "true")
+    Si
+    = f.radio_button(:gen_sangrado_vaginal, "false")
+    No
   %p
     .clinical_form
       %table
@@ -552,11 +593,8 @@
   %p
     = f.hidden_field :patient_id, :value => @clinical_history.patient_id
   %p
-    = f.label :user_id 
-    = f.text_field :user_id 
-  %p
-    = f.label :dependency_id 
-    = f.text_field :dependency_id 
+    = f.hidden_field :user_id, :value => current_user.id
+    = f.hidden_field :dependency_id, :value => current_user.dependency_id
   %hr
   %p
   .guardado{:style => "display:none;"}

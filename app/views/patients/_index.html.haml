@@ -4,7 +4,7 @@
   = text_field_tag 'patient[search]', nil
   = submit_to_remote('submit_get_patient', 'Buscar', :url => { :controller => 'patients', :action => 'get_patient'})
 %p
- .looking{:style => 'display:none'} Buscando...
+ #looking{:style => 'display:none'} Buscando...
  %br
   .table_header
    %table
