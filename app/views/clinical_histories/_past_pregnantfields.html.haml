@@ -1,5 +1,24 @@
-%tr.even
-  %td.numeric
-    = f.text_field :year, :class => "short_field"
-    = f.text_field :pregnant_type
-    = f.text_field :resolve
+%p
+  Año:
+  = f.text_field :year, :class => "short_field"
+  SG:
+  = f.text_field :sg
+  TIPO EMBARAZO:
+  = f.text_field :pregnant_type
+  RESOLUCION
+  = f.text_field :resolve
+  PESO
+  = f.text_field :peso, :class => "short_field"
+  SEXO: Masculino
+  = f.radio_button(:sexo, "true")
+  Femenino
+  = f.radio_button(:sexo, "false")
+  VIVO? Vivo
+  = f.radio_button(:vivo, "true")
+  Muerto
+  = f.radio_button(:vivo, "false")
+  SANO? Sano
+  = f.radio_button(:sano, "true")
+  Enfermo
+  = f.radio_button(:sano, "false")
+%hr

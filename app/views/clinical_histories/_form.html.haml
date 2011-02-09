@@ -309,14 +309,22 @@
   %p
     %table
       %tr.odd
-        %th{:width => "100px"} AÑO
-        %th{:width => "300px"} TIPO EMBARAZO
-        %th{:width => "300px"} RESOLUCION
+        %th{:width => "200px"} AÑO
+        %th{:width => "100px"} SG
+        %th{:width => "100px"} TIPO EMBARAZO
+        %th{:width => "100px"} RESOLUCION
+        %th{:width => "100px"} PESO
+        %th{:width => "100px"} SEXO
+        %th{:width => "100px"} VIVO?
+        %th{:width => "100px"} SANO?
   %p
     %table
       - f.fields_for :past_pregnants do |builder|
         = render 'past_pregnantfields', :f => builder
+      %br      
+      %br  
       = link_to_add_fields "Ingresar datos de otro embarazo pasado", f, :past_pregnants
+      %br
   %br
     %h1.questionary_title DATOS DEL EMBARAZO
     %hr
