@@ -1,0 +1,126 @@
+%p
+  Familiar responsable:
+  = h @clinical_history.responsible_family 
+  Parentesco:
+  = h @clinical_history.relationship
+%br
+  %h1.questionary_title ANTECEDENTES HEREDOFAMILIARES
+  %hr
+%br
+.clinical_form
+  %table
+    %tr.odd
+      %th PADECIMIENTO
+      %th MADRE
+      %th PADRE
+      %th HIJOS
+      %th HERMANOS
+      %th ESPOSO
+      %th OTROS
+    %tr.even
+      %td CARDIOVASCULARES
+      %td.numeric 
+        = h checked_value(@clinical_history.cardiovascular_mother)
+      %td.numeric
+        = h  checked_value(@clinical_history.cardiovascular_father)
+      %td.numeric
+        = h  checked_value(@clinical_history.cardiovascular_children)
+      %td.numeric
+        = h  checked_value(@clinical_history.cardiovascular_brothers)
+      %td.numeric
+        = h  checked_value(@clinical_history.cardiovascular_husband)
+      %td.numeric
+        = h @clinical_history.cardiovascular_others 
+    %tr.odd
+      %td DIABETES MELLITUS
+      %td.numeric
+        =  checked_value(@clinical_history.diabetes_mother)
+      %td.numeric
+        =  checked_value(@clinical_history.diabetes_father)
+      %td.numeric
+        =  checked_value(@clinical_history.diabetes_children)
+      %td.numeric
+        =  checked_value(@clinical_history.diabetes_brothers)
+      %td.numeric
+        =  checked_value(@clinical_history.diabetes_husband)
+      %td.numeric
+        = @clinical_history.diabetes_others 
+    %tr.even
+      %td NEOPLASICOS
+      %td.numeric
+        =  checked_value(@clinical_history.neoplastic_mother)
+      %td.numeric
+        =  checked_value(@clinical_history.neoplastic_father)
+      %td.numeric
+        =  checked_value(@clinical_history.neoplastic_children)
+      %td.numeric
+        =  checked_value(@clinical_history.neoplastic_brothers)
+      %td.numeric
+        =  checked_value(@clinical_history.neoplastic_husband)
+      %td.numeric
+        = @clinical_history.neoplastic_others 
+    %tr.odd
+      %td INFECCIOSOS
+      %td.numeric
+        = @clinical_history.infectious_mother 
+      %td.numeric
+        = @clinical_history.infectious_father 
+      %td.numeric
+        = @clinical_history.infectious_children 
+      %td.numeric
+        = @clinical_history.infectious_brothers 
+      %td.numeric
+        = @clinical_history.infectious_husband 
+      %td.numeric
+        = @clinical_history.infectious_others
+    %tr.even
+      %td TOXICOMANIAS
+      %td.numeric
+        = @clinical_history.toxicomanias_mother
+      %td.numeric
+        = @clinical_history.toxicomanias_father 
+      %td.numeric
+        = @clinical_history.toxicomanias_children 
+      %td.numeric
+        = @clinical_history.toxicomanias_brothers 
+      %td.numeric
+        = @clinical_history.toxicomanias_husband 
+      %td.numeric
+        = @clinical_history.toxicomanias_others 
+    %tr.odd
+      %td SX DOWN/MALFORMADOS
+      %td.numeric
+        = @clinical_history.malformed_mother
+      %td.numeric
+        = @clinical_history.malformed_father
+      %td.numeric
+        = @clinical_history.malformed_children
+      %td.numeric
+        = @clinical_history.malformed_brothers
+      %td.numeric
+        = @clinical_history.malformed_husband
+      %td.numeric  
+        = @clinical_history.malformed_others 
+%br
+  %h1.questionary_title ANTECEDENTES PERSONALES NO PATOLOGICOS
+  %hr
+%br
+%p
+  Alimentación: 
+  = feed(@clinical_history.feed)
+%p
+  Vitaminas:
+  = h @clinical_history.vitamins  
+  Hierro:
+  = h @clinical_history.iron 
+  Ácido folico: 
+  = h @clinical_history.folic_acid 
+  Cafeina: 
+  = h @clinical_history.caffeine
+  Drogas: 
+  = h @clinical_history.drugs 
+  Medicamentos: 
+  = h @clinical_history.medicaments
+  %br
+  Mecione Cuales: 
+  = h @clinical_history.medicaments_details

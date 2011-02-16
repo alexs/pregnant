@@ -98,7 +98,7 @@ es:
         blank: "no puede estar en blanco"
         empty: "no puede estar vacío"
         not_a_number: "no es un número"
-        taken: "ya ha sido tomado"
+        taken: "ya ha sido capturado"
         less_than: "debe ser menor que {{count}}"
         less_than_or_equal_to: "debe ser menor o igual que {{count}}"
         greater_than: "debe ser mayor que {{count}}"
@@ -125,6 +125,7 @@ es:
      meeting: "Cita"
      psychology: "Cuestionario CGS-15"
      user_session: "Tu sesión"
+     clinical_history: "Historia Clínica"
         # Overrides default messages
 
     attributes:
@@ -222,6 +223,8 @@ es:
         proteinuria: "Proteinuria"
         meeting_id: "Cita"
         obsevaciones: "Observaciones"
+     clinical_history:
+        patient_id: "Este paciente"
 
 
 
