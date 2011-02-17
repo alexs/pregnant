@@ -17,6 +17,8 @@ module ClinicalHistoriesHelper
 
   def checked_value(valor)
     if valor == false
+      image_tag("uncheck.jpg")
+    else
       image_tag("checked.png")
     end
   end

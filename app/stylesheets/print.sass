@@ -10,14 +10,11 @@ body
   background-color: #fff
   border: solid
   #header
-    +column(!blueprint-grid-columns)
-    background: $blueprint_table_header_color
-    background:
-      image: image-url("header.png")
-      repeat: no-repeat
-      position: top left
-    height: 136px
+    visibility: hidden
+    display: none  
   #content
+    visibility: hidden
+    display: none
     +column(8, true)
     .indicator
       +border-radius(6px)
@@ -38,6 +35,42 @@ body
       repeat: no-repeat
       position: bottom center
     height: 80px
+.menu
+  visibility: hidden
+  display: none
+  +container
+  position: relative
+  top: 116px
+  font-family: Arial,Helvetica,sans-serif
+  ul
+    list-style: url(none) none
+  ul li 
+    display: inline
+    float: left
+    position: relative
+    background-color: #FFF
+    width: 150px
+    margin: 0
+  ul li a
+    color: #FFF
+    text-decoration: none
+    background-color: #000
+    font-size: 16px
+    display: block
+    width: 140px
+    padding: 2px 5px
+  ul li a:hover, ul li a:active
+    background-color: #FFCC33
+    color: #000
+  ul li ul
+    position: relative
+    display: none
+  ul li ul li
+    display: list-item
+    float: none
+    margin: 0
+  ul li ul li a
+    font-size: 14px
 #content #workspace
   margin: 10px 10px 10px 10px
   padding-bottom: 25px
@@ -65,6 +98,9 @@ body
     +outer-table-borders(2px)
     +alternating-rows-and-columns($table-color, adjust-hue($table-color,-120deg), #222)
 #patient_show
+  visibility: visible
+  display: block
+  position: top center
   table
     $table-color: #7a98c6
     +table-scaffolding
@@ -175,5 +211,9 @@ h1
     +table-scaffolding
     +inner-table-borders(1px, darken($table-color, 40%))
     +outer-table-borders(2px)
-    +alternating-rows-and-columns($table-color, adjust-hue($table-color, -120deg), #222)  
-
+    +alternating-rows-and-columns($table-color, adjust-hue($table-color, -120deg), #222)
+.ui-widget-overlay
+  div
+    position: relative center
+    top: 30px
+    right: 5px

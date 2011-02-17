@@ -43,7 +43,7 @@
       .status_clinical{ :style => 'display:none'}
         = image_tag("checked.png")
     - else
-      Historia Clinica Perinatal
+      = link_to_remote "Historia Clinica Perinatal", :url => {:controller => 'clinical_histories', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
       .status_clinical{ :style => 'display:inline'}
         = image_tag("checked.png")
   .button

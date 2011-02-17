@@ -8,10 +8,10 @@ class ClinicalHistoriesController < ApplicationController
   end
 
   def show
-    @clinical_history = ClinicalHistory.find(params[:id])
+    @clinical_history = ClinicalHistory.find_last_by_patient_id(params[:id])
 
     respond_to do |format|
-      format.html
+      format.js
     end
   end
 
