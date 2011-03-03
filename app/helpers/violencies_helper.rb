@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 module ViolenciesHelper
   def question_violence(f,field,value)
    case value
@@ -6,7 +7,7 @@ module ViolenciesHelper
    when 2
      @answer = "No"
    when 3
-     @answer = "No se"
+     @answer = "No sé"
    when 4
      @answer = "Solo en una ocasion"
    when 5

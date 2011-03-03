@@ -6,12 +6,9 @@
     %tr
       %td
         Responda Marcando el cuadro que corresponde
-    %br
     %tr
       %td
         1. No estaba Preparada para embarazarme
-    %br
-    %tr
       %td
         = questions(f,:no_preparada_emb,1)
       %td
@@ -26,14 +23,12 @@
     %tr
       %td
         En caso de que haya deseado embarazarse, escriba dos acciones que hizo para prepararse
-        %br
+      %td{:colspan => "5"}
         = f.text_field :no_razon
     %br
     %tr
       %td
         2.Considero que actualmente tengo un problema muy grande, o se me han juntado demasiados
-    %br
-    %tr
       %td
         = questions(f,:considero_problema_grande,1)
       %td
@@ -48,8 +43,6 @@
     %tr
       %td
         3.Sé que pasé por cosas en mi infancia que me avergüenzan o me daban mucho miedo.
-    %br
-    %tr
       %td
         = questions(f,:cosas_infancia,1)
       %td
@@ -64,8 +57,6 @@
     %tr
       %td
         4.No cuento con el apoyo suficiente de mi pareja
-    %br
-    %tr
       %td
         = questions(f,:no_apoyo_pareja,1)
       %td
@@ -80,8 +71,6 @@
     %tr
       %td
         5.Considero que no cuento con personas que me puedan ayudar cuando lo necesito.
-    %br
-    %tr
       %td
         = questions(f,:no_personas_necesito,1)
       %td
@@ -96,8 +85,6 @@
     %tr
       %td
         6.Tengo desconfianza en la forma que puedo ser como madre.
-    %br
-    %tr
       %td
         = questions(f,:desconfianza_madre,1)
       %td
