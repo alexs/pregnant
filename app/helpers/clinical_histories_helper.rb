@@ -1,7 +1,10 @@
+# -*- coding: utf-8 -*-
 module ClinicalHistoriesHelper
-  def feed(valor)
+  def get_value(valor)
     if valor.nil?
       "No seleccionado"
+    elsif valor == 5
+      "No"
     elsif valor == 16
       "Suficiente"
     elsif valor == 17
@@ -10,8 +13,22 @@ module ClinicalHistoriesHelper
       "Adecuada"
     elsif valor == 19
       "Excesivo"
-    else
+    elsif valor == 20
       "Dieta no habitual"
+    elsif valor == 21
+      "Sí"
+    elsif valor == 22
+      "Antes del embarazo"
+    elsif valor == 23
+      "Durante el embarazo"
+    end
+  end
+
+  def get_boolean(value)
+    if value == false
+      "No"
+    elsif value == true
+      "Si"
     end
   end
 

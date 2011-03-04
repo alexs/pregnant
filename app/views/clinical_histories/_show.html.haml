@@ -1,8 +1,7 @@
-%p
-  Familiar responsable:
-  = h @clinical_history.responsible_family 
-  Parentesco:
-  = h @clinical_history.relationship
+Familiar responsable:
+= h @clinical_history.responsible_family 
+Parentesco:
+= h @clinical_history.relationship
 %br
   %h1.questionary_title ANTECEDENTES HEREDOFAMILIARES
   %hr
@@ -22,15 +21,15 @@
       %td.numeric 
         = h checked_value(@clinical_history.cardiovascular_mother)
       %td.numeric
-        = h  checked_value(@clinical_history.cardiovascular_father)
+        = h checked_value(@clinical_history.cardiovascular_father)
       %td.numeric
-        = h  checked_value(@clinical_history.cardiovascular_children)
+        = h checked_value(@clinical_history.cardiovascular_children)
       %td.numeric
-        = h  checked_value(@clinical_history.cardiovascular_brothers)
+        = h checked_value(@clinical_history.cardiovascular_brothers)
       %td.numeric
-        = h  checked_value(@clinical_history.cardiovascular_husband)
+        = h checked_value(@clinical_history.cardiovascular_husband)
       %td.numeric
-        = h @clinical_history.cardiovascular_others 
+        = h checked_value(@clinical_history.cardiovascular_others)
     %tr.odd
       %td DIABETES MELLITUS
       %td.numeric
@@ -44,7 +43,7 @@
       %td.numeric
         =  checked_value(@clinical_history.diabetes_husband)
       %td.numeric
-        = @clinical_history.diabetes_others 
+        = checked_value(@clinical_history.diabetes_others)
     %tr.even
       %td NEOPLASICOS
       %td.numeric
@@ -58,69 +57,123 @@
       %td.numeric
         =  checked_value(@clinical_history.neoplastic_husband)
       %td.numeric
-        = @clinical_history.neoplastic_others 
+        = checked_value(@clinical_history.neoplastic_others)
     %tr.odd
       %td INFECCIOSOS
       %td.numeric
-        = @clinical_history.infectious_mother 
+        = checked_value(@clinical_history.infectious_mother)
       %td.numeric
-        = @clinical_history.infectious_father 
+        = checked_value(@clinical_history.infectious_father)
       %td.numeric
-        = @clinical_history.infectious_children 
+        = checked_value(@clinical_history.infectious_children)
       %td.numeric
-        = @clinical_history.infectious_brothers 
+        = checked_value(@clinical_history.infectious_brothers)
       %td.numeric
-        = @clinical_history.infectious_husband 
+        = checked_value(@clinical_history.infectious_husband)
       %td.numeric
-        = @clinical_history.infectious_others
+        = checked_value(@clinical_history.infectious_others)
     %tr.even
       %td TOXICOMANIAS
       %td.numeric
-        = @clinical_history.toxicomanias_mother
+        = checked_value(@clinical_history.toxicomanias_mother)
       %td.numeric
-        = @clinical_history.toxicomanias_father 
+        = checked_value(@clinical_history.toxicomanias_father)
       %td.numeric
-        = @clinical_history.toxicomanias_children 
+        = checked_value(@clinical_history.toxicomanias_children)
       %td.numeric
-        = @clinical_history.toxicomanias_brothers 
+        = checked_value(@clinical_history.toxicomanias_brothers)
       %td.numeric
-        = @clinical_history.toxicomanias_husband 
+        = checked_value(@clinical_history.toxicomanias_husband)
       %td.numeric
-        = @clinical_history.toxicomanias_others 
+        = checked_value(@clinical_history.toxicomanias_others)
     %tr.odd
       %td SX DOWN/MALFORMADOS
       %td.numeric
-        = @clinical_history.malformed_mother
+        = checked_value(@clinical_history.malformed_mother)
       %td.numeric
-        = @clinical_history.malformed_father
+        = checked_value(@clinical_history.malformed_father)
       %td.numeric
-        = @clinical_history.malformed_children
+        = checked_value(@clinical_history.malformed_children)
       %td.numeric
-        = @clinical_history.malformed_brothers
+        = checked_value(@clinical_history.malformed_brothers)
       %td.numeric
-        = @clinical_history.malformed_husband
+        = checked_value(@clinical_history.malformed_husband)
       %td.numeric  
-        = @clinical_history.malformed_others 
+        = checked_value(@clinical_history.malformed_others)
 %br
   %h1.questionary_title ANTECEDENTES PERSONALES NO PATOLOGICOS
   %hr
 %br
 %p
-  Alimentación: 
-  = feed(@clinical_history.feed)
+  %b
+    Alimentación: 
+  = get_value(@clinical_history.feed)
 %p
-  Vitaminas:
-  = h @clinical_history.vitamins  
-  Hierro:
-  = h @clinical_history.iron 
-  Ácido folico: 
-  = h @clinical_history.folic_acid 
-  Cafeina: 
-  = h @clinical_history.caffeine
-  Drogas: 
-  = h @clinical_history.drugs 
-  Medicamentos: 
-  = h @clinical_history.medicaments
+  %b
+    Vitaminas:
+  = h get_boolean(@clinical_history.vitamins)
+  %b
+    Hierro:
+  = h get_boolean(@clinical_history.iron)
+  %b
+    Ácido folico: 
+  = h get_boolean(@clinical_history.folic_acid)
+  %b
+    Cafeina: 
+  = h get_boolean(@clinical_history.caffeine)
+  %b
+    Drogas: 
+  = h get_boolean(@clinical_history.drugs)
+  %b
+    Medicamentos: 
+  = h get_boolean(@clinical_history.medicaments)
   %br
-  Mecione Cuales: 
+  %b  
+    Mecione Cuales: 
   = h @clinical_history.medicaments_details
+  %p
+    %b
+      Alcoholismo:
+    = h get_value(@clinical_history.alcoholism)
+    %br
+    %b
+      ¿Cuántas veces a la semana?:
+    = h @clinical_history.alcoholism_times
+  %p
+    %b
+      Tabaquísmo:
+    = h get_value(@clinical_history.smoking)
+    %b
+      ¿Cuántos cigarrillos al dia?:
+    = @clinical_history.cigarretes_day
+    %br
+      %b
+        ¿Hay alguien que fuma en el hogar?
+      = h get_boolean(@clinical_history.fuman_hogar)
+  %p
+    %b
+      Vacunas:
+    %br
+      %b
+        Toxina tetánica 1a.
+    = h get_boolean(@clinical_history.toxina_tetanica_1)
+    %b
+      2a.
+    = h get_boolean(@clinical_history.toxina_tetanica_2)
+    %b
+      Influenza H1N1
+    = h get_boolean(@clinical_history.influenza_h1n1)
+    %b
+      Influenza estacional
+    = h get_boolean(@clinical_history.influenza_estacional)
+    %b
+      Grupo sanguineo
+    = h @clinical_history.grupo_sanguineo + @clinical_history.rh
+    %b
+      ¿Tiene anticuerpos irregulares?
+    = h get_boolean(@clinical_history.anticuerpos_irregulares)  
+  %br
+    %h1.questionary_title ANTECEDENTES PERSONALES PATOLOGICOS
+    %hr
+  %br
+  %p

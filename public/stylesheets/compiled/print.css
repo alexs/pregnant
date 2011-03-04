@@ -25,8 +25,6 @@ body {
 }
 /* line 15, ../../../app/stylesheets/print.sass */
 .principal #content {
-  visibility: hidden;
-  display: none;
   display: inline;
   float: left;
   margin-right: 0;
@@ -36,7 +34,7 @@ body {
 * html .principal #content {
   overflow-x: hidden;
 }
-/* line 19, ../../../app/stylesheets/print.sass */
+/* line 17, ../../../app/stylesheets/print.sass */
 .principal #content .indicator {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -55,7 +53,7 @@ body {
   height: 16px;
   font-size: 12px;
 }
-/* line 31, ../../../app/stylesheets/print.sass */
+/* line 29, ../../../app/stylesheets/print.sass */
 .principal #footer {
   display: inline;
   float: left;
@@ -71,7 +69,7 @@ body {
   overflow-x: hidden;
 }
 
-/* line 38, ../../../app/stylesheets/print.sass */
+/* line 36, ../../../app/stylesheets/print.sass */
 .menu {
   visibility: hidden;
   display: none;
@@ -87,11 +85,11 @@ body {
 .menu {
   display: block;
 }
-/* line 45, ../../../app/stylesheets/print.sass */
+/* line 43, ../../../app/stylesheets/print.sass */
 .menu ul {
   list-style: url(none) none;
 }
-/* line 47, ../../../app/stylesheets/print.sass */
+/* line 45, ../../../app/stylesheets/print.sass */
 .menu ul li {
   display: inline;
   float: left;
@@ -100,7 +98,7 @@ body {
   width: 150px;
   margin: 0;
 }
-/* line 54, ../../../app/stylesheets/print.sass */
+/* line 52, ../../../app/stylesheets/print.sass */
 .menu ul li a {
   color: white;
   text-decoration: none;
@@ -110,44 +108,44 @@ body {
   width: 140px;
   padding: 2px 5px;
 }
-/* line 62, ../../../app/stylesheets/print.sass */
+/* line 60, ../../../app/stylesheets/print.sass */
 .menu ul li a:hover, .menu ul li a:active {
   background-color: #ffcc33;
   color: black;
 }
-/* line 65, ../../../app/stylesheets/print.sass */
+/* line 63, ../../../app/stylesheets/print.sass */
 .menu ul li ul {
   position: relative;
   display: none;
 }
-/* line 68, ../../../app/stylesheets/print.sass */
+/* line 66, ../../../app/stylesheets/print.sass */
 .menu ul li ul li {
   display: list-item;
   float: none;
   margin: 0;
 }
-/* line 72, ../../../app/stylesheets/print.sass */
+/* line 70, ../../../app/stylesheets/print.sass */
 .menu ul li ul li a {
   font-size: 14px;
 }
 
-/* line 74, ../../../app/stylesheets/print.sass */
+/* line 72, ../../../app/stylesheets/print.sass */
 #content #workspace {
   margin: 10px 10px 10px 10px;
   padding-bottom: 25px;
 }
-/* line 77, ../../../app/stylesheets/print.sass */
+/* line 75, ../../../app/stylesheets/print.sass */
 #content #workspace #clean {
   padding-bottom: 250px;
 }
 
-/* line 79, ../../../app/stylesheets/print.sass */
+/* line 77, ../../../app/stylesheets/print.sass */
 #create_questionary_dialog {
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* line 82, ../../../app/stylesheets/print.sass */
+/* line 80, ../../../app/stylesheets/print.sass */
 #content #workspace {
   font-size: 13px;
   font-family: Arial, Helvetica, sans-serif;
@@ -175,21 +173,21 @@ body {
   width: 390px;
   height: 250px;
 }
-/* line 87, ../../../app/stylesheets/print.sass */
+/* line 85, ../../../app/stylesheets/print.sass */
 #content #workspace #patient_exterior {
   width: 60px;
 }
-/* line 89, ../../../app/stylesheets/print.sass */
+/* line 87, ../../../app/stylesheets/print.sass */
 #content #workspace #patient_interior {
   width: 60px;
 }
 
-/* line 91, ../../../app/stylesheets/print.sass */
+/* line 89, ../../../app/stylesheets/print.sass */
 .short_field {
   width: 60px;
 }
 
-/* line 94, ../../../app/stylesheets/print.sass */
+/* line 92, ../../../app/stylesheets/print.sass */
 #patients_form table {
   border: 2px solid black;
 }
@@ -270,13 +268,13 @@ body {
   background-color: #dddddd;
 }
 
-/* line 100, ../../../app/stylesheets/print.sass */
+/* line 98, ../../../app/stylesheets/print.sass */
 #patient_show {
   visibility: visible;
   display: block;
   position: top center;
 }
-/* line 104, ../../../app/stylesheets/print.sass */
+/* line 102, ../../../app/stylesheets/print.sass */
 #patient_show table {
   border: 2px solid black;
   width: 100%;
@@ -358,7 +356,7 @@ body {
   background-color: #dddddd;
 }
 
-/* line 112, ../../../app/stylesheets/print.sass */
+/* line 110, ../../../app/stylesheets/print.sass */
 .table_header table, .table_result table {
   border: 1px solid #0080ff;
 }
@@ -423,40 +421,40 @@ body {
 .table_header table tfoot th.even, .table_header table tfoot th:nth-child(2n), .table_header table tfoot td.even, .table_header table tfoot td:nth-child(2n), .table_result table tfoot th.even, .table_result table tfoot th:nth-child(2n), .table_result table tfoot td.even, .table_result table tfoot td:nth-child(2n) {
   background-color: #eeeeee;
 }
-/* line 117, ../../../app/stylesheets/print.sass */
+/* line 115, ../../../app/stylesheets/print.sass */
 .table_header table .name, .table_result table .name {
   width: 200px;
 }
-/* line 119, ../../../app/stylesheets/print.sass */
+/* line 117, ../../../app/stylesheets/print.sass */
 .table_header table .lastname, .table_result table .lastname {
   width: 150px;
 }
-/* line 121, ../../../app/stylesheets/print.sass */
+/* line 119, ../../../app/stylesheets/print.sass */
 .table_header table .date_next_consult, .table_result table .date_next_consult {
   width: 100px;
 }
-/* line 123, ../../../app/stylesheets/print.sass */
+/* line 121, ../../../app/stylesheets/print.sass */
 .table_header table .presumptive_diagnosis, .table_result table .presumptive_diagnosis {
   width: 150px;
 }
-/* line 125, ../../../app/stylesheets/print.sass */
+/* line 123, ../../../app/stylesheets/print.sass */
 .table_header table .applicant_doctor, .table_result table .applicant_doctor {
   width: 150px;
 }
-/* line 127, ../../../app/stylesheets/print.sass */
+/* line 125, ../../../app/stylesheets/print.sass */
 .table_header table .age, .table_result table .age {
   width: 60px;
 }
-/* line 129, ../../../app/stylesheets/print.sass */
+/* line 127, ../../../app/stylesheets/print.sass */
 .table_header table .address, .table_result table .address {
   width: 300px;
 }
-/* line 131, ../../../app/stylesheets/print.sass */
+/* line 129, ../../../app/stylesheets/print.sass */
 .table_header table .actions, .table_result table .actions {
   width: 100px;
 }
 
-/* line 133, ../../../app/stylesheets/print.sass */
+/* line 131, ../../../app/stylesheets/print.sass */
 .info, .success, .warning, .error, .validation {
   border: 1px solid;
   margin: 10px 0px;
@@ -465,34 +463,34 @@ body {
   background-position: 10px center;
 }
 
-/* line 139, ../../../app/stylesheets/print.sass */
+/* line 137, ../../../app/stylesheets/print.sass */
 .info {
   color: #00529b;
   background-color: #bde5f8;
   background-image: url("info.png");
 }
 
-/* line 143, ../../../app/stylesheets/print.sass */
+/* line 141, ../../../app/stylesheets/print.sass */
 .success {
   color: #4f8a10;
   background-color: #dff2bf;
 }
 
-/* line 147, ../../../app/stylesheets/print.sass */
+/* line 145, ../../../app/stylesheets/print.sass */
 .warning {
   color: #9f6000;
   background-color: #feefb3;
   background-image: url("warning.png");
 }
 
-/* line 151, ../../../app/stylesheets/print.sass */
+/* line 149, ../../../app/stylesheets/print.sass */
 .error {
   color: #d8000c;
   background-color: #ffbaba;
   background-image: url("error.png");
 }
 
-/* line 155, ../../../app/stylesheets/print.sass */
+/* line 153, ../../../app/stylesheets/print.sass */
 .validation {
   color: #d63301;
   background-color: #ffccba;
@@ -505,14 +503,14 @@ body {
   background: url('/images/bullet-round.png?1294443723') no-repeat 4.5px 5.5px;
   list-style-type: none;
 }
-/* line 160, ../../../app/stylesheets/print.sass */
+/* line 158, ../../../app/stylesheets/print.sass */
 .validation p {
   line-height: 40px;
   color: #61380b;
   font-size: 15px;
 }
 
-/* line 164, ../../../app/stylesheets/print.sass */
+/* line 162, ../../../app/stylesheets/print.sass */
 .validation h2 {
   color: #5e610b;
   background-color: #feefb3;
@@ -523,24 +521,24 @@ body {
   font-size: 20px;
 }
 
-/* line 172, ../../../app/stylesheets/print.sass */
+/* line 170, ../../../app/stylesheets/print.sass */
 h1 {
   text-align: center;
   font-size: 14px;
 }
 
-/* line 175, ../../../app/stylesheets/print.sass */
+/* line 173, ../../../app/stylesheets/print.sass */
 .questionary_title {
   text-align: left;
   font-size: 14px;
   font-weight: bold;
 }
 
-/* line 179, ../../../app/stylesheets/print.sass */
+/* line 177, ../../../app/stylesheets/print.sass */
 #menu_patient {
   padding-top: 50px;
 }
-/* line 181, ../../../app/stylesheets/print.sass */
+/* line 179, ../../../app/stylesheets/print.sass */
 #menu_patient .button {
   padding: 2px 2px 2px 2px;
   background-color: #ffffcc;
@@ -557,14 +555,14 @@ h1 {
   width: 12em;
 }
 
-/* line 195, ../../../app/stylesheets/print.sass */
+/* line 193, ../../../app/stylesheets/print.sass */
 .fieldWithErrors {
   padding: 2px;
   display: inline-block;
   background-color: #ffbaba;
 }
 
-/* line 200, ../../../app/stylesheets/print.sass */
+/* line 198, ../../../app/stylesheets/print.sass */
 .clinical_form table {
   border: 2px solid black;
 }
@@ -645,7 +643,7 @@ h1 {
   background-color: #dddddd;
 }
 
-/* line 207, ../../../app/stylesheets/print.sass */
+/* line 205, ../../../app/stylesheets/print.sass */
 #create_questionary table {
   background-color: #f5f5f5;
   border-color: #222222 #dedede #dedede #222222;
@@ -735,7 +733,7 @@ h1 {
   background-color: #dddddd;
 }
 
-/* line 216, ../../../app/stylesheets/print.sass */
+/* line 214, ../../../app/stylesheets/print.sass */
 .ui-widget-overlay div {
   position: relative center;
   top: 30px;

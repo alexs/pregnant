@@ -14,16 +14,14 @@
   </p>
   <p>
     <%= f.label :trofismo %><br />
-    <%= f.select(:trofismo, {"Recien Nacido Pretermino" => "1",
-    "Recien Nacido de Termino" => "2", "Recien Nacido Postermino" =>
-    "3", "Recien Nacido Hipotrofico" => "4", "Recien Nacido Eutrofico" => "6","Recien Nacido Hipertrofico" => "7"}, {:include_blank => true}) %>
+    <%= f.select(:trofismo, {"Recien Nacido Hipertrófico" => "1", "Recien Nacido Eutrófico" => "2","Recien Nacido Hipotónico" => "3"}, {:include_blank => true}) %>
   </p>
   <p>
-    <%= f.label :calificacion_apgar %><br />
+    Calificación APGAR<br />
     <%= f.text_field :calificacion_apgar %>
   </p>
   <p>
-    <%= f.label :sirveman %><br />
+    <%= f.label :silverman %><br />
     <%= f.text_field :sirveman %>
   </p>
   <p>
@@ -38,14 +36,7 @@
     <%= f.label :muerte_neonatal %><br />
  <%= f.select(:muerte_neonatal, {"Muerte Neonatal Precoz (MNP)" => "1", "Muerte Neonatal Tardía (MNT)" => "2"}, {:include_blank => true}) %>
   </p>
-  <p>
-    <%= f.label :tasa_mortalidad %><br />
-    <%= f.text_field :tasa_mortalidad %>
-  </p>
-  <p>
-    <%= f.label :muerte_perinatal %><br />
-    <%= f.text_field :muerte_perinatal %>
-  </p>
+
   <p>
     <%= f.submit 'Guardar' %>
   </p>

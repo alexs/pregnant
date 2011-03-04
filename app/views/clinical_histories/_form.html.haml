@@ -150,6 +150,12 @@
     = f.radio_button(:smoking,23) + "Durante el embarazo"
     = f.label "¿Cuántos cigarrillos al dia?:"
     = f.text_field :cigarretes_day, :size => 4
+    %br
+      ¿Hay alguien que fuma en el hogar?
+      = f.radio_button(:fuman_hogar, "true")
+      Sí
+      = f.radio_button(:fuman_hogar, "false")
+      No
   %p
     Vacunas:
     = f.label "Toxina tetánica 1a. "
@@ -184,7 +190,7 @@
           %th Sí
           %th 
           %th Sí
-          %th 
+          %th
           %th Sí
         %tr.even
           %td Hipertensión
@@ -291,7 +297,7 @@
     = f.label "Número de parejas"
     = f.text_field :num_parejas, :size => 6
   %p
-    = f.label "Papanicolau método: "
+    = f.label "Método anticonceptivo: "
     = f.text_field :papanicolau_method, :size => 5
     = f.label "Gesta: "
     = f.text_field :gesta, :size => 5
