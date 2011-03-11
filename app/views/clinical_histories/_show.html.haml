@@ -1,3 +1,6 @@
+%p
+  = link_to_remote "Regresar", :update => "workspace", :url => { :controller => "patients", :action => "show", :id => "#{@clinical_history.patient_id}"}, :method => :get, :layout => false
+
 Familiar responsable:
 = h @clinical_history.responsible_family 
 Parentesco:
@@ -177,3 +180,92 @@ Parentesco:
     %hr
   %br
   %p
+    .clinical_form
+      %table
+        %tr.odd
+          %th 
+          %th Sí
+          %th 
+          %th Sí
+          %th 
+          %th Sí
+          %th
+          %th Sí
+        %tr.even
+          %td Hipertensión
+          %td.numeric
+            = checked_value(@clinical_history.hipertension)
+          %td Enfermedad hepática
+          %td.numeric
+            = checked_value(@clinical_history.enfermedad_hepatica)
+          %td Infecciosos
+          %td.numeric
+            = checked_value(@clinical_history.infecciosos)
+          %td Complicaciones anestésicas
+          %td.numeric
+            = checked_value(@clinical_history.complicaciones_anestesicas)
+        %tr.odd
+          %td Cardiopatía
+          %td.numeric
+            = checked_value(@clinical_history.cardiopatia)
+          %td Varices-flebitis
+          %td.numeric
+            = checked_value(@clinical_history.varices_flebitis)
+          %td Neumopatías-asma
+          %td.numeric
+            = checked_value(@clinical_history.neumopatias_asma)
+          %td Inmunizaciones
+          %td.numeric
+            = checked_value(@clinical_history.inmunizaciones)
+        %tr.even
+          %td Hipirlipidemia
+          %td.numeric
+            = checked_value(@clinical_history.hiperlipidemia)
+          %td Función tiroidea
+          %td.numeric
+            = checked_value(@clinical_history.funcion_tiroidea)
+          %td Alergias
+          %td.numeric
+            = checked_value(@clinical_history.alergias)
+          %td Anomalías uterinas
+          %td.numeric
+            = checked_value(@clinical_history.anomalias_uterinas)
+        %tr.odd
+          %td Enfermedad renal
+          %td.numeric
+            = checked_value(@clinical_history.enfermedad_renal)
+          %td Traumatismo
+          %td.numeric
+            = checked_value(@clinical_history.traumatismo)
+          %td Mamas
+          %td.numeric
+            = checked_value(@clinical_history.mamas)
+          %td Infertilidad
+          %td.numeric
+            = checked_value(@clinical_history.infertilidad)
+        %tr.even
+          %td Neurológicas epilepsia
+          %td.numeric
+            = checked_value(@clinical_history.neurologicas_epilepsia)
+          %td Diabetes
+          %td.numeric
+            = checked_value(@clinical_history.diabetes)
+          %td Cirugía genecológica
+          %td.numeric
+            = checked_value(@clinical_history.cirugia_genecologica)
+          %td Transplantes
+          %td.numeric
+            = checked_value(@clinical_history.transplantes)
+        %tr.odd
+          %td Psiquiátricas-depresión
+          %td.numeric
+            = checked_value(@clinical_history.psiquiatricas_depresion)
+          %td Cáncer
+          %td.numeric
+            = checked_value(@clinical_history.cancer)
+          %td Cirugías generales
+          %td.numeric
+            = checked_value(@clinical_history.cirugias_generales)
+          %td Genéticos
+          %td.numeric
+            = checked_value(@clinical_history.geneticos)
