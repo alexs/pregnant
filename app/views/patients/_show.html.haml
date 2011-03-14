@@ -28,6 +28,8 @@
         Correo electrónico:
         %b #{@patient.mail}
 #menu_patient
+  %fieldset
+    
   .button 
     - if @patient.psychologies.size < 1
       = link_to_remote "Cuestionario CGS-15", :url => {:controller => 'psychologies', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"

@@ -269,3 +269,20 @@ Parentesco:
           %td Genéticos
           %td.numeric
             = checked_value(@clinical_history.geneticos)
+  %br
+    %h1.questionary_title ANTECEDENTES GINECO-OBSTETRICOS
+    %hr
+  %br
+  %p
+    %b
+      Menarquia:
+    = h @clinical_history.menarquia
+    %b
+      Patrón menstrual:
+    = h @clinical_history.patron_menstrual
+    %b
+      FUM:
+    = l @clinical_history.fum
+    %b
+      IVSA:
+    = h @clinical_history.ivsa
