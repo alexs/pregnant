@@ -286,3 +286,160 @@ Parentesco:
     %b
       IVSA:
     = h @clinical_history.ivsa
+    %b
+      Papanicolau normal:
+    = h get_boolean(@clinical_history.papanicolau_normal)
+    %b
+      Papanicolau normal fecha:
+    = l @clinical_history.papanicolau_normal_fecha
+    %b
+  %p
+    %b
+      Papanicolau anormal:
+    = h get_boolean(@clinical_history.papanicolau_anormal)
+    %b
+      Papanicolau anormal fecha:
+    = l @clinical_history.papanicolau_anormal_fecha
+    %b
+      Número de parejas:
+    = h @clinical_history.num_parejas
+    %b
+      Método anticonceptivo:
+    = h @clinical_history.papanicolau_method
+    %b
+  %p 
+    %b
+      Gesta:
+    = h @clinical_history.gesta
+    %b
+      Partos:
+    = h @clinical_history.partos
+    %b
+      Cesáreas:
+    = h @clinical_history.cesareas
+    %b
+      Abortos:
+    = h @clinical_history.abortos
+    %b
+      Ectópicos:
+    = h @clinical_history.ectopicos
+    %b
+      Molas:
+    = h @clinical_history.molas
+
+  %br
+    %h1.questionary_title EMBARAZOS PASADOS
+    %hr
+  %br
+  %br
+    %h1.questionary_title DATOS DE EMBARAZO
+    %hr
+  %br
+    %b
+      Altura del fondo uterino:
+    = h @clinical_history.altura_fondo_uterino
+    %b
+      Número de fetos:
+    = h @clinical_history.num_fetos
+    %p 
+    %b
+      En caso de ser negativo se aplicó gammaglobulina en embarazo previo, SI(seleccionado) No(no seleccionar)
+    = h get_boolean(@clinical_history.gammaglobulina)
+    %p
+    %b
+      Antecentes de hidropsfeta: (selecciona en caso de ser afirmativo, deja en blanco en caso negativo):
+    = h get_boolean(@clinical_history.hidrops_feta)
+    %p
+    %b
+      Peso antes del embarazo:
+    = h @clinical_history.peso_anterior
+    %b
+      Comentarios:
+    = h @clinical_history.comentarios
+    %p
+  %br
+    %h1.questionary_title INTERROGATORIO POR APARATOS Y SISTEMAS
+  %hr
+%br
+.clinical_form
+  %table
+    %tr.odd
+      %th SISTEMA
+      %th SDP
+      %th COMENTARIO
+    %tr.even
+      %td DIGESTIVO
+      %td.numeric
+        = h checked_value(@clinical_history.inte_digestivo)
+      %td.numeric
+        = h checked_value(@clinical_history.inte_digestivo_desc)
+    %tr.odd
+      %td CARDIOCIRCULATORIO
+      %td.numeric
+        =  checked_value(@clinical_history.inte_cardiocirculatorio)
+      %td.numeric
+        = checked_value(@clinical_history.inte_cardiocirculatorio_desc)
+    %tr.even
+      %td MUSCULOÉSQUELETICO
+      %td.numeric
+        =  checked_value(@clinical_history.inte_musculoesqueletico)
+      %td.numeric
+        =  checked_value(@clinical_history.inte_musculoesqueletico_desc)
+    %tr.odd
+      %td NEUROLÓGICO
+      %td.numeric
+        = checked_value(@clinical_history.inte_neurologico)
+      %td.numeric
+        = checked_value(@clinical_history.inte_neurologico_desc)
+    %tr.even
+      %td GENITALES
+      %td.numeric
+        = checked_value(@clinical_history.genitales)
+      %td.numeric
+        = checked_value(@clinical_history.genitales_desc)
+%br
+  %h1.questionary_title EXPLORACIÓN FÍSICA
+  %hr
+%br
+%p
+  %b
+    Prurito :
+  = h get_boolean(@clinical_history.gen_prurito)
+  %b
+    Ardor:
+  = h get_boolean(@clinical_history.gen_ardor)
+  %b
+    Urinario:
+  = h @clinical_history. urinario
+  %b
+    Ardor :
+  = h get_boolean(@clinical_history.ardor)
+  %b
+    Polaquiuria :
+  = h get_boolean(@clinical_history.polaquiuria)  
+  %b
+    Tenesmo Vesical:
+  = h get_boolean(@clinical_history.tenesmo_vesical)
+  %b
+    Presión arterial diastólica:
+  = h @clinical_history.diastolica
+  %p
+  %b
+    Presión arterial sistólica:
+  = h @clinical_history.sistolica
+  %b
+    temperatura :
+  = h @clinical_history.temperatura 
+  %b
+    peso:
+  = h @clinical_history.peso
+  %b
+    talla:
+  = h @clinical_history.talla
+  %b
+    masa corporal:
+  = h @clinical_history.masa_corporal
+  %b
+    cervix :
+  = h @clinical_history.cervix
+  
