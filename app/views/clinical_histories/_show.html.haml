@@ -405,21 +405,27 @@ Parentesco:
   %b
     Prurito :
   = h get_boolean(@clinical_history.gen_prurito)
+  %p
   %b
     Ardor:
   = h get_boolean(@clinical_history.gen_ardor)
+  %p
   %b
     Urinario:
   = h @clinical_history. urinario
+  %p
   %b
     Ardor :
   = h get_boolean(@clinical_history.ardor)
+  %p
   %b
     Polaquiuria :
   = h get_boolean(@clinical_history.polaquiuria)  
+  %p
   %b
     Tenesmo Vesical:
   = h get_boolean(@clinical_history.tenesmo_vesical)
+  %p
   %b
     Presión arterial diastólica:
   = h @clinical_history.diastolica
@@ -427,19 +433,172 @@ Parentesco:
   %b
     Presión arterial sistólica:
   = h @clinical_history.sistolica
+  %p
   %b
     temperatura :
   = h @clinical_history.temperatura 
+  %p
   %b
     peso:
   = h @clinical_history.peso
+  %p
   %b
     talla:
   = h @clinical_history.talla
+  %p
   %b
     masa corporal:
   = h @clinical_history.masa_corporal
+  %p
   %b
     cervix :
   = h @clinical_history.cervix
-  
+  %p
+  %b
+    fluidos:
+  = h get_boolean(@clinical_history.fluidos)
+  %p
+  %b
+    sangrado:
+  = h get_boolean(@clinical_history.sangrado)
+  %p
+  %b
+    dilatacion
+  = h dilated_value(@clinical_history.dilatacion)
+  %p
+  %b
+    longitud
+  = h longitud_value(@clinical_history.longitud)
+  %p
+  %b
+    consistencia
+  = h consistence_value(@clinical_history.consistencia)
+  %p
+  %b
+    posicion:
+  = h @clinical_history.posicion
+  %p
+  %b
+    borramientos:
+  = h get_boolean(@clinical_history.borramientos)
+  %p
+  %b
+    reblandecimientos:
+  = h get_boolean(@clinical_history.reblandecimientos)
+  %p
+  %b
+    Salida de liquido vaginal:
+  = h get_boolean(@clinical_history.salida_liquido_vaginal)
+  %p
+  %b
+    Fetido:
+  = h get_boolean(@clinical_history.vaginal_fetido)
+  %p
+  %b
+    Leucorrea:
+  = h get_boolean(@clinical_history.gen_leucorrea)
+  %p
+  %b
+    Fetido:
+  = h get_boolean(@clinical_history.leucorrea_fetido)
+  %p
+  %b
+    leucorrea_tipo
+  = h lucorre_value(@clinical_history.leucorrea_tipo)
+  %p
+  %b
+    Sangrado Vaginal:
+  = h get_boolean(@clinical_history.gen_sangrado_vaginal)
+  %p
+  %b
+    sangrado_tipo
+  = h sangre_value(@clinical_history.sangrado_tipo)
+  %p
+  %b
+    Fondo de saco
+  = h fondo_value(@clinical_history.fondo_saco)
+  %p
+  %b
+    Dolor al movilizar el útero:
+  = h get_boolean(@clinical_history.gen_sangrado_vaginal)
+
+
+.clinical_form
+  %table
+    %tr.odd
+      %th AREA
+      %th SDP
+      %th COMENTARIO
+    %tr.even
+      %td Cabeza-cuello-tiroides
+      %td.numeric
+        = h checked_value(@clinical_history.cabeza_cuello_tiroides)
+      %td.numeric
+        = h checked_value(@clinical_history.cabeza_cuello_tiroides_desc)
+    %tr.odd
+      %td Cardiorespiratorio
+      %td.numeric
+        =  checked_value(@clinical_history.cardiorespiratorio_desc)
+      %td.numeric
+        = checked_value(@clinical_history.cardiorespiratorio_desc)
+    %tr.even
+      %td Mamas
+      %td.numeric
+        =  checked_value(@clinical_history.explora_mamas)
+      %td.numeric
+        =  checked_value(@clinical_history.explora_mamas_desc)
+    %tr.odd
+      %td Abdomen
+      %td.numeric
+        = checked_value(@clinical_history.abdomen)
+      %td.numeric
+        = checked_value(@clinical_history.abdomen_desc)
+    %tr.even
+      %td Extremidades
+      %td.numeric
+        = checked_value(@clinical_history.extremidades)      
+      %td.numeric
+        = checked_value(@clinical_history.extremidades_desc)
+  %br
+    %h1.questionary_title IMPRESIóN DIAGNÓSTICA
+    %hr
+  %br
+    %b
+      impresion_diagnostica:
+    = h @clinical_history.impresion_diagnostica
+    %p
+  %br
+    %h1.questionary_title TRATAMIENTO
+    %hr
+  %br
+    %b
+      Inicio de ácido fólico:
+    = h @clinical_history.inicio_acido_folico
+    SDG,
+    %p
+    %b
+      Inicio de multivitaminas:
+    = h @clinical_history.inicio_multivitaminas
+    SDG,
+    %p
+    %b
+      Inicio de multivitaminas:
+    = h @clinical_history.inicio_multivitaminas
+    SDG,
+    %p
+    %b
+      Inicio de suplementos:
+    = h @clinical_history.inicio_suplementos
+    SDG,
+    %p
+    %b
+      Inicio de hierro:
+    = h @clinical_history.inicio_hierro
+    SDG,
+    %p
+    %b
+      Inicio de aspirinas:
+    = h @clinical_history.inicio_aspirina
+    SDG,
+    
+    
