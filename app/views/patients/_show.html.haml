@@ -73,7 +73,7 @@
       = link_to_remote "Variables Fetales", :url => {:controller => 'variable_fetals', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
   %fieldset
     %legend
-      Médico
+      Médico Materno-Fetal
       .button
         - if @patient.ultra_sounds.size < 1
           = link_to_remote "Ultrasonido Primer Trimestre", :url => {:controller => 'ultra_sounds', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
@@ -109,7 +109,7 @@
 
   %fieldset
     %legend
-      Parto
+      Parto y Puerperio
     .button    
       = link_to_remote "Variables Neonatal", :url => {:controller => 'neonatals', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
     .button    
