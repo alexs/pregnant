@@ -30,7 +30,7 @@
 #menu_patient
   %fieldset
     %legend
-      Grupo 1
+      Trabajo social
     .button
       = link_to_remote "Ficha Socio Económica Inicial", :url => {:controller => 'socioeconomics', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
     .button 
@@ -55,16 +55,14 @@
           = image_tag("checked.png")
   %fieldset
     %legend
-      Grupo 2
-    .button
-      = link_to_remote "Programar Cita para Laboratorio", :url => {:controller => 'appoiments', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+      Médico
     .button 
       - if @patient.clinical_histories.size < 1
-        = link_to_remote "Historia Clinica Perinatal", :url => {:controller => 'clinical_histories', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        = link_to_remote "Historia Clínica Perinatal", :url => {:controller => 'clinical_histories', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
         .status_clinical{ :style => 'display:none'}
           = image_tag("checked.png")
       - else
-        = link_to_remote "Historia Clinica Perinatal", :url => {:controller => 'clinical_histories', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        = link_to_remote "Historia Clínica Perinatal", :url => {:controller => 'clinical_histories', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
         .status_clinical{ :style => 'display:inline'}
           = image_tag("checked.png")
     .button
@@ -75,37 +73,43 @@
       = link_to_remote "Variables Fetales", :url => {:controller => 'variable_fetals', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
   %fieldset
     %legend
-      Grupo 3
+      Médico
       .button
         - if @patient.ultra_sounds.size < 1
-          = link_to_remote "UltraSonido Primer Trimestre", :url => {:controller => 'ultra_sounds', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+          = link_to_remote "Ultrasonido Primer Trimestre", :url => {:controller => 'ultra_sounds', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
           .status{ :style => 'display:none'}
             = image_tag("checked.png")
         - else
-          UltraSonido Primer Trimestre
+          Ultrasonido Primer Trimestre
           .status{ :style => 'display:inline'}
           = image_tag("checked.png")
       .button
         - if @patient.ultra2_sounds.size < 1
-          = link_to_remote "UltraSonido Segundo Trimestre", :url => {:controller => 'ultra2_sounds', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+          = link_to_remote "Ultrasonido Segundo Trimestre", :url => {:controller => 'ultra2_sounds', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
           .status{ :style => 'display:none'}
             = image_tag("checked.png")
         - else
-          UltraSonido Segundo Trimestre
+          Ultrasonido Segundo Trimestre
           .status{ :style => 'display:inline'}
           = image_tag("checked.png")
       .button
         - if @patient.ultra3_sounds.size < 1
-          = link_to_remote "UltraSonido Tercer Trimestre", :url => {:controller => 'ultra3_sounds', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+          = link_to_remote "Ultrasonido Tercer Trimestre", :url => {:controller => 'ultra3_sounds', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
           .status{ :style => 'display:none'}
             = image_tag("checked.png")
         - else
-          UltraSonido Tercer Trimestre
+          Ultrasonido Tercer Trimestre
           .status{ :style => 'display:inline'}
           = image_tag("checked.png")
   %fieldset
     %legend
-      Grupo 4
+      Laboratorio
+    .button
+      = link_to_remote "Programar Cita para Laboratorio", :url => {:controller => 'appoiments', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+
+  %fieldset
+    %legend
+      Parto
     .button    
       = link_to_remote "Variables Neonatal", :url => {:controller => 'neonatals', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
     .button    
