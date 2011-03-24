@@ -545,7 +545,7 @@ h1 {
 #menu_patient .button {
   padding: 2px 2px 2px 2px;
   background-color: #ffffcc;
-  display: block;
+  display: inline-block;
   color: #003366;
   font-weight: bold;
   line-height: 29px;
@@ -555,17 +555,16 @@ h1 {
   border-style: double;
   border-width: medium;
   cursor: pointer;
-  width: 12em;
 }
 
-/* line 193, ../../../app/stylesheets/application.sass */
+/* line 192, ../../../app/stylesheets/application.sass */
 .fieldWithErrors {
   padding: 2px;
   display: inline-block;
   background-color: #ffbaba;
 }
 
-/* line 198, ../../../app/stylesheets/application.sass */
+/* line 197, ../../../app/stylesheets/application.sass */
 .clinical_form table {
   border: 2px solid black;
 }
@@ -646,7 +645,7 @@ h1 {
   background-color: #dddddd;
 }
 
-/* line 205, ../../../app/stylesheets/application.sass */
+/* line 204, ../../../app/stylesheets/application.sass */
 #create_questionary table {
   background-color: #f5f5f5;
   border-color: #222222 #dedede #dedede #222222;
