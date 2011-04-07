@@ -343,11 +343,11 @@ Parentesco:
     = h @clinical_history.num_fetos
     %p 
     %b
-      En caso de ser negativo se aplicó gammaglobulina en embarazo previo, SI(seleccionado) No(no seleccionar)
+      ¿Se aplicó gammaglobulina en embarazo previo?
     = h get_boolean(@clinical_history.gammaglobulina)
     %p
     %b
-      Antecentes de hidropsfeta: (selecciona en caso de ser afirmativo, deja en blanco en caso negativo):
+      Antecentes de hidropsfeta:
     = h get_boolean(@clinical_history.hidrops_feta)
     %p
     %b

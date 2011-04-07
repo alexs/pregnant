@@ -3,9 +3,10 @@ body {
   background-image: url('/images/body_bg.jpg?1294443723');
   background-repeat: repeat-x;
   background-position: top left;
+  float: none;
 }
 
-/* line 8, ../../../app/stylesheets/print.sass */
+/* line 9, ../../../app/stylesheets/print.sass */
 .principal {
   width: 890px;
   margin: 0 auto;
@@ -13,12 +14,13 @@ body {
   display: inline-block;
   background-color: white;
   border: solid;
+  overflow: visible;
 }
 /* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
 .principal {
   display: block;
 }
-/* line 12, ../../../app/stylesheets/print.sass */
+/* line 14, ../../../app/stylesheets/print.sass */
 .principal #header {
   display: inline;
   float: left;
@@ -29,12 +31,13 @@ body {
   background-repeat: no-repeat;
   background-position: top left;
   height: 136px;
+  visibility: none;
 }
 /* line 138, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html .principal #header {
   overflow-x: hidden;
 }
-/* line 20, ../../../app/stylesheets/print.sass */
+/* line 23, ../../../app/stylesheets/print.sass */
 .principal #content {
   display: inline;
   float: left;
@@ -45,7 +48,7 @@ body {
 * html .principal #content {
   overflow-x: hidden;
 }
-/* line 22, ../../../app/stylesheets/print.sass */
+/* line 25, ../../../app/stylesheets/print.sass */
 .principal #content .indicator {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -64,7 +67,7 @@ body {
   height: 16px;
   font-size: 12px;
 }
-/* line 34, ../../../app/stylesheets/print.sass */
+/* line 37, ../../../app/stylesheets/print.sass */
 .principal #footer {
   display: inline;
   float: left;
@@ -80,83 +83,22 @@ body {
   overflow-x: hidden;
 }
 
-/* line 41, ../../../app/stylesheets/print.sass */
+/* line 44, ../../../app/stylesheets/print.sass */
 .menu {
   visibility: hidden;
-  display: none;
-  width: 890px;
-  margin: 0 auto;
-  overflow: hidden;
-  display: inline-block;
-  position: relative;
-  top: 116px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-/* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
-.menu {
-  display: block;
-}
-/* line 48, ../../../app/stylesheets/print.sass */
-.menu ul {
-  list-style: url(none) none;
-}
-/* line 50, ../../../app/stylesheets/print.sass */
-.menu ul li {
-  display: inline;
-  float: left;
-  position: relative;
-  background-color: white;
-  width: 150px;
-  margin: 0;
-}
-/* line 57, ../../../app/stylesheets/print.sass */
-.menu ul li a {
-  color: white;
-  text-decoration: none;
-  background-color: black;
-  font-size: 16px;
-  display: block;
-  width: 140px;
-  padding: 2px 5px;
-}
-/* line 65, ../../../app/stylesheets/print.sass */
-.menu ul li a:hover, .menu ul li a:active {
-  background-color: #ffcc33;
-  color: black;
-}
-/* line 68, ../../../app/stylesheets/print.sass */
-.menu ul li ul {
-  position: relative;
-  display: none;
-}
-/* line 71, ../../../app/stylesheets/print.sass */
-.menu ul li ul li {
-  display: list-item;
-  float: none;
-  margin: 0;
-}
-/* line 75, ../../../app/stylesheets/print.sass */
-.menu ul li ul li a {
-  font-size: 14px;
 }
 
-/* line 77, ../../../app/stylesheets/print.sass */
+/* line 46, ../../../app/stylesheets/print.sass */
 #content #workspace {
   margin: 10px 10px 10px 10px;
   padding-bottom: 25px;
 }
-/* line 80, ../../../app/stylesheets/print.sass */
+/* line 49, ../../../app/stylesheets/print.sass */
 #content #workspace #clean {
   padding-bottom: 250px;
 }
 
-/* line 82, ../../../app/stylesheets/print.sass */
-#create_questionary_dialog {
-  font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* line 85, ../../../app/stylesheets/print.sass */
+/* line 51, ../../../app/stylesheets/print.sass */
 #content #workspace {
   font-size: 13px;
   font-family: Arial, Helvetica, sans-serif;
@@ -184,108 +126,14 @@ body {
   width: 390px;
   height: 250px;
 }
-/* line 90, ../../../app/stylesheets/print.sass */
-#content #workspace #patient_exterior {
-  width: 60px;
-}
-/* line 92, ../../../app/stylesheets/print.sass */
-#content #workspace #patient_interior {
-  width: 60px;
-}
 
-/* line 94, ../../../app/stylesheets/print.sass */
-.short_field {
-  width: 60px;
-}
-
-/* line 97, ../../../app/stylesheets/print.sass */
-#patients_form table {
-  border: 2px solid black;
-}
-/* line 2, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
-#patients_form table th {
-  text-align: center;
-  font-weight: bold;
-}
-/* line 6, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
-#patients_form table td,
-#patients_form table th {
-  padding: 2px;
-}
-/* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
-#patients_form table td.numeric,
-#patients_form table th.numeric {
-  text-align: right;
-}
-/* line 14, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-#patients_form table th, #patients_form table td {
-  border-right: 1px solid #233551;
-  border-bottom: 1px solid #233551;
-  border-left-width: 0px;
-  border-top-width: 0px;
-}
-/* line 21, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-#patients_form table th:last-child, #patients_form table th.last, #patients_form table td:last-child, #patients_form table td.last {
-  border-right-width: 0px;
-}
-/* line 26, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-#patients_form table tbody tr:last-child th, #patients_form table tbody tr:last-child td,
-#patients_form table tbody tr.last th,
-#patients_form table tbody tr.last td, #patients_form table tfoot tr:last-child th, #patients_form table tfoot tr:last-child td, #patients_form table tfoot tr.last th, #patients_form table tfoot tr.last td {
-  border-bottom-width: 0px;
-}
-/* line 4, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-#patients_form table thead th {
-  border-bottom: 2px solid black;
-}
-/* line 7, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-#patients_form table tfoot th, #patients_form table tfoot td {
-  border-top: 2px solid black;
-}
-/* line 10, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-#patients_form table th:first-child {
-  border-right: 2px solid black;
-}
-/* line 2, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#patients_form table th {
-  background-color: white;
-}
-/* line 4, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#patients_form table th.even, #patients_form table th:nth-child(2n) {
-  background-color: #dddddd;
-}
-/* line 7, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#patients_form table tr.odd td {
-  background-color: #98c67a;
-}
-/* line 9, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#patients_form table tr.odd td.even, #patients_form table tr.odd td:nth-child(2n) {
-  background-color: #76a458;
-}
-/* line 12, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#patients_form table tr.even td {
-  background-color: #7a98c6;
-}
-/* line 14, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#patients_form table tr.even td.even, #patients_form table tr.even td:nth-child(2n) {
-  background-color: #5876a4;
-}
-/* line 17, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#patients_form table tfoot th, #patients_form table tfoot td {
-  background-color: white;
-}
-/* line 19, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#patients_form table tfoot th.even, #patients_form table tfoot th:nth-child(2n), #patients_form table tfoot td.even, #patients_form table tfoot td:nth-child(2n) {
-  background-color: #dddddd;
-}
-
-/* line 103, ../../../app/stylesheets/print.sass */
+/* line 56, ../../../app/stylesheets/print.sass */
 #patient_show {
   visibility: visible;
   display: block;
   position: top center;
 }
-/* line 107, ../../../app/stylesheets/print.sass */
+/* line 60, ../../../app/stylesheets/print.sass */
 #patient_show table {
   border: 2px solid black;
   width: 100%;
@@ -367,7 +215,7 @@ body {
   background-color: #dddddd;
 }
 
-/* line 115, ../../../app/stylesheets/print.sass */
+/* line 68, ../../../app/stylesheets/print.sass */
 .table_header table, .table_result table {
   border: 1px solid #0080ff;
 }
@@ -432,321 +280,35 @@ body {
 .table_header table tfoot th.even, .table_header table tfoot th:nth-child(2n), .table_header table tfoot td.even, .table_header table tfoot td:nth-child(2n), .table_result table tfoot th.even, .table_result table tfoot th:nth-child(2n), .table_result table tfoot td.even, .table_result table tfoot td:nth-child(2n) {
   background-color: #eeeeee;
 }
-/* line 120, ../../../app/stylesheets/print.sass */
+/* line 73, ../../../app/stylesheets/print.sass */
 .table_header table .name, .table_result table .name {
   width: 200px;
 }
-/* line 122, ../../../app/stylesheets/print.sass */
+/* line 75, ../../../app/stylesheets/print.sass */
 .table_header table .lastname, .table_result table .lastname {
   width: 150px;
 }
-/* line 124, ../../../app/stylesheets/print.sass */
+/* line 77, ../../../app/stylesheets/print.sass */
 .table_header table .date_next_consult, .table_result table .date_next_consult {
   width: 100px;
 }
-/* line 126, ../../../app/stylesheets/print.sass */
+/* line 79, ../../../app/stylesheets/print.sass */
 .table_header table .presumptive_diagnosis, .table_result table .presumptive_diagnosis {
   width: 150px;
 }
-/* line 128, ../../../app/stylesheets/print.sass */
+/* line 81, ../../../app/stylesheets/print.sass */
 .table_header table .applicant_doctor, .table_result table .applicant_doctor {
   width: 150px;
 }
-/* line 130, ../../../app/stylesheets/print.sass */
+/* line 83, ../../../app/stylesheets/print.sass */
 .table_header table .age, .table_result table .age {
   width: 60px;
 }
-/* line 132, ../../../app/stylesheets/print.sass */
+/* line 85, ../../../app/stylesheets/print.sass */
 .table_header table .address, .table_result table .address {
   width: 300px;
 }
-/* line 134, ../../../app/stylesheets/print.sass */
+/* line 87, ../../../app/stylesheets/print.sass */
 .table_header table .actions, .table_result table .actions {
   width: 100px;
-}
-
-/* line 136, ../../../app/stylesheets/print.sass */
-.info, .success, .warning, .error, .validation {
-  border: 1px solid;
-  margin: 10px 0px;
-  padding: 15px 10px 15px 50px;
-  background-repeat: no-repeat;
-  background-position: 10px center;
-}
-
-/* line 142, ../../../app/stylesheets/print.sass */
-.info {
-  color: #00529b;
-  background-color: #bde5f8;
-  background-image: url("info.png");
-}
-
-/* line 146, ../../../app/stylesheets/print.sass */
-.success {
-  color: #4f8a10;
-  background-color: #dff2bf;
-}
-
-/* line 150, ../../../app/stylesheets/print.sass */
-.warning {
-  color: #9f6000;
-  background-color: #feefb3;
-  background-image: url("warning.png");
-}
-
-/* line 154, ../../../app/stylesheets/print.sass */
-.error {
-  color: #d8000c;
-  background-color: #ffbaba;
-  background-image: url("error.png");
-}
-
-/* line 158, ../../../app/stylesheets/print.sass */
-.validation {
-  color: #d63301;
-  background-color: #ffccba;
-  background-image: url('/images/validation.png?1294443723');
-  margin-left: 0;
-}
-/* line 29, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/lists/_bullets.scss */
-.validation li {
-  padding-left: 14px;
-  background: url('/images/bullet-round.png?1294443723') no-repeat 4.5px 5.5px;
-  list-style-type: none;
-}
-/* line 163, ../../../app/stylesheets/print.sass */
-.validation p {
-  line-height: 40px;
-  color: #61380b;
-  font-size: 15px;
-}
-
-/* line 167, ../../../app/stylesheets/print.sass */
-.validation h2 {
-  color: #5e610b;
-  background-color: #feefb3;
-  border-style: dotted;
-  border-width: 2px;
-  border-color: red;
-  text-align: center;
-  font-size: 20px;
-}
-
-/* line 175, ../../../app/stylesheets/print.sass */
-h1 {
-  text-align: center;
-  font-size: 14px;
-}
-
-/* line 178, ../../../app/stylesheets/print.sass */
-.questionary_title {
-  text-align: left;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-/* line 182, ../../../app/stylesheets/print.sass */
-#menu_patient {
-  padding-top: 50px;
-}
-/* line 184, ../../../app/stylesheets/print.sass */
-#menu_patient .button {
-  padding: 2px 2px 2px 2px;
-  background-color: #ffffcc;
-  display: block;
-  color: #003366;
-  font-weight: bold;
-  line-height: 29px;
-  margin-bottom: 14px;
-  text-decoration: none;
-  border-color: #6699cc;
-  border-style: double;
-  border-width: medium;
-  cursor: pointer;
-  width: 12em;
-}
-
-/* line 198, ../../../app/stylesheets/print.sass */
-.fieldWithErrors {
-  padding: 2px;
-  display: inline-block;
-  background-color: #ffbaba;
-}
-
-/* line 203, ../../../app/stylesheets/print.sass */
-.clinical_form table {
-  border: 2px solid black;
-}
-/* line 2, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
-.clinical_form table th {
-  text-align: center;
-  font-weight: bold;
-}
-/* line 6, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
-.clinical_form table td,
-.clinical_form table th {
-  padding: 2px;
-}
-/* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
-.clinical_form table td.numeric,
-.clinical_form table th.numeric {
-  text-align: right;
-}
-/* line 14, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-.clinical_form table th, .clinical_form table td {
-  border-right: 1px solid #233551;
-  border-bottom: 1px solid #233551;
-  border-left-width: 0px;
-  border-top-width: 0px;
-}
-/* line 21, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-.clinical_form table th:last-child, .clinical_form table th.last, .clinical_form table td:last-child, .clinical_form table td.last {
-  border-right-width: 0px;
-}
-/* line 26, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-.clinical_form table tbody tr:last-child th, .clinical_form table tbody tr:last-child td,
-.clinical_form table tbody tr.last th,
-.clinical_form table tbody tr.last td, .clinical_form table tfoot tr:last-child th, .clinical_form table tfoot tr:last-child td, .clinical_form table tfoot tr.last th, .clinical_form table tfoot tr.last td {
-  border-bottom-width: 0px;
-}
-/* line 4, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-.clinical_form table thead th {
-  border-bottom: 2px solid black;
-}
-/* line 7, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-.clinical_form table tfoot th, .clinical_form table tfoot td {
-  border-top: 2px solid black;
-}
-/* line 10, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-.clinical_form table th:first-child {
-  border-right: 2px solid black;
-}
-/* line 2, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-.clinical_form table th {
-  background-color: white;
-}
-/* line 4, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-.clinical_form table th.even, .clinical_form table th:nth-child(2n) {
-  background-color: #dddddd;
-}
-/* line 7, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-.clinical_form table tr.odd td {
-  background-color: #98c67a;
-}
-/* line 9, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-.clinical_form table tr.odd td.even, .clinical_form table tr.odd td:nth-child(2n) {
-  background-color: #76a458;
-}
-/* line 12, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-.clinical_form table tr.even td {
-  background-color: #7a98c6;
-}
-/* line 14, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-.clinical_form table tr.even td.even, .clinical_form table tr.even td:nth-child(2n) {
-  background-color: #5876a4;
-}
-/* line 17, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-.clinical_form table tfoot th, .clinical_form table tfoot td {
-  background-color: white;
-}
-/* line 19, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-.clinical_form table tfoot th.even, .clinical_form table tfoot th:nth-child(2n), .clinical_form table tfoot td.even, .clinical_form table tfoot td:nth-child(2n) {
-  background-color: #dddddd;
-}
-
-/* line 210, ../../../app/stylesheets/print.sass */
-#create_questionary table {
-  background-color: #f5f5f5;
-  border-color: #222222 #dedede #dedede #222222;
-  color: #565656;
-  border: 2px solid black;
-}
-/* line 65, ../../../vendor/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_buttons.scss */
-#create_questionary table:hover {
-  background-color: #dff4ff;
-  border-color: #666666 #c2e1ef #c2e1ef #666666;
-  color: #565656;
-}
-/* line 2, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
-#create_questionary table th {
-  text-align: center;
-  font-weight: bold;
-}
-/* line 6, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
-#create_questionary table td,
-#create_questionary table th {
-  padding: 2px;
-}
-/* line 8, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
-#create_questionary table td.numeric,
-#create_questionary table th.numeric {
-  text-align: right;
-}
-/* line 14, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-#create_questionary table th, #create_questionary table td {
-  border-right: 1px solid #233551;
-  border-bottom: 1px solid #233551;
-  border-left-width: 0px;
-  border-top-width: 0px;
-}
-/* line 21, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-#create_questionary table th:last-child, #create_questionary table th.last, #create_questionary table td:last-child, #create_questionary table td.last {
-  border-right-width: 0px;
-}
-/* line 26, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-#create_questionary table tbody tr:last-child th, #create_questionary table tbody tr:last-child td,
-#create_questionary table tbody tr.last th,
-#create_questionary table tbody tr.last td, #create_questionary table tfoot tr:last-child th, #create_questionary table tfoot tr:last-child td, #create_questionary table tfoot tr.last th, #create_questionary table tfoot tr.last td {
-  border-bottom-width: 0px;
-}
-/* line 4, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-#create_questionary table thead th {
-  border-bottom: 2px solid black;
-}
-/* line 7, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-#create_questionary table tfoot th, #create_questionary table tfoot td {
-  border-top: 2px solid black;
-}
-/* line 10, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_borders.scss */
-#create_questionary table th:first-child {
-  border-right: 2px solid black;
-}
-/* line 2, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#create_questionary table th {
-  background-color: white;
-}
-/* line 4, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#create_questionary table th.even, #create_questionary table th:nth-child(2n) {
-  background-color: #dddddd;
-}
-/* line 7, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#create_questionary table tr.odd td {
-  background-color: #98c67a;
-}
-/* line 9, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#create_questionary table tr.odd td.even, #create_questionary table tr.odd td:nth-child(2n) {
-  background-color: #76a458;
-}
-/* line 12, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#create_questionary table tr.even td {
-  background-color: #7a98c6;
-}
-/* line 14, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#create_questionary table tr.even td.even, #create_questionary table tr.even td:nth-child(2n) {
-  background-color: #5876a4;
-}
-/* line 17, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#create_questionary table tfoot th, #create_questionary table tfoot td {
-  background-color: white;
-}
-/* line 19, ../../../vendor/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
-#create_questionary table tfoot th.even, #create_questionary table tfoot th:nth-child(2n), #create_questionary table tfoot td.even, #create_questionary table tfoot td:nth-child(2n) {
-  background-color: #dddddd;
-}
-
-/* line 219, ../../../app/stylesheets/print.sass */
-.ui-widget-overlay div {
-  position: relative center;
-  top: 30px;
-  right: 5px;
 }
