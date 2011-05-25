@@ -1,4 +1,9 @@
 <p>
+  <%= link_to_remote "Regresar", :update => "workspace", :url => {
+  :controller => "patients", :action => "show", :id =>
+  "#{@ultra2_sound.patient_id}"}, :method => :get, :layout => false %>
+</p>
+<p>
   <b>Diametrobiparietal:</b>
   <%=h @ultra2_sound.DiametroBiparietal %>
 </p>

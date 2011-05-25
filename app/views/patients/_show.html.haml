@@ -77,29 +77,33 @@
       .button
         - if @patient.ultra_sounds.size < 1
           = link_to_remote "Ultrasonido Primer Trimestre", :url => {:controller => 'ultra_sounds', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
-          .status{ :style => 'display:none'}
+          .status_ultrasound1{ :style => 'display:none'}
             = image_tag("checked.png")
+            = link_to_remote "Ver", :url => {:controller => 'ultra_sounds', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
         - else
           Ultrasonido Primer Trimestre
-          .status{ :style => 'display:inline'}
+          .status_ultrasound1{ :style => 'display:inline'}
+            = link_to_remote "Ver", :url => {:controller => 'ultra_sounds', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
           = image_tag("checked.png")
       .button
         - if @patient.ultra2_sounds.size < 1
           = link_to_remote "Ultrasonido Segundo Trimestre", :url => {:controller => 'ultra2_sounds', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
-          .status{ :style => 'display:none'}
+          .status_ultrasound2{ :style => 'display:none'}
             = image_tag("checked.png")
+            = link_to_remote "Ver", :url => {:controller => 'ultra2_sounds', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
         - else
           Ultrasonido Segundo Trimestre
-          .status{ :style => 'display:inline'}
+          .status_ultrasound2{ :style => 'display:inline'}
+            = link_to_remote "Ver", :url => {:controller => 'ultra2_sounds', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
           = image_tag("checked.png")
       .button
         - if @patient.ultra3_sounds.size < 1
           = link_to_remote "Ultrasonido Tercer Trimestre", :url => {:controller => 'ultra3_sounds', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
-          .status{ :style => 'display:none'}
+          .status_ultrasound3{ :style => 'display:none'}
             = image_tag("checked.png")
         - else
           Ultrasonido Tercer Trimestre
-          .status{ :style => 'display:inline'}
+          .status_ultrasound3{ :style => 'display:inline'}
           = image_tag("checked.png")
   %fieldset
     %legend

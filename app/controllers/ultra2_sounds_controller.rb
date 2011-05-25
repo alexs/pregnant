@@ -13,11 +13,10 @@ class Ultra2SoundsController < ApplicationController
   # GET /ultra2_sounds/1
   # GET /ultra2_sounds/1.xml
   def show
-    @ultra2_sound = Ultra2Sound.find(params[:id])
+    @ultra2_sound = Ultra2Sound.find_last_by_patient_id(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @ultra2_sound }
+      format.js
     end
   end
 
@@ -25,7 +24,6 @@ class Ultra2SoundsController < ApplicationController
   # GET /ultra2_sounds/new.xml
   def new
    @ultra2_sound = Ultra2Sound.new(:patient_id => params[:id])
-
   end
 
   # GET /ultra2_sounds/1/edit
@@ -39,7 +37,7 @@ class Ultra2SoundsController < ApplicationController
     @ultra2_sound = Ultra2Sound.new(params[:ultra2_sound])
 
     respond_to do |format|
-      if @ultra_sound.save
+      if @ultra2_sound.save
         format.js { render :action => "create" }
       else
         format.js { render :action => "new" }

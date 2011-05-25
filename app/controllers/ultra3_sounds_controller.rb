@@ -31,7 +31,7 @@ class Ultra3SoundsController < ApplicationController
     @ultra3_sound = Ultra3Sound.new(params[:ultra3_sound])
 
    respond_to do |format|
-      if @ultra_sound.save
+      if @ultra3_sound.save
         format.js { render :action => "create" }
       else
         format.js { render :action => "new" }

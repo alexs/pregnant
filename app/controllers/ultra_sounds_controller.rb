@@ -13,11 +13,10 @@ class UltraSoundsController < ApplicationController
   # GET /ultra_sounds/1
   # GET /ultra_sounds/1.xml
   def show
-    @ultra_sound = UltraSound.find(params[:id])
+    @ultra_sound = UltraSound.find_last_by_patient_id(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @ultra_sound }
+      format.js
     end
   end
 
