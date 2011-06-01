@@ -4,6 +4,7 @@ class CreateViolencies < ActiveRecord::Migration
       
       
       t.integer :estudios
+      t.date :fecha
       t.string  :registro
       t.boolean :esta
       t.boolean :deseaba

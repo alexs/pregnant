@@ -4,7 +4,8 @@ class ModifiedClinicalHistory < ActiveRecord::Migration
     add_column :clinical_histories, :grupo_sanguineo, :string
     add_column :clinical_histories, :rh, :string
     add_column :clinical_histories, :alcoholism_times, :string
-    add_column :clinical_histories, :cigarretes_day, :string
+     add_column :clinical_histories, :cigarretes_day, :string
+#    remove_column :clinical_histories, :ivsa
     add_column :clinical_histories, :ivsa, :string
     add_column :clinical_histories, :num_parejas, :string
     remove_column :clinical_histories, :ritmico
@@ -17,7 +18,7 @@ class ModifiedClinicalHistory < ActiveRecord::Migration
     remove_column :clinical_histories, :inte_pulmonar
     remove_column :clinical_histories, :inte_psicologico
     remove_column :clinical_histories, :inte_mamas
-    remove_column :clinical_histories, :no_audible_desc
+   remove_column :clinical_histories, :no_audible_desc
     remove_column :clinical_histories, :inte_ojos_desc
     remove_column :clinical_histories, :inte_oidos_desc
     remove_column :clinical_histories, :inte_nariz_desc
@@ -39,23 +40,23 @@ class ModifiedClinicalHistory < ActiveRecord::Migration
   end
 
   def self.down
-    remove_column :clinical_histories, :grupo_sanguineo
-    remove_column :clinical_histories, :rh
-    add_column :clinical_histories, :grupo_rh, :string
-    remove_column :clinical_histories, :alcoholism_times
-    remove_column :clinical_histories, :cigarretes_day
-    remove_column :clinical_histories, :ivsa
-    remove_column :clinical_histories, :num_parejas
-    add_column :clinical_histories, :ritmico, :boolean
-    add_column :clinical_histories, :no_audible, :boolean
-    add_column :clinical_histories, :inte_ojos, :boolean
-    add_column :clinical_histories, :inte_oidos, :boolean
-    add_column :clinical_histories, :inte_nariz, :boolean
-    add_column :clinical_histories, :inte_garganta, :boolean
-    add_column :clinical_histories, :inte_piel_y_tegumentos, :boolean
-    add_column :clinical_histories, :inte_pulmonar, :boolean
-    add_column :clinical_histories, :inte_psicologico, :boolean
-    add_column :clinical_histories, :inte_mamas, :boolean
+   remove_column :clinical_histories, :grupo_sanguineo
+   remove_column :clinical_histories, :rh
+   add_column :clinical_histories, :grupo_rh, :string
+   remove_column :clinical_histories, :alcoholism_times
+   remove_column :clinical_histories, :cigarretes_day
+   remove_column :clinical_histories, :ivsa
+   remove_column :clinical_histories, :num_parejas
+   add_column :clinical_histories, :ritmico, :boolean
+   add_column :clinical_histories, :no_audible, :boolean
+   add_column :clinical_histories, :inte_ojos, :boolean
+   add_column :clinical_histories, :inte_oidos, :boolean
+   add_column :clinical_histories, :inte_nariz, :boolean
+   add_column :clinical_histories, :inte_garganta, :boolean
+   add_column :clinical_histories, :inte_piel_y_tegumentos, :boolean
+   add_column :clinical_histories, :inte_pulmonar, :boolean
+   add_column :clinical_histories, :inte_psicologico, :boolean
+   add_column :clinical_histories, :inte_mamas, :boolean
     add_column :clinical_histories, :no_audible_desc, :string
     add_column :clinical_histories, :inte_ojos_desc, :string
     add_column :clinical_histories, :inte_oidos_desc, :string
