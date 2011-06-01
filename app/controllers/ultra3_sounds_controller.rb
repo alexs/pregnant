@@ -9,11 +9,10 @@ class Ultra3SoundsController < ApplicationController
   end
 
   def show
-    @ultra3_sound = Ultra3Sound.find(params[:id])
+    @ultra3_sound = Ultra3Sound.find_last_by_patient_id(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @ultra3_sound }
+      format.js 
     end
   end
 

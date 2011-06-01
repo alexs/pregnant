@@ -105,6 +105,7 @@
           Ultrasonido Tercer Trimestre
           .status_ultrasound3{ :style => 'display:inline'}
           = image_tag("checked.png")
+          = link_to_remote "Ver", :url => {:controller => 'ultra3_sounds', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
   %fieldset
     %legend
       Laboratorio
