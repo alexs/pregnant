@@ -13,11 +13,10 @@ class ViolenciesController < ApplicationController
   # GET /violencies/1
   # GET /violencies/1.xml
   def show
-    @violency = Violency.find(params[:id])
+    @violency = Violency.find_last_by_patient_id(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @violency }
+      format.js
     end
   end
 

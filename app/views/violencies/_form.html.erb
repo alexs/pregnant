@@ -400,6 +400,8 @@
   </p>
   <p>
     <%= f.hidden_field :patient_id, :value => @violency.patient_id %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.hidden_field :dependency_id, :value => current_user.dependency_id %>
   </p>
   <br />
   <div class="guardar">

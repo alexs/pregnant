@@ -8,14 +8,11 @@ class NeonatalsController < ApplicationController
     end
   end
 
-  # GET /neonatals/1
-  # GET /neonatals/1.xml
   def show
-    @neonatal = Neonatal.find(params[:id])
+    @neonatal = Neonatal.find_by_patient_id(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @neonatal }
+      format.js
     end
   end
 
@@ -27,7 +24,6 @@ class NeonatalsController < ApplicationController
     end
   end
 
-  # GET /neonatals/1/edit
   def edit
     @neonatal = Neonatal.find(params[:id])
   end
@@ -44,8 +40,6 @@ class NeonatalsController < ApplicationController
     end
   end
 
-  # PUT /neonatals/1
-  # PUT /neonatals/1.xml
   def update
     @neonatal = Neonatal.find(params[:id])
 

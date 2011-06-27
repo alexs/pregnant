@@ -126,8 +126,8 @@ es:
      psychology: "Cuestionario CGS-15"
      user_session: "Tu sesión"
      clinical_history: "Historia Clínica"
+     socioeconomic: "Prueba socioeconómica inicial"
         # Overrides default messages
-
     attributes:
      user_session:
         login: "Nombre de Usuario"
@@ -224,6 +224,8 @@ es:
         meeting_id: "Cita"
         obsevaciones: "Observaciones"
      clinical_history:
+        patient_id: "Este paciente"
+     socioeconomic:
         patient_id: "Este paciente"
 
 

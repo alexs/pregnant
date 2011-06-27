@@ -1,6 +1,4 @@
 class PsychologiesController < ApplicationController
-  # GET /psychologies
-  # GET /psychologies.xml
   def index
     @psychologies = Psychology.all
 
@@ -10,19 +8,14 @@ class PsychologiesController < ApplicationController
     end
   end
 
-  # GET /psychologies/1
-  # GET /psychologies/1.xml
   def show
-    @psychology = Psychology.find(params[:id])
+    @psychology = Psychology.find_last_by_patient_id(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @psychology }
+      format.js
     end
   end
 
-  # GET /psychologies/new
-  # GET /psychologies/new.xml
   def new
     @psychology = Psychology.new(:patient_id => params[:id])
   end

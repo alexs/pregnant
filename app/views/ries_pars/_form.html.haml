@@ -95,6 +95,12 @@
         = questions(f,:desconfianza_madre,4)
       %td
         = questions(f,:desconfianza_madre,5)
+
+  %p
+    = f.hidden_field :user_id, :value => current_user.id
+    = f.hidden_field :dependency_id, :value => current_user.dependency_id
+    = f.hidden_field :patient_id, :value => @ries_par.patient_id
+
     .guardar
       = f.submit 'Guardar'
     .creating{:style => "display:none;"}Guardando, por favor espere

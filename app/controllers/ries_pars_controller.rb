@@ -13,11 +13,10 @@ class RiesParsController < ApplicationController
   # GET /ries_pars/1
   # GET /ries_pars/1.xml
   def show
-    @ries_par = RiesPar.find(params[:id])
+    @ries_par = RiesPar.find_last_by_patient_id(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @ries_par }
+      format.js
     end
   end
 

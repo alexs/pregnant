@@ -1,2 +1,1 @@
-page<<"$('#create_questionary_dialog').dialog('destroy');"
-page<<"$('.status').css('display','inline');"
+page<<"$('div #create_questionary_dialog').dialog('destroy'); $('.status_ries_par').show(); $('.ries_par_link').hide();"

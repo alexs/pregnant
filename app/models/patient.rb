@@ -14,12 +14,16 @@ class Patient < ActiveRecord::Base
   belongs_to :tipo_vivienda
   belongs_to :schooling
   has_many :psychologies
+  has_one :violency
   has_many :clinical_histories
   has_many :appoiments
-  has_many :ries_pars
+  has_one :ries_par
+  has_one :neonatal
+  has_one :variable_fetal
   has_many :ultra_sounds
   has_many :ultra2_sounds
   has_many :ultra3_sounds
+  has_one :socioeconomic
   
   def keygen(patient, borndate)
     key = rfc(patient, borndate) + unique_chars(patient, borndate)

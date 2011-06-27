@@ -10,14 +10,11 @@ class SocioeconomicsController < ApplicationController
     end
   end
 
-  # GET /socioeconomics/1
-  # GET /socioeconomics/1.xml
   def show
-    @socioeconomic = Socioeconomic.find(params[:id])
+    @socioeconomic = Socioeconomic.find_last_by_patient_id(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @socioeconomic }
+      format.js
     end
   end
 

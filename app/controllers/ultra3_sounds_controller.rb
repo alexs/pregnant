@@ -12,14 +12,12 @@ class Ultra3SoundsController < ApplicationController
     @ultra3_sound = Ultra3Sound.find_last_by_patient_id(params[:id])
 
     respond_to do |format|
-      format.js 
+      format.js
     end
   end
 
   def new
     @ultra3_sound = Ultra3Sound.new(:patient_id => params[:id])
-
-
   end
 
   def edit
@@ -44,16 +42,13 @@ class Ultra3SoundsController < ApplicationController
     respond_to do |format|
       if @ultra3_sound.update_attributes(params[:ultra3_sound])
         format.html { redirect_to(@ultra3_sound, :notice => 'Ultra3Sound was successfully updated.') }
-        format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @ultra3_sound.errors, :status => :unprocessable_entity }
       end
     end
   end
 
-  # DELETE /ultra3_sounds/1
-  # DELETE /ultra3_sounds/1.xml
+
   def destroy
     @ultra3_sound = Ultra3Sound.find(params[:id])
     @ultra3_sound.destroy

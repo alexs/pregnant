@@ -1,1 +1,2 @@
-page<<"$('#create_questionary_dialog').dialog('destroy');"
+page<<"$('div #create_questionary_dialog').dialog('destroy'); $('.status_neonatal').show(); $('.neonatal_link').hide();"
+

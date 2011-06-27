@@ -23,32 +23,32 @@
       <tr>
         <td>Sin salario a - de 1 SM</td>
         <td><%= f.radio_button(:ingreso,0)%></td>
-        <td><%= f.radio_button(:ingreso,0)%></td>
-        <td><%= f.radio_button(:ingreso,0)%></td>
+        <td><%= f.radio_button(:ingreso,1)%></td>
+        <td><%= f.radio_button(:ingreso,2)%></td>
       </tr>
       <tr>
         <td>1 SM a 1.5 SM</td>
-        <td><%= f.radio_button(:ingreso,2)%></td>
-        <td><%= f.radio_button(:ingreso,1)%></td>
-        <td><%= f.radio_button(:ingreso,0)%></td>
+        <td><%= f.radio_button(:ingreso,3)%></td>
+        <td><%= f.radio_button(:ingreso,4)%></td>
+        <td><%= f.radio_button(:ingreso,5)%></td>
       </tr>
       <tr>
         <td>Más 1.5 SM a 3.0 SM</td>
-        <td><%= f.radio_button(:ingreso,3)%></td>
-        <td><%= f.radio_button(:ingreso,2)%></td>
-        <td><%= f.radio_button(:ingreso,1)%></td>
+        <td><%= f.radio_button(:ingreso,6)%></td>
+        <td><%= f.radio_button(:ingreso,7)%></td>
+        <td><%= f.radio_button(:ingreso,8)%></td>
       </tr>
       <tr>
         <td>Más 3.0 SM a 4.5 SM</td>
-        <td><%= f.radio_button(:ingreso,4)%></td>
-        <td><%= f.radio_button(:ingreso,3)%></td>
-        <td><%= f.radio_button(:ingreso,2)%></td>
+        <td><%= f.radio_button(:ingreso,9)%></td>
+        <td><%= f.radio_button(:ingreso,10)%></td>
+        <td><%= f.radio_button(:ingreso,11)%></td>
       </tr>
       <tr>
         <td>Más 4.5 SM</td>
-        <td><%= f.radio_button(:ingreso,5)%></td>
-        <td><%= f.radio_button(:ingreso,4)%></td>
-        <td><%= f.radio_button(:ingreso,3)%></td>
+        <td><%= f.radio_button(:ingreso,12)%></td>
+        <td><%= f.radio_button(:ingreso,13)%></td>
+        <td><%= f.radio_button(:ingreso,14)%></td>
       </tr>
 
     </table>
@@ -85,6 +85,8 @@
       </tr>
     </table>
   </p>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+  <%= f.hidden_field :dependency_id, :value => current_user.dependency_id %>
   <%= f.hidden_field :patient_id, :value => @socioeconomic.patient_id %>
  <div class="guardar">
     <%= f.submit 'Guardar' %>

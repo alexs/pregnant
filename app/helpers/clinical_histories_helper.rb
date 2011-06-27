@@ -109,7 +109,4 @@ module ClinicalHistoriesHelper
       "abombados"
     end
   end
-
-  
-
 end

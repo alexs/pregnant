@@ -1,8 +1,12 @@
 <% remote_form_for @variable_fetal, :url => {:action => :create},:before => "$('.creating').show();", :complete => "$('.creating').hide();" do |f| %>
 
   <%= f.error_messages %>
-  <%= f.hidden_field :patient_id %>
   <%= f.hidden_field :user_id, :value => current_user.id %>
+  <%= f.hidden_field :dependency_id, :value => current_user.dependency_id %>
+  <%= f.hidden_field :patient_id, :value => @variable_fetal.patient_id %>
+  <hr />
+
+
   <p>
     <%= f.label :nombre_madre %><br />
     <%= f.text_field :nombre_madre %>

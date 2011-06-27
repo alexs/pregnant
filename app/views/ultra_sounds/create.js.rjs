@@ -1,2 +1,2 @@
-page<<"$('#create_questionary_dialog').dialog('destroy');"
-page<<"$('.status_ultrasound1').css('display','inline');"
+page<<"$('div #create_questionary_dialog').dialog('destroy'); $('.status_ultrasound1').show(); $('.ultrasound1_link').hide();"
+

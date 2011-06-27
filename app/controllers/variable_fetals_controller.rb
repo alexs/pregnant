@@ -8,10 +8,10 @@ class VariableFetalsController < ApplicationController
   end
 
   def show
-    @variable_fetal = VariableFetal.find(params[:id])
+    @variable_fetal = VariableFetal.find_last_by_patient_id(params[:id])
 
     respond_to do |format|
-      format.html
+      format.js
     end
   end
 
