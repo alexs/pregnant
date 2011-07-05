@@ -1,0 +1,473 @@
+ <%= link_to_remote "Regresar", :update => "workspace", :url => {:controller => "patients", :action => "show", :id =>"#{@classification.patient_id}"}, :method => :get, :layout => false %>
+<br />
+<br />
+<div class="classification">
+<table>
+<tr>
+<th>
+Datos generales
+</th>
+<th>
+Mediano riesgo
+</th>
+<th>
+Alto riesgo
+</th>
+</tr>
+
+
+
+<tr>
+<td>
+Edad
+</td>
+<%= eval_age(@classification.age) %>
+</tr>
+
+<tr>
+<td>
+Peso
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+
+<tr>
+<td>
+Estatura
+</td>
+<td  class="odd">
+
+</td>
+<td  class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Nivel socioeconomico
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Estado civil
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+
+<tr>
+<td>
+Escolaridad
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Actitud frente al embarazo
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Paridad
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+
+<tr>
+<td>
+Parto anterior
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Abortos consecutivos
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Cesáreas previas
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Partos menores a 37 SDG
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Preclampsia/eclampsia
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Hijos 2500 grs o menos
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Hijos 4000 grs o más
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Muertes perinatales
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+
+<tr>
+<td>
+Hijo con defectos congénitos
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Cirugía previa
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Antecedentes diabéticos
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Antecedentes hipertensivos
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+
+<tr>
+<td>
+Hemoglobina
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+
+<tr>
+<td>
+Factor RH
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+
+<tr>
+<td>
+Tabaquísmo
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Alcoholismo
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Toxicomanías
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Diabetes mellitus
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Hipertensión crónica
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Preeclampsia
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Epilepsia
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Cardiopatía
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Colagenopatía
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Nefropatías
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+
+<tr>
+<td>
+Endocrinopatías
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Consanguinidad
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Amenaza de Aborto
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+
+<tr>
+<td>
+Amenaza parto pretérmino
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+<tr>
+<td>
+Ruptura de membranas
+</td>
+<td class="odd">
+
+</td>
+<td class="even">
+
+</td>
+</tr>
+
+
+
+
+</table>
+</div>
+

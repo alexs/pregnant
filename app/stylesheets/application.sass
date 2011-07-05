@@ -193,6 +193,18 @@ h1
   padding: 2px
   display: inline-block
   background-color: #FFBABA
+.classification
+  table
+    $table-color: #7a98c6
+    +table-scaffolding
+    +inner-table-borders(1px, darken($table-color, 40%))
+    +outer-table-borders(2px)
+    td.even
+      background-color: #FF6666
+    td.odd
+      background-color: #FFFF99
+ 
+
 .clinical_form
   table
     $table-color: #7a98c6

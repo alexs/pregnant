@@ -1,9 +1,10 @@
 class FirstTimesController < ApplicationController
   def index
-    @first_times = FirstTime.all
+    @first_times = FirstTime.find_all_by_patient_id(params[:id])
+    @patient = params[:id]
 
     respond_to do |format|
-      format.html
+      format.js
     end
   end
 
@@ -11,7 +12,7 @@ class FirstTimesController < ApplicationController
     @first_time = FirstTime.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.js
     end
   end
 

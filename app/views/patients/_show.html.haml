@@ -27,6 +27,11 @@
       %td
         Correo electrónico:
         %b #{@patient.mail}
+
+  %br      
+  .button
+    = link_to_remote "Clasificación del embarazo", :url => {:controller => 'classifications', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+    
 #menu_patient
   %fieldset
     %legend
@@ -74,6 +79,10 @@
         .status_ries_par{ :style => 'display:inline'}
           = link_to_remote "Cuestionario de Riesgo de Parentaje", :url => {:controller => 'ries_pars', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
           = image_tag("checked.png")
+
+
+
+
   %fieldset
     %legend
       Médico
@@ -90,6 +99,11 @@
           = image_tag("checked.png")
     .button
       = link_to_remote "Primera Vez y Subsecuentes", :url => {:controller => 'first_times', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+      .status_first_time{ :style => 'display:none'}
+        = link_to_remote "| Ver registros |", :url => {:controller => 'first_times', :action => :index, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+      - if @patient.first_times.size > 0
+        .status_first_time_two
+          = link_to_remote "| Ver registros |", :url => {:controller => 'first_times', :action => :index, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
     .button
       = link_to_remote "Factores de Riesgo Modificables", :url => {:controller => 'risk_factors', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
 
@@ -108,43 +122,42 @@
   %fieldset
     %legend
       Médico Materno-Fetal
-      .button
-        - if @patient.ultra_sounds.size < 1
-          .ultrasound1_link
-            = link_to_remote "Ultrasonido Primer Trimestre", :url => {:controller => 'ultra_sounds', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
-          .status_ultrasound1{:style => 'display:none'}
-            = link_to_remote "Ultrasonido Primer Trimestre", :url => {:controller => 'ultra_sounds', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
-            = image_tag("checked.png")
-        - else
-          .status_ultrasound1{ :style => 'display:inline'}
-            = link_to_remote "Ultrasonido Primer Trimestre", :url => {:controller => 'ultra_sounds', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+    .button
+      - if @patient.ultra_sounds.size < 1
+        .ultrasound1_link
+          = link_to_remote "Ultrasonido Primer Trimestre", :url => {:controller => 'ultra_sounds', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        .status_ultrasound1{:style => 'display:none'}
+          = link_to_remote "Ultrasonido Primer Trimestre", :url => {:controller => 'ultra_sounds', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
           = image_tag("checked.png")
+      - else
+        .status_ultrasound1{ :style => 'display:inline'}
+          = link_to_remote "Ultrasonido Primer Trimestre", :url => {:controller => 'ultra_sounds', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        = image_tag("checked.png")
 
 
-      .button
-        - if @patient.ultra2_sounds.size < 1
-          .ultrasound2_link
-            = link_to_remote "Ultrasonido Segundo Trimestre", :url => {:controller => 'ultra2_sounds', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
-          .status_ultrasound2{ :style => 'display:none'}
-            = link_to_remote "Ultrasonido Segundo Trimestre", :url => {:controller => 'ultra2_sounds', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
-            = image_tag("checked.png")
-        - else
-          .status_ultrasound2{ :style => 'display:inline'}
-            = link_to_remote "Ultrasonido Segundo Trimestre", :url => {:controller => 'ultra2_sounds', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+    .button
+      - if @patient.ultra2_sounds.size < 1
+        .ultrasound2_link
+          = link_to_remote "Ultrasonido Segundo Trimestre", :url => {:controller => 'ultra2_sounds', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        .status_ultrasound2{ :style => 'display:none'}
+          = link_to_remote "Ultrasonido Segundo Trimestre", :url => {:controller => 'ultra2_sounds', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
           = image_tag("checked.png")
+      - else
+        .status_ultrasound2{ :style => 'display:inline'}
+          = link_to_remote "Ultrasonido Segundo Trimestre", :url => {:controller => 'ultra2_sounds', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        = image_tag("checked.png")
 
-      .button
-        - if @patient.ultra3_sounds.size < 1
-          .ultrasound3_link
-            = link_to_remote "Ultrasonido Tercer Trimestre", :url => {:controller => 'ultra3_sounds', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
-          .status_ultrasound3{ :style => 'display:none'}
-            = link_to_remote "Ultrasonido Tercer Trimestre", :url => {:controller => 'ultra3_sounds', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
-            = image_tag("checked.png")
-        - else
-          .status_ultrasound3{ :style => 'display:inline'}
-            = link_to_remote "Ultrasonido Tercer Trimestre", :url => {:controller => 'ultra3_sounds', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+    .button
+      - if @patient.ultra3_sounds.size < 1
+        .ultrasound3_link
+          = link_to_remote "Ultrasonido Tercer Trimestre", :url => {:controller => 'ultra3_sounds', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        .status_ultrasound3{ :style => 'display:none'}
+          = link_to_remote "Ultrasonido Tercer Trimestre", :url => {:controller => 'ultra3_sounds', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
           = image_tag("checked.png")
-
+      - else
+        .status_ultrasound3{ :style => 'display:inline'}
+          = link_to_remote "Ultrasonido Tercer Trimestre", :url => {:controller => 'ultra3_sounds', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        = image_tag("checked.png")
 
 
   %fieldset
@@ -167,11 +180,6 @@
         .status_neonatal
           = link_to_remote "Variables Neonatal", :url => {:controller => 'neonatals', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
           = image_tag("checked.png")
-          
-
-
-
-
     .button    
       = link_to_remote "Visita Domiciliaria Después de 24 horas de la madre", :url => {:controller => 'visits', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
 #create_questionary_dialog{ :stylefood => 'display:none' }

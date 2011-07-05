@@ -130,11 +130,8 @@
 
   <p>
     <%= f.hidden_field :user_id, :value => current_user.id %>
-  </p>
-  <p>
+    <%= f.hidden_field :date, :value => Date.today %>
     <%= f.hidden_field :dependency_id, :value => current_user.dependency_id %>
-  </p>
-  <p>
     <%= f.hidden_field :patient_id, :value => @first_time.patient_id  %>
   </p>
 

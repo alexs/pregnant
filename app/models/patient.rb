@@ -1,4 +1,6 @@
 class Patient < ActiveRecord::Base
+  after_save :add_to_classification
+
   searchable_by :firstname, :lastname1, :lastname2
 
   validates_presence_of :firstname, :lastname1, :lastname2, :birthday, :street,  :bornstate_id, :square_id, :ocupation_id, :maritalstatus_id
@@ -13,18 +15,23 @@ class Patient < ActiveRecord::Base
   belongs_to :economic_situation
   belongs_to :tipo_vivienda
   belongs_to :schooling
+
   has_many :psychologies
-  has_one :violency
   has_many :clinical_histories
   has_many :appoiments
-  has_one :ries_par
-  has_one :neonatal
-  has_one :variable_fetal
   has_many :ultra_sounds
   has_many :ultra2_sounds
   has_many :ultra3_sounds
+  has_many :first_times
+
+  has_one :violency
+  has_one :ries_par
+  has_one :neonatal
+  has_one :variable_fetal
   has_one :socioeconomic
-  
+  has_one :classification
+
+
   def keygen(patient, borndate)
     key = rfc(patient, borndate) + unique_chars(patient, borndate)
     key = key.upcase
@@ -68,4 +75,8 @@ class Patient < ActiveRecord::Base
     gender == true ? "Hombre" : "Mujer"
   end
 
+  private
+  def add_to_classification
+    Classification.new(:patient_id => self.id, :age => self.age, :maritalstatus_id => self.maritalstatus_id, :schooling_id => self.schooling_id).save
+  end
 end
