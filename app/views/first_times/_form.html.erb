@@ -1,5 +1,6 @@
 <% remote_form_for @first_time, :url => {:action => :create},:before => "$('.creating').show();", :complete => "$('.creating').hide();" do |f| %>
   <%= f.error_messages %>
+   Fecha en que se captura o capturó: <%= f.date_select :date, :value => Date.today %>
   <table>
     <th>
       Basicos:
@@ -130,7 +131,6 @@
 
   <p>
     <%= f.hidden_field :user_id, :value => current_user.id %>
-    <%= f.hidden_field :date, :value => Date.today %>
     <%= f.hidden_field :dependency_id, :value => current_user.dependency_id %>
     <%= f.hidden_field :patient_id, :value => @first_time.patient_id  %>
   </p>
