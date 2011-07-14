@@ -7,14 +7,7 @@
     </th>
     <tr>
       <td>
-        T.A.
         <br />
-        Sistólica: <%= f.text_field :sistolica, :size => 5  %>
-        Diastólica: <%= f.text_field :diastolica, :size => 5  %>
-        Peso: <%= f.text_field :peso, :size => 5  %> Kg.
-        Temp: <%= f.text_field :temp, :size => 5  %> °C
-        FC: <%= f.text_field :fc, :size => 5  %> X min
-        FR: <%= f.text_field :fr, :size => 5  %> X min
         FCF: <%= f.text_field :fcf, :size => 5  %>
         MOV FETALES: <%= f.text_field :mov_fetales, :size => 5  %>
       </td>
@@ -22,10 +15,17 @@
     <hr>
     <tr>
       <td>
-        G: <%= f.text_field :gestados, :size => 5 %>
-        P: <%= f.text_field :partos, :size => 5  %>
-        C: <%= f.text_field :cesareas, :size => 5  %>
-        A: <%= f.text_field :abortos, :size => 5  %>
+        <% @historia = ClinicalHistory.find_by_patient_id(@first_time.patient_id) %>
+        <% if !@historia.nil? %>
+          <% @gesta = !@historia.gesta.nil? ? @historia.gesta : "" %>
+          <% @parto = !@historia.partos.nil? ? @historia.partos : "" %>
+          <% @cesarea = !@historia.cesareas.nil? ? @historia.cesareas : "" %>
+          <% @aborto = !@historia.abortos.nil? ? @historia.abortos : "" %>
+        <% end %>
+        G: <%= f.text_field :gestados, :size => 5, :value => @gesta %>
+        P: <%= f.text_field :partos, :size => 5, :value =>  @parto   %>
+        C: <%= f.text_field :cesareas, :size => 5, :value => @cesarea  %>
+        A: <%= f.text_field :abortos, :size => 5, :value => @aborto  %>
         Semanas de gestación: <%= f.text_field :semanas_gestacion, :size => 5 %>
         <br />
         FUM: <%= f.date_select :fum %>
@@ -133,6 +133,7 @@
     <%= f.hidden_field :user_id, :value => current_user.id %>
     <%= f.hidden_field :dependency_id, :value => current_user.dependency_id %>
     <%= f.hidden_field :patient_id, :value => @first_time.patient_id  %>
+    <%= f.hidden_field :somatometry_id, :value => @first_time.somatometry_id  %>
   </p>
 
   <div class="guardar">

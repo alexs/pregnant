@@ -355,6 +355,35 @@
     %hr
   %br
   %p
+    Genitales
+    %br
+    Prurito    
+    = f.radio_button(:gen_prurito, "true")
+    Sí
+    = f.radio_button(:gen_prurito, "false")
+    No
+    %br
+    Ardor
+    = f.radio_button(:gen_ardor, "true")
+    Sí
+    = f.radio_button(:gen_ardor, "false")
+    No
+    %br
+    Urinario:
+    = f.text_field :urinario
+    %br
+    Ardor
+    = f.radio_button(:ardor, "true")
+    Sí
+    = f.radio_button(:ardor, "false")
+    No
+    %br
+    Polaquiuria
+    = f.radio_button(:polaquiuria, "true")
+    Sí
+    = f.radio_button(:polaquiuria, "false")
+    No
+  %p
     .clinical_form
       %table
         %tr.odd
@@ -391,41 +420,11 @@
             = f.check_box :genitales
           %td
             = f.text_field :genitales_desc
-
-
   %br
     %h1.questionary_title EXPLORACIÓN FÍSICA
     %hr
   %br
   %p
-    Genitales
-    %br
-    Prurito    
-    = f.radio_button(:gen_prurito, "true")
-    Sí
-    = f.radio_button(:gen_prurito, "false")
-    No
-    %br
-    Ardor
-    = f.radio_button(:gen_ardor, "true")
-    Sí
-    = f.radio_button(:gen_ardor, "false")
-    No
-    %br
-    Urinario:
-    = f.text_field :urinario
-    %br
-    Ardor
-    = f.radio_button(:ardor, "true")
-    Sí
-    = f.radio_button(:ardor, "false")
-    No
-    %br
-    Polaquiuria
-    = f.radio_button(:polaquiuria, "true")
-    Sí
-    = f.radio_button(:polaquiuria, "false")
-    No
     %br
     Tenesmo Vesical
     = f.radio_button(:tenesmo_vesical, "true")
@@ -444,8 +443,7 @@
   
   %p
     = f.label :peso 
-    = f.text_field :peso 
-  
+    = f.text_field :peso  
   %p
     = f.label :talla 
     = f.text_field :talla 
@@ -454,6 +452,43 @@
     = f.label :masa_corporal 
     = f.text_field :masa_corporal 
   
+    .clinical_form
+      %table
+        %tr.odd
+          %th AREA
+          %th SDP
+          %th COMENTARIO
+        %tr.even
+          %td Cabeza-cuello-tiroides
+          %td.numeric
+            = f.check_box :cabeza_cuello_tiroides
+          %td
+            = f.text_field :cabeza_cuello_tiroides_desc
+          %td.numeric
+        %tr.odd
+          %td Cardiorespiratorio
+          %td.numeric
+            = f.check_box :cardiorespiratorio_desc
+          %td
+            = f.text_field :cardiorespiratorio_desc
+        %tr.even
+          %td Mamas
+          %td.numeric
+            = f.check_box :explora_mamas
+          %td
+            = f.text_field :explora_mamas_desc
+        %tr.odd
+          %td Abdomen
+          %td.numeric
+            = f.check_box :abdomen
+          %td
+            = f.text_field :abdomen_desc
+        %tr.even
+          %td Extremidades
+          %td.numeric
+            = f.check_box :extremidades
+          %td
+            = f.text_field :extremidades_desc
   %p
     = f.label :cervix 
     = f.text_field :cervix 
@@ -533,43 +568,7 @@
     = f.radio_button(:gen_sangrado_vaginal, "false")
     No
   %p
-    .clinical_form
-      %table
-        %tr.odd
-          %th AREA
-          %th SDP
-          %th COMENTARIO
-        %tr.even
-          %td Cabeza-cuello-tiroides
-          %td.numeric
-            = f.check_box :cabeza_cuello_tiroides
-          %td
-            = f.text_field :cabeza_cuello_tiroides_desc
-          %td.numeric
-        %tr.odd
-          %td Cardiorespiratorio
-          %td.numeric
-            = f.check_box :cardiorespiratorio_desc
-          %td
-            = f.text_field :cardiorespiratorio_desc
-        %tr.even
-          %td Mamas
-          %td.numeric
-            = f.check_box :explora_mamas
-          %td
-            = f.text_field :explora_mamas_desc
-        %tr.odd
-          %td Abdomen
-          %td.numeric
-            = f.check_box :abdomen
-          %td
-            = f.text_field :abdomen_desc
-        %tr.even
-          %td Extremidades
-          %td.numeric
-            = f.check_box :extremidades
-          %td
-            = f.text_field :extremidades_desc
+
   %br
     %h1.questionary_title IMPRESIóN DIAGNÓSTICA
     %hr

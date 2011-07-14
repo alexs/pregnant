@@ -97,13 +97,35 @@
         .status_clinical{ :style => 'display:inline'}
           = link_to_remote "Historia Clínica Perinatal", :url => {:controller => 'clinical_histories', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
           = image_tag("checked.png")
+    .button 
+      - if Somatometry.find_last_by_patient_id_and_date(@patient.id,Date.today).nil?
+        .somatometry_link
+          = link_to_remote "Somatometría", :url => {:controller => 'somatometries', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        .status_somatometry{ :style => 'display:none'}
+          = link_to_remote "Somatometría", :url => {:controller => 'somatometries', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+          = image_tag("checked.png")
+      - else
+        .status_somatometry{ :style => 'display:inline'}
+          = link_to_remote "Somatometría", :url => {:controller => 'somatometries', :action => :show, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+          = image_tag("checked.png")
     .button
-      = link_to_remote "Primera Vez y Subsecuentes", :url => {:controller => 'first_times', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
-      .status_first_time{ :style => 'display:none'}
-        = link_to_remote "| Ver registros |", :url => {:controller => 'first_times', :action => :index, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
-      - if @patient.first_times.size > 0
-        .status_first_time_two
+      - if !Somatometry.find_last_by_patient_id_and_date(@patient.id,Date.today).nil?
+        = link_to_remote "Primera Vez y Subsecuentes", :url => {:controller => 'first_times', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        .status_first_time{ :style => 'display:none'}
           = link_to_remote "| Ver registros |", :url => {:controller => 'first_times', :action => :index, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        - if @patient.first_times.size > 0
+          .status_first_time_two
+            = link_to_remote "| Ver registros |", :url => {:controller => 'first_times', :action => :index, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+      - else
+        .status_somatometry_not_captured{ :style => 'display:inline'}
+          No se ha capturado somatometría.
+          %br
+            (Primera Vez y Subsecuentes)
+        .status_somatometry_captured{ :style => 'display:none'}
+          = link_to_remote "Primera Vez y Subsecuentes", :url => {:controller => 'first_times', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+        .status_first_time{ :style => 'display:none'}
+          = link_to_remote "| Ver registros |", :url => {:controller => 'first_times', :action => :index, :id => @patient.id}, :method => :get, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
+
     .button
       = link_to_remote "Factores de Riesgo Modificables", :url => {:controller => 'risk_factors', :action => :new, :id => @patient.id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()"
 

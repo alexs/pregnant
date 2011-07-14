@@ -17,7 +17,7 @@ class FirstTimesController < ApplicationController
   end
 
   def new
-    @first_time = FirstTime.new(:patient_id => params[:id])
+   @first_time = FirstTime.new(:patient_id => params[:id], :somatometry_id => Somatometry.find_last_by_patient_id_and_date(params[:id],Date.today).id)
   end
 
   def edit

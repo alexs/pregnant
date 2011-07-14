@@ -23,6 +23,7 @@ class Patient < ActiveRecord::Base
   has_many :ultra2_sounds
   has_many :ultra3_sounds
   has_many :first_times
+  has_many :somatomeries
 
   has_one :violency
   has_one :ries_par
