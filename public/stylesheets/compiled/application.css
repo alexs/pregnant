@@ -620,8 +620,12 @@ h1 {
 .classification table td.odd {
   background-color: #ffff99;
 }
+/* line 206, ../../../app/stylesheets/application.sass */
+.classification table td.normal {
+  background-color: #abfd88;
+}
 
-/* line 209, ../../../app/stylesheets/application.sass */
+/* line 211, ../../../app/stylesheets/application.sass */
 .clinical_form table {
   border: 2px solid black;
 }
@@ -702,7 +706,7 @@ h1 {
   background-color: #dddddd;
 }
 
-/* line 216, ../../../app/stylesheets/application.sass */
+/* line 218, ../../../app/stylesheets/application.sass */
 #create_questionary table {
   background-color: #f5f5f5;
   border-color: #222222 #dedede #dedede #222222;

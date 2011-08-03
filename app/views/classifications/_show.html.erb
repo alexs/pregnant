@@ -8,118 +8,53 @@
 Datos generales
 </th>
 <th>
+Bajo riesgo
+</th>
+<th>
 Mediano riesgo
 </th>
 <th>
 Alto riesgo
 </th>
 </tr>
-
-
-
-<tr>
-<td>
-Edad
-</td>
 <%= eval_age(@classification.age) %>
-</tr>
-
-<tr>
-<td>
-Peso
-</td>
-<td class="odd">
-
-</td>
-<td class="even">
-
-</td>
-</tr>
-
-
-<tr>
-<td>
-Estatura
-</td>
-<td  class="odd">
-
-</td>
-<td  class="even">
-
-</td>
-</tr>
-
+<%= eval_weight(@classification.weight) %>
+<%= eval_height(@classification.height) %>
 <tr>
 <td>
 Nivel socioeconomico
 </td>
-<td class="odd">
-
-</td>
-<td class="even">
-
-</td>
-</tr>
-
-<tr>
-<td>
-Estado civil
+<td class="normal">
 </td>
 <td class="odd">
-
 </td>
 <td class="even">
-
 </td>
 </tr>
-
-
-<tr>
-<td>
-Escolaridad
-</td>
-<td class="odd">
-
-</td>
-<td class="even">
-
-</td>
-</tr>
-
+<%= eval_marital(@classification.maritalstatus_id) %>
+<%= eval_schoolar(@classification.schooling_id) %>
+<%= eval_paridad(@classification.parity) %>
 <tr>
 <td>
 Actitud frente al embarazo
 </td>
+<td class="normal">
+</td>
 <td class="odd">
-
 </td>
 <td class="even">
-
 </td>
 </tr>
 
 <tr>
-<td>
-Paridad
 </td>
-<td class="odd">
-
-</td>
-<td class="even">
-
-</td>
-</tr>
-
-
-<tr>
-<td>
 Parto anterior
 </td>
+<td>
+<td class="normal">
 <td class="odd">
-
 </td>
 <td class="even">
-
 </td>
 </tr>
 
@@ -127,11 +62,11 @@ Parto anterior
 <td>
 Abortos consecutivos
 </td>
+<td class="normal">
+</td>
 <td class="odd">
-
 </td>
 <td class="even">
-
 </td>
 </tr>
 
@@ -139,11 +74,11 @@ Abortos consecutivos
 <td>
 Cesáreas previas
 </td>
+<td class="normal">
+</td>
 <td class="odd">
-
 </td>
 <td class="even">
-
 </td>
 </tr>
 
@@ -151,8 +86,9 @@ Cesáreas previas
 <td>
 Partos menores a 37 SDG
 </td>
+<td class="normal">
+</td>
 <td class="odd">
-
 </td>
 <td class="even">
 
@@ -163,11 +99,11 @@ Partos menores a 37 SDG
 <td>
 Preclampsia/eclampsia
 </td>
+<td class="normal">
+</td>
 <td class="odd">
-
 </td>
 <td class="even">
-
 </td>
 </tr>
 
@@ -175,11 +111,11 @@ Preclampsia/eclampsia
 <td>
 Hijos 2500 grs o menos
 </td>
+<td class="normal">
+</td>
 <td class="odd">
-
 </td>
 <td class="even">
-
 </td>
 </tr>
 
@@ -187,23 +123,23 @@ Hijos 2500 grs o menos
 <td>
 Hijos 4000 grs o más
 </td>
+<td class="normal">
+</td>
 <td class="odd">
-
 </td>
 <td class="even">
 
 </td>
 </tr>
-
 <tr>
 <td>
 Muertes perinatales
 </td>
+<td class="normal">
+</td>
 <td class="odd">
-
 </td>
 <td class="even">
-
 </td>
 </tr>
 
@@ -212,20 +148,20 @@ Muertes perinatales
 <td>
 Hijo con defectos congénitos
 </td>
+<td class="normal">
+</td>
 <td class="odd">
-
 </td>
 <td class="even">
-
 </td>
 </tr>
-
 <tr>
 <td>
 Cirugía previa
 </td>
+<td class="normal">
+</td>
 <td class="odd">
-
 </td>
 <td class="even">
 
@@ -235,6 +171,8 @@ Cirugía previa
 <tr>
 <td>
 Antecedentes diabéticos
+</td>
+<td class="normal">
 </td>
 <td class="odd">
 
@@ -247,6 +185,8 @@ Antecedentes diabéticos
 <tr>
 <td>
 Antecedentes hipertensivos
+</td>
+<td class="normal">
 </td>
 <td class="odd">
 
@@ -261,6 +201,8 @@ Antecedentes hipertensivos
 <td>
 Hemoglobina
 </td>
+<td class="normal">
+</td>
 <td class="odd">
 
 </td>
@@ -273,6 +215,8 @@ Hemoglobina
 <tr>
 <td>
 Factor RH
+</td>
+<td class="normal">
 </td>
 <td class="odd">
 
@@ -287,6 +231,8 @@ Factor RH
 <td>
 Tabaquísmo
 </td>
+<td class="normal">
+</td>
 <td class="odd">
 
 </td>
@@ -298,6 +244,8 @@ Tabaquísmo
 <tr>
 <td>
 Alcoholismo
+</td>
+<td class="normal">
 </td>
 <td class="odd">
 
@@ -311,6 +259,8 @@ Alcoholismo
 <td>
 Toxicomanías
 </td>
+<td class="normal">
+</td>
 <td class="odd">
 
 </td>
@@ -322,6 +272,8 @@ Toxicomanías
 <tr>
 <td>
 Diabetes mellitus
+</td>
+<td class="normal">
 </td>
 <td class="odd">
 
@@ -335,6 +287,8 @@ Diabetes mellitus
 <td>
 Hipertensión crónica
 </td>
+<td class="normal">
+</td>
 <td class="odd">
 
 </td>
@@ -346,6 +300,8 @@ Hipertensión crónica
 <tr>
 <td>
 Preeclampsia
+</td>
+<td class="normal">
 </td>
 <td class="odd">
 
@@ -359,6 +315,8 @@ Preeclampsia
 <td>
 Epilepsia
 </td>
+<td class="normal">
+</td>
 <td class="odd">
 
 </td>
@@ -370,6 +328,8 @@ Epilepsia
 <tr>
 <td>
 Cardiopatía
+</td>
+<td class="normal">
 </td>
 <td class="odd">
 
@@ -383,6 +343,8 @@ Cardiopatía
 <td>
 Colagenopatía
 </td>
+<td class="normal">
+</td>
 <td class="odd">
 
 </td>
@@ -394,6 +356,8 @@ Colagenopatía
 <tr>
 <td>
 Nefropatías
+</td>
+<td class="normal">
 </td>
 <td class="odd">
 
@@ -408,6 +372,8 @@ Nefropatías
 <td>
 Endocrinopatías
 </td>
+<td class="normal">
+</td>
 <td class="odd">
 
 </td>
@@ -420,6 +386,8 @@ Endocrinopatías
 <td>
 Consanguinidad
 </td>
+<td class="normal">
+</td>
 <td class="odd">
 
 </td>
@@ -431,6 +399,8 @@ Consanguinidad
 <tr>
 <td>
 Amenaza de Aborto
+</td>
+<td class="normal">
 </td>
 <td class="odd">
 
@@ -445,6 +415,8 @@ Amenaza de Aborto
 <td>
 Amenaza parto pretérmino
 </td>
+<td class="normal">
+</td>
 <td class="odd">
 
 </td>
@@ -457,6 +429,8 @@ Amenaza parto pretérmino
 <td>
 Ruptura de membranas
 </td>
+<td class="normal">
+</td>
 <td class="odd">
 
 </td>
@@ -464,10 +438,6 @@ Ruptura de membranas
 
 </td>
 </tr>
-
-
-
-
 </table>
 </div>
 

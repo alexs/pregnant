@@ -120,11 +120,11 @@
     = f.radio_button(:feed,20) + "Dieta no habitual"
   %p
     = f.label "Vitaminas: "
-    = f.check_box :vitamins  
+    = f.check_box :vitamins
     = f.label "Hierro: "
-    = f.check_box :iron 
+    = f.check_box :iron
     = f.label "Ácido folico: "
-    = f.check_box :folic_acid 
+    = f.check_box :folic_acid
     = f.label "Cafeína: "
     = f.check_box :caffeine
     = f.label "Drogas: "
@@ -316,13 +316,14 @@
     %h1 Embarazos pasados
     %hr
   %p
-    %table
-      - f.fields_for :past_pregnants do |builder|
-        = render 'past_pregnantfields', :f => builder
-      %br      
-      %br  
-      = link_to_add_fields "Ingresar datos de otro embarazo pasado", f, :past_pregnants
-      %br
+    #past_pregnants
+      %table
+        - f.fields_for :past_pregnants do |builder|
+          = render 'past_pregnantfields', :f => builder
+        %br      
+        %br  
+          = link_to_add_fields "Ingresar datos de otro embarazo pasado", f, :past_pregnants
+        %br
   %br
     %h1.questionary_title DATOS DEL EMBARAZO
     %hr
@@ -590,14 +591,13 @@
     = f.text_field :inicio_suplementos
     SDG,
     = f.label "Inicio de hierro"
-    = f.text_field :inicio_hierro 
+    = f.text_field :inicio_hierro
     SDG,
     = f.label "Inicio de aspirinas"
     = f.text_field :inicio_aspirina
     SDG
   %p
     = f.hidden_field :patient_id, :value => @clinical_history.patient_id
-  %p
     = f.hidden_field :user_id, :value => current_user.id
     = f.hidden_field :dependency_id, :value => current_user.dependency_id
   %hr
