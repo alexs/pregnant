@@ -32,7 +32,7 @@ Parentesco:
       %td.numeric
         = h checked_value(@clinical_history.cardiovascular_husband)
       %td.numeric
-        = h checked_value(@clinical_history.cardiovascular_others)
+        = h @clinical_history.cardiovascular_others
     %tr.odd
       %td DIABETES MELLITUS
       %td.numeric
@@ -46,7 +46,7 @@ Parentesco:
       %td.numeric
         =  checked_value(@clinical_history.diabetes_husband)
       %td.numeric
-        = checked_value(@clinical_history.diabetes_others)
+        = h @clinical_history.diabetes_others
     %tr.even
       %td NEOPLASICOS
       %td.numeric
@@ -60,7 +60,7 @@ Parentesco:
       %td.numeric
         =  checked_value(@clinical_history.neoplastic_husband)
       %td.numeric
-        = checked_value(@clinical_history.neoplastic_others)
+        = h @clinical_history.neoplastic_others
     %tr.odd
       %td INFECCIOSOS
       %td.numeric
@@ -74,7 +74,7 @@ Parentesco:
       %td.numeric
         = checked_value(@clinical_history.infectious_husband)
       %td.numeric
-        = checked_value(@clinical_history.infectious_others)
+        = h @clinical_history.infectious_others
     %tr.even
       %td TOXICOMANIAS
       %td.numeric
@@ -88,7 +88,7 @@ Parentesco:
       %td.numeric
         = checked_value(@clinical_history.toxicomanias_husband)
       %td.numeric
-        = checked_value(@clinical_history.toxicomanias_others)
+        = h @clinical_history.toxicomanias_others
     %tr.odd
       %td SX DOWN/MALFORMADOS
       %td.numeric
@@ -102,7 +102,7 @@ Parentesco:
       %td.numeric
         = checked_value(@clinical_history.malformed_husband)
       %td.numeric  
-        = checked_value(@clinical_history.malformed_others)
+        = h @clinical_history.malformed_others
 %br
   %h1.questionary_title ANTECEDENTES PERSONALES NO PATOLOGICOS
   %hr

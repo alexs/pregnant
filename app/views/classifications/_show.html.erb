@@ -1,4 +1,5 @@
- <%= link_to_remote "Regresar", :update => "workspace", :url => {:controller => "patients", :action => "show", :id =>"#{@classification.patient_id}"}, :method => :get, :layout => false %>
+
+ <%= link_to_remote "Regresar", :update => "workspace", :url => {:controller => "patients", :action => "show", :id =>"#{@classification.patient_id}"}, :method => :get, :layout => false %>  | <%= link_to_remote "Completar", :url => {:controller => 'socioeconomics', :action => :new, :id => @classification.patient_id}, :before => "$('.indicator').show()", :complete => "$('.indicator').hide()" %>
 <br />
 <br />
 <div class="classification">
