@@ -31,13 +31,14 @@ class ClassificationsController < ApplicationController
     end
   end
 
-  # GET /classifications/1/edit
   def edit
     @classification = Classification.find(params[:id])
+
+    respond_to do |format|
+      format.js
+    end
   end
 
-  # POST /classifications
-  # POST /classifications.xml
   def create
     @classification = Classification.new(params[:classification])
 
@@ -52,18 +53,14 @@ class ClassificationsController < ApplicationController
     end
   end
 
-  # PUT /classifications/1
-  # PUT /classifications/1.xml
   def update
     @classification = Classification.find(params[:id])
 
     respond_to do |format|
       if @classification.update_attributes(params[:classification])
-        format.html { redirect_to(@classification, :notice => 'Classification was successfully updated.') }
-        format.xml  { head :ok }
+        format.js { render :action => "create" }
       else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @classification.errors, :status => :unprocessable_entity }
+        format.js { render :action => "edit" }
       end
     end
   end
